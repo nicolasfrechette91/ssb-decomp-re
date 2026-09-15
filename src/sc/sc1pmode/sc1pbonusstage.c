@@ -10,10 +10,34 @@ extern void port_coroutine_yield(void);
 #include <reloc_data.h>
 #include <sys/audio.h>
 #include <sys/debug.h>
+#include <sys/netinput.h>
+#include <sys/netreplay.h>
 #include <wp/wpmanager.h>
 extern void sc1PBonusStageSetupFiles(void);
 extern void *func_800269C0_275C0(u16 id);
 extern void func_800266A0_272A0(void);
+
+#ifdef PORT
+    extern void port_log(const char *fmt, ...);
+#endif
+
+/* Consume exactly one imported movie row per controllable bonus-stage frame.
+ * The stock controller callback remains active through the READY/GO wait and
+ * whenever BTT playback was not configured, so normal play is unchanged. */
+void sc1PBonusStageFuncReadReplay(void)
+{
+    #ifdef PORT
+        if ((syNetReplayIsBTTPlaybackConfigured() != FALSE) &&
+            (gSCManagerBattleState != NULL) &&
+            (gSCManagerBattleState->game_status != nSCBattleGameStatusWait) &&
+            (gSCManagerBattleState->game_status != nSCBattleGameStatusPause))
+        {
+            syNetInputFuncRead();
+            return;
+        }
+    #endif
+	syControllerFuncRead();
+}
 
 // // // // // // // // // // // //
 //                               //
@@ -292,7 +316,7 @@ SYTaskmanSetup dSC1PBonusStageTaskmanSetup =
         2,                          // ???
         0xC000,                     // RDP Output Buffer Size
         sc1PBonusStageFuncLights,   // Pre-render function
-        syControllerFuncRead,       // Controller I/O function
+        sc1PBonusStageFuncReadReplay, // Controller I/O function
     },
 
     0,                              // Number of GObjThreads
@@ -360,6 +384,9 @@ void func_ovl6_8018D0C8(void)
 void sc1PBonusStageFuncUpdate(void)
 {
 	ifCommonBattleUpdateInterfaceAll();
+    #ifdef PORT
+        syNetReplayUpdate();
+    #endif
 }
 
 // 0x8018D0F0
@@ -580,6 +607,13 @@ void sc1PBonusStageUpdateTargetCount(void)
 
 	if (gGRCommonStruct.bonus1.target_count == 0)
 	{
+        #ifdef PORT
+            if (syNetReplayIsBTTPlaybackConfigured() != FALSE)
+            {
+                port_log("SSB64 BTT Replay: COMPLETE input_tick=%u time_passed=%u\n",
+                         syNetInputGetTick(), gSCManagerBattleState->time_passed);
+            }
+        #endif
 		if
 		(
 			(gSCManagerSceneData.scene_prev != nSCKind1PGame) &&
@@ -1141,6 +1175,13 @@ void sc1PBonusStageFuncStart(void)
 	SYColorRGBA color;
 
 	sc1PBonusStageInitVars();
+    #ifdef PORT
+        /* mario_743.btti is authored specifically for Mario's Bonus 1 map. */
+        if (gSCManagerBattleState->gkind == nGRKindBonus1Start)
+        {
+            syNetReplayStartBTTSession(gSCManagerBattleState);
+        }
+    #endif
 	sc1PBonusStageSetupFiles();
 	sc1PBonusStageBonus1LoadFile();
 	gcMakeDefaultCameraGObj(nGCCommonLinkIDCamera, GOBJ_PRIORITY_DEFAULT, 100, COBJ_FLAG_ZBUFFER, GPACK_RGBA8888(0x00, 0x00, 0x00, 0xFF));
@@ -1324,6 +1365,9 @@ void sc1PBonusStageStartScene(void)
 	dSC1PBonusStageTaskmanSetup.func_start = sc1PBonusStageFuncStart;
 
 	syTaskmanStartTask(&dSC1PBonusStageTaskmanSetup);
+    #ifdef PORT
+        syNetReplayFinishBTTSession();
+    #endif
 	syAudioStopBGMAll();
 
 	while (syAudioCheckBGMPlaying(0) != FALSE)

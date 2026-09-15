@@ -32,6 +32,7 @@ typedef struct SYNetReplayFileHeader
 
 const char *sSYNetReplayRecordPath;
 const char *sSYNetReplayPlayPath;
+const char *sSYNetReplayBTTInputPath;
 u32 sSYNetReplayRecordFrameLimit = SYNETREPLAY_DEFAULT_RECORD_FRAMES;
 u32 sSYNetReplayLoadedFrameCount;
 u32 sSYNetReplayLoadedInputChecksum;
@@ -40,6 +41,7 @@ sb32 sSYNetReplayIsRecordWritten;
 sb32 sSYNetReplayIsPlaybackLoaded;
 sb32 sSYNetReplayIsPlaybackActive;
 sb32 sSYNetReplayIsPlaybackVerified;
+sb32 sSYNetReplayIsBTTTextPlayback;
 SYNetInputReplayMetadata sSYNetReplayLoadedMetadata;
 SYNetInputFrame sSYNetReplayLoadedFrames[MAXCONTROLLERS][SYNETINPUT_REPLAY_MAX_FRAMES];
 
@@ -174,6 +176,7 @@ void syNetReplayInitDebugEnv(void)
 
 	sSYNetReplayRecordPath = getenv("SSB64_REPLAY_RECORD");
 	sSYNetReplayPlayPath = getenv("SSB64_REPLAY_PLAY");
+	sSYNetReplayBTTInputPath = getenv("SSB64_BTT_INPUT");
 	frame_limit_env = getenv("SSB64_REPLAY_RECORD_FRAMES");
 
 	if (frame_limit_env != NULL)
@@ -185,7 +188,14 @@ void syNetReplayInitDebugEnv(void)
 			sSYNetReplayRecordFrameLimit = frame_limit;
 		}
 	}
-	if (sSYNetReplayPlayPath != NULL)
+	if (sSYNetReplayBTTInputPath != NULL)
+	{
+		/* BTT playback is loaded only after the bonus-stage battle state has
+		 * been initialized.  Unlike the native VS replay path, it deliberately
+		 * does not redirect boot into another scene. */
+		port_log("SSB64 BTT Replay: configured path=%s\n", sSYNetReplayBTTInputPath);
+	}
+	else if (sSYNetReplayPlayPath != NULL)
 	{
 		if (syNetReplayLoadDebugFile(sSYNetReplayPlayPath) != FALSE)
 		{
@@ -195,6 +205,123 @@ void syNetReplayInitDebugEnv(void)
 			gSCManagerSceneData.scene_curr = nSCKindVSBattle;
 		}
 	}
+#endif
+}
+
+sb32 syNetReplayIsBTTPlaybackConfigured(void)
+{
+	return (sSYNetReplayIsBTTTextPlayback != FALSE) ? TRUE : FALSE;
+}
+
+void syNetReplayStartBTTSession(SCBattleState *battle_state)
+{
+#ifdef PORT
+	SYNetInputReplayMetadata metadata;
+	SYNetInputFrame frame;
+	char line[256];
+	FILE *fp;
+	u32 tick = 0;
+	s32 player;
+
+	if (sSYNetReplayBTTInputPath == NULL)
+	{
+		return;
+	}
+	fp = fopen(sSYNetReplayBTTInputPath, "r");
+	if (fp == NULL)
+	{
+		port_log("SSB64 BTT Replay: failed to open path=%s\n", sSYNetReplayBTTInputPath);
+		return;
+	}
+
+	syNetInputReset();
+	syNetInputClearReplayFrames();
+
+	while ((tick < SYNETINPUT_REPLAY_MAX_FRAMES) && (fgets(line, sizeof(line), fp) != NULL))
+	{
+		unsigned int buttons;
+		int stick_x;
+		int stick_y;
+
+		if ((line[0] == '#') || (line[0] == '\n') || (line[0] == '\r'))
+		{
+			continue;
+		}
+		if ((sscanf(line, "%x,%d,%d", &buttons, &stick_x, &stick_y) != 3) ||
+			(buttons > 0xFFFFU) || (stick_x < -128) || (stick_x > 127) ||
+			(stick_y < -128) || (stick_y > 127))
+		{
+			port_log("SSB64 BTT Replay: invalid row near input tick=%u\n", tick);
+			fclose(fp);
+			return;
+		}
+
+		for (player = 0; player < MAXCONTROLLERS; player++)
+		{
+			memset(&frame, 0, sizeof(frame));
+			frame.tick = tick;
+			frame.source = nSYNetInputSourceSaved;
+			frame.is_predicted = FALSE;
+			frame.is_valid = TRUE;
+
+			if (player == 0)
+			{
+				frame.buttons = (u16)buttons;
+				frame.stick_x = (s8)stick_x;
+				frame.stick_y = (s8)stick_y;
+			}
+			syNetInputSetReplayFrame(player, tick, &frame);
+		}
+		tick++;
+	}
+	fclose(fp);
+
+	if (tick == 0)
+	{
+		port_log("SSB64 BTT Replay: no input rows in path=%s\n", sSYNetReplayBTTInputPath);
+		return;
+	}
+
+	syNetReplayCaptureBattleMetadata(battle_state, &metadata);
+	metadata.scene_kind = nSCKind1PBonusStage;
+	syNetInputSetReplayMetadata(&metadata);
+	syNetInputSetTick(0);
+
+	for (player = 0; player < MAXCONTROLLERS; player++)
+	{
+		syNetInputSetSlotSource(player, nSYNetInputSourceSaved);
+	}
+
+	sSYNetReplayLoadedFrameCount = tick;
+	sSYNetReplayLoadedInputChecksum = 0;
+	sSYNetReplayIsPlaybackActive = TRUE;
+	sSYNetReplayIsPlaybackVerified = FALSE;
+	sSYNetReplayIsBTTTextPlayback = TRUE;
+
+	port_log("SSB64 BTT Replay: playback armed path=%s frames=%u stage=%u\n",
+	         sSYNetReplayBTTInputPath, tick, metadata.stage_kind);
+#else
+	(void)battle_state;
+#endif
+}
+
+void syNetReplayFinishBTTSession(void)
+{
+	s32 player;
+
+	if (sSYNetReplayIsBTTTextPlayback == FALSE)
+	{
+		return;
+	}
+	for (player = 0; player < MAXCONTROLLERS; player++)
+	{
+		syNetInputSetSlotSource(player, nSYNetInputSourceLocal);
+	}
+	sSYNetReplayIsBTTTextPlayback = FALSE;
+	sSYNetReplayIsPlaybackActive = FALSE;
+
+#ifdef PORT
+	port_log("SSB64 BTT Replay: session finished at input_tick=%u\n", syNetInputGetTick());
 #endif
 }
 
@@ -261,9 +388,17 @@ void syNetReplayUpdate(void)
 		u32 checksum = syNetInputGetHistoryInputChecksum(sSYNetReplayLoadedFrameCount);
 
 #ifdef PORT
-		port_log("SSB64 Replay: playback verify frames=%u expected=0x%08X actual=0x%08X result=%s\n",
-		         sSYNetReplayLoadedFrameCount, sSYNetReplayLoadedInputChecksum, checksum,
-		         (checksum == sSYNetReplayLoadedInputChecksum) ? "PASS" : "FAIL");
+		if (sSYNetReplayIsBTTTextPlayback != FALSE)
+		{
+			port_log("SSB64 BTT Replay: input exhausted frames=%u actual_checksum=0x%08X\n",
+			         sSYNetReplayLoadedFrameCount, checksum);
+		}
+		else
+		{
+			port_log("SSB64 Replay: playback verify frames=%u expected=0x%08X actual=0x%08X result=%s\n",
+			         sSYNetReplayLoadedFrameCount, sSYNetReplayLoadedInputChecksum, checksum,
+			         (checksum == sSYNetReplayLoadedInputChecksum) ? "PASS" : "FAIL");
+		}
 #endif
 		sSYNetReplayIsPlaybackVerified = TRUE;
 		sSYNetReplayIsPlaybackActive = FALSE;
