@@ -2,11 +2,29 @@
 /* File size: 1984 bytes (0x7C0) */
 
 #include "relocdata_types.h"
+extern u32 dPurinMainMotion_EggLay_0x0034[];
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dPurinModel_FTEmblem[];
+extern u32 dPurinModel_Stock[];
+extern u8 dPurinShieldPose_data0[];
+extern u8 dPurinShieldPose_data0_end[];
+extern u8 dPurinShieldPose_shield_anim_joint_1[];
+extern u8 dPurinShieldPose_shield_anim_joint_2[];
+extern u8 dPurinShieldPose_shield_anim_joint_3[];
+extern u8 dPurinShieldPose_shield_anim_joint_4[];
+extern u8 dPurinShieldPose_shield_anim_joint_5[];
+extern u8 dPurinShieldPose_shield_anim_joint_6[];
+extern u8 dPurinShieldPose_shield_anim_joint_7[];
+extern AObjEvent32 **dPurinModel_gap_0x24D0[];
+extern AObjEvent32 **dPurinModel_gap_0x4550[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dPurinModel_JointTree[];
 extern DObjDesc dPurinModel_JointTree_0x40A0[];
-extern Vtx dPurinModel_JointVerts_Vtx[];
+extern MObjSub **dPurinModel_JointVerts_Vtx[];
 extern Gfx dPurinModel_Joint_0x3D10_DisplayList[];
 extern Gfx dPurinModel_Joint_0x3D90_DisplayList[];
 extern Gfx dPurinModel_Joint_0x3E38_DisplayList[];
@@ -34,10 +52,10 @@ extern DObjDesc dPurinSpecial2_SingDObjDesc[];
 
 /* Pre-attributes data (285 words, 0x0474 bytes) */
 /* @ 0x0000, 8 bytes: FTAttributes.file_handles target (was dPurinMain_pre+0x0) */
-u32 dPurinMain_file_handles[2] = {
+void *dPurinMain_file_handles[2] = {
 
-	0x0001000D, /* extern -> 0x0034 */
-	(u32)&dPurinSpecial2_SingDObjDesc, /* extern -> 0x2130 */
+	&dPurinMainMotion_EggLay_0x0034, /* extern */
+	&dPurinSpecial2_SingDObjDesc, /* extern -> 0x2130 */
 };
 
 /* @ 0x0008, 8 bytes: FTAttributes.animlock target (was dPurinMain_pre+0x8) */
@@ -88,8 +106,8 @@ FTTexturePartContainer dPurinMain_textureparts_container = {
 /* @ 0x00D8, 32 bytes: FTAttributes.commonparts_container target (was dPurinMain_pre+0xD8) */
 FTCommonPartContainer dPurinMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dPurinModel_JointTree, (MObjSub***)&dPurinModel_JointVerts_Vtx, (AObjEvent32***)((u8*)dPurinModel_JointTree + 0x4A8), 0x00 },
-		{ (DObjDesc*)&dPurinModel_JointTree_0x40A0, (MObjSub***)&dPurinModel_gap_0x24F8_sub_0x3B8, (AObjEvent32***)((u8*)dPurinModel_JointTree_0x40A0 + 0x4B0), 0x00 },
+		{ (DObjDesc*)&dPurinModel_JointTree, (MObjSub***)&dPurinModel_JointVerts_Vtx, (AObjEvent32***)dPurinModel_gap_0x24D0, 0x00 },
+		{ (DObjDesc*)&dPurinModel_JointTree_0x40A0, (MObjSub***)&dPurinModel_gap_0x24F8_sub_0x3B8, (AObjEvent32***)dPurinModel_gap_0x4550, 0x00 },
 	},
 };
 
@@ -162,9 +180,9 @@ int *dPurinMain_stock_luts[5] = {
 
 /* @ 0x02BC, 12 bytes: FTAttributes.sprites target (was dPurinMain_pre+0x2BC) */
 FTSprites dPurinMain_sprites = {
-	(Sprite*)((u8*)dPurinModel_gap_0x7B00_sub_0x80 + 0x30), /* stock_sprite */
+	(Sprite*)dPurinModel_Stock, /* stock_sprite */
 	(int**)dPurinMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dPurinModel_gap_0x7B00_sub_0x80 + 0x218), /* emblem */
+	(Sprite*)dPurinModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x02C8, 208 bytes: FTAttributes.sub_0x2C8 target (was dPurinMain_pre+0x2C8) */
@@ -357,8 +375,8 @@ FTAttributes dPurinMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dPurinMain_hiddenparts, /* hiddenparts */
 	&dPurinMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dPurinShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dPurinShieldPose_data0_end, (void *)&dPurinShieldPose_shield_anim_joint_1, (void *)&dPurinShieldPose_shield_anim_joint_2, (void *)&dPurinShieldPose_shield_anim_joint_3, (void *)&dPurinShieldPose_shield_anim_joint_4, (void *)&dPurinShieldPose_shield_anim_joint_5, (void *)&dPurinShieldPose_shield_anim_joint_6, (void *)&dPurinShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	61.848f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */

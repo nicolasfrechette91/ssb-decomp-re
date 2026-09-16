@@ -2,16 +2,37 @@
 /* File size: 2000 bytes (0x7D0) */
 
 #include "relocdata_types.h"
+extern u32 dCaptainMainMotion_EggLay_0x006C[];
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dCaptainModel_FTEmblem[];
+extern MObjSub *dCaptainModel_Joint_0x0080_post_sub_0x118C[];
+extern MObjSub *dCaptainModel_Joint_0x0080_post_sub_0x11C8[];
+extern u32 dCaptainModel_Stock[];
+extern Gfx dCaptainSpecial3_DL_0x0760[];
+extern u8 dCaptainShieldPose_data0[];
+extern u8 dCaptainShieldPose_data0_end[];
+extern u8 dCaptainShieldPose_shield_anim_joint_1[];
+extern u8 dCaptainShieldPose_shield_anim_joint_2[];
+extern u8 dCaptainShieldPose_shield_anim_joint_3[];
+extern u8 dCaptainShieldPose_shield_anim_joint_4[];
+extern u8 dCaptainShieldPose_shield_anim_joint_5[];
+extern u8 dCaptainShieldPose_shield_anim_joint_6[];
+extern u8 dCaptainShieldPose_shield_anim_joint_7[];
+extern AObjEvent32 **dCaptainModel_gap_0x4090[];
+extern AObjEvent32 **dCaptainModel_gap_0x7DB0[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dCaptainModel_JointTree[];
+extern u8 dCaptainModel_Joint_0x0080_post[];
 extern DObjDesc dCaptainModel_JointTree_0x7900[];
 extern Gfx dCaptainModel_Joint_0x2A98_DisplayList[];
 extern Gfx dCaptainModel_Joint_0x3308_DisplayList[];
 extern Gfx dCaptainModel_Joint_0x6AF0_DisplayList[];
 extern Gfx dCaptainModel_Joint_0x7148_DisplayList[];
-extern u8 dCaptainModel_gap_0x0000[];
-extern u8 dCaptainModel_gap_0x0000_sub_0x18[];
+extern MObjSub **dCaptainModel_gap_0x0000[];
 extern u8 dCaptainModel_gap_0x40B0_sub_0x17A4[];
 extern u8 dCaptainModel_gap_0x40B0_sub_0x17D4[];
 extern u8 dCaptainModel_gap_0x40B0_sub_0x784[];
@@ -35,7 +56,7 @@ extern u8 dCaptainModel_gap_0x7DD0_sub_0x2078[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x2100[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x223C[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x22C0[];
-extern u8 dCaptainModel_gap_0x7DD0_sub_0x2390[];
+extern u8 dCaptainModel_DL_0xA160[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x25C0[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x27B0[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x28C0[];
@@ -44,7 +65,7 @@ extern u8 dCaptainModel_gap_0x7DD0_sub_0x2B30[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x2C30[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x2D50[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x2E60[];
-extern u8 dCaptainModel_gap_0x7DD0_sub_0x2F40[];
+extern u8 dCaptainModel_DL_0xAD10[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x694[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x6B4[];
 extern u8 dCaptainModel_gap_0x7DD0_sub_0x808[];
@@ -65,11 +86,11 @@ extern u8 dCaptainSpecial3_gap_0x0708_sub_0x18[];
 
 /* Pre-attributes data (290 words, 0x0488 bytes) */
 /* @ 0x0000, 12 bytes: FTAttributes.file_handles target (was dCaptainMain_pre+0x0) */
-u32 dCaptainMain_file_handles[3] = {
+void *dCaptainMain_file_handles[3] = {
 
-	0x0001001B, /* extern -> 0x006C */
-	(u32)((u8*)dCaptainSpecial3_gap_0x0708_sub_0x18 + 0x40), /* extern -> 0x0760 */
-	(u32)&dCaptainSpecial2_FalconKickDObjDesc, /* extern -> 0x0B08 */
+	&dCaptainMainMotion_EggLay_0x006C, /* extern */
+	dCaptainSpecial3_DL_0x0760, /* extern -> 0x0760 */
+	&dCaptainSpecial2_FalconKickDObjDesc, /* extern -> 0x0B08 */
 };
 
 /* @ 0x000C, 8 bytes: FTAttributes.animlock target (was dCaptainMain_pre+0xC) */
@@ -94,7 +115,7 @@ FTHiddenPart dCaptainMain_hiddenparts[4] = {
 
 /* @ 0x005C, 120 bytes: FTAttributes.sub_0x05C target (was dCaptainMain_pre+0x5C) */
 FTModelPart dCaptainMain_modelparts_desc_0x05C[6] = {
-	{ (Gfx*)&dCaptainModel_Joint_0x2A98_DisplayList, (MObjSub**)((u8*)dCaptainModel_gap_0x0000_sub_0x18 + 0x11F4), (AObjEvent32**)&dCaptainModel_gap_0x40B0_sub_0x784, NULL, 0x00 },
+	{ (Gfx*)&dCaptainModel_Joint_0x2A98_DisplayList, (MObjSub**)dCaptainModel_Joint_0x0080_post_sub_0x118C, (AObjEvent32**)&dCaptainModel_gap_0x40B0_sub_0x784, NULL, 0x00 },
 	{ (Gfx*)&dCaptainModel_Joint_0x6AF0_DisplayList, (MObjSub**)&dCaptainModel_gap_0x40B0_sub_0x17A4, (AObjEvent32**)&dCaptainModel_gap_0x7DD0_sub_0x694, NULL, 0x00 },
 	{ (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x16D8, (MObjSub**)&dCaptainModel_gap_0x7DD0_sub_0x15B8, (AObjEvent32**)&dCaptainModel_gap_0x7DD0_sub_0x18E4, NULL, 0x00 },
 	{ (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x1A30, (MObjSub**)&dCaptainModel_gap_0x7DD0_sub_0x1988, (AObjEvent32**)&dCaptainModel_gap_0x7DD0_sub_0x1B7C, NULL, 0x00 },
@@ -104,7 +125,7 @@ FTModelPart dCaptainMain_modelparts_desc_0x05C[6] = {
 
 /* @ 0x00D4, 120 bytes: FTAttributes.sub_0x0D4 target (was dCaptainMain_pre+0xD4) */
 FTModelPart dCaptainMain_modelparts_desc_0x0D4[6] = {
-	{ (Gfx*)&dCaptainModel_Joint_0x3308_DisplayList, (MObjSub**)((u8*)dCaptainModel_gap_0x0000_sub_0x18 + 0x1230), (AObjEvent32**)&dCaptainModel_gap_0x40B0_sub_0x7B0, NULL, 0x00 },
+	{ (Gfx*)&dCaptainModel_Joint_0x3308_DisplayList, (MObjSub**)dCaptainModel_Joint_0x0080_post_sub_0x11C8, (AObjEvent32**)&dCaptainModel_gap_0x40B0_sub_0x7B0, NULL, 0x00 },
 	{ (Gfx*)&dCaptainModel_Joint_0x7148_DisplayList, (MObjSub**)&dCaptainModel_gap_0x40B0_sub_0x17D4, (AObjEvent32**)&dCaptainModel_gap_0x7DD0_sub_0x6B4, NULL, 0x00 },
 	{ (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x928, (MObjSub**)&dCaptainModel_gap_0x7DD0_sub_0x808, (AObjEvent32**)&dCaptainModel_gap_0x7DD0_sub_0xB34, NULL, 0x00 },
 	{ (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0xC80, (MObjSub**)&dCaptainModel_gap_0x7DD0_sub_0xBD8, (AObjEvent32**)&dCaptainModel_gap_0x7DD0_sub_0xDCC, NULL, 0x00 },
@@ -122,15 +143,13 @@ FTModelPartDesc *dCaptainMain_modelparts_container[26] = {
 };
 
 /* @ 0x01B4, 4 bytes: FTAttributes.textureparts_container target (was dCaptainMain_pre+0x1B4) */
-u32 dCaptainMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dCaptainMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x01B8, 32 bytes: FTAttributes.commonparts_container target (was dCaptainMain_pre+0x1B8) */
 FTCommonPartContainer dCaptainMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dCaptainModel_JointTree, (MObjSub***)&dCaptainModel_gap_0x0000, (AObjEvent32***)((u8*)dCaptainModel_JointTree + 0x4B0), 0x00 },
-		{ (DObjDesc*)&dCaptainModel_JointTree_0x7900, (MObjSub***)&dCaptainModel_gap_0x40B0_sub_0x7E0, (AObjEvent32***)((u8*)dCaptainModel_JointTree_0x7900 + 0x4B0), 0x00 },
+		{ (DObjDesc*)&dCaptainModel_JointTree, (MObjSub***)&dCaptainModel_gap_0x0000, (AObjEvent32***)dCaptainModel_gap_0x4090, 0x00 },
+		{ (DObjDesc*)&dCaptainModel_JointTree_0x7900, (MObjSub***)&dCaptainModel_gap_0x40B0_sub_0x7E0, (AObjEvent32***)dCaptainModel_gap_0x7DB0, 0x00 },
 	},
 };
 
@@ -204,16 +223,16 @@ int *dCaptainMain_stock_luts[6] = {
 
 /* @ 0x03A0, 12 bytes: FTAttributes.sprites target (was dCaptainMain_pre+0x3A0) */
 FTSprites dCaptainMain_sprites = {
-	(Sprite*)((u8*)dCaptainModel_gap_0xC5D0_sub_0xA8 + 0x30), /* stock_sprite */
+	(Sprite*)dCaptainModel_Stock, /* stock_sprite */
 	(int**)dCaptainMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dCaptainModel_gap_0xC5D0_sub_0xA8 + 0x1D0), /* emblem */
+	(Sprite*)dCaptainModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x03AC, 208 bytes: FTAttributes.sub_0x3AC target (was dCaptainMain_pre+0x3AC) */
 FTSkeleton dCaptainMain_skeleton_dls[26] = {
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x22C0 }, 0 },
-	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2390 }, 0 },
+	{ { (Gfx*)&dCaptainModel_DL_0xA160 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x28C0 }, 0 },
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x27B0 }, 0 },
@@ -230,12 +249,12 @@ FTSkeleton dCaptainMain_skeleton_dls[26] = {
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2D50 }, 0 },
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2E60 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2F40 }, 0 },
+	{ { (Gfx*)&dCaptainModel_DL_0xAD10 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2D50 }, 0 },
 	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2E60 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dCaptainModel_gap_0x7DD0_sub_0x2F40 }, 0 },
+	{ { (Gfx*)&dCaptainModel_DL_0xAD10 }, 0 },
 	{ { NULL }, 0 },
 };
 
@@ -363,8 +382,8 @@ FTAttributes dCaptainMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dCaptainMain_hiddenparts, /* hiddenparts */
 	&dCaptainMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dCaptainShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dCaptainShieldPose_data0_end, (void *)&dCaptainShieldPose_shield_anim_joint_1, (void *)&dCaptainShieldPose_shield_anim_joint_2, (void *)&dCaptainShieldPose_shield_anim_joint_3, (void *)&dCaptainShieldPose_shield_anim_joint_4, (void *)&dCaptainShieldPose_shield_anim_joint_5, (void *)&dCaptainShieldPose_shield_anim_joint_6, (void *)&dCaptainShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	176.271f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */
@@ -375,7 +394,7 @@ FTAttributes dCaptainMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dCaptainMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dCaptainMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dCaptainMain_textureparts_container, /* textureparts_container */
 	29, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dCaptainMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

@@ -8,6 +8,53 @@
 
 /* Vtx: JointVerts @ 0x0 (0 vertices — elided) */
 
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern Vtx dNSamusModel_Vtx_0x01F0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0260_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0440_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x05E0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x07E0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0820_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0970_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0AF0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0CD0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0ED0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0F10_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x0FD0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x11D0_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x1330_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x1510_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x1570_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x1730_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x1890_Vtx[];
+extern Vtx dNSamusModel_Vtx_0x1A70_Vtx[];
+extern Vtx dNSamusModel_gap_0x0000[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x1078[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x1258[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x1278[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x1288[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x1428[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x1608[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x17E8[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x208[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x3E8[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x408[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x418[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x5B8[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x798[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x8[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0x978[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0xB78[];
+extern Vtx dNSamusModel_gap_0x2FE8_sub_0xE78[];
 /* Placeholder wrapper: the description slot collapsed to
  * zero vertices because an extras block starts at the
  * same offset. No C declaration is emitted so IDO CFE
@@ -223,10 +270,7 @@ DObjDesc dNSamusModel_JointTree[] = {
 };
 
 /* Raw data from file offset 0x2FE8 to 0x4BD0 (7144 bytes) */
-/* gap sub-block @ 0x2FE8 (was gap+0x0, 8 bytes) */
-u8 dNSamusModel_gap_0x2FE8[8] = {
-	#include <NSamusModel/gap_0x2FE8.data.inc.c>
-};
+PAD(8);
 
 /* Vtx: gap_0x2FE8_sub_0x8 @ 0x2FF0 (32 vertices) */
 Vtx dNSamusModel_gap_0x2FE8_sub_0x8[32] = {

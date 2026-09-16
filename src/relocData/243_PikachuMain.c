@@ -2,7 +2,29 @@
 /* File size: 1904 bytes (0x770) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dPikachuModel_FTEmblem[];
+extern AObjEvent32 **dPikachuModel_JointTree_0x5490_post[];
+extern AObjEvent32 **dPikachuModel_JointTree_post[];
+extern u32 dPikachuModel_Stock[];
+extern u8 dPikachuShieldPose_data0[];
+extern u8 dPikachuShieldPose_data0_end[];
+extern u8 dPikachuShieldPose_shield_anim_joint_1[];
+extern u8 dPikachuShieldPose_shield_anim_joint_2[];
+extern u8 dPikachuShieldPose_shield_anim_joint_3[];
+extern u8 dPikachuShieldPose_shield_anim_joint_4[];
+extern u8 dPikachuShieldPose_shield_anim_joint_5[];
+extern u8 dPikachuShieldPose_shield_anim_joint_6[];
+extern u8 dPikachuShieldPose_shield_anim_joint_7[];
+extern u32 dPikachuMainMotion_Idle_0x0010[];
+extern u32 dPikachuSpecial1_ThunderJoltAir_WeaponAttributes[];
 #include <ft/fttypes.h>
+#include <wp/wptypes.h>  // WPAttributes
+#include <gm/gmsound.h>  // nSYAudioFGM*
+#include <gm/gmdef.h>    // nGMHitElement*
 
 extern DObjDesc dPikachuModel_JointTree[];
 extern DObjDesc dPikachuModel_JointTree_0x5490[];
@@ -10,19 +32,19 @@ extern DObjDesc dPikachuModel_ThunderTrailDObjDesc[];
 extern MObjSub dPikachuModel_ThunderTrailMObjSub_MObjSub;
 extern u8 dPikachuModel_gap_0x0000[];
 extern u8 dPikachuModel_gap_0x2B78_sub_0x8B8[];
-extern u8 dPikachuModel_gap_0x59B8_sub_0x1128[];
+extern u8 dPikachuModel_DL_0x6AE0[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x1338[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x1438[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x1548[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x1658[];
-extern u8 dPikachuModel_gap_0x59B8_sub_0x1718[];
+extern u8 dPikachuModel_DL_0x70D0[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x1868[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x1908[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0x998[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0xA38[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0xB94[];
 extern u8 dPikachuModel_gap_0x59B8_sub_0xC38[];
-extern u8 dPikachuModel_gap_0x59B8_sub_0xD88[];
+extern u8 dPikachuModel_DL_0x6740[];
 extern u8 dPikachuModel_gap_0x9950_sub_0x30[];
 extern u8 dPikachuModel_gap_0x9950_sub_0x58[];
 extern u8 dPikachuModel_gap_0x9950_sub_0x8[];
@@ -31,38 +53,74 @@ extern u16 dPikachuModel_palette_0x9930[];
 extern DObjDesc dPikachuSpecial2_UnkDObjDesc[];
 
 /* Pre-attributes data (263 words, 0x041C bytes) */
-/* @ 0x0000, 116 bytes: FTAttributes.file_handles target (was dPikachuMain_pre+0x0) */
-u32 dPikachuMain_file_handles[29] = {
+/* @ 0x0000, 12 bytes: 3 cross-file handle pointers (chain-rewritten). */
+void *dPikachuMain_file_handles[3] = {
 
-	0x00010004, /* extern -> 0x0010 */
-	(u32)&dPikachuSpecial2_UnkDObjDesc, /* extern -> 0x0800 */
-	0x00030000, /* extern -> 0x0000 */
-	(u32)&dPikachuModel_ThunderTrailDObjDesc, /* extern -> 0x95B0 */
-	(u32)&dPikachuModel_ThunderTrailMObjSub_MObjSub, /* extern -> 0x9420 */
-	0x00000000,
-	0x00000000,
-	0x000000E1,
-	0x00000000,
-	0x00000000,
-	0x00640000,
-	0xFF9C0032,
-	0x00641180,
-	0x0C830800,
-	0x0140B9C0,
-	0x14000000,
-	(u32)&dPikachuModel_ThunderTrailDObjDesc, /* extern -> 0x95B0 */
-	(u32)&dPikachuModel_ThunderTrailMObjSub_MObjSub, /* extern -> 0x9420 */
-	0x00000000,
-	0x00000000,
-	0x000000F0,
-	0x00000000,
-	0xFF100000,
-	0x00E10000,
-	0xFF1F004B,
-	0x01901180,
-	0x0C830800,
-	0x0180B984,
-	0x14000000,
+	(void *)&dPikachuMainMotion_Idle_0x0010, /* extern -> 0x0010 */
+	(void *)&dPikachuSpecial2_UnkDObjDesc, /* extern -> 0x0800 */
+	(void *)&dPikachuSpecial1_ThunderJoltAir_WeaponAttributes, /* extern -> 0x0000 */
+};
+
+/* @ 0x000C, 52 bytes: WPAttributes for the Thunder head projectile (the bolt tip).
+ * Referenced from wp/wppikachu/wppikachuthunder.c via llPikachuMainThunderHeadWeaponAttributes (0x0C). */
+WPAttributes dPikachuMain_ThunderHeadWeaponAttributes = {
+	(void *)&dPikachuModel_ThunderTrailDObjDesc,             /* data */
+	(MObjSub ***)&dPikachuModel_ThunderTrailMObjSub_MObjSub, /* p_mobjsubs */
+	NULL,                                                    /* anim_joints */
+	NULL,                                                    /* p_matanim_joints */
+	{ { 0, 225, 0 }, { 0, 0, 0 } },                          /* attack_offsets */
+	100, 0, -100, 50,                                        /* map_coll top/center/bottom/width */
+	100,                   /* size             : 16 */
+	70,                    /* angle            : 10 */
+	50,                    /* knockback_scale  : 10 */
+	12,                    /* damage           :  8 */
+	nGMHitElementElectric, /* element          :  4 */
+	0,                     /* knockback_weight : 10 */
+	1,                     /* shield_damage    :  8 */
+	1,                     /* attack_count     :  2 */
+	0,                     /* can_setoff       :  1 */
+	nSYAudioFGMShockM,     /* sfx              : 10 */
+	1,                     /* priority         :  3 */
+	1,                     /* can_rehit_item   :  1 */
+	1,                     /* can_rehit_fighter:  1 */
+	0,                     /* can_hop          :  1 */
+	0,                     /* can_reflect      :  1 */
+	0,                     /* can_absorb       :  1 */
+	0,                     /* can_shield       :  1 */
+	0,                     /* unused_0x2F_b6   :  1 */
+	0,                     /* unused_0x2F_b7   :  1 */
+	80,                    /* knockback_base   : 10 */
+};
+
+/* @ 0x0040, 52 bytes: WPAttributes for the Thunder trail (the vertical bolt column).
+ * Referenced from wp/wppikachu/wppikachuthunder.c via llPikachuMainThunderTrailWeaponAttributes (0x40). */
+WPAttributes dPikachuMain_ThunderTrailWeaponAttributes = {
+	(void *)&dPikachuModel_ThunderTrailDObjDesc,             /* data */
+	(MObjSub ***)&dPikachuModel_ThunderTrailMObjSub_MObjSub, /* p_mobjsubs */
+	NULL,                                                    /* anim_joints */
+	NULL,                                                    /* p_matanim_joints */
+	{ { 0, 240, 0 }, { 0, -240, 0 } },                       /* attack_offsets */
+	225, 0, -225, 75,                                        /* map_coll top/center/bottom/width */
+	400,                   /* size             : 16 */
+	70,                    /* angle            : 10 */
+	50,                    /* knockback_scale  : 10 */
+	12,                    /* damage           :  8 */
+	nGMHitElementElectric, /* element          :  4 */
+	0,                     /* knockback_weight : 10 */
+	1,                     /* shield_damage    :  8 */
+	2,                     /* attack_count     :  2 */
+	0,                     /* can_setoff       :  1 */
+	nSYAudioFGMShockM,     /* sfx              : 10 */
+	1,                     /* priority         :  3 */
+	1,                     /* can_rehit_item   :  1 */
+	0,                     /* can_rehit_fighter:  1 */
+	0,                     /* can_hop          :  1 */
+	0,                     /* can_reflect      :  1 */
+	0,                     /* can_absorb       :  1 */
+	1,                     /* can_shield       :  1 */
+	0,                     /* unused_0x2F_b6   :  1 */
+	0,                     /* unused_0x2F_b7   :  1 */
+	80,                    /* knockback_base   : 10 */
 };
 
 /* @ 0x0074, 8 bytes: FTAttributes.animlock target (was dPikachuMain_pre+0x74) */
@@ -113,8 +171,8 @@ FTTexturePartContainer dPikachuMain_textureparts_container = {
 /* @ 0x0148, 32 bytes: FTAttributes.commonparts_container target (was dPikachuMain_pre+0x148) */
 FTCommonPartContainer dPikachuMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dPikachuModel_JointTree, (MObjSub***)&dPikachuModel_gap_0x0000, (AObjEvent32***)((u8*)dPikachuModel_JointTree + 0x4D0), 0x00 },
-		{ (DObjDesc*)&dPikachuModel_JointTree_0x5490, (MObjSub***)&dPikachuModel_gap_0x2B78_sub_0x8B8, (AObjEvent32***)((u8*)dPikachuModel_JointTree_0x5490 + 0x4D0), 0x00 },
+		{ (DObjDesc*)&dPikachuModel_JointTree, (MObjSub***)&dPikachuModel_gap_0x0000, (AObjEvent32***)dPikachuModel_JointTree_post, 0x00 },
+		{ (DObjDesc*)&dPikachuModel_JointTree_0x5490, (MObjSub***)&dPikachuModel_gap_0x2B78_sub_0x8B8, (AObjEvent32***)dPikachuModel_JointTree_0x5490_post, 0x00 },
 	},
 };
 
@@ -187,21 +245,21 @@ int *dPikachuMain_stock_luts[5] = {
 
 /* @ 0x032C, 12 bytes: FTAttributes.sprites target (was dPikachuMain_pre+0x32C) */
 FTSprites dPikachuMain_sprites = {
-	(Sprite*)((u8*)dPikachuModel_gap_0x9950_sub_0x80 + 0x30), /* stock_sprite */
+	(Sprite*)dPikachuModel_Stock, /* stock_sprite */
 	(int**)dPikachuMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dPikachuModel_gap_0x9950_sub_0x80 + 0x218), /* emblem */
+	(Sprite*)dPikachuModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x0338, 216 bytes: FTAttributes.sub_0x338 target (was dPikachuMain_pre+0x338) */
 FTSkeleton dPikachuMain_skeleton_dls[27] = {
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0xC38 }, 0 },
-	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0xD88 }, 0 },
+	{ { (Gfx*)&dPikachuModel_DL_0x6740 }, 0 },
 	{ { NULL }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1438 }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1338 }, 0 },
-	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1128 }, 0 },
+	{ { (Gfx*)&dPikachuModel_DL_0x6AE0 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1868 }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1908 }, 0 },
@@ -213,12 +271,12 @@ FTSkeleton dPikachuMain_skeleton_dls[27] = {
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1548 }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1658 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1718 }, 0 },
+	{ { (Gfx*)&dPikachuModel_DL_0x70D0 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1548 }, 0 },
 	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1658 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dPikachuModel_gap_0x59B8_sub_0x1718 }, 0 },
+	{ { (Gfx*)&dPikachuModel_DL_0x70D0 }, 0 },
 	{ { NULL }, 0 },
 	{ { NULL }, 0 },
 };
@@ -327,8 +385,8 @@ FTAttributes dPikachuMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dPikachuMain_hiddenparts, /* hiddenparts */
 	&dPikachuMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dPikachuShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dPikachuShieldPose_data0_end, (void *)&dPikachuShieldPose_shield_anim_joint_1, (void *)&dPikachuShieldPose_shield_anim_joint_2, (void *)&dPikachuShieldPose_shield_anim_joint_3, (void *)&dPikachuShieldPose_shield_anim_joint_4, (void *)&dPikachuShieldPose_shield_anim_joint_5, (void *)&dPikachuShieldPose_shield_anim_joint_6, (void *)&dPikachuShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	79.671f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */

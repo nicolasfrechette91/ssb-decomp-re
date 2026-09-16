@@ -57,11 +57,7 @@ struct db2Shorts
 
 struct db4Shorts
 {
-    union
-    {
-        s16 arr[4];
-        u16 uarr[4];
-    };
+    s16 arr[4];
 };
 
 struct dbBytesContainer
@@ -85,7 +81,11 @@ struct dbUnknown16
 struct dbFunction
 {
     s16 unk_dbfunc_0x0;
+#ifdef DBFUNCTION_VARARGS
+    sb32 (*unk_dbfunc_0x4)(...);
+#else
     sb32 (*unk_dbfunc_0x4)();
+#endif
 };
 
 struct dbBytesCopy
@@ -406,8 +406,8 @@ typedef struct dbBytesCopy2
 
 typedef struct dbUnknownS14 {
     s32 dbUnknownS14_0x0;
-    db4Bytes dbUnknownS14_0x4;
-    db4Bytes dbUnknownS14_0x8;
+    SYColorRGBA color1;
+    SYColorRGBA color2;
     s32 dbUnknownS14_0xC;
     s32 dbUnknownS14_0x10;
 } dbUnknownS14;

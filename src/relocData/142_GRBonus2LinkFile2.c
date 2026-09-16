@@ -9,6 +9,111 @@
 
 /* Raw data from file offset 0x0000 to 0x0938 (2360 bytes) */
 /* Vtx: gap_0x0000 @ 0x0 (4 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dBonus1CommonImages4_Lut_0x01D0_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0458_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0588_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x07B8_palette[];
+extern u8 dBonus1CommonImages4_Tex_0x0008[];
+extern u8 dBonus1CommonImages4_Tex_0x0480[];
+extern u8 dBonus1CommonImages4_Tex_0x05B0[];
+extern u8 dBonus1CommonImages4_Tex_0x07E0[];
+extern u8 dBonus1CommonImages4_Tex_0x09E8[];
+extern u8 dBonus1CommonImages4_Tex_0x0A70[];
+extern u16 dBonus1CommonImages4_Tex_0x0AB8[];
+extern u8 dBonus1CommonImages4_Tex_0x0AC8[];
+extern Gfx dGRBonus2LinkFile2_DL_0x0610[];
+extern Gfx dGRBonus2LinkFile2_DL_0x2E38[];
+extern u16 dBonus1CommonImages4_Lut_0x01D0_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0458_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0588_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x07B8_palette[];
+extern u8 dBonus1CommonImages4_Tex_0x0008[];
+extern u8 dBonus1CommonImages4_Tex_0x0480[];
+extern u8 dBonus1CommonImages4_Tex_0x05B0[];
+extern u8 dBonus1CommonImages4_Tex_0x07E0[];
+extern u8 dBonus1CommonImages4_Tex_0x09E8[];
+extern u8 dBonus1CommonImages4_Tex_0x0A70[];
+extern u16 dBonus1CommonImages4_Tex_0x0AB8[];
+extern u8 dBonus1CommonImages4_Tex_0x0AC8[];
+extern u16 dBonus1CommonImages4_Lut_0x01D0_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0458_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0588_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x07B8_palette[];
+extern u8 dBonus1CommonImages4_Tex_0x0008[];
+extern u8 dBonus1CommonImages4_Tex_0x0480[];
+extern u8 dBonus1CommonImages4_Tex_0x05B0[];
+extern u8 dBonus1CommonImages4_Tex_0x07E0[];
+extern u8 dBonus1CommonImages4_Tex_0x09E8[];
+extern u8 dBonus1CommonImages4_Tex_0x0A70[];
+extern u16 dBonus1CommonImages4_Tex_0x0AB8[];
+extern u8 dBonus1CommonImages4_Tex_0x0AC8[];
+extern u16 dBonus1CommonImages4_Lut_0x01D0_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0458_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0588_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x07B8_palette[];
+extern u8 dBonus1CommonImages4_Tex_0x0008[];
+extern u8 dBonus1CommonImages4_Tex_0x0480[];
+extern u8 dBonus1CommonImages4_Tex_0x05B0[];
+extern u8 dBonus1CommonImages4_Tex_0x07E0[];
+extern u8 dBonus1CommonImages4_Tex_0x09E8[];
+extern u8 dBonus1CommonImages4_Tex_0x0A70[];
+extern u16 dBonus1CommonImages4_Tex_0x0AB8[];
+extern u8 dBonus1CommonImages4_Tex_0x0AC8[];
+extern u16 dBonus1CommonImages4_Lut_0x01D0_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0458_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x0588_palette[];
+extern u16 dBonus1CommonImages4_Lut_0x07B8_palette[];
+extern u8 dBonus1CommonImages4_Tex_0x0008[];
+extern u8 dBonus1CommonImages4_Tex_0x0480[];
+extern u8 dBonus1CommonImages4_Tex_0x05B0[];
+extern u8 dBonus1CommonImages4_Tex_0x07E0[];
+extern u8 dBonus1CommonImages4_Tex_0x09E8[];
+extern u8 dBonus1CommonImages4_Tex_0x0A70[];
+extern u16 dBonus1CommonImages4_Tex_0x0AB8[];
+extern u8 dBonus1CommonImages4_Tex_0x0AC8[];
+extern Vtx dGRBonus2LinkFile2_Vtx_0xB80[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000_sub_0x100[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000_sub_0x300[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000_sub_0x40[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000_sub_0x4C0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000_sub_0x80[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0000_sub_0xC0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1000[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1080[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1280[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1460[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1620[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1660[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x16C0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x18C0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x18D0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x19B0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1BB0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1C30[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1E0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1E30[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1EB0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1F30[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1F70[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x1FF0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x2070[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x20B0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x2170[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x21F0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x260[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x460[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x560[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x650[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x850[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x950[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0x9D0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0xAC0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0xCC0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0xE0[];
+extern Vtx dGRBonus2LinkFile2_gap_0x0BA0_sub_0xEC0[];
 Vtx dGRBonus2LinkFile2_gap_0x0000[4] = {
 	#include <GRBonus2LinkFile2/gap_0x0000.vtx.inc.c>
 };
@@ -173,8 +278,11 @@ DObjDLLink dGRBonus2LinkFile2_DLLink_0x0928[] = {
 	{ 4, NULL },
 };
 
-/* DObjDesc: Layer0DObj @ 0x938 (14 entries) */
-DObjDesc dGRBonus2LinkFile2_Layer0DObj[] = {
+/* DObjDesc: Layer0DObj @ 0x938 (13 entries; sentinel at [12]). The
+ * trailing 44 bytes that an earlier extractor mis-typed as a 14th
+ * DObjDesc are a 12-byte zero header followed by an 8-word chain-pointer
+ * block targeted from elsewhere — split out as `Layer0DObj_post` below. */
+DObjDesc dGRBonus2LinkFile2_Layer0DObj[13] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dGRBonus2LinkFile2_DLLink_0x0888, { -6300.0f, 150.0f, 0.0f }, { 0.0f, 0.0f, 3.1415929794311523f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dGRBonus2LinkFile2_DLLink_0x0898, { -3000.0f, -3150.0f, 0.0f }, { 0.0f, 0.0f, 3.1415929794311523f }, { 1.0f, 1.0f, 1.0f } },
@@ -188,13 +296,17 @@ DObjDesc dGRBonus2LinkFile2_Layer0DObj[] = {
 	{ 1, (void*)dGRBonus2LinkFile2_DLLink_0x0918, { -5850.0f, -2100.0f, 0.0f }, { 0.0f, 0.0f, 2.356194019317627f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dGRBonus2LinkFile2_DLLink_0x0928, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 0.0f, 1.0093875392553974e-22f, 1.5869173736100881e-37f }, { 7.174648137343064e-43f, 4.5559015672128453e-41f, 1.0093780729245348e-22f }, { 1.5869173736100881e-37f, 0.0f, 4.5559015672128453e-41f } },
 };
 
-/* Raw data from file offset 0x0BA0 to 0x3C28 (12424 bytes) */
-/* gap sub-block @ 0x0BA0 (was gap+0x0, 224 bytes) */
-u8 dGRBonus2LinkFile2_gap_0x0BA0[224] = {
-	#include <GRBonus2LinkFile2/gap_0x0BA0.data.inc.c>
+/* Trailing 12 bytes of zero pad (compiler-extended sentinel slack). */
+PAD(12);
+
+/* @ 0xB80, 256 bytes — Vtx[16] loaded by `gsSPVertex(this, 16, 0)` from
+ * DL_0x2E38+0x68 (chain arg at +0x6C). The first 32 B previously lived
+ * under the ghost-DObjDesc symbol `Layer0DObj_post`, and the remaining
+ * 224 B under `gap_0x0BA0` — both were the same Vtx pool split. */
+Vtx dGRBonus2LinkFile2_Vtx_0xB80[16] = {
+	#include <GRBonus2LinkFile2/Vtx_0xB80.vtx.inc.c>
 };
 
 /* gap sub-block @ 0x0C80 (was gap+0xE0, 256 bytes) */
@@ -468,35 +580,203 @@ DObjDesc dGRBonus2LinkFile2_Layer1DObj[] = {
 };
 
 /* Raw data from file offset 0x3F6C to 0x465C (1776 bytes) */
-/* gap sub-block @ 0x3F6C (was gap+0x0, 696 bytes) */
-u8 dGRBonus2LinkFile2_gap_0x3F6C[696] = {
-	#include <GRBonus2LinkFile2/gap_0x3F6C.data.inc.c>
+/* MPVertexData[116] @ 0x3F6C — vertex positions (MPGeometryData.vertex_data) */
+MPVertexData dGRBonus2LinkFile2_gap_0x3F6C[116] = {
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -450,   -300 }, 0x0000 },
+	{ {   -450,      0 }, 0x000E },
+	{ {    450,      0 }, 0x0000 },
+	{ {    450,   -300 }, 0x0000 },
+	{ {   -450,      0 }, 0x000E },
+	{ {    450,      0 }, 0x0000 },
+	{ {   -450,      0 }, 0x000E },
+	{ {    450,      0 }, 0x0000 },
+	{ {   -450,      0 }, 0x000E },
+	{ {    450,      0 }, 0x0000 },
+	{ {   -300,      0 }, 0x000E },
+	{ {    300,      0 }, 0x0000 },
+	{ {   -345,      0 }, 0x000E },
+	{ {    345,      0 }, 0x0000 },
+	{ {  -2700,  -2400 }, 0x0000 },
+	{ {  -1500,  -2400 }, 0x0000 },
+	{ {  -1500,  -3000 }, 0x0000 },
+	{ {  -1500,  -4200 }, 0x0000 },
+	{ {  -1200,  -4200 }, 0x0000 },
+	{ {  -1200,  -3000 }, 0x0000 },
+	{ {   -600,  -3000 }, 0x0000 },
+	{ {   -600,  -3300 }, 0x0000 },
+	{ {    600,  -3300 }, 0x0000 },
+	{ {    600,  -3000 }, 0x0000 },
+	{ {   1500,  -3000 }, 0x0000 },
+	{ {   1500,  -2400 }, 0x0000 },
+	{ {   4800,  -2400 }, 0x0000 },
+	{ {   4800,  -1500 }, 0x0000 },
+	{ {   2700,  -1500 }, 0x0000 },
+	{ {   2700,   -600 }, 0x0000 },
+	{ {   3900,      0 }, 0x0000 },
+	{ {   5400,      0 }, 0x0000 },
+	{ {   5400,  -1200 }, 0x0000 },
+	{ {   5700,  -1200 }, 0x0000 },
+	{ {   5700,    900 }, 0x0000 },
+	{ {   3900,    900 }, 0x0000 },
+	{ {   3900,   2400 }, 0x0000 },
+	{ {   3900,   3000 }, 0x0008 },
+	{ {   1500,   3000 }, 0x0000 },
+	{ {   1500,   2400 }, 0x0000 },
+	{ {    600,   2400 }, 0x0000 },
+	{ {    600,   1800 }, 0x0000 },
+	{ {   3300,   1800 }, 0x0000 },
+	{ {   3300,    900 }, 0x0000 },
+	{ {   1800,    900 }, 0x0000 },
+	{ {   1800,  -1200 }, 0x0000 },
+	{ {   1200,  -1200 }, 0x0000 },
+	{ {   1200,  -2100 }, 0x0000 },
+	{ {  -1200,  -2100 }, 0x0000 },
+	{ {  -1200,  -1200 }, 0x0000 },
+	{ {  -1800,  -1200 }, 0x0000 },
+	{ {  -1800,    900 }, 0x0000 },
+	{ {  -3300,    900 }, 0x0000 },
+	{ {  -3300,   1800 }, 0x0000 },
+	{ {   -600,   1800 }, 0x0000 },
+	{ {   -600,   2400 }, 0x0000 },
+	{ {  -1500,   2400 }, 0x0000 },
+	{ {  -1500,   3000 }, 0x0008 },
+	{ {  -3900,   3000 }, 0x0000 },
+	{ {  -3900,   2400 }, 0x0000 },
+	{ {  -3900,    900 }, 0x0000 },
+	{ {  -5700,    900 }, 0x0000 },
+	{ {  -5700,  -1200 }, 0x0000 },
+	{ {  -5400,  -1200 }, 0x0000 },
+	{ {  -5400,      0 }, 0x0000 },
+	{ {  -3900,      0 }, 0x0000 },
+	{ {  -2700,   -600 }, 0x0000 },
+	{ {   4200,  -2400 }, 0x0000 },
+	{ {   4800,  -2400 }, 0x0000 },
+	{ {   4800,  -7500 }, 0x0000 },
+	{ {    300,  -7500 }, 0x0000 },
+	{ {   7500,  -1200 }, 0x4000 },
+	{ {   6300,  -1200 }, 0x0000 },
+	{ {  -6300,  -1200 }, 0x4000 },
+	{ {  -7500,  -1200 }, 0x0000 },
+	{ {  -6900,   1200 }, 0x4000 },
+	{ {  -7500,   1200 }, 0x0000 },
+	{ {  -6900,   3600 }, 0x4000 },
+	{ {  -7500,   3600 }, 0x0000 },
+	{ {   7500,   3600 }, 0x4000 },
+	{ {   6900,   3600 }, 0x0000 },
+	{ {   7500,   1200 }, 0x4000 },
+	{ {   6900,   1200 }, 0x0000 },
+	{ {   5400,   1800 }, 0x0000 },
+	{ {   6600,   3600 }, 0x0000 },
+	{ {   6600,   1800 }, 0x0000 },
+	{ {  -5400,   1800 }, 0x0000 },
+	{ {  -6600,   3600 }, 0x0000 },
+	{ {  -6600,   1800 }, 0x0000 },
+	{ {   -300,  -7500 }, 0x0000 },
+	{ {  -5100,  -2100 }, 0x0000 },
+	{ {  -5100,  -7500 }, 0x0000 },
+	{ {   -600,   1200 }, 0x0000 },
+	{ {      0,   1200 }, 0x0000 },
+	{ {      0,      0 }, 0x0000 },
+	{ {   -600,      0 }, 0x0000 },
+	{ {    600,      0 }, 0x0000 },
+	{ {      0,      0 }, 0x0000 },
+	{ {      0,   1200 }, 0x0000 },
+	{ {    600,   1200 }, 0x0000 },
+	{ {    600,      0 }, 0x4000 },
+	{ {   -600,      0 }, 0x0000 },
+	{ {    600,      0 }, 0x4000 },
+	{ {   -600,      0 }, 0x0000 },
+	{ {    600,      0 }, 0x4000 },
+	{ {   -600,      0 }, 0x0000 },
+	{ {    600,      0 }, 0x4000 },
+	{ {   -600,      0 }, 0x0000 },
 };
 
-/* gap sub-block @ 0x4224 (was gap+0x2B8, 376 bytes) */
-u8 dGRBonus2LinkFile2_gap_0x3F6C_sub_0x2B8[376] = {
-	#include <GRBonus2LinkFile2/gap_0x3F6C_sub_0x2B8.data.inc.c>
+/* MPVertexArray (188 IDs) @ 0x4224 — vertex_id table (MPGeometryData.vertex_id) */
+u16 dGRBonus2LinkFile2_gap_0x3F6C_sub_0x2B8[188] = {
+	  0,   1,   2,   3,   4,   5,   6,   7,   9,  10,  10,  11,   8,   9,  12,  13,
+	 14,  15,  16,  17,  18,  19,  20,  21,  85,  86,  87,  88,  45,  46,  65,  66,
+	 63,  64,  47,  48,  83,  84,  89,  90,  68,  69,  42,  43,  59,  60,  51,  52,
+	 79,  80,  81,  82,  57,  58,  53,  54,  35,  36,  55,  56,  75,  76,  99,  97,
+	 77,  78,  25,  26,  29,  30,  27,  28,  31,  32,  33,  34,  22,  23,  40,  41,
+	 70,  71,  37,  38,  39,  72,  73,  74,  93,  91,  96,  94,  61,  62,  49,  50,
+	 92,  93,  41,  42,  34,  35,  76,  77,  43,  44,  45,  36,  37,  32,  33,  30,
+	 31,  97,  98,  62,  63,  26,  27,  56,  57,  64,  65,  58,  59,  60,  61,  94,
+	 95,  71,  72,  95,  96,  69,  70,  98,  99,  66,  67,  68,  74,  22,  23,  24,
+	 25,  28,  29,  78,  75,  48,  49,  54,  55,  46,  47,  52,  53,  50,  51,  91,
+	 92,  39,  40, 100, 101, 102, 103, 101, 102, 103, 100, 106, 107, 104, 105, 107,
+	104, 105, 106, 108, 109, 110, 111, 112, 113, 114, 115,   0,
 };
 
-/* gap sub-block @ 0x439C (was gap+0x430, 364 bytes) */
-u8 dGRBonus2LinkFile2_gap_0x3F6C_sub_0x430[364] = {
-	#include <GRBonus2LinkFile2/gap_0x3F6C_sub_0x430.data.inc.c>
+/* MPVertexLinks[91] @ 0x439C — line vertex pairs (MPGeometryData.vertex_links) */
+MPVertexLinks dGRBonus2LinkFile2_gap_0x3F6C_sub_0x430[91] = {
+	{   0, 2 }, {   2, 2 }, {   4, 2 }, {   6, 2 }, {   8, 2 }, {  10, 2 },
+	{  12, 2 }, {  14, 2 }, {  16, 2 }, {  18, 2 }, {  20, 2 }, {  22, 2 },
+	{  24, 2 }, {  26, 2 }, {  28, 2 }, {  30, 2 }, {  32, 2 }, {  34, 2 },
+	{  36, 2 }, {  38, 2 }, {  40, 2 }, {  42, 2 }, {  44, 2 }, {  46, 2 },
+	{  48, 2 }, {  50, 2 }, {  52, 2 }, {  54, 2 }, {  56, 2 }, {  58, 2 },
+	{  60, 2 }, {  62, 2 }, {  64, 2 }, {  66, 2 }, {  68, 2 }, {  70, 2 },
+	{  72, 2 }, {  74, 2 }, {  76, 2 }, {  78, 2 }, {  80, 2 }, {  82, 3 },
+	{  85, 3 }, {  88, 2 }, {  90, 2 }, {  92, 2 }, {  94, 2 }, {  96, 2 },
+	{  98, 2 }, { 100, 2 }, { 102, 2 }, { 104, 3 }, { 107, 2 }, { 109, 2 },
+	{ 111, 2 }, { 113, 2 }, { 115, 2 }, { 117, 2 }, { 119, 2 }, { 121, 2 },
+	{ 123, 2 }, { 125, 2 }, { 127, 2 }, { 129, 2 }, { 131, 2 }, { 133, 2 },
+	{ 135, 2 }, { 137, 3 }, { 140, 2 }, { 142, 3 }, { 145, 2 }, { 147, 2 },
+	{ 149, 2 }, { 151, 2 }, { 153, 2 }, { 155, 2 }, { 157, 2 }, { 159, 2 },
+	{ 161, 2 }, { 163, 2 }, { 165, 2 }, { 167, 2 }, { 169, 2 }, { 171, 2 },
+	{ 173, 2 }, { 175, 2 }, { 177, 2 }, { 179, 2 }, { 181, 2 }, { 183, 2 },
+	{ 185, 2 },
 };
 
-/* gap sub-block @ 0x4508 (was gap+0x59C, 308 bytes) */
-u8 dGRBonus2LinkFile2_gap_0x3F6C_sub_0x59C[308] = {
-	#include <GRBonus2LinkFile2/gap_0x3F6C_sub_0x59C.data.inc.c>
+/* MPLineInfo[17] @ 0x4508 — yakumono line groups (MPGeometryData.line_info) */
+MPLineInfo dGRBonus2LinkFile2_gap_0x3F6C_sub_0x59C[17] = {
+	{ 1, { {  0,   1}, {  1,   0}, {  1,   0}, {  1,   0} } },
+	{ 2, { {  1,   1}, {  2,   0}, {  2,   0}, {  2,   0} } },
+	{ 3, { {  2,   1}, {  3,   0}, {  3,   0}, {  3,   0} } },
+	{ 4, { {  3,   1}, {  4,   0}, {  4,   0}, {  4,   0} } },
+	{ 5, { {  4,   1}, {  5,   0}, {  5,   1}, {  6,   1} } },
+	{ 6, { {  7,   1}, {  8,   0}, {  8,   0}, {  8,   0} } },
+	{ 7, { {  8,   1}, {  9,   0}, {  9,   0}, {  9,   0} } },
+	{ 8, { {  9,   1}, { 10,   0}, { 10,   0}, { 10,   0} } },
+	{ 9, { { 10,   1}, { 11,   0}, { 11,   0}, { 11,   0} } },
+	{ 10, { { 11,   1}, { 12,   0}, { 12,   0}, { 12,   0} } },
+	{ 11, { { 12,  19}, { 31,  16}, { 47,  17}, { 64,  15} } },
+	{ 12, { { 79,   1}, { 80,   1}, { 81,   1}, { 82,   1} } },
+	{ 13, { { 83,   1}, { 84,   1}, { 85,   1}, { 86,   1} } },
+	{ 14, { { 87,   1}, { 88,   0}, { 88,   0}, { 88,   0} } },
+	{ 15, { { 88,   1}, { 89,   0}, { 89,   0}, { 89,   0} } },
+	{ 16, { { 89,   1}, { 90,   0}, { 90,   0}, { 90,   0} } },
+	{ 17, { { 90,   1}, { 91,   0}, { 91,   0}, { 91,   0} } },
 };
 
-/* gap sub-block @ 0x463C (was gap+0x6D0, 32 bytes) */
-u8 dGRBonus2LinkFile2_gap_0x3F6C_sub_0x6D0[32] = {
-	#include <GRBonus2LinkFile2/gap_0x3F6C_sub_0x6D0.data.inc.c>
+/* MPMapObjData[5] @ 0x463C — map objects (MPGeometryData.mapobjs); 2 bytes pad to align next decl */
+MPMapObjData dGRBonus2LinkFile2_gap_0x3F6C_sub_0x6D0[5] = {
+	{  33, {   300, -2096 } },
+	{   0, {   300, -2096 } },
+	{   1, {  -300, -2096 } },
+	{   2, {  -900, -2096 } },
+	{   3, {   900, -2096 } },
 };
 
-/* Raw data from file offset 0x465C to 0x4680 (36 bytes) */
-u8 dGRBonus2LinkFile2_MPGeometryData_0x465C[36] = {
-	#include <GRBonus2LinkFile2/MPGeometryData_0x465C.data.inc.c>
+/* MPGeometryData @ 0x465C (28 bytes + 8 bytes pad) */
+MPGeometryData dGRBonus2LinkFile2_MPGeometryData_0x465C = {
+	17,
+	(MPVertexPosContainer*)dGRBonus2LinkFile2_gap_0x3F6C,
+	(MPVertexArray*)dGRBonus2LinkFile2_gap_0x3F6C_sub_0x2B8,
+	dGRBonus2LinkFile2_gap_0x3F6C_sub_0x430,
+	dGRBonus2LinkFile2_gap_0x3F6C_sub_0x59C,
+	5,
+	(MPMapObjContainer*)dGRBonus2LinkFile2_gap_0x3F6C_sub_0x6D0,
 };
+PAD(8);
 
 /* Raw data from file offset 0x4680 to 0x4950 (720 bytes) */
 /* Script-table split: leading chain-pointer table at the
@@ -534,101 +814,101 @@ AObjEvent32 *dGRBonus2LinkFile2_Layer1Anim_AnimJoint[18] = {
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x46C8[] = {
-	aobjEvent32SetVal0Rate(0x020, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAY, 0),
 	    0x4573C000,  /* 3900.0f */
-	aobjEvent32SetValAfterBlock(0x050, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 0),
 	    0x459F6000,  /* 5100.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 300),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 300),
 	    0x45C4E000,  /* 6300.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 300),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 300),
 	    0x4573C000,  /* 3900.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x46C8),
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x46F4[] = {
-	aobjEvent32SetVal0Rate(0x020, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAY, 0),
 	    0x45C4E000,  /* 6300.0f */
-	aobjEvent32SetValAfterBlock(0x050, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 0),
 	    0xC59F6000,  /* -5100.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 300),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 300),
 	    0x4573C000,  /* 3900.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 300),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 300),
 	    0x45C4E000,  /* 6300.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x46F4),
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4720[] = {
-	aobjEvent32SetVal(0x010, 0),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX, 0),
 	    0xC544E000,  /* -3150.0f */
-	aobjEvent32SetValAfter(0x060, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAY | AOBJ_FLAG_TRAZ, 0),
 	    0xC4960000,  /* -1200.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 30),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 30),
 	    0xC544E000,  /* -3150.0f */
-	aobjEvent32SetValBlock(0x010, 270),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 270),
 	    0xC59AB000,  /* -4950.0f */
-	aobjEvent32SetValBlock(0x010, 300),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 300),
 	    0xC544E000,  /* -3150.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4720),
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4754[] = {
-	aobjEvent32SetVal(0x010, 0),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX, 0),
 	    0x45EA6000,  /* 7500.0f */
-	aobjEvent32SetValAfter(0x060, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAY | AOBJ_FLAG_TRAZ, 0),
 	    0xC4960000,  /* -1200.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 180),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 180),
 	    0x45D7A000,  /* 6900.0f */
-	aobjEvent32SetValBlock(0x010, 60),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 60),
 	    0x45D7A000,  /* 6900.0f */
-	aobjEvent32SetValBlock(0x010, 180),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 180),
 	    0x45EA6000,  /* 7500.0f */
-	aobjEvent32SetValBlock(0x010, 180),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 180),
 	    0x45EA6000,  /* 7500.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4754),
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4790[] = {
-	aobjEvent32SetVal(0x010, 0),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX, 0),
 	    0xC5EA6000,  /* -7500.0f */
-	aobjEvent32SetValAfter(0x060, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAY | AOBJ_FLAG_TRAZ, 0),
 	    0xC4960000,  /* -1200.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 180),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 180),
 	    0xC5D7A000,  /* -6900.0f */
-	aobjEvent32SetValBlock(0x010, 60),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 60),
 	    0xC5D7A000,  /* -6900.0f */
-	aobjEvent32SetValBlock(0x010, 180),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 180),
 	    0xC5EA6000,  /* -7500.0f */
-	aobjEvent32SetValBlock(0x010, 180),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 180),
 	    0xC5EA6000,  /* -7500.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4790),
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x47CC[] = {
-	aobjEvent32SetVal(0x030, 0),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0xB6B40000,  /* -5.364418029785156e-06f */
 	    0x454E4000,  /* 3300.0f */
-	aobjEvent32SetValAfter(0x040, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x030, 150),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0x45160000,  /* 2400.0f */
 	    0x459F6000,  /* 5100.0f */
-	aobjEvent32SetValBlock(0x030, 150),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0x00000000,  /* 0.0f */
 	    0x45D7A000,  /* 6900.0f */
-	aobjEvent32SetValBlock(0x030, 150),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0xC5160000,  /* -2400.0f */
 	    0x459F6000,  /* 5100.0f */
-	aobjEvent32SetValBlock(0x030, 150),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0x00000000,  /* 0.0f */
 	    0x454E4000,  /* 3300.0f */
 	aobjEvent32SetAnim(0x000, 0),
@@ -636,27 +916,27 @@ u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x47CC[] = {
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4818[] = {
-	aobjEvent32SetVal0Rate(0x030, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0xC5160000,  /* -2400.0f */
 	    0x459F6000,  /* 5100.0f */
-	aobjEvent32SetValAfterBlock(0x040, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRate(0x010, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAX, 150),
 	    0x00000000,  /* 0.0f */
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x454E4000,  /* 3300.0f */
-	aobjEvent32SetValRate(0x020, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAY, 150),
 	    0x459F6000,  /* 5100.0f */
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 150),
 	    0x45160000,  /* 2400.0f */
-	aobjEvent32SetValRate(0x010, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAX, 150),
 	    0x00000000,  /* 0.0f */
 	    0xC1800000,  /* -16.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x45D7A000,  /* 6900.0f */
-	aobjEvent32SetVal0RateBlock(0x030, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0xC5160000,  /* -2400.0f */
 	    0x459F6000,  /* 5100.0f */
 	aobjEvent32SetAnim(0x000, 0),
@@ -664,27 +944,27 @@ u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x4818[] = {
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x487C[] = {
-	aobjEvent32SetVal0Rate(0x030, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0x45160000,  /* 2400.0f */
 	    0x459F6000,  /* 5100.0f */
-	aobjEvent32SetValAfterBlock(0x040, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRate(0x010, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAX, 150),
 	    0x00000000,  /* 0.0f */
 	    0xC1800000,  /* -16.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x45D7A000,  /* 6900.0f */
-	aobjEvent32SetValRate(0x020, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAY, 150),
 	    0x459F6000,  /* 5100.0f */
 	    0xC1400000,  /* -12.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 150),
 	    0xC5160000,  /* -2400.0f */
-	aobjEvent32SetValRate(0x010, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAX, 150),
 	    0x00000000,  /* 0.0f */
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x454E4000,  /* 3300.0f */
-	aobjEvent32SetVal0RateBlock(0x030, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0x45160000,  /* 2400.0f */
 	    0x459F6000,  /* 5100.0f */
 	aobjEvent32SetAnim(0x000, 0),
@@ -692,33 +972,30 @@ u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x487C[] = {
 };
 
 u32 dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x48E0[] = {
-	aobjEvent32SetVal0Rate(0x030, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0x35F00000,  /* 1.7881393432617188e-06f */
 	    0x45D7A000,  /* 6900.0f */
-	aobjEvent32SetValAfterBlock(0x040, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRateBlock(0x030, 150),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0xC5160000,  /* -2400.0f */
 	    0xB1CCCCCD,  /* -5.9604645663569045e-09f */
 	    0x459F6000,  /* 5100.0f */
 	    0xC1400000,  /* -12.0f */
-	aobjEvent32SetValRate(0x010, 150),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAX, 150),
 	    0x00000000,  /* 0.0f */
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x454E4000,  /* 3300.0f */
-	aobjEvent32SetValRateBlock(0x030, 150),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0x45160000,  /* 2400.0f */
 	    0x31CCCCCD,  /* 5.9604645663569045e-09f */
 	    0x459F6000,  /* 5100.0f */
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetVal0RateBlock(0x030, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 150),
 	    0x35F00000,  /* 1.7881393432617188e-06f */
 	    0x45D7A000,  /* 6900.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dGRBonus2LinkFile2_Layer1Anim_AnimJoint_0x48E0),
 	aobjEvent32End(),
 };
-
-PAD(8);
-

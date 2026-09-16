@@ -142,7 +142,7 @@ struct MPCollData
 	u16 mask_curr;					// Current collision flags
 	u16 mask_unk;			 		// ???
 	u16 mask_stat;			 		// Used exclusively by object to transition between action states? Also, persists unlike the above three
-	
+
 	u16 update_tic;		 			// Updates on each tic
 	s32 ewall_line_id;			 	// Line ID of wall that is right under the ledge the object is standing on?
 	sb32 is_coll_end;			 	// Collision task completion bool? Main collision loop's second condition is that this is FALSE
@@ -172,7 +172,7 @@ struct MPCollData
 
 struct MPItemWeights
 {
-    u8 values[1];
+    u8 values[nITKindCommonEnd + 1]; // one randomizer weight per common item kind (nITKindCommonStart..nITKindCommonEnd)
 };
 
 struct MPGroundDesc

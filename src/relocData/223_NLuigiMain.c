@@ -2,16 +2,28 @@
 /* File size: 1504 bytes (0x5E0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+extern u8 dMarioShieldPose_data0[];
+extern u8 dMarioShieldPose_data0_end[];
+extern u8 dMarioShieldPose_shield_anim_joint_1[];
+extern u8 dMarioShieldPose_shield_anim_joint_2[];
+extern u8 dMarioShieldPose_shield_anim_joint_3[];
+extern u8 dMarioShieldPose_shield_anim_joint_4[];
+extern u8 dMarioShieldPose_shield_anim_joint_5[];
+extern u8 dMarioShieldPose_shield_anim_joint_6[];
+extern u8 dMarioShieldPose_shield_anim_joint_7[];
+extern u32 dMasterHandIcon_FTEmblem[];
 #include <ft/fttypes.h>
 
-extern u32 dLuigiMainMotion_0x0024[];
+extern u32 dLuigiMainMotion_EggLay_0x0024[];
 extern DObjDesc dNMarioModel_JointTree[];
 
 /* Pre-attributes data (166 words, 0x0298 bytes) */
 /* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNLuigiMain_pre+0x0) */
-u32 dNLuigiMain_file_handles[1] = {
+u32 *dNLuigiMain_file_handles[1] = {
 
-	(u32)&dLuigiMainMotion_0x0024, /* extern -> 0x0024 */
+	(u32 *)&dLuigiMainMotion_EggLay_0x0024, /* extern -> 0x0024 */
 };
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNLuigiMain_pre+0x4) */
@@ -44,9 +56,7 @@ FTModelPartDesc *dNLuigiMain_modelparts_container[25] = {
 };
 
 /* @ 0x00B8, 4 bytes: FTAttributes.textureparts_container target (was dNLuigiMain_pre+0xB8) */
-u32 dNLuigiMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dNLuigiMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x00BC, 32 bytes: FTAttributes.commonparts_container target (was dNLuigiMain_pre+0xBC) */
 FTCommonPartContainer dNLuigiMain_commonparts_container = {
@@ -118,7 +128,7 @@ FTThrownStatus dNLuigiMain_thrown_status[54] = {
 FTSprites dNLuigiMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x015C00AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNLuigiMain_attr = {
@@ -218,8 +228,8 @@ FTAttributes dNLuigiMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNLuigiMain_hiddenparts, /* hiddenparts */
 	&dNLuigiMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dMarioShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dMarioShieldPose_data0_end, (void *)&dMarioShieldPose_shield_anim_joint_1, (void *)&dMarioShieldPose_shield_anim_joint_2, (void *)&dMarioShieldPose_shield_anim_joint_3, (void *)&dMarioShieldPose_shield_anim_joint_4, (void *)&dMarioShieldPose_shield_anim_joint_5, (void *)&dMarioShieldPose_shield_anim_joint_6, (void *)&dMarioShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	23, /* joint_rfoot_id */
 	60.891f, /* joint_rfoot_rotate */
 	18, /* joint_lfoot_id */
@@ -230,7 +240,7 @@ FTAttributes dNLuigiMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dNLuigiMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dNLuigiMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dNLuigiMain_textureparts_container, /* textureparts_container */
 	28, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dNLuigiMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

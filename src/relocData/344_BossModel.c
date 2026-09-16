@@ -7,6 +7,41 @@
 #include "relocdata_types.h"
 
 /* Vtx: JointVerts @ 0x0 (32 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Vtx dBossModel_JointVerts_Vtx[];
+extern u8 dBossModel_Tex_0x2880[];
+extern Vtx dBossModel_Vtx_0x0200_Vtx[];
+extern Vtx dBossModel_Vtx_0x0210_Vtx[];
+extern Vtx dBossModel_Vtx_0x0370_Vtx[];
+extern Vtx dBossModel_Vtx_0x0570_Vtx[];
+extern Vtx dBossModel_Vtx_0x0590_Vtx[];
+extern Vtx dBossModel_Vtx_0x05C0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0620_Vtx[];
+extern Vtx dBossModel_Vtx_0x0680_Vtx[];
+extern Vtx dBossModel_Vtx_0x06E0_Vtx[];
+extern Vtx dBossModel_Vtx_0x07B0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0810_Vtx[];
+extern Vtx dBossModel_Vtx_0x0870_Vtx[];
+extern Vtx dBossModel_Vtx_0x0940_Vtx[];
+extern Vtx dBossModel_Vtx_0x09A0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0A00_Vtx[];
+extern Vtx dBossModel_Vtx_0x0AD0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0C20_Vtx[];
+extern Vtx dBossModel_Vtx_0x0C30_Vtx[];
+extern Vtx dBossModel_Vtx_0x0C40_Vtx[];
+extern Vtx dBossModel_Vtx_0x0C50_Vtx[];
+extern Vtx dBossModel_Vtx_0x0C90_Vtx[];
+extern Vtx dBossModel_Vtx_0x0CA0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0CB0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0CC0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0D20_Vtx[];
+extern Vtx dBossModel_Vtx_0x0D80_Vtx[];
+extern Vtx dBossModel_Vtx_0x0E50_Vtx[];
+extern Vtx dBossModel_Vtx_0x0EB0_Vtx[];
+extern Vtx dBossModel_Vtx_0x0F10_Vtx[];
+extern Vtx dBossModel_gap_0x2850_sub_0x230[];
+extern u16 dBossModel_gap_0x2850_sub_0x8[];
 Vtx dBossModel_JointVerts_Vtx[32] = {
 	#include <BossModel/JointVerts.vtx.inc.c>
 };
@@ -348,15 +383,13 @@ DObjDesc dBossModel_JointTree[] = {
 };
 
 /* Raw data from file offset 0x2850 to 0x2D40 (1264 bytes) */
-/* gap sub-block @ 0x2850 (was gap+0x0, 8 bytes) */
-u8 dBossModel_gap_0x2850[8] = {
-	#include <BossModel/gap_0x2850.data.inc.c>
-};
+PAD(8);
 
 /* gap sub-block @ 0x2858 (was gap+0x8, 40 bytes) */
-u16 dBossModel_gap_0x2850_sub_0x8[20] = {
+u16 dBossModel_gap_0x2850_sub_0x8[16] = {
 	#include <BossModel/gap_0x2850_sub_0x8.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x2880 (was gap+0x30, 512 bytes) */
 /* @tex fmt=CI4 dim=32x32 lut=dBossModel_gap_0x2850_sub_0x8 */
@@ -374,7 +407,9 @@ Gfx dBossModel_gap_0x2850_sub_0x350[35] = {
 	#include <BossModel/gap_0x2850_sub_0x350.dl.inc.c>
 };
 
-/* Raw tail after DL @ 0x2CB8 (136 bytes) */
-u8 dBossModel_gap_0x2850_sub_0x350_post[136] = {
-	#include <BossModel/gap_0x2850_sub_0x350_post.data.inc.c>
+/* DObjDesc array @ 0x2CB8 (3 entries: 1 real + sentinel + leading id=0). */
+DObjDesc dBossModel_DObjDescs_0x2CB8[3] = {
+	{ 0,  (void *)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1,  (void *)dBossModel_gap_0x2850_sub_0x350, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 18, (void *)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };

@@ -6,6 +6,11 @@
 
 #include "relocdata_types.h"
 
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Vtx dSamusSpecial3_JointVerts_Vtx[];
+extern u16 dSamusSpecial3_Lut_0x0008_palette[];
+extern u8 dSamusSpecial3_Tex_0x0030[];
 PAD(8);
 
 /* Palette: Lut_0x0008 @ 0x8 (16 colors RGBA5551) */
@@ -16,7 +21,7 @@ u16 dSamusSpecial3_Lut_0x0008_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x0030 to 0x0230 (512 bytes) */
-/* @tex fmt=CI4 dim=64x64 lut=dSamusSpecial3_Lut_0x0008_palette */
+/* @tex fmt=CI4 dim=32x32 lut=dSamusSpecial3_Lut_0x0008_palette */
 u8 dSamusSpecial3_Tex_0x0030[512] = {
 	#include <SamusSpecial3/Tex_0x0030.tex.inc.c>
 };

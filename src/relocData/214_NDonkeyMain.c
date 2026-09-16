@@ -2,16 +2,28 @@
 /* File size: 1504 bytes (0x5E0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+extern u8 dDonkeyShieldPose_data0[];
+extern u8 dDonkeyShieldPose_data0_end[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_1[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_2[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_3[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_4[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_5[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_6[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_7[];
+extern u32 dMasterHandIcon_FTEmblem[];
 #include <ft/fttypes.h>
 
-extern u32 dDonkeyMainMotion_0x0000[];
+extern u32 dDonkeyMainMotion_EggLay_0x0000[];
 extern DObjDesc dNDonkeyModel_JointTree[];
 
 /* Pre-attributes data (166 words, 0x0298 bytes) */
 /* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNDonkeyMain_pre+0x0) */
-u32 dNDonkeyMain_file_handles[1] = {
+u32 *dNDonkeyMain_file_handles[1] = {
 
-	(u32)&dDonkeyMainMotion_0x0000, /* extern -> 0x0000 */
+	(u32 *)&dDonkeyMainMotion_EggLay_0x0000, /* extern -> 0x0000 */
 };
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNDonkeyMain_pre+0x4) */
@@ -113,7 +125,7 @@ FTThrownStatus dNDonkeyMain_thrown_status[54] = {
 FTSprites dNDonkeyMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x015C00AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNDonkeyMain_attr = {
@@ -213,8 +225,8 @@ FTAttributes dNDonkeyMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNDonkeyMain_hiddenparts, /* hiddenparts */
 	&dNDonkeyMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dDonkeyShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dDonkeyShieldPose_data0_end, (void *)&dDonkeyShieldPose_shield_anim_joint_1, (void *)&dDonkeyShieldPose_shield_anim_joint_2, (void *)&dDonkeyShieldPose_shield_anim_joint_3, (void *)&dDonkeyShieldPose_shield_anim_joint_4, (void *)&dDonkeyShieldPose_shield_anim_joint_5, (void *)&dDonkeyShieldPose_shield_anim_joint_6, (void *)&dDonkeyShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	152.787f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */

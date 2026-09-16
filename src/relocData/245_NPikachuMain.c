@@ -2,6 +2,19 @@
 /* File size: 1520 bytes (0x5F0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+extern u8 dPikachuShieldPose_data0[];
+extern u8 dPikachuShieldPose_data0_end[];
+extern u8 dPikachuShieldPose_shield_anim_joint_1[];
+extern u8 dPikachuShieldPose_shield_anim_joint_2[];
+extern u8 dPikachuShieldPose_shield_anim_joint_3[];
+extern u8 dPikachuShieldPose_shield_anim_joint_4[];
+extern u8 dPikachuShieldPose_shield_anim_joint_5[];
+extern u8 dPikachuShieldPose_shield_anim_joint_6[];
+extern u8 dPikachuShieldPose_shield_anim_joint_7[];
+extern u32 dMasterHandIcon_FTEmblem[];
+extern u32 dPikachuMainMotion_Idle_0x0010[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dNPikachuModel_JointTree[];
@@ -9,10 +22,10 @@ extern DObjDesc dPikachuSpecial2_UnkDObjDesc[];
 
 /* Pre-attributes data (170 words, 0x02A8 bytes) */
 /* @ 0x0000, 8 bytes: FTAttributes.file_handles target (was dNPikachuMain_pre+0x0) */
-u32 dNPikachuMain_file_handles[2] = {
+void *dNPikachuMain_file_handles[2] = {
 
-	0x00010004, /* extern -> 0x0010 */
-	(u32)&dPikachuSpecial2_UnkDObjDesc, /* extern -> 0x0800 */
+	&dPikachuMainMotion_Idle_0x0010, /* extern -> 0x0010 */
+	&dPikachuSpecial2_UnkDObjDesc, /* extern -> 0x0800 */
 };
 
 /* @ 0x0008, 8 bytes: FTAttributes.animlock target (was dNPikachuMain_pre+0x8) */
@@ -122,7 +135,7 @@ FTThrownStatus dNPikachuMain_thrown_status[54] = {
 FTSprites dNPikachuMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x016000AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNPikachuMain_attr = {
@@ -222,8 +235,8 @@ FTAttributes dNPikachuMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNPikachuMain_hiddenparts, /* hiddenparts */
 	&dNPikachuMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dPikachuShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dPikachuShieldPose_data0_end, (void *)&dPikachuShieldPose_shield_anim_joint_1, (void *)&dPikachuShieldPose_shield_anim_joint_2, (void *)&dPikachuShieldPose_shield_anim_joint_3, (void *)&dPikachuShieldPose_shield_anim_joint_4, (void *)&dPikachuShieldPose_shield_anim_joint_5, (void *)&dPikachuShieldPose_shield_anim_joint_6, (void *)&dPikachuShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	79.671f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */

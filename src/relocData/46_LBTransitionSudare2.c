@@ -8,6 +8,15 @@
 #include <sys/objdef.h>  // aobjEvent32* macros
 
 /* Vtx: gap_0x0000 @ 0x0 (16 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dLBTransitionSudare2_DL_0x1E08[];
+extern Vtx dLBTransitionSudare2_Vtx_0x0100_Vtx[];
+extern Vtx dLBTransitionSudare2_Vtx_0x1B30_Vtx[];
+extern Vtx dLBTransitionSudare2_Vtx_0x1BE0_Vtx[];
+extern Vtx dLBTransitionSudare2_Vtx_0x1C80_Vtx[];
+extern Vtx dLBTransitionSudare2_Vtx_0x1D20_Vtx[];
+extern Vtx dLBTransitionSudare2_gap_0x0000[];
 Vtx dLBTransitionSudare2_gap_0x0000[16] = {
 	#include <LBTransitionSudare2/gap_0x0000.vtx.inc.c>
 };
@@ -57,7 +66,7 @@ Gfx dLBTransitionSudare2_DL_0x2D78[549] = {
 DObjDesc dLBTransitionSudare2_DObjDesc_0x3EA0[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dLBTransitionSudare2_DL_0x1DC0, { 3400.0f, 2500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dLBTransitionSudare2_DL_0x1DC0 + 0xFB8), { -3400.0f, -2500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dLBTransitionSudare2_DL_0x2D78, { -3400.0f, -2500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
@@ -75,28 +84,25 @@ AObjEvent32 *dLBTransitionSudare2_AnimJoint_0x3F50[3] = {
 };
 
 u32 dLBTransitionSudare2_AnimJoint_0x3F5C[] = {
-	aobjEvent32SetVal(0x030, 0),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfter(0x040, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x030, 64),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 64),
 	    0x45548000,  /* 3400.0f */
 	    0x451C4000,  /* 2500.0f */
 	aobjEvent32End(),
 };
 
 u32 dLBTransitionSudare2_AnimJoint_0x3F80[] = {
-	aobjEvent32SetVal(0x030, 0),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfter(0x040, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x030, 64),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 64),
 	    0xC5548000,  /* -3400.0f */
 	    0xC51C4000,  /* -2500.0f */
 	aobjEvent32End(),
 };
-
-PAD(12);
-

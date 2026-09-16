@@ -9,6 +9,83 @@
 
 /* Raw data from file offset 0x0000 to 0x0A60 (2656 bytes) */
 /* Vtx: gap_0x0000 @ 0x0 (4 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dBonus1CommonImages2_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x00B8_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x0630_palette[];
+extern u8 dBonus1CommonImages2_Tex_0x0030[];
+extern u8 dBonus1CommonImages2_Tex_0x00E0[];
+extern u16 dBonus1CommonImages2_Tex_0x0588[];
+extern u8 dBonus1CommonImages2_Tex_0x05A8[];
+extern u8 dBonus1CommonImages2_Tex_0x0658[];
+extern u16 dBonus1CommonImages2_Tex_0x06E0[];
+extern u8 dBonus1CommonImages2_Tex_0x06F0[];
+extern Gfx dGRBonus1FoxFile2_DL_0x1B70[];
+extern u16 dBonus1CommonImages2_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x00B8_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x0630_palette[];
+extern u8 dBonus1CommonImages2_Tex_0x0030[];
+extern u8 dBonus1CommonImages2_Tex_0x00E0[];
+extern u16 dBonus1CommonImages2_Tex_0x0588[];
+extern u8 dBonus1CommonImages2_Tex_0x05A8[];
+extern u8 dBonus1CommonImages2_Tex_0x0658[];
+extern u16 dBonus1CommonImages2_Tex_0x06E0[];
+extern u8 dBonus1CommonImages2_Tex_0x06F0[];
+extern u16 dBonus1CommonImages2_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x00B8_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x0630_palette[];
+extern u8 dBonus1CommonImages2_Tex_0x0030[];
+extern u8 dBonus1CommonImages2_Tex_0x00E0[];
+extern u16 dBonus1CommonImages2_Tex_0x0588[];
+extern u8 dBonus1CommonImages2_Tex_0x05A8[];
+extern u8 dBonus1CommonImages2_Tex_0x0658[];
+extern u16 dBonus1CommonImages2_Tex_0x06E0[];
+extern u8 dBonus1CommonImages2_Tex_0x06F0[];
+extern u16 dBonus1CommonImages2_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x00B8_palette[];
+extern u16 dBonus1CommonImages2_Lut_0x0630_palette[];
+extern u8 dBonus1CommonImages2_Tex_0x0030[];
+extern u8 dBonus1CommonImages2_Tex_0x00E0[];
+extern u16 dBonus1CommonImages2_Tex_0x0588[];
+extern u8 dBonus1CommonImages2_Tex_0x05A8[];
+extern u8 dBonus1CommonImages2_Tex_0x0658[];
+extern u16 dBonus1CommonImages2_Tex_0x06E0[];
+extern u8 dBonus1CommonImages2_Tex_0x06F0[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x100[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x140[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x180[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x1C0[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x200[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x240[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x280[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x2C0[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x300[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x340[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x380[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x3C0[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x40[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x400[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x440[];
+extern Gfx dGRBonus1FoxFile2_gap_0x0000_sub_0x580[];
+extern Gfx dGRBonus1FoxFile2_gap_0x0000_sub_0x680[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0x80[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0000_sub_0xC0[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x20C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x28C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x38C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x50C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x70C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x78C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x88C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0x8CC[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xA0C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xB4C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xC[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xC0C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xD6C[];
+extern Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xE2C[];
 Vtx dGRBonus1FoxFile2_gap_0x0000[4] = {
 	#include <GRBonus1FoxFile2/gap_0x0000.vtx.inc.c>
 };
@@ -169,10 +246,7 @@ DObjDesc dGRBonus1FoxFile2_Layer0DObj[] = {
 };
 
 /* Raw data from file offset 0x0B94 to 0x2068 (5332 bytes) */
-/* gap sub-block @ 0x0B94 (was gap+0x0, 12 bytes) */
-u8 dGRBonus1FoxFile2_gap_0x0B94[12] = {
-	#include <GRBonus1FoxFile2/gap_0x0B94.data.inc.c>
-};
+PAD(12);
 
 /* gap sub-block @ 0x0BA0 (was gap+0xC, 512 bytes) */
 Vtx dGRBonus1FoxFile2_gap_0x0B94_sub_0xC[32] = {
@@ -272,249 +346,225 @@ Gfx dGRBonus1FoxFile2_DL_0x1FB8[22] = {
 /* DObjDesc: Layer1DObj @ 0x2068 (6 entries) */
 DObjDesc dGRBonus1FoxFile2_Layer1DObj[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1FoxFile2_gap_0x0B94 + 0xF8C), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1FoxFile2_gap_0x0B94 + 0x135C), { 3900.0f, -750.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1FoxFile2_gap_0x0B94 + 0x139C), { -4500.0f, -6150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1FoxFile2_gap_0x0B94 + 0x1424), { -4500.0f, -3150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1FoxFile2_DL_0x1B20, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1FoxFile2_DL_0x1EF0, { 3900.0f, -750.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1FoxFile2_DL_0x1F30, { -4500.0f, -6150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1FoxFile2_DL_0x1FB8, { -4500.0f, -3150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
 /* Raw data from file offset 0x2170 to 0x240C (668 bytes) */
-/* gap sub-block @ 0x2170 (was gap+0x0, 264 bytes) */
-u8 dGRBonus1FoxFile2_gap_0x2170[264] = {
-	#include <GRBonus1FoxFile2/gap_0x2170.data.inc.c>
+/* MPVertexData[44] @ 0x2170 — vertex positions (MPGeometryData.vertex_data) */
+MPVertexData dGRBonus1FoxFile2_gap_0x2170[44] = {
+	{ {   3149,   1350 }, 0x4000 },
+	{ {   2249,   1350 }, 0x0000 },
+	{ {  -2250,  -4650 }, 0x0000 },
+	{ {  -3750,  -4650 }, 0x0000 },
+	{ {  -3750,  -4350 }, 0x0000 },
+	{ {  -2250,  -4350 }, 0x0000 },
+	{ {   2100,  -4650 }, 0x0000 },
+	{ {  -1200,  -4650 }, 0x0000 },
+	{ {  -1200,  -3450 }, 0x0000 },
+	{ {   -900,  -3450 }, 0x0000 },
+	{ {   -900,  -4350 }, 0x0000 },
+	{ {   1800,  -4350 }, 0x0000 },
+	{ {   1800,  -3450 }, 0x0000 },
+	{ {   2699,  -3449 }, 0x0000 },
+	{ {   2699,  -2549 }, 0x0000 },
+	{ {   4199,  -2549 }, 0x0000 },
+	{ {   4200,  -6750 }, 0x0000 },
+	{ {   3900,  -6750 }, 0x0000 },
+	{ {   3900,  -2850 }, 0x0000 },
+	{ {   2999,  -2849 }, 0x0000 },
+	{ {   2999,  -3749 }, 0x0000 },
+	{ {   2100,  -3750 }, 0x0000 },
+	{ {  -2250,   1200 }, 0x0000 },
+	{ {  -2550,   1200 }, 0x0000 },
+	{ {  -2550,   2100 }, 0x0000 },
+	{ {  -3450,   2100 }, 0x0000 },
+	{ {  -3450,   1200 }, 0x0000 },
+	{ {  -3750,   1200 }, 0x0000 },
+	{ {  -3750,   2400 }, 0x0000 },
+	{ {  -2250,   2400 }, 0x0000 },
+	{ {    600,    150 }, 0x4000 },
+	{ {   -600,    150 }, 0x0000 },
+	{ {    150,  -1500 }, 0x0000 },
+	{ {    150,  -1800 }, 0x0000 },
+	{ {   -150,  -1500 }, 0x0000 },
+	{ {   -150,    900 }, 0x0000 },
+	{ {    150,   1200 }, 0x0000 },
+	{ {    150,    900 }, 0x0000 },
+	{ {    150,   -900 }, 0x0000 },
+	{ {    150,  -1200 }, 0x0000 },
+	{ {   -150,   -900 }, 0x0000 },
+	{ {   -150,   5100 }, 0x0000 },
+	{ {    150,   5400 }, 0x0000 },
+	{ {    150,   5100 }, 0x0000 },
 };
 
-/* gap sub-block @ 0x2278 (was gap+0x108, 156 bytes) */
-u8 dGRBonus1FoxFile2_gap_0x2170_sub_0x108[156] = {
-	#include <GRBonus1FoxFile2/gap_0x2170_sub_0x108.data.inc.c>
+/* MPVertexArray (78 IDs) @ 0x2278 — vertex_id table (MPGeometryData.vertex_id) */
+u16 dGRBonus1FoxFile2_gap_0x2170_sub_0x108[78] = {
+	 28,  29,   0,   1,  14,  15,  12,  13,   8,   9,  10,  11,   4,   5,  16,  17,
+	  6,   7,   2,   3,  20,  21,  18,  19,  26,  27,  22,  23,  24,  25,  15,  16,
+	 19,  20,  21,   6,   9,  10,  29,  22,   5,   2,  25,  26,  27,  28,   3,   4,
+	 23,  24,   7,   8,  11,  12,  13,  14,  17,  18,  30,  31,  32,  33,  36,  37,
+	 32,  33,  34,  35,  36,  38,  39,  42,  43,  38,  39,  40,  41,  42,
 };
 
-/* gap sub-block @ 0x2314 (was gap+0x1A4, 144 bytes) */
-u8 dGRBonus1FoxFile2_gap_0x2170_sub_0x1A4[144] = {
-	#include <GRBonus1FoxFile2/gap_0x2170_sub_0x1A4.data.inc.c>
+/* MPVertexLinks[36] @ 0x2314 — line vertex pairs (MPGeometryData.vertex_links) */
+MPVertexLinks dGRBonus1FoxFile2_gap_0x2170_sub_0x1A4[36] = {
+	{   0, 2 }, {   2, 2 }, {   4, 2 }, {   6, 2 }, {   8, 2 }, {  10, 2 },
+	{  12, 2 }, {  14, 2 }, {  16, 2 }, {  18, 2 }, {  20, 2 }, {  22, 2 },
+	{  24, 2 }, {  26, 2 }, {  28, 2 }, {  30, 2 }, {  32, 2 }, {  34, 2 },
+	{  36, 2 }, {  38, 2 }, {  40, 2 }, {  42, 2 }, {  44, 2 }, {  46, 2 },
+	{  48, 2 }, {  50, 2 }, {  52, 2 }, {  54, 2 }, {  56, 2 }, {  58, 2 },
+	{  60, 2 }, {  62, 3 }, {  65, 4 }, {  69, 2 }, {  71, 3 }, {  74, 4 },
 };
 
-/* gap sub-block @ 0x23A4 (was gap+0x234, 72 bytes) */
-u8 dGRBonus1FoxFile2_gap_0x2170_sub_0x234[72] = {
-	#include <GRBonus1FoxFile2/gap_0x2170_sub_0x234.data.inc.c>
+/* MPLineInfo[4] @ 0x23A4 — yakumono line groups (MPGeometryData.line_info) */
+MPLineInfo dGRBonus1FoxFile2_gap_0x2170_sub_0x234[4] = {
+	{ 1, { {  0,   7}, {  7,   8}, { 15,   7}, { 22,   7} } },
+	{ 2, { { 29,   1}, { 30,   0}, { 30,   0}, { 30,   0} } },
+	{ 3, { { 30,   0}, { 30,   0}, { 30,   2}, { 32,   1} } },
+	{ 4, { { 33,   0}, { 33,   0}, { 33,   2}, { 35,   1} } },
 };
 
-/* gap sub-block @ 0x23EC (was gap+0x27C, 32 bytes) */
-u8 dGRBonus1FoxFile2_gap_0x2170_sub_0x27C[32] = {
-	#include <GRBonus1FoxFile2/gap_0x2170_sub_0x27C.data.inc.c>
+/* MPMapObjData[5] @ 0x23EC — map objects (MPGeometryData.mapobjs); 2 bytes pad to align next decl */
+MPMapObjData dGRBonus1FoxFile2_gap_0x2170_sub_0x27C[5] = {
+	{  33, {   149, -4347 } },
+	{   0, {   149, -4347 } },
+	{   1, {  -450, -4347 } },
+	{   2, {  1349, -4347 } },
+	{   3, {   749, -4347 } },
 };
 
-/* Raw data from file offset 0x240C to 0x2430 (36 bytes) */
-u8 dGRBonus1FoxFile2_MPGeometryData_0x240C[36] = {
-	#include <GRBonus1FoxFile2/MPGeometryData_0x240C.data.inc.c>
+/* MPGeometryData @ 0x240C (28 bytes + 8 bytes pad) */
+MPGeometryData dGRBonus1FoxFile2_MPGeometryData_0x240C = {
+	4,
+	(MPVertexPosContainer*)dGRBonus1FoxFile2_gap_0x2170,
+	(MPVertexArray*)dGRBonus1FoxFile2_gap_0x2170_sub_0x108,
+	dGRBonus1FoxFile2_gap_0x2170_sub_0x1A4,
+	dGRBonus1FoxFile2_gap_0x2170_sub_0x234,
+	5,
+	(MPMapObjContainer*)dGRBonus1FoxFile2_gap_0x2170_sub_0x27C,
+};
+PAD(8);
+
+extern u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x14[];
+extern u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x3C[];
+extern u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x5C[];
+extern u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2BC[];
+extern u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2DC[];
+extern u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2FC[];
+
+/* AObjEvent32 *[5] joint table 1. */
+AObjEvent32 *dGRBonus1FoxFile2_Layer1Anim_AnimJoint[5] = {
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x14,
+	(AObjEvent32 *)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x3C,
+	(AObjEvent32 *)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x5C,
 };
 
-/* Raw data from file offset 0x2430 to 0x2760 (816 bytes) */
-u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint[204] = {
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x14),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x3C),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x5C),
-	aobjEvent32SetVal0Rate(0x010, 0),
+u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x14[10] = {
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAX, 0),
 	    0x4573C000,  /* 3900.0f */
-	aobjEvent32SetValAfterBlock(0x040, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 60),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 60),
 	    0x459F6000,  /* 5100.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 60),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 60),
 	    0x4573C000,  /* 3900.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x14),
-	aobjEvent32SetVal0RateBlock(0x020, 0),
+	(u32)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x14,
+};
+
+u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x3C[8] = {
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 0),
 	    0xC5C03000,  /* -6150.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 60),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 60),
 	    0xC59AB000,  /* -4950.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 60),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 60),
 	    0xC5C03000,  /* -6150.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x3C),
-	aobjEvent32SetVal0RateBlock(0x020, 0),
-	    0xC544E000,  /* -3150.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 60),
-	    0xC4F3C000,  /* -1950.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 60),
-	    0xC544E000,  /* -3150.0f */
-	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x5C),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC59AB002,
-	    0xC589FCB6,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x44833FFA,
-	    0xC57D2000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x4509661E,
-	    0xC59F6000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x45579FFD,
-	    0xC5034000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x4315FFCF,
-	    0x45834000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x4315FFCF,
-	    0xC51F6000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC53B8004,
-	    0xC3E10000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x45980CB6,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x4315FFCF,
-	    0xC3960000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC53B8004,
-	    0x44CE4000,
-	    0x41F3E93A,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 18),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x2BC),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x2DC),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x2FC),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32SetVal0RateBlock(0x020, 0),
-	    0xC557A000,  /* -3450.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 60),
-	    0xC5915000,  /* -4650.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 60),
-	    0xC557A000,  /* -3450.0f */
-	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x2BC),
-	aobjEvent32SetVal0RateBlock(0x010, 0),
-	    0x443B7FF1,  /* 749.9990844726562f */
-	aobjEvent32SetVal0RateBlock(0x010, 60),
-	    0x451F5FFC,  /* 2549.9990234375f */
-	aobjEvent32SetVal0RateBlock(0x010, 60),
-	    0x443B7FF1,  /* 749.9990844726562f */
-	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x2DC),
-	aobjEvent32SetVal0Rate(0x010, 0),
-	    0x4573C000,  /* 3900.0f */
-	aobjEvent32SetValAfterBlock(0x040, 0),
-	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 60),
-	    0x459F6000,  /* 5100.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 60),
-	    0x4573C000,  /* 3900.0f */
-	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1FoxFile2_Layer1Anim_AnimJoint + 0x2FC),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
+	(u32)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x3C,
 };
 
+u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x5C[8] = {
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 0),
+	    0xC544E000,  /* -3150.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 60),
+	    0xC4F3C000,  /* -1950.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 60),
+	    0xC544E000,  /* -3150.0f */
+	aobjEvent32SetAnim(0x000, 0),
+	(u32)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x5C,
+};
+
+PAD(4);
+
+/* DObjDesc[12] — Layer1 scene-object list. */
+DObjDesc dGRBonus1FoxFile2_Layer1Anim_DObjDesc[12] = {
+	{ 0, NULL, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -4950.0009765625f, -4415.5888671875f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 1049.999267578125f, -4050.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 2198.38232421875f, -5100.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 3449.999267578125f, -2100.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 149.99925231933594f, 4200.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 149.99925231933594f, -2550.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -3000.0009765625f, -450.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 4865.5888671875f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 149.99925231933594f, -300.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -3000.0009765625f, 1650.0f, 30.488880157470703f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 18, NULL, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
+};
+
+/* AObjEvent32 *[11] joint table 2. */
+AObjEvent32 *dGRBonus1FoxFile2_Layer1Anim_AnimJoint_ptrs_0x290[11] = {
+	NULL,
+	(AObjEvent32 *)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2BC,
+	NULL,
+	(AObjEvent32 *)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2DC,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2FC,
+	NULL,
+	NULL,
+};
+
+u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2BC[8] = {
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 0),
+	    0xC557A000,  /* -3450.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 60),
+	    0xC5915000,  /* -4650.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 60),
+	    0xC557A000,  /* -3450.0f */
+	aobjEvent32SetAnim(0x000, 0),
+	(u32)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2BC,
+};
+
+u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2DC[8] = {
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 0),
+	    0x443B7FF1,  /* 749.9990844726562f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 60),
+	    0x451F5FFC,  /* 2549.9990234375f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 60),
+	    0x443B7FF1,  /* 749.9990844726562f */
+	aobjEvent32SetAnim(0x000, 0),
+	(u32)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2DC,
+};
+
+u32 dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2FC[10] = {
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAX, 0),
+	    0x4573C000,  /* 3900.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAZ, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 60),
+	    0x459F6000,  /* 5100.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 60),
+	    0x4573C000,  /* 3900.0f */
+	aobjEvent32SetAnim(0x000, 0),
+	(u32)dGRBonus1FoxFile2_Layer1Anim_AnimJoint_data_0x2FC,
+};

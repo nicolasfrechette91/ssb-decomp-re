@@ -8,6 +8,9 @@
 #include <sys/objdef.h>  // aobjEvent32* macros
 
 /* Vtx: Vtx_0x0000_Vtx @ 0x0 (90 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Vtx dLBTransitionPaperAirplane_Vtx_0x0000_Vtx[];
 Vtx dLBTransitionPaperAirplane_Vtx_0x0000_Vtx[90] = {
 	#include <LBTransitionPaperAirplane/Vtx_0x0000.vtx.inc.c>
 };
@@ -36,16 +39,13 @@ AObjEvent32 *dLBTransitionPaperAirplane_AnimJoint_0x101C[2] = {
 };
 
 u32 dLBTransitionPaperAirplane_AnimJoint_0x1024[] = {
-	aobjEvent32SetVal0Rate(0x001, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_ROTX, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x006, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_ROTY | AOBJ_FLAG_ROTZ, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRateBlock(0x001, 64),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_ROTX, 64),
 	    0xBFCB4BC3,  /* -1.5882495641708374f */
 	    0xBD9F06F2,  /* -0.07764996588230133f */
 	aobjEvent32End(),
 };
-
-PAD(8);
-

@@ -6,9 +6,84 @@
 
 #include "relocdata_types.h"
 #include <sys/objdef.h>  // aobjEvent32* macros
+#include <sys/interp.h>  // SYInterpDesc
 
 /* Raw data from file offset 0x0000 to 0x0D40 (3392 bytes) */
 /* Vtx: gap_0x0000 @ 0x0 (4 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dBonus1CommonImages3_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages3_Lut_0x0298_palette[];
+extern u8 dBonus1CommonImages3_Tex_0x0030[];
+extern u8 dBonus1CommonImages3_Tex_0x0078[];
+extern u8 dBonus1CommonImages3_Tex_0x0100[];
+extern u8 dBonus1CommonImages3_Tex_0x0188[];
+extern u16 dBonus1CommonImages3_Tex_0x02C0[];
+extern u8 dBonus1CommonImages3_Tex_0x02D0[];
+extern Gfx dGRBonus2YoshiFile2_DL_0x1DD0[];
+extern u16 dBonus1CommonImages3_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages3_Lut_0x0298_palette[];
+extern u8 dBonus1CommonImages3_Tex_0x0030[];
+extern u8 dBonus1CommonImages3_Tex_0x0078[];
+extern u8 dBonus1CommonImages3_Tex_0x0100[];
+extern u8 dBonus1CommonImages3_Tex_0x0188[];
+extern u16 dBonus1CommonImages3_Tex_0x02C0[];
+extern u8 dBonus1CommonImages3_Tex_0x02D0[];
+extern u16 dBonus1CommonImages3_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages3_Lut_0x0298_palette[];
+extern u8 dBonus1CommonImages3_Tex_0x0030[];
+extern u8 dBonus1CommonImages3_Tex_0x0078[];
+extern u8 dBonus1CommonImages3_Tex_0x0100[];
+extern u8 dBonus1CommonImages3_Tex_0x0188[];
+extern u16 dBonus1CommonImages3_Tex_0x02C0[];
+extern u8 dBonus1CommonImages3_Tex_0x02D0[];
+extern u16 dBonus1CommonImages3_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages3_Lut_0x0298_palette[];
+extern u8 dBonus1CommonImages3_Tex_0x0030[];
+extern u8 dBonus1CommonImages3_Tex_0x0078[];
+extern u8 dBonus1CommonImages3_Tex_0x0100[];
+extern u8 dBonus1CommonImages3_Tex_0x0188[];
+extern u16 dBonus1CommonImages3_Tex_0x02C0[];
+extern u8 dBonus1CommonImages3_Tex_0x02D0[];
+extern u16 dBonus1CommonImages3_Lut_0x0008_palette[];
+extern u16 dBonus1CommonImages3_Lut_0x0298_palette[];
+extern u8 dBonus1CommonImages3_Tex_0x0030[];
+extern u8 dBonus1CommonImages3_Tex_0x0078[];
+extern u8 dBonus1CommonImages3_Tex_0x0188[];
+extern u8 dBonus1CommonImages3_Tex_0x02D0[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x100[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x140[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x180[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x1C0[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x200[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x240[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x280[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x2C0[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x300[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x340[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x380[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x3C0[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x40[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x400[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x440[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x480[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x4C0[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x500[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0x80[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0000_sub_0xC0[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x104[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x244[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x384[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x4[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x484[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x664[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x7C4[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x9A4[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0xA24[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0xB64[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0xC64[];
+extern Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0xD64[];
 Vtx dGRBonus2YoshiFile2_gap_0x0000[4] = {
 	#include <GRBonus2YoshiFile2/gap_0x0000.vtx.inc.c>
 };
@@ -204,10 +279,7 @@ DObjDesc dGRBonus2YoshiFile2_Layer0DObj[] = {
 };
 
 /* Raw data from file offset 0x0ECC to 0x2510 (5700 bytes) */
-/* gap sub-block @ 0x0ECC (was gap+0x0, 4 bytes) */
-u8 dGRBonus2YoshiFile2_gap_0x0ECC[4] = {
-	#include <GRBonus2YoshiFile2/gap_0x0ECC.data.inc.c>
-};
+PAD(4);
 
 /* gap sub-block @ 0x0ED0 (was gap+0x4, 256 bytes) */
 Vtx dGRBonus2YoshiFile2_gap_0x0ECC_sub_0x4[16] = {
@@ -411,645 +483,582 @@ DObjDesc dGRBonus2YoshiFile2_Layer1DObj[] = {
 };
 
 /* Raw data from file offset 0x28D8 to 0x2E68 (1424 bytes) */
-/* gap sub-block @ 0x28D8 (was gap+0x0, 492 bytes) */
-u8 dGRBonus2YoshiFile2_gap_0x28D8[492] = {
-	#include <GRBonus2YoshiFile2/gap_0x28D8.data.inc.c>
+/* MPVertexData[82] @ 0x28D8 — vertex positions (MPGeometryData.vertex_data) */
+MPVertexData dGRBonus2YoshiFile2_gap_0x28D8[82] = {
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -750,      0 }, 0x000E },
+	{ {    750,      0 }, 0x0000 },
+	{ {   -450,      0 }, 0x000E },
+	{ {    450,      0 }, 0x0000 },
+	{ {   -593,      0 }, 0x000E },
+	{ {    593,      0 }, 0x0000 },
+	{ {   -450,      0 }, 0x000E },
+	{ {    450,      0 }, 0x0000 },
+	{ {   -345,      0 }, 0x000E },
+	{ {    345,      0 }, 0x0000 },
+	{ {   -345,      0 }, 0x000E },
+	{ {    345,      0 }, 0x0000 },
+	{ {  -3900,  -4800 }, 0x0000 },
+	{ {  -3900,   2100 }, 0x0000 },
+	{ {  -1500,   4200 }, 0x0000 },
+	{ {  -1500,   1800 }, 0x0000 },
+	{ {    300,   1800 }, 0x0000 },
+	{ {    300,   -600 }, 0x0000 },
+	{ {   4500,   -600 }, 0x0000 },
+	{ {   4500,  -4800 }, 0x0000 },
+	{ {   7500, -10800 }, 0x0000 },
+	{ {   7500,  -4200 }, 0x0000 },
+	{ {   6600,  -4200 }, 0x0000 },
+	{ {   6600,   7800 }, 0x0000 },
+	{ {  -3900,  -3900 }, 0x0000 },
+	{ {  -6600,  -3900 }, 0x0000 },
+	{ {  -7500,  -4200 }, 0x0000 },
+	{ {  -7500,   6600 }, 0x0000 },
+	{ {   4500,   6600 }, 0x0000 },
+	{ {   4500,   3000 }, 0x0000 },
+	{ {   3900,   3000 }, 0x0000 },
+	{ {   3900,   6000 }, 0x0000 },
+	{ {  -6600,   6000 }, 0x0000 },
+	{ {  -6600,  -4200 }, 0x0000 },
+	{ {   3600,  -6897 }, 0x0000 },
+	{ {   4500,  -6897 }, 0x0000 },
+	{ {   4500,  -6597 }, 0x0000 },
+	{ {   3600,  -6597 }, 0x0000 },
+	{ {   -660,   -300 }, 0x0000 },
+	{ {    839,   -300 }, 0x0000 },
+	{ {    839,      0 }, 0x0000 },
+	{ {   -660,      0 }, 0x0000 },
+	{ {   -660,   -300 }, 0x0000 },
+	{ {    839,   -300 }, 0x0000 },
+	{ {    839,      0 }, 0x0000 },
+	{ {   -660,      0 }, 0x0000 },
+	{ {   -660,   -300 }, 0x0000 },
+	{ {    839,   -300 }, 0x0000 },
+	{ {    839,      0 }, 0x0000 },
+	{ {   -660,      0 }, 0x0000 },
+	{ {  -2100,   1200 }, 0x0000 },
+	{ {  -5700,   1200 }, 0x0000 },
+	{ {  -5700,    300 }, 0x0000 },
+	{ {  -2100,    300 }, 0x0000 },
+	{ {  -2100,  -2100 }, 0x0000 },
+	{ {  -5700,  -2100 }, 0x0000 },
+	{ {  -5700,  -3000 }, 0x0000 },
+	{ {  -2100,  -3000 }, 0x0000 },
+	{ {   -599,   -313 }, 0x0000 },
+	{ {    600,   -313 }, 0x0000 },
+	{ {    600,    -13 }, 0x0000 },
+	{ {   -599,    -13 }, 0x0000 },
+	{ {   -599,   -313 }, 0x0000 },
+	{ {    600,   -313 }, 0x0000 },
+	{ {    600,    -13 }, 0x0000 },
+	{ {   -599,    -13 }, 0x0000 },
+	{ {   -599,   -313 }, 0x0000 },
+	{ {    600,   -313 }, 0x0000 },
+	{ {    600,    -13 }, 0x0000 },
+	{ {   -599,    -13 }, 0x0000 },
+	{ {   -599,   -313 }, 0x0000 },
+	{ {    600,   -313 }, 0x0000 },
+	{ {    600,    -13 }, 0x0000 },
+	{ {   -599,    -13 }, 0x0000 },
 };
 
-/* gap sub-block @ 0x2AC4 (was gap+0x1EC, 272 bytes) */
-u8 dGRBonus2YoshiFile2_gap_0x28D8_sub_0x1EC[272] = {
-	#include <GRBonus2YoshiFile2/gap_0x28D8_sub_0x1EC.data.inc.c>
+/* MPVertexArray (136 IDs) @ 0x2AC4 — vertex_id table (MPGeometryData.vertex_id) */
+u16 dGRBonus2YoshiFile2_gap_0x28D8_sub_0x1EC[136] = {
+	  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,
+	 16,  17,  18,  19,  35,  36,  23,  24,  25,  26,  32,  33,  44,  45,  42,  43,
+	 27,  20,  29,  30,  41,  34,  37,  38,  39,  40,  26,  27,  36,  37,  43,  44,
+	 24,  25,  22,  23,  40,  41,  34,  35,  20,  21,  22,  45,  42,  38,  39,  30,
+	 31,  28,  29,  48,  49,  46,  47,  47,  48,  49,  46,  52,  53,  50,  51,  51,
+	 52,  53,  50,  56,  57,  54,  55,  55,  56,  57,  54,  58,  59,  60,  61,  59,
+	 60,  62,  63,  64,  65,  63,  64,  68,  69,  66,  67,  67,  68,  69,  66,  72,
+	 73,  70,  71,  71,  72,  73,  70,  76,  77,  74,  75,  75,  76,  77,  74,  80,
+	 81,  78,  79,  79,  80,  81,  78,   0,
 };
 
-/* gap sub-block @ 0x2BD4 (was gap+0x2FC, 268 bytes) */
-u8 dGRBonus2YoshiFile2_gap_0x28D8_sub_0x2FC[268] = {
-	#include <GRBonus2YoshiFile2/gap_0x28D8_sub_0x2FC.data.inc.c>
+/* MPVertexLinks[67] @ 0x2BD4 — line vertex pairs (MPGeometryData.vertex_links) */
+MPVertexLinks dGRBonus2YoshiFile2_gap_0x28D8_sub_0x2FC[67] = {
+	{   0, 2 }, {   2, 2 }, {   4, 2 }, {   6, 2 }, {   8, 2 }, {  10, 2 },
+	{  12, 2 }, {  14, 2 }, {  16, 2 }, {  18, 2 }, {  20, 2 }, {  22, 2 },
+	{  24, 2 }, {  26, 2 }, {  28, 2 }, {  30, 2 }, {  32, 2 }, {  34, 2 },
+	{  36, 2 }, {  38, 2 }, {  40, 2 }, {  42, 2 }, {  44, 2 }, {  46, 2 },
+	{  48, 2 }, {  50, 2 }, {  52, 2 }, {  54, 2 }, {  56, 3 }, {  59, 2 },
+	{  61, 2 }, {  63, 2 }, {  65, 2 }, {  67, 2 }, {  69, 2 }, {  71, 2 },
+	{  73, 2 }, {  75, 2 }, {  77, 2 }, {  79, 2 }, {  81, 2 }, {  83, 2 },
+	{  85, 2 }, {  87, 2 }, {  89, 2 }, {  91, 2 }, {  93, 2 }, {  95, 2 },
+	{  97, 2 }, {  99, 2 }, { 101, 2 }, { 103, 2 }, { 105, 2 }, { 107, 2 },
+	{ 109, 2 }, { 111, 2 }, { 113, 2 }, { 115, 2 }, { 117, 2 }, { 119, 2 },
+	{ 121, 2 }, { 123, 2 }, { 125, 2 }, { 127, 2 }, { 129, 2 }, { 131, 2 },
+	{ 133, 2 },
 };
 
-/* gap sub-block @ 0x2CE0 (was gap+0x408, 360 bytes) */
-u8 dGRBonus2YoshiFile2_gap_0x28D8_sub_0x408[360] = {
-	#include <GRBonus2YoshiFile2/gap_0x28D8_sub_0x408.data.inc.c>
+/* MPLineInfo[20] @ 0x2CE0 — yakumono line groups (MPGeometryData.line_info) */
+MPLineInfo dGRBonus2YoshiFile2_gap_0x28D8_sub_0x408[20] = {
+	{ 1, { {  0,   1}, {  1,   0}, {  1,   0}, {  1,   0} } },
+	{ 2, { {  1,   1}, {  2,   0}, {  2,   0}, {  2,   0} } },
+	{ 3, { {  2,   1}, {  3,   0}, {  3,   0}, {  3,   0} } },
+	{ 4, { {  3,   1}, {  4,   0}, {  4,   0}, {  4,   0} } },
+	{ 5, { {  4,   1}, {  5,   0}, {  5,   0}, {  5,   0} } },
+	{ 6, { {  5,   1}, {  6,   0}, {  6,   0}, {  6,   0} } },
+	{ 7, { {  6,   1}, {  7,   0}, {  7,   0}, {  7,   0} } },
+	{ 8, { {  7,   1}, {  8,   0}, {  8,   0}, {  8,   0} } },
+	{ 9, { {  8,   1}, {  9,   0}, {  9,   0}, {  9,   0} } },
+	{ 10, { {  9,   1}, { 10,   0}, { 10,   0}, { 10,   0} } },
+	{ 11, { { 10,   5}, { 15,   6}, { 21,   6}, { 27,   6} } },
+	{ 12, { { 33,   1}, { 34,   1}, { 35,   1}, { 36,   1} } },
+	{ 13, { { 37,   1}, { 38,   1}, { 39,   1}, { 40,   1} } },
+	{ 14, { { 41,   1}, { 42,   1}, { 43,   1}, { 44,   1} } },
+	{ 15, { { 45,   1}, { 46,   1}, { 47,   0}, { 47,   1} } },
+	{ 16, { { 48,   1}, { 49,   1}, { 50,   0}, { 50,   1} } },
+	{ 17, { { 51,   1}, { 52,   1}, { 53,   1}, { 54,   1} } },
+	{ 18, { { 55,   1}, { 56,   1}, { 57,   1}, { 58,   1} } },
+	{ 19, { { 59,   1}, { 60,   1}, { 61,   1}, { 62,   1} } },
+	{ 20, { { 63,   1}, { 64,   1}, { 65,   1}, { 66,   1} } },
 };
 
-/* gap sub-block @ 0x2E48 (was gap+0x570, 32 bytes) */
-u8 dGRBonus2YoshiFile2_gap_0x28D8_sub_0x570[32] = {
-	#include <GRBonus2YoshiFile2/gap_0x28D8_sub_0x570.data.inc.c>
+/* MPMapObjData[5] @ 0x2E48 — map objects (MPGeometryData.mapobjs); 2 bytes pad to align next decl */
+MPMapObjData dGRBonus2YoshiFile2_gap_0x28D8_sub_0x570[5] = {
+	{  33, { -6150, -3896 } },
+	{   0, { -6150, -3896 } },
+	{   1, {  2250,  -596 } },
+	{   2, {  1800,  -596 } },
+	{   3, {  1200,  -596 } },
 };
 
-/* Raw data from file offset 0x2E68 to 0x2E90 (40 bytes) */
-u8 dGRBonus2YoshiFile2_MPGeometryData_0x2E68[40] = {
-	#include <GRBonus2YoshiFile2/MPGeometryData_0x2E68.data.inc.c>
+/* MPGeometryData @ 0x2E68 (28 bytes + 12 bytes pad) */
+MPGeometryData dGRBonus2YoshiFile2_MPGeometryData_0x2E68 = {
+	20,
+	(MPVertexPosContainer*)dGRBonus2YoshiFile2_gap_0x28D8,
+	(MPVertexArray*)dGRBonus2YoshiFile2_gap_0x28D8_sub_0x1EC,
+	dGRBonus2YoshiFile2_gap_0x28D8_sub_0x2FC,
+	dGRBonus2YoshiFile2_gap_0x28D8_sub_0x408,
+	5,
+	(MPMapObjContainer*)dGRBonus2YoshiFile2_gap_0x28D8_sub_0x570,
 };
+PAD(12);
 
 /* Raw data from file offset 0x2E90 to 0x3810 (2432 bytes) */
-u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint[608] = {
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3D0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x40C),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6F4),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x730),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x74C),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x788),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x7C4),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x800),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x860),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x8AC),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x8E8),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x924),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x960),
-	    0xC4D20000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0x44960000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0x44B40000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0x44F00000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0x44F00000,
-	    0xC5E10000,
-	aobjEvent32End(),
-	    0x44F00000,
-	    0xC5EA6000,
-	aobjEvent32End(),
-	    0x44F00000,
-	    0xC61F6000,
-	aobjEvent32End(),
-	    0x44F00000,
-	    0xC6241000,
-	aobjEvent32End(),
-	    0x44F00000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0x44B40000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0x44960000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0xC4D20000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0xC58E8000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0xC5960000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC6241000,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC61F6000,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC6187224,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC5EA6000,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC5E10000,
-	aobjEvent32End(),
-	    0xC5A50000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0xC5960000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0xC58E8000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0xC4D20000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0x44960000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	    0x44B40000,
-	    0xC5CE4000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3D011905,
-	    0x3D4666ED,
-	    0x3D8CD962,
-	    0x3DD01648,
-	    0x3E3D35EB,
-	    0x3E5ED45F,
-	    0x3E73A754,
-	    0x3E827D67,
-	    0x3E92A088,
-	    0x3EC95033,
-	    0x3F000000,
-	    0x3F081190,
-	    0x3F0C666F,
-	    0x3F119B2C,
-	    0x3F15CBDE,
-	    0x3F1DE258,
-	    0x3F30218E,
-	    0x3F37B518,
-	    0x3F3CE9D5,
-	    0x3F413EB4,
-	    0x3F495044,
-	    0x3F64A81A,
-	    0x3F800000,
-	    0x45100000,
-	    0xC6040000,
-	    0x46470000,
-	    0xC60F0000,
-	    0x45290000,
-	    0x43740001,
-	    0xC3400000,
-	    0xC3600000,
-	    0x43400000,
-	    0x43100000,
-	    0x43908000,
-	    0xC4560000,
-	    0x43F20000,
-	    0x43100000,
-	    0x43240000,
-	    0x44FD2000,
-	    0xC4610000,
-	    0x44B54000,
-	    0xC3960000,
-	    0x43610000,
-	    0x45C80002,
-	    0xC6480001,
-	    0xC4C80000,
-	    0x45FA0000,
-	    0x451C4000,
-	    0x44FD2000,
-	    0xC5E10000,
-	    0x462A5000,
-	    0xC5FA0000,
-	    0x451C4000,
-	    0x43908000,
-	    0xC3960000,
-	    0xC3AF0000,
-	    0x43960000,
-	    0x43610000,
-	    0x43740001,
-	    0xC4440000,
-	    0x44260000,
-	    0xC3100000,
-	    0x43240000,
-	    0x45100000,
-	    0xC4400000,
-	    0x44980000,
-	    0xC3400000,
-	    0x43100000,
-	    0x44F20000,
-	    0xC5F20001,
-	    0x45460000,
-	    0x460F0000,
-	    0x45290000,
-	    0x44F20000,
-	aobjEvent32End(),
-	    0xC6040000,
-	aobjEvent32End(),
-	    0x46100000,
-	    0x45100000,
-	    0xC6040000,
-	    0x46470000,
-	    0xC60F0000,
-	    0x45290000,
-	    0x43740001,
-	    0xC3400000,
-	    0xC3600000,
-	    0x43400000,
-	    0x43100000,
-	    0x43908000,
-	    0xC4560000,
-	    0x43F20000,
-	    0x43100000,
-	    0x43240000,
-	    0x425A832F,
-	    0xC313D258,
-	    0x43A0DDC2,
-	    0xC3960000,
-	    0x43610000,
-	    0x44419500,
-	    0x43851278,
-	    0x44321E7B,
-	    0x42ED065C,
-	    0x431989F7,
-	    0x4576B337,
-	    0xC5ED4FA1,
-	    0xC4FA3E02,
-	    0x45A9F9AE,
-	    0x44FD2000,
-	    0x44B0CDC9,
-	    0xC5994C5B,
-	    0x45E91288,
-	    0xC5ADADC8,
-	    0x44E2F0A2,
-	    0x43908000,
-	    0xC3960000,
-	    0xC3AF0000,
-	    0x43960000,
-	    0x43610000,
-	    0x43740001,
-	    0xC4440000,
-	    0x44260000,
-	    0xC3100000,
-	    0x43240000,
-	    0x45100000,
-	    0xC4400000,
-	    0x44980000,
-	    0xC3400000,
-	    0x43100000,
-	    0x44F20000,
-	    0xC5F20001,
-	    0x45460000,
-	    0x460F0000,
-	    0x45290000,
-	    0x44F20000,
-	aobjEvent32End(),
-	    0xC6040000,
-	aobjEvent32End(),
-	    0x46100000,
-	aobjEvent32JumpCmd(0x000, 24),
-	    (u32)0x00000000,
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x54),
-	    0x443E5EB7,
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x18C),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x1EC),
+/* Split AnimJoint blob: forward decls for sub-scripts. */
+extern Vec3f dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x54[26];
+extern f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x18C[24];
+extern f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x1EC[115];
+extern SYInterpDesc dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8[1];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3D0[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x40C[8];
+extern Vec3f dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x42C[21];
+extern f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x528[19];
+extern f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x574[90];
+extern SYInterpDesc dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC[1];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6F4[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x730[7];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x74C[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x788[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x7C4[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x800[24];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x860[19];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8AC[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8E8[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x924[15];
+extern u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x960[8];
+
+AObjEvent32 *dGRBonus2YoshiFile2_Layer1Anim_AnimJoint[21] = {
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3D0,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x40C,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6F4,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x730,
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x74C,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x788,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x7C4,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x800,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x860,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8AC,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8E8,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x924,
+	(AObjEvent32 *)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x960,
+};
+
+Vec3f dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x54[26] = {
+	{ -1680.0f, -6600.0f, 0.0f },
+	{ 1200.0f, -6600.0f, 0.0f },
+	{ 1440.0f, -6600.0f, 0.0f },
+	{ 1920.0f, -6600.0f, 0.0f },
+	{ 1920.0f, -7200.0f, 0.0f },
+	{ 1920.0f, -7500.0f, 0.0f },
+	{ 1920.0f, -10200.0f, 0.0f },
+	{ 1920.0f, -10500.0f, 0.0f },
+	{ 1920.0f, -11100.0f, 0.0f },
+	{ 1440.0f, -11100.0f, 0.0f },
+	{ 1200.0f, -11100.0f, 0.0f },
+	{ -1680.0f, -11100.0f, 0.0f },
+	{ -4560.0f, -11100.0f, 0.0f },
+	{ -4800.0f, -11100.0f, 0.0f },
+	{ -5280.0f, -11100.0f, 0.0f },
+	{ -5280.0f, -10500.0f, 0.0f },
+	{ -5280.0f, -10200.0f, 0.0f },
+	{ -5280.0f, -9756.53515625f, 0.0f },
+	{ -5280.0f, -7500.0f, 0.0f },
+	{ -5280.0f, -7200.0f, 0.0f },
+	{ -5280.0f, -6600.0f, 0.0f },
+	{ -4800.0f, -6600.0f, 0.0f },
+	{ -4560.0f, -6600.0f, 0.0f },
+	{ -1680.0f, -6600.0f, 0.0f },
+	{ 1200.0f, -6600.0f, 0.0f },
+	{ 1440.0f, -6600.0f, 0.0f },
+};f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x18C[24] = {
+	0.0f, 0.03151800110936165f, 0.04843800142407417f, 0.06877399981021881f,
+	0.10160499811172485f, 0.18477599322795868f, 0.21760700643062592f, 0.23794299364089966f,
+	0.2548629939556122f, 0.2863810062408447f, 0.3931899964809418f, 0.5f,
+	0.5315179824829102f, 0.5484380125999451f, 0.5687739849090576f, 0.5851420164108276f,
+	0.6167349815368652f, 0.6880120038986206f, 0.7176070213317871f, 0.7379429936408997f,
+	0.7548630237579346f, 0.7863810062408447f, 0.8931900262832642f, 1.0f,
+};
+
+f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x1EC[115] = {
+	2304.0f, -8448.0f, 12736.0f, -9152.0f,
+	2704.0f, 244.00001525878906f, -192.0f, -224.0f,
+	192.0f, 144.0f, 289.0f, -856.0f,
+	484.0f, 144.0f, 164.0f, 2025.0f,
+	-900.0f, 1450.0f, -300.0f, 225.0f,
+	6400.0009765625f, -12800.0009765625f, -1600.0f, 8000.0f,
+	2500.0f, 2025.0f, -7200.0f, 10900.0f,
+	-8000.0f, 2500.0f, 289.0f, -300.0f,
+	-350.0f, 300.0f, 225.0f, 244.00001525878906f,
+	-784.0f, 664.0f, -144.0f, 164.0f,
+	2304.0f, -768.0f, 1216.0f, -192.0f,
+	144.0f, 1936.0f, -7744.00048828125f, 3168.0f,
+	9152.0f, 2704.0f, 1936.0f, 0.0f,
+	-8448.0f, 0.0f, 9216.0f, 2304.0f,
+	-8448.0f, 12736.0f, -9152.0f, 2704.0f,
+	244.00001525878906f, -192.0f, -224.0f, 192.0f,
+	144.0f, 289.0f, -856.0f, 484.0f,
+	144.0f, 164.0f, 54.628108978271484f, -147.8216552734375f,
+	321.73248291015625f, -300.0f, 225.0f, 774.328125f,
+	266.144287109375f, 712.4762573242188f, 118.51242065429688f, 153.53892517089844f,
+	3947.200927734375f, -7593.95361328125f, -2001.937744140625f, 5439.2099609375f,
+	2025.0f, 1414.4307861328125f, -4905.54443359375f, 7458.31640625f,
+	-5557.72265625f, 1815.519775390625f, 289.0f, -300.0f,
+	-350.0f, 300.0f, 225.0f, 244.00001525878906f,
+	-784.0f, 664.0f, -144.0f, 164.0f,
+	2304.0f, -768.0f, 1216.0f, -192.0f,
+	144.0f, 1936.0f, -7744.00048828125f, 3168.0f,
+	9152.0f, 2704.0f, 1936.0f, 0.0f,
+	-8448.0f, 0.0f, 9216.0f,
+};
+
+SYInterpDesc dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8[1] = {
+	{
+		nSYInterpKindBezier, 24, 0.0f,
+		dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x54,
+		761.4799194335938f,
+		dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x18C,
+		dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x1EC,
+	},
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3D0[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3B8),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
-	aobjEvent32Cmd12(0x008, 400),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 400),
 	aobjEvent32Wait(99),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
 	aobjEvent32Wait(400),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3D0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3D0,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x40C[8] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3B8),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x008, 500),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 500),
 	    0x3F800000,  /* 1.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x40C),
-	    0x45D5735A,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45F97358,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45FC7359,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x460139AC,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x460139AC,
-	    0x457BFC9D,
-	    0x42E81E80,
-	    0x460139AC,
-	    0x45693C9D,
-	    0x42E81E80,
-	    0x46010FED,
-	    0xC6241000,
-	aobjEvent32End(),
-	    0x46010FED,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0x45F91FD9,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0x45C03000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0x45AD7000,
-	    0xC62D7000,
-	aobjEvent32End(),
-	    0x45AD7000,
-	    0xC6241000,
-	aobjEvent32End(),
-	    0x45AD7000,
-	    0xC61F6000,
-	aobjEvent32End(),
-	    0x45ADC37F,
-	    0x45693C9D,
-	    0x42E81E80,
-	    0x45ADC37F,
-	    0x457BFC9D,
-	    0x42E81E80,
-	    0x45ADC37F,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45C0837F,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45C9E37F,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45D5735A,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45F97358,
-	    0x4590BE4E,
-	    0x42E81E80,
-	    0x45FC7359,
-	    0x4590BE4E,
-	    0x42E81E80,
-	aobjEvent32End(),
-	    0x3C01B21C,
-	    0x3C58665E,
-	    0x3CD21577,
-	    0x3DCAF039,
-	    0x3EBA604E,
-	    0x3EE171C1,
-	    0x3EE8E6D1,
-	    0x3EFC141F,
-	    0x3F032336,
-	    0x3F06759B,
-	    0x3F18E8EA,
-	    0x3F5AF8AD,
-	    0x3F6D6BFD,
-	    0x3F70BE73,
-	    0x3F7410E9,
-	    0x3F769C67,
-	    0x3F7A0C9E,
-	    0x3F800000,
-	    0x43B851C3,
-	    0xC4A8F5A1,
-	    0x44FEB827,
-	    0xC4B70A26,
-	    0x43D851DB,
-	    0x42F6146D,
-	    0xC1F5C20B,
-	    0xC20F5C31,
-	    0x41F5C23D,
-	    0x41B851FB,
-	    0x436B3D6F,
-	    0xC4203D6F,
-	    0x4321709C,
-	    0x43B38521,
-	    0x42DC7ADF,
-	    0x475BC9F0,
-	    0xC5943F70,
-	    0x45E17F28,
-	    0xC3960000,
-	    0x43610000,
-	    0x484E1C3E,
-	    0xC8D05A7C,
-	    0xC5D68F40,
-	    0x485BB0F1,
-	    0x476526E8,
-	    0x473862CB,
-	    0xC840C6E2,
-	    0x489942B6,
-	    0xC85B65F1,
-	    0x476EB5DF,
-	    0x4404CF6D,
-	    0xBFA49B7C,
-	    0x445EE11A,
-	    0xC399EB81,
-	    0x42F6147F,
-	    0x4503DD00,
-	    0xC592CA98,
-	    0xC41A012C,
-	    0x4560C4CE,
-	    0x449A9583,
-	    0x434F7611,
-	    0xC4531FEB,
-	    0x451C00E5,
-	    0xC54D875E,
-	    0x44CBAE25,
-	    0x43A28001,
-	    0xC47A0000,
-	    0x442F0000,
-	aobjEvent32End(),
-	    0x43480000,
-	    0x47529EF9,
-	    0xC5911F70,
-	    0x45DCCF28,
-	    0xC3960000,
-	    0x43610000,
-	    0x4849A604,
-	    0xC8C9A604,
-	    0xC60DFF80,
-	    0x485285FA,
-	    0x475BC9F1,
-	    0x47529EF9,
-	    0xC84E15FE,
-	    0x489A9CFF,
-	    0xC85285FA,
-	    0x475BC9F1,
-	    0x43A28001,
-	    0xC3960000,
-	    0xC3AF0000,
-	    0x43960000,
-	    0x43610000,
-	    0x43A28001,
-	    0xC47A0000,
-	    0x442F0000,
-	aobjEvent32End(),
-	    0x43480000,
-	    0x421818A9,
-	    0xC2F6A79A,
-	    0x438E7EDA,
-	    0xC3960000,
-	    0x43610000,
-	    0x430CD4E3,
-	    0x425D770A,
-	    0x43873C20,
-	    0x4250629E,
-	    0x42F96020,
-	    0x446A9AAE,
-	    0xC4C7A21A,
-	    0xC45AA7F4,
-	    0x44A54EC0,
-	    0x4420DCE7,
-	aobjEvent32JumpCmd(0x000, 19),
-	    (u32)0x00000000,
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x42C),
-	    0x44979635,
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x528),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x574),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x40C,
+};
+
+Vec3f dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x42C[21] = {
+	{ 6830.4189453125f, 4631.7880859375f, 116.0595703125f },
+	{ 7982.41796875f, 4631.7880859375f, 116.0595703125f },
+	{ 8078.41845703125f, 4631.7880859375f, 116.0595703125f },
+	{ 8270.41796875f, 4631.7880859375f, 116.0595703125f },
+	{ 8270.41796875f, 4031.788330078125f, 116.0595703125f },
+	{ 8270.41796875f, 3731.788330078125f, 116.0595703125f },
+	{ 8259.9814453125f, -10500.0f, 0.0f },
+	{ 8259.9814453125f, -11100.0f, 0.0f },
+	{ 7971.98095703125f, -11100.0f, 0.0f },
+	{ 6150.0f, -11100.0f, 0.0f },
+	{ 5550.0f, -11100.0f, 0.0f },
+	{ 5550.0f, -10500.0f, 0.0f },
+	{ 5550.0f, -10200.0f, 0.0f },
+	{ 5560.43701171875f, 3731.788330078125f, 116.0595703125f },
+	{ 5560.43701171875f, 4031.788330078125f, 116.0595703125f },
+	{ 5560.43701171875f, 4631.7880859375f, 116.0595703125f },
+	{ 6160.43701171875f, 4631.7880859375f, 116.0595703125f },
+	{ 6460.43701171875f, 4631.7880859375f, 116.0595703125f },
+	{ 6830.4189453125f, 4631.7880859375f, 116.0595703125f },
+	{ 7982.41796875f, 4631.7880859375f, 116.0595703125f },
+	{ 8078.41845703125f, 4631.7880859375f, 116.0595703125f },
+};
+
+f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x528[19] = {
+	0.0f, 0.007915999740362167f, 0.013207999989390373f, 0.025645000860095024f,
+	0.09909100085496902f, 0.36401599645614624f, 0.4403209984302521f, 0.45488598942756653f,
+	0.492341011762619f, 0.5122560262680054f, 0.5252320170402527f, 0.5973039865493774f,
+	0.8553569912910461f, 0.9274290204048157f, 0.9404060244560242f, 0.9533830285072327f,
+	0.9633240103721619f, 0.9767550230026245f, 1.0f,
+};
+
+f32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x574[90] = {
+	368.6387634277344f, -1351.6759033203125f, 2037.7547607421875f, -1464.317138671875f,
+	432.6394958496094f, 123.0398941040039f, -30.71974754333496f, -35.840030670166016f,
+	30.7198429107666f, 23.040029525756836f, 235.23997497558594f, -640.9598999023438f,
+	161.43988037109375f, 359.0400695800781f, 110.23998260498047f, 56265.9375f,
+	-4743.9296875f, 7215.89453125f, -300.0f, 225.0f,
+	211056.96875f, -426707.875f, -6865.90625f, 224963.765625f,
+	58662.90625f, 47202.79296875f, -197403.53125f, 313877.6875f,
+	-224663.765625f, 61109.87109375f, 531.2410278320312f, -1.2859950065612793f,
+	891.5172119140625f, -307.8398742675781f, 123.04003143310547f, 2109.8125f,
+	-4697.32421875f, -616.018310546875f, 3596.30029296875f, 1236.6722412109375f,
+	207.46119689941406f, -844.4987182617188f, 2496.055908203125f, -3288.46044921875f,
+	1629.4420166015625f, 325.0000305175781f, -1000.0f, 700.0f,
+	0.0f, 200.0f, 53918.97265625f, -4643.9296875f,
+	7065.89453125f, -300.0f, 225.0f, 206488.0625f,
+	-412976.125f, -9087.875f, 215575.90625f, 56265.94140625f,
+	53918.97265625f, -211031.96875f, 316647.96875f, -215575.90625f,
+	56265.94140625f, 325.0000305175781f, -300.0f, -350.0f,
+	300.0f, 225.0f, 325.0000305175781f, -1000.0f,
+	700.0f, 0.0f, 200.0f, 38.02408218383789f,
+	-123.32734680175781f, 284.99102783203125f, -300.0f, 225.0f,
+	140.8315887451172f, 55.366249084472656f, 270.4697265625f, 52.09630584716797f,
+	124.687744140625f, 938.4168701171875f, -1597.065673828125f, -874.624267578125f,
+	1322.4609375f, 643.4515991210938f,
+};
+
+SYInterpDesc dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC[1] = {
+	{
+		nSYInterpKindBezier, 19, 0.0f,
+		dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x42C,
+		1212.6939697265625f,
+		dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x528,
+		dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x574,
+	},
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6F4[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6DC),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
-	aobjEvent32Cmd12(0x008, 400),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 400),
 	aobjEvent32Wait(99),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
 	aobjEvent32Wait(400),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6F4),
-	aobjEvent32SetValAfter(0x070, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6F4,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x730[7] = {
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAXYZ, 0),
 	    0xC5E10000,  /* -7200.0f */
 	    0xC5A8C000,  /* -5400.0f */
 	    0x00000000,  /* 0.0f */
 	aobjEvent32Wait(500),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x730),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x730,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x74C[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3B8),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
-	aobjEvent32Cmd12(0x008, 100),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 100),
 	aobjEvent32Wait(399),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
 	aobjEvent32Wait(100),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x74C),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x74C,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x788[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3B8),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
-	aobjEvent32Cmd12(0x008, 300),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 300),
 	aobjEvent32Wait(199),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
 	aobjEvent32Wait(300),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x788),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x788,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x7C4[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x3B8),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x3B8,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
-	aobjEvent32Cmd12(0x008, 200),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 200),
 	aobjEvent32Wait(299),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3F7F7CEE,  /* 0.9980000257492065f */
 	aobjEvent32Wait(200),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x7C4),
-	aobjEvent32SetValAfterBlock(0x060, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x7C4,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x800[24] = {
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAY | AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 0),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 0),
 	    0x3FDD8793,  /* 1.730699896812439f */
-	aobjEvent32SetVal(0x010, 155),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX, 155),
 	    0x45034000,  /* 2100.0f */
-	aobjEvent32Cmd12(0x010, 30),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAX, 30),
 	aobjEvent32Wait(125),
-	aobjEvent32SetValBlock(0x010, 30),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 30),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 50),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 50),
 	    0x3FDD8793,  /* 1.730699896812439f */
-	aobjEvent32SetValBlock(0x010, 170),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 170),
 	    0x45034000,  /* 2100.0f */
-	aobjEvent32SetValBlock(0x010, 30),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 30),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 65),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 65),
 	    0x3FDD8793,  /* 1.730699896812439f */
-	aobjEvent32SetVal(0x010, 155),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX, 155),
 	    0x45034000,  /* 2100.0f */
 	aobjEvent32Wait(30),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x800),
-	aobjEvent32SetVal(0x010, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x800,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x860[19] = {
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX, 0),
 	    0x44BB8000,  /* 1500.0f */
-	aobjEvent32SetValAfter(0x060, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAY | AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 30),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 30),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x010, 50),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 50),
 	    0x3FDD8434,  /* 1.7305970191955566f */
-	aobjEvent32SetValBlock(0x010, 170),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 170),
 	    0x44BB8000,  /* 1500.0f */
-	aobjEvent32SetValBlock(0x010, 30),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 30),
 	    0x3FDD8434,  /* 1.7305970191955566f */
-	aobjEvent32SetValBlock(0x010, 50),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 50),
 	    0x3FDD8434,  /* 1.7305970191955566f */
-	aobjEvent32SetValBlock(0x010, 170),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 170),
 	    0x44BB8000,  /* 1500.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x860),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x860,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8AC[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6DC),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
-	aobjEvent32Cmd12(0x008, 300),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 300),
 	aobjEvent32Wait(199),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
 	aobjEvent32Wait(300),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x8AC),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8AC,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8E8[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6DC),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
-	aobjEvent32Cmd12(0x008, 200),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 200),
 	aobjEvent32Wait(299),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
 	aobjEvent32Wait(200),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x8E8),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x8E8,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x924[15] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6DC),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
-	aobjEvent32Cmd12(0x008, 100),
+	aobjEvent32Cmd12(AOBJ_FLAG_TRAI, 100),
 	aobjEvent32Wait(399),
-	aobjEvent32SetValBlock(0x008, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal(0x008, 499),
+	aobjEvent32SetVal(AOBJ_FLAG_TRAI, 499),
 	    0x3B03126F,  /* 0.0020000000949949026f */
 	aobjEvent32Wait(100),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x924),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x924,
+};
+
+u32 dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x960[8] = {
 	aobjEvent32SetInterp(0, 0x008),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x6DC),
-	aobjEvent32SetValBlock(0x008, 0),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x6DC,
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValBlock(0x008, 500),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAI, 500),
 	    0x00000000,  /* 0.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint + 0x960),
+	(u32)dGRBonus2YoshiFile2_Layer1Anim_AnimJoint_0x960,
 };
 

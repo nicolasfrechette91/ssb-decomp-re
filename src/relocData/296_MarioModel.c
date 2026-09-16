@@ -5,8 +5,140 @@
  * at extract time. */
 
 #include "relocdata_types.h"
-extern u8 dMarioModel_gap_0x26D0_sub_0x2F4[];
-extern u8 dMarioModel_gap_0x4A60_sub_0x314[];
+#include <sys/objdef.h>  // aobjEvent32* macros
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u8 dMarioModel_Tex_0x65F0[];
+extern u8 dMarioModel_Tex_0x6C78[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioModel_Lut_0x6F70_palette[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u8 *dMarioModel_Joint_0x0040_post_sub_0x38[];
+extern Vtx dMarioModel_Vtx_0x0798_Vtx[];
+extern Vtx dMarioModel_Vtx_0x0928_Vtx[];
+extern Vtx dMarioModel_Vtx_0x09B8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x09F8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1058_Vtx[];
+extern Vtx dMarioModel_Vtx_0x10E8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1148_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1248_Vtx[];
+extern Vtx dMarioModel_Vtx_0x12F8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1358_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1458_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1508_Vtx[];
+extern Vtx dMarioModel_Vtx_0x1568_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3188_Vtx[];
+extern Vtx dMarioModel_Vtx_0x32F8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3368_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3398_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3878_Vtx[];
+extern Vtx dMarioModel_Vtx_0x38E8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3918_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3A18_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3A78_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3AA8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3B48_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3BA8_Vtx[];
+extern Vtx dMarioModel_Vtx_0x3BD8_Vtx[];
+extern MObjSub **dMarioModel_gap_0x0000[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x1040[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x12C0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x13D0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x14E0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x15E0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x16E0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x17F0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x1900[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x19E0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x340[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x570[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x730[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0x960[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0xB20[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0xC10[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0xD70[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0xDD0[];
+extern Vtx dMarioModel_gap_0x4A60_sub_0xFD0[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2F4[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x314[];
+
+/* Forward decls — anim-chain pointer cells in gap_0x26D0 (defined later)
+ * referenced by JointTree_post / gap_0x26D0_sub_0xC. */
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2DC[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2E0[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2E4[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2E8[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2F8[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2FC[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x300[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x304[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x308[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x30C[];
+extern AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x310[];
+
+/* Forward decls — anim-chain pointer cells in gap_0x4A60 (defined later)
+ * referenced by JointTree_0x4590_post / gap_0x4A60_sub_0xC. */
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x2FC[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x300[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x304[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x308[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x318[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x31C[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x320[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x324[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x328[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x32C[];
+extern AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x330[];
+
+/* Forward decls — MObjSub * trailing-index cells of the Joint_0x0040_post
+ * region (each cell is { MObjSub *, u32 zero pad }). Referenced by the
+ * three small dispatch tables (gap_0x0000_sub_0x8, Joint_0x0020_post,
+ * Joint_0x0040_post) that live earlier in the file. */
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x6F0[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x6F8[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x700[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x708[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x718[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x720[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x728[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x730[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x738[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x740[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x748[];
+extern MObjSub *dMarioModel_Joint_0x0040_post_sub_0x750[];
+
+/* Forward decls — palette frames split out of Tex_0x65F0 (defined later
+ * at file offsets 0x6BD8/0x6C00/0x6C28/0x6C50) referenced by gap_0x26D0_sub_0x3A8. */
+extern u8 dMarioModel_Tex_0x67A0[];
+extern u8 dMarioModel_Tex_0x69D0[];
+extern u8 dMarioModel_Tex_0x6D68[];
+extern u8 dMarioModel_Tex_0x6F98[];
+extern u16 dMarioModel_palette_0x6BD8[];
+extern u16 dMarioModel_palette_0x6C00[];
+extern u16 dMarioModel_palette_0x6C28[];
+extern u16 dMarioModel_palette_0x6C50[];
+
+/* Forward decls — palette frames in 0x4A60 region (defined later at file
+ * offsets 0x6528/0x6550/0x6578/0x65A0/0x65C8). */
+extern u16 dMarioModel_gap_0x4A60_sub_0x1AC8[];
+extern u16 dMarioModel_gap_0x4A60_sub_0x1AF0[];
+extern u16 dMarioModel_gap_0x4A60_sub_0x1B18[];
+extern u16 dMarioModel_gap_0x4A60_sub_0x1B40[];
+extern u16 dMarioModel_gap_0x4A60_sub_0x1B68[];
 
 extern MObjSub *dMarioModel_gap_0x26D0_sub_0xA60[];
 extern MObjSub *dMarioModel_gap_0x26D0_sub_0xA68[];
@@ -21,25 +153,567 @@ extern MObjSub *dMarioModel_gap_0x26D0_sub_0xAB0[];
 extern MObjSub *dMarioModel_gap_0x26D0_sub_0xA50[];
 extern MObjSub *dMarioModel_gap_0x26D0_sub_0xA80[];
 
-/* Forward DObjDesc chain-target decls for fixRelocChain.py */
-/* Raw data from file offset 0x0000 to 0x0020 (32 bytes) */
-PAD(8);
-
-/* gap sub-block @ 0x0008 (was gap+0x8, 16 bytes) */
-u8 dMarioModel_gap_0x0000_sub_0x8[16] = {
-	#include <MarioModel/gap_0x0000_sub_0x8.data.inc.c>
+/* MObjSub-dispatch table at file 0x0000 (100 bytes, 25 u32 slots). Sparse
+ * pointer array — 12 of 25 slots hold chain-encoded `MObjSub **` pointers
+ * to the trailing-index cells of the original Joint_0x0040_post region;
+ * the rest are NULL filler. The original splitter sliced this region into
+ * three pieces (`gap_0x0000_sub_0x8`, `Joint_0x0020_post`, the first 0x20
+ * bytes of `Joint_0x0040_post`) plus three internal PADs, but the .reloc
+ * relationships only make sense as one continuous table. */
+MObjSub **dMarioModel_gap_0x0000[25] = {
+	NULL,                                            /* +0x00 (was PAD(8)) */
+	NULL,                                            /* +0x04 */
+	dMarioModel_Joint_0x0040_post_sub_0x6F0,        /* +0x08 → cell 0 */
+	NULL,                                            /* +0x0C */
+	dMarioModel_Joint_0x0040_post_sub_0x6F8,        /* +0x10 → cell 1 */
+	dMarioModel_Joint_0x0040_post_sub_0x700,        /* +0x14 → cell 2 */
+	NULL,                                            /* +0x18 (was PAD(8)) */
+	NULL,                                            /* +0x1C */
+	dMarioModel_Joint_0x0040_post_sub_0x708,        /* +0x20 → cell 3 (3-tuple) */
+	NULL,                                            /* +0x24 */
+	dMarioModel_Joint_0x0040_post_sub_0x718,        /* +0x28 → cell 4 */
+	dMarioModel_Joint_0x0040_post_sub_0x720,        /* +0x2C → cell 5 */
+	NULL,                                            /* +0x30 */
+	NULL,                                            /* +0x34 */
+	NULL,                                            /* +0x38 */
+	dMarioModel_Joint_0x0040_post_sub_0x728,        /* +0x3C → cell 6 */
+	dMarioModel_Joint_0x0040_post_sub_0x730,        /* +0x40 → cell 7 */
+	NULL,                                            /* +0x44 */
+	dMarioModel_Joint_0x0040_post_sub_0x738,        /* +0x48 → cell 8 */
+	NULL,                                            /* +0x4C */
+	dMarioModel_Joint_0x0040_post_sub_0x740,        /* +0x50 → cell 9 */
+	dMarioModel_Joint_0x0040_post_sub_0x748,        /* +0x54 → cell 10 */
+	NULL,                                            /* +0x58 */
+	dMarioModel_Joint_0x0040_post_sub_0x750,        /* +0x5C → cell 11 */
+	NULL,                                            /* +0x60 (was PAD(4)) */
 };
 
-PAD(8);
+/* The original Joint_0x0040_post block (file 0x0040..0x0798, 1880 bytes)
+ * has been split: the dispatch header is now part of gap_0x0000 above;
+ * the palette/sprite tables, 14 MObjSubs, and 12 trailing-index cells
+ * follow. The `_sub_0xNN` suffix is still keyed on the original
+ * Joint_0x0040_post-relative offset. */
 
-/* Raw data from file offset 0x0020 to 0x0040 (32 bytes) */
-u8 dMarioModel_Joint_0x0020_post[32] = {
-	#include <MarioModel/Joint_0x0020_post.data.inc.c>
+/* Palette table A @ 0x0064 — 5 RGBA5551 palette frames in the gap_0x4A60
+ * region. Same shape as the JointTree-side palette tables. */
+u16 *dMarioModel_Joint_0x0040_post_sub_0x24[5] = {
+	dMarioModel_gap_0x4A60_sub_0x1B68,
+	dMarioModel_gap_0x4A60_sub_0x1AC8,
+	dMarioModel_gap_0x4A60_sub_0x1AF0,
+	dMarioModel_gap_0x4A60_sub_0x1B18,
+	dMarioModel_gap_0x4A60_sub_0x1B40,
 };
 
-/* Raw data from file offset 0x0040 to 0x0798 (1880 bytes) */
-u8 dMarioModel_Joint_0x0040_post[1880] = {
-	#include <MarioModel/Joint_0x0040_post.data.inc.c>
+/* Sprite table @ 0x0078 — 4 CI4 texture frames. Mirrors the
+ * gap_0x26D0_sub_0x398 sprite table. */
+u8 *dMarioModel_Joint_0x0040_post_sub_0x38[4] = {
+	dMarioModel_Tex_0x6F98,
+	dMarioModel_Tex_0x6D68,dMarioModel_Tex_0x67A0,dMarioModel_Tex_0x69D0,
+};
+
+/* Palette table B @ 0x0088 — 5 RGBA5551 palette frames (one shared with
+ * table A; the next four are the frames split out of Tex_0x65F0). */
+u16 *dMarioModel_Joint_0x0040_post_sub_0x48[5] = {
+	dMarioModel_gap_0x4A60_sub_0x1B68,
+	dMarioModel_palette_0x6BD8,
+	dMarioModel_palette_0x6C00,
+	dMarioModel_palette_0x6C28,
+	dMarioModel_palette_0x6C50,
+};
+
+PAD(4);  /* original Joint_0x0040_post+0x5C: zero word */
+
+/* === 14 individual MObjSub structs (file 0x00A0..0x0730, 0x690 bytes) ===
+ * Each entry is referenced from one slot of a trailing-index cell below.
+ * Decoded field-by-field from the baserom; the .sprites/.palettes pointer
+ * fields are wired to the inline tables above (sub_0x24/sub_0x38/sub_0x48). */
+
+/* MObjSub @ Joint_0x0040_post+0x60 (entry 0) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x60[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0040, 0x0000, 0x0040, 0x0018,
+		1,
+		0.0f, -0.10000000149011612f,
+		1.0f, 0.8199999928474426f,
+		0.0f, 1.0f,
+		(void**)dMarioModel_Joint_0x0040_post_sub_0x24,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0020,
+		0x0018, 0x0040, 0x0018,
+		0.0f, -0.10000000149011612f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0xD8 (entry 1) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0xD8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0xCE, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x150 (entry 2) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x150[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0xCE, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x1C8 (entry 3) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x1C8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)dMarioModel_Joint_0x0040_post_sub_0x38,
+		0x007D, 0x0010, 0x0040, 0x0020,
+		1,
+		0.24500000476837158f, 0.39160001277923584f,
+		0.5099999904632568f, 0.5f,
+		0.24500000476837158f, 0.5099999904632568f,
+		(void**)0x00000000,
+		0x0001,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0020,
+		0x0020, 0x0040, 0x0020,
+		0.24500000476837158f, 0.39160001277923584f,
+		0.24500000476837158f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x8C, 0x66, 0x66, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x240 (entry 4) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x240[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x006A, 0x000B, 0x0020, 0x0018,
+		0,
+		0.32499998807907104f, 0.09000000357627869f,
+		0.3499999940395355f, 0.30000001192092896f,
+		0.32499998807907104f, 0.3499999940395355f,
+		(void**)dMarioModel_Joint_0x0040_post_sub_0x48,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0010,
+		0x0018, 0x0020, 0x0018,
+		0.32499998807907104f, 0.09000000357627869f,
+		0.32499998807907104f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x2B8 (entry 5) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x2B8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0xCE, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x330 (entry 6) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x330[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0xCE, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x3A8 (entry 7) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x3A8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0xCE, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x420 (entry 8) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x420[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0x50, 0x00, 0x46, 0x00 } },
+		{ { 0x24, 0x00, 0x1C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x498 (entry 9) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x498[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xEF, 0x63, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x510 (entry 10) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x510[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xEF, 0x63, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x588 (entry 11) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x588[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0x50, 0x00, 0x46, 0x00 } },
+		{ { 0x24, 0x00, 0x1C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x600 (entry 12) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x600[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xEF, 0x63, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x0040_post+0x678 (entry 13) */
+MObjSub dMarioModel_Joint_0x0040_post_sub_0x678[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xEF, 0x63, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* === 12 trailing-index cells (file 0x0730..0x0798, 0x68 bytes) ===
+ * Each cell holds a chain pointer to one MObjSub (the 3-tuple cell holds 3)
+ * followed by a 4-byte zero pad, except the 3-tuple ends with a single
+ * zero pad after 3 pointers. */
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x6F0[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x60,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x6F8[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x150,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x700[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0xD8,
+	NULL,
+};
+
+/* 3-tuple cell: 3 chain pointers + 1 zero pad = 16 bytes. */
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x708[4] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x1C8,
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x240,
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x2B8,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x718[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x3A8,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x720[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x330,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x728[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x510,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x730[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x498,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x738[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x420,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x740[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x678,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x748[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x600,
+	NULL,
+};
+
+MObjSub *dMarioModel_Joint_0x0040_post_sub_0x750[2] = {
+	(MObjSub *)dMarioModel_Joint_0x0040_post_sub_0x588,
+	NULL,
 };
 
 /* Vtx: Vtx_0x0798 @ 0x798 (25 vertices) */
@@ -234,207 +908,387 @@ DObjDesc dMarioModel_JointTree[] = {
 	{ 6, (void*)dMarioModel_Joint_0x2188_DisplayList, { 0.0f, 0.0f, -3.999999989900971e-06f }, { 0.030578000470995903f, 0.4896720051765442f, 0.19668099284172058f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, 0.0f, 120.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 3.949136087066847e-33f }, { 0.0f, 3.973210578713672e-33f, 4.045433318970178e-33f }, { 0.0f, 0.0f, 4.0935819349218435e-33f } },
-	{ 0, (void *)dMarioModel_gap_0x26D0_sub_0x2F4, { 4.213954025813984e-33f, 0.0f, 0.0f }, { 0.0f, 4.2380285174608094e-33f, 4.286177133412475e-33f }, { 0.0f, 4.3343257493641404e-33f, 0.0f } },
 };
 
-/* Raw data from file offset 0x26D0 to 0x3188 (2744 bytes) */
-/* gap sub-block @ 0x26D0 (was gap+0x0, 20 bytes) */
-u8 dMarioModel_gap_0x26D0[20] = {
-	#include <MarioModel/gap_0x26D0.data.inc.c>
+PAD(8);
+
+/* AObjEvent32 ** dispatch table @ file 0x2680 (100 bytes, 25 slots). NOT
+ * additional DObjDesc entries — the chain-encoded values would decode as
+ * f32 ~e-33 if read as DObjDesc. 12 chain pointers at offsets 0x08, 0x10,
+ * 0x14, 0x20, 0x28, 0x2C, 0x3C, 0x40, 0x48, 0x50, 0x54, 0x5C; the rest
+ * are NULL filler.
+ *
+ * Each target is a `gap_0x26D0_sub_0x2DC..0x310` cell holding 1, 3, or 4
+ * `AObjEvent32 *` script entries. Likely a per-joint anim/material
+ * dispatch lookup keyed by joint slot in JointTree. Same 25-slot shape
+ * (with PAD(8) prefix) is used by JointTree_0x4590_post and by the
+ * file-header `gap_0x0000` MObjSub** dispatch table. */
+AObjEvent32 **dMarioModel_JointTree_post[25] = {
+	NULL, NULL,
+	dMarioModel_gap_0x26D0_sub_0x2DC,                     /* +0x08 */
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0x2E0,                     /* +0x10 */
+	dMarioModel_gap_0x26D0_sub_0x2E4,                     /* +0x14 */
+	NULL, NULL,
+	dMarioModel_gap_0x26D0_sub_0x2E8,                     /* +0x20 */
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0x2F4,                     /* +0x28 */
+	dMarioModel_gap_0x26D0_sub_0x2F8,                     /* +0x2C */
+	NULL, NULL, NULL,
+	dMarioModel_gap_0x26D0_sub_0x2FC,                     /* +0x3C */
+	dMarioModel_gap_0x26D0_sub_0x300,                     /* +0x40 */
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0x304,                     /* +0x48 */
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0x308,                     /* +0x50 (was gap_0x26D0+0x0) */
+	dMarioModel_gap_0x26D0_sub_0x30C,                     /* +0x54 (was gap_0x26D0+0x4) */
+	NULL,                                                  /* +0x58 (was gap_0x26D0+0x8) */
+	dMarioModel_gap_0x26D0_sub_0x310,                     /* +0x5C (was gap_0x26D0+0xC) */
+	NULL,                                                  /* +0x60 (was gap_0x26D0+0x10) */
 };
 
-/* gap sub-block @ 0x26E4 (was gap+0x14, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x14[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x14.data.inc.c>
+/* gap sub-block @ 0x26E4 (was gap+0x14, 48 bytes) — AObjEvent32 anim script */
+u32 dMarioModel_gap_0x26D0_sub_0x14[12] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2714 (was gap+0x44, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x44[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x44.data.inc.c>
+/* AObjEvent32 anim/matanim scripts pointed to by sub_0x2DC..0x308 cells. */
+u32 dMarioModel_gap_0x26D0_sub_0x44[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2744 (was gap+0x74, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x74[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x74.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x74[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2774 (was gap+0xA4, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0xA4[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0xA4.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0xA4[12] = {
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 50),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32Wait(48),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x27A4 (was gap+0xD4, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0xD4[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0xD4.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0xD4[12] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x27D4 (was gap+0x104, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x104[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x104.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x104[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x7B2108FF,  /* RGBA(123, 33, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2804 (was gap+0x134, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x134[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x134.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x134[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2834 (was gap+0x164, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x164[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x164.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x164[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2864 (was gap+0x194, 68 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x194[68] = {
-	#include <MarioModel/gap_0x26D0_sub_0x194.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x194[17] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0x83271400,  /* RGBA(131, 39, 20, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00530000,  /* RGBA(0, 83, 0, 0) */
+	    0x000F0000,  /* RGBA(0, 15, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00278700,  /* RGBA(0, 39, 135, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x36120800,  /* RGBA(54, 18, 8, 0) */
+	    0x17070000,  /* RGBA(23, 7, 0, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x50004600,  /* RGBA(80, 0, 70, 0) */
+	    0x24001C00,  /* RGBA(36, 0, 28, 0) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x28A8 (was gap+0x1D8, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x1D8[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x1D8.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x1D8[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x28D8 (was gap+0x208, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x208[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x208.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x208[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2908 (was gap+0x238, 68 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x238[68] = {
-	#include <MarioModel/gap_0x26D0_sub_0x238.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x238[17] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0x83271400,  /* RGBA(131, 39, 20, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00530000,  /* RGBA(0, 83, 0, 0) */
+	    0x000F0000,  /* RGBA(0, 15, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00278700,  /* RGBA(0, 39, 135, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x36120800,  /* RGBA(54, 18, 8, 0) */
+	    0x17070000,  /* RGBA(23, 7, 0, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x50004600,  /* RGBA(80, 0, 70, 0) */
+	    0x24001C00,  /* RGBA(36, 0, 28, 0) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x294C (was gap+0x27C, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x27C[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x27C.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x27C[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x297C (was gap+0x2AC, 48 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2AC[48] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2AC.data.inc.c>
+u32 dMarioModel_gap_0x26D0_sub_0x2AC[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x29AC (was gap+0x2DC, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2DC[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2DC.data.inc.c>
+/* AObj32 anim-event chain pointer cells. Each 4-byte cell is a single
+ * pointer to a per-track AObjEvent32 script (sub_0x14, 0x44, ... below). */
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2DC[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x14,
 };
 
-/* gap sub-block @ 0x29B0 (was gap+0x2E0, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2E0[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2E0.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2E0[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x74,
 };
 
-/* gap sub-block @ 0x29B4 (was gap+0x2E4, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2E4[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2E4.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2E4[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x44,
 };
 
-/* gap sub-block @ 0x29B8 (was gap+0x2E8, 12 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2E8[12] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2E8.data.inc.c>
+/* 3-pointer cell: sprites/sub-tracks for a single joint */
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2E8[3] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0xA4,
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0xD4,
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x104,
 };
 
-/* gap sub-block @ 0x29C4 (was gap+0x2F4, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2F4[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2F4.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2F4[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x164,
 };
 
-/* gap sub-block @ 0x29C8 (was gap+0x2F8, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2F8[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2F8.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2F8[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x134,
 };
 
-/* gap sub-block @ 0x29CC (was gap+0x2FC, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x2FC[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x2FC.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x2FC[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x208,
 };
 
-/* gap sub-block @ 0x29D0 (was gap+0x300, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x300[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x300.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x300[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x1D8,
 };
 
-/* gap sub-block @ 0x29D4 (was gap+0x304, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x304[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x304.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x304[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x194,
 };
 
-/* gap sub-block @ 0x29D8 (was gap+0x308, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x308[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x308.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x308[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x2AC,
 };
 
-/* gap sub-block @ 0x29DC (was gap+0x30C, 4 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x30C[4] = {
-	#include <MarioModel/gap_0x26D0_sub_0x30C.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x30C[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x27C,
 };
 
-/* gap sub-block @ 0x29E0 (was gap+0x310, 16 bytes) */
-u8 dMarioModel_gap_0x26D0_sub_0x310[16] = {
-	#include <MarioModel/gap_0x26D0_sub_0x310.data.inc.c>
+/* 16-byte AObjEvent32 *[4] cell: 1 chain pointer at offset 0, 3 NULL slots. */
+AObjEvent32 *dMarioModel_gap_0x26D0_sub_0x310[4] = {
+	(AObjEvent32 *)dMarioModel_gap_0x26D0_sub_0x238,
+	NULL, NULL, NULL,
 };
 
 /* gap sub-block @ 0x29F0 (was gap+0x320, 100 bytes) */
-MObjSub *dMarioModel_gap_0x26D0_sub_0x320[25] = {
+MObjSub **dMarioModel_gap_0x26D0_sub_0x320[25] = {
 	NULL,
 	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA50,
+	dMarioModel_gap_0x26D0_sub_0xA50,
 	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA58,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA60,
-	NULL,
-	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA68,
-	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA78,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA80,
+	dMarioModel_gap_0x26D0_sub_0xA58,
+	dMarioModel_gap_0x26D0_sub_0xA60,
 	NULL,
 	NULL,
+	dMarioModel_gap_0x26D0_sub_0xA68,
 	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA88,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA90,
+	dMarioModel_gap_0x26D0_sub_0xA78,
+	dMarioModel_gap_0x26D0_sub_0xA80,
 	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xA98,
 	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xAA0,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xAA8,
 	NULL,
-	(MObjSub *)dMarioModel_gap_0x26D0_sub_0xAB0,
+	dMarioModel_gap_0x26D0_sub_0xA88,
+	dMarioModel_gap_0x26D0_sub_0xA90,
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0xA98,
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0xAA0,
+	dMarioModel_gap_0x26D0_sub_0xAA8,
+	NULL,
+	dMarioModel_gap_0x26D0_sub_0xAB0,
 	NULL,
 };
 
-/* u32 pointer array @ 0x2A54 (5 entries) */
-u32 dMarioModel_gap_0x26D0_sub_0x384[5] = {
-	0x0A961972,
-	0x0A97194A,
-	0x0A981954,
-	0x0A99195E,
-	0x0A9A1968,
+/* MObjSub.palettes table @ 0x2A54 — referenced by sub_0x3C0+0x2C.
+ * Five RGBA5551 palette frames (animated). */
+u16 *dMarioModel_gap_0x26D0_sub_0x384[5] = {
+	(u16 *)dMarioModel_gap_0x4A60_sub_0x1B68,
+	(u16 *)dMarioModel_gap_0x4A60_sub_0x1AC8,
+	(u16 *)dMarioModel_gap_0x4A60_sub_0x1AF0,
+	(u16 *)dMarioModel_gap_0x4A60_sub_0x1B18,
+	(u16 *)dMarioModel_gap_0x4A60_sub_0x1B40,
 };
 
-/* u32 pointer array @ 0x2A68 (4 entries) */
-u32 dMarioModel_gap_0x26D0_sub_0x398[4] = {
-	0x0A9B1BE6,
-	0x0A9C1B5A,
-	0x0A9D19E8,
-	0x0A9E1A74,
+/* MObjSub.sprites table @ 0x2A68 — referenced by sub_0x528+0x4.
+ * Four CI4 texture-frame pointers; second points at the standalone
+ * Tex_0x6D68 block (split out of the original Tex_0x6C78 region), the
+ * last two are sub-regions of Tex_0x65F0. */
+u8 *dMarioModel_gap_0x26D0_sub_0x398[4] = {
+	(u8 *)dMarioModel_Tex_0x6F98,
+	(u8 *)dMarioModel_Tex_0x6D68,dMarioModel_Tex_0x67A0,dMarioModel_Tex_0x69D0,
 };
 
-/* u32 pointer array @ 0x2A78 (6 entries) */
-u32 dMarioModel_gap_0x26D0_sub_0x3A8[6] = {
-	0x0A9F1972,
-	0x0AA01AF6,
-	0x0AA11B00,
-	0x0AA21B0A,
-	0x0AAF1B14,
-	0x00000000,
+/* MObjSub.palettes table @ 0x2A78 — referenced by sub_0x5A0+0x2C.
+ * Six RGBA5551 palette frames; first is in 0x4A60 region, the next four
+ * are the frames split out of Tex_0x65F0; last is NULL terminator. */
+u16 *dMarioModel_gap_0x26D0_sub_0x3A8[6] = {
+	(u16 *)dMarioModel_gap_0x4A60_sub_0x1B68,
+	dMarioModel_palette_0x6BD8,
+	dMarioModel_palette_0x6C00,
+	dMarioModel_palette_0x6C28,
+	dMarioModel_palette_0x6C50,
+	NULL,
 };
 
 /* MObjSub @ 0x2A90 */
 MObjSub dMarioModel_gap_0x26D0_sub_0x3C0[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x002E, 0x0006, 0x0020, 0x0018,
 		0,
@@ -443,7 +1297,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x3C0[1] = {
 		0.15669000148773193f, 0.686618983745575f,
 		(void**)dMarioModel_gap_0x26D0_sub_0x384,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0020,
 		0x0018, 0x0020, 0x0018,
 		0.15669000148773193f, -0.01940000057220459f,
@@ -464,7 +1318,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x3C0[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x438[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -473,7 +1327,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x438[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -494,7 +1348,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x438[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x4B0[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -503,7 +1357,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x4B0[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -524,7 +1378,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x4B0[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x528[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)dMarioModel_gap_0x26D0_sub_0x398,
 		0x007D, 0x0018, 0x0040, 0x0020,
 		0,
@@ -533,7 +1387,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x528[1] = {
 		0.3725000023841858f, 0.2549999952316284f,
 		(void**)0x00000000,
 		0x0001,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0020,
 		0x0020, 0x0040, 0x0020,
 		0.3725000023841858f, 0.39160001277923584f,
@@ -554,7 +1408,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x528[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x5A0[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x006A, 0x000B, 0x0020, 0x0018,
 		0,
@@ -563,7 +1417,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x5A0[1] = {
 		0.32499998807907104f, 0.3499999940395355f,
 		(void**)dMarioModel_gap_0x26D0_sub_0x3A8,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0010,
 		0x0018, 0x0020, 0x0018,
 		0.32499998807907104f, 0.11400000005960464f,
@@ -584,7 +1438,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x5A0[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x618[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -593,7 +1447,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x618[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -614,7 +1468,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x618[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x690[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -623,7 +1477,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x690[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -644,7 +1498,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x690[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x708[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -653,7 +1507,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x708[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -674,7 +1528,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x708[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x780[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -683,7 +1537,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x780[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -704,7 +1558,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x780[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x7F8[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -713,7 +1567,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x7F8[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -734,7 +1588,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x7F8[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x870[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -743,7 +1597,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x870[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -764,7 +1618,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x870[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x8E8[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -773,7 +1627,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x8E8[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -794,7 +1648,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x8E8[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x960[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -803,7 +1657,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x960[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -824,7 +1678,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x960[1] = {
 MObjSub dMarioModel_gap_0x26D0_sub_0x9D8[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -833,7 +1687,7 @@ MObjSub dMarioModel_gap_0x26D0_sub_0x9D8[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1144,144 +1998,317 @@ DObjDesc dMarioModel_JointTree_0x4590[] = {
 #endif
 	{ 1, (void*)0x00000000, { -9.999999974752427e-07f, 0.0f, 119.99999237060547f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 8.587574288381939e-28f }, { 0.0f, 8.650684123764592e-28f, 8.840011703982607e-28f }, { 0.0f, 0.0f, 8.966230411782941e-28f } },
-	{ 0, (void *)dMarioModel_gap_0x4A60_sub_0x314, { 9.281778625731235e-28f, 0.0f, 0.0f }, { 0.0f, 9.344888461113888e-28f, 9.471107168914222e-28f }, { 0.0f, 9.597325876714556e-28f, 0.0f } },
 };
 
-/* Raw data from file offset 0x4A60 to 0x65F0 (7056 bytes) */
-/* gap sub-block @ 0x4A60 (was gap+0x0, 20 bytes) */
-u8 dMarioModel_gap_0x4A60[20] = {
-	#include <MarioModel/gap_0x4A60.data.inc.c>
+PAD(8);
+
+/* AObjEvent32 ** dispatch table @ file 0x4A10 (100 bytes, 25 slots). Same
+ * shape as JointTree_post — 12 chain pointers at offsets 0x08..0x5C, here
+ * targeting gap_0x4A60_sub_0x2FC..0x330. */
+AObjEvent32 **dMarioModel_JointTree_0x4590_post[25] = {
+	NULL, NULL,
+	dMarioModel_gap_0x4A60_sub_0x2FC,                     /* +0x08 */
+	NULL,
+	dMarioModel_gap_0x4A60_sub_0x300,                     /* +0x10 */
+	dMarioModel_gap_0x4A60_sub_0x304,                     /* +0x14 */
+	NULL, NULL,
+	dMarioModel_gap_0x4A60_sub_0x308,                     /* +0x20 */
+	NULL,
+	dMarioModel_gap_0x4A60_sub_0x314,                     /* +0x28 */
+	dMarioModel_gap_0x4A60_sub_0x318,                     /* +0x2C */
+	NULL, NULL, NULL,
+	dMarioModel_gap_0x4A60_sub_0x31C,                     /* +0x3C */
+	dMarioModel_gap_0x4A60_sub_0x320,                     /* +0x40 */
+	NULL,
+	dMarioModel_gap_0x4A60_sub_0x324,                     /* +0x48 */
+	NULL,
+	dMarioModel_gap_0x4A60_sub_0x328,                     /* +0x50 (was gap_0x4A60+0x0) */
+	dMarioModel_gap_0x4A60_sub_0x32C,                     /* +0x54 (was gap_0x4A60+0x4) */
+	NULL,                                                  /* +0x58 (was gap_0x4A60+0x8) */
+	dMarioModel_gap_0x4A60_sub_0x330,                     /* +0x5C (was gap_0x4A60+0xC) */
+	NULL,                                                  /* +0x60 (was gap_0x4A60+0x10) */
 };
 
-/* gap sub-block @ 0x4A74 (was gap+0x14, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x14[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0x14.data.inc.c>
+/* AObjEvent32 anim/matanim scripts pointed to by sub_0x2FC..0x32C cells. */
+u32 dMarioModel_gap_0x4A60_sub_0x14[12] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4AA4 (was gap+0x44, 56 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x44[56] = {
-	#include <MarioModel/gap_0x4A60_sub_0x44.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x44[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4ADC (was gap+0x7C, 56 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x7C[56] = {
-	#include <MarioModel/gap_0x4A60_sub_0x7C.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x7C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4B14 (was gap+0xB4, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0xB4[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0xB4.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0xB4[12] = {
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 50),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32Wait(48),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4B44 (was gap+0xE4, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0xE4[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0xE4.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0xE4[12] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4B74 (was gap+0x114, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x114[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0x114.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x114[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x7B2108FF,  /* RGBA(123, 33, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4BA4 (was gap+0x144, 56 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x144[56] = {
-	#include <MarioModel/gap_0x4A60_sub_0x144.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x144[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4BDC (was gap+0x17C, 56 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x17C[56] = {
-	#include <MarioModel/gap_0x4A60_sub_0x17C.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x17C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF0000FF,  /* RGBA(255, 0, 0, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFE700FF,  /* RGBA(255, 231, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xF7E78CFF,  /* RGBA(247, 231, 140, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x5242FFFF,  /* RGBA(82, 66, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00CE00FF,  /* RGBA(0, 206, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4C14 (was gap+0x1B4, 68 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1B4[68] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1B4.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x1B4[17] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0x83271400,  /* RGBA(131, 39, 20, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00530000,  /* RGBA(0, 83, 0, 0) */
+	    0x000F0000,  /* RGBA(0, 15, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00278700,  /* RGBA(0, 39, 135, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x36120800,  /* RGBA(54, 18, 8, 0) */
+	    0x17070000,  /* RGBA(23, 7, 0, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x50004600,  /* RGBA(80, 0, 70, 0) */
+	    0x24001C00,  /* RGBA(36, 0, 28, 0) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4C58 (was gap+0x1F8, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1F8[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1F8.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x1F8[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4C88 (was gap+0x228, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x228[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0x228.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x228[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4CB8 (was gap+0x258, 68 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x258[68] = {
-	#include <MarioModel/gap_0x4A60_sub_0x258.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x258[17] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0x83271400,  /* RGBA(131, 39, 20, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00530000,  /* RGBA(0, 83, 0, 0) */
+	    0x000F0000,  /* RGBA(0, 15, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x00278700,  /* RGBA(0, 39, 135, 0) */
+	    0x240F1100,  /* RGBA(36, 15, 17, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x36120800,  /* RGBA(54, 18, 8, 0) */
+	    0x17070000,  /* RGBA(23, 7, 0, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x50004600,  /* RGBA(80, 0, 70, 0) */
+	    0x24001C00,  /* RGBA(36, 0, 28, 0) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4CFC (was gap+0x29C, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x29C[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0x29C.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x29C[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4D2C (was gap+0x2CC, 48 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x2CC[48] = {
-	#include <MarioModel/gap_0x4A60_sub_0x2CC.data.inc.c>
+u32 dMarioModel_gap_0x4A60_sub_0x2CC[12] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x0000F7FF,  /* RGBA(0, 0, 247, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xBD009CFF,  /* RGBA(189, 0, 156, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x521008FF,  /* RGBA(82, 16, 8, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF0018FF,  /* RGBA(239, 0, 24, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xEF6300FF,  /* RGBA(239, 99, 0, 255) */
+	aobjEvent32Wait(97),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4D5C (was gap+0x2FC, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x2FC[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x2FC.data.inc.c>
+/* AObj32 anim-event chain pointer cells (costume/JP variant — same shape as 0x26D0). */
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x2FC[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x14,
 };
 
-/* gap sub-block @ 0x4D60 (was gap+0x300, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x300[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x300.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x300[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x7C,
 };
 
-/* gap sub-block @ 0x4D64 (was gap+0x304, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x304[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x304.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x304[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x44,
 };
 
-/* gap sub-block @ 0x4D68 (was gap+0x308, 12 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x308[12] = {
-	#include <MarioModel/gap_0x4A60_sub_0x308.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x308[3] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0xB4,
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0xE4,
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x114,
 };
 
-/* gap sub-block @ 0x4D74 (was gap+0x314, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x314[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x314.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x314[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x17C,
 };
 
-/* gap sub-block @ 0x4D78 (was gap+0x318, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x318[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x318.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x318[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x144,
 };
 
-/* gap sub-block @ 0x4D7C (was gap+0x31C, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x31C[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x31C.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x31C[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x228,
 };
 
-/* gap sub-block @ 0x4D80 (was gap+0x320, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x320[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x320.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x320[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x1F8,
 };
 
-/* gap sub-block @ 0x4D84 (was gap+0x324, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x324[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x324.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x324[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x1B4,
 };
 
-/* gap sub-block @ 0x4D88 (was gap+0x328, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x328[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x328.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x328[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x2CC,
 };
 
-/* gap sub-block @ 0x4D8C (was gap+0x32C, 4 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x32C[4] = {
-	#include <MarioModel/gap_0x4A60_sub_0x32C.data.inc.c>
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x32C[1] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x29C,
 };
 
-/* gap sub-block @ 0x4D90 (was gap+0x330, 16 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x330[16] = {
-	#include <MarioModel/gap_0x4A60_sub_0x330.data.inc.c>
+/* 16-byte AObjEvent32 *[4] cell: 1 chain pointer at offset 0, 3 NULL slots. */
+AObjEvent32 *dMarioModel_gap_0x4A60_sub_0x330[4] = {
+	(AObjEvent32 *)dMarioModel_gap_0x4A60_sub_0x258,
+	NULL, NULL, NULL,
 };
 
 /* gap sub-block @ 0x4DA0 (was gap+0x340, 368 bytes) */
@@ -1463,45 +2490,103 @@ Gfx dMarioModel_DL_0x63D0[14] = {
 	#include <MarioModel/DL_0x63D0.dl.inc.c>
 };
 
-/* gap sub-block @ 0x6440 (was gap+0x19E0, 232 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x19E0[232] = {
-	#include <MarioModel/gap_0x4A60_sub_0x19E0.data.inc.c>
+/* gap sub-block @ 0x6440 (was gap+0x19E0, 232 bytes).
+ * Self-referencing block (reloc at +0x94 points back to itself); structure
+ * unidentified. Not reached by any other intern reloc. Leave as u8 until a
+ * code consumer is found. */
+/* Vtx data @ 0x6440 (was gap+0x19E0, 112 B / 7 vertices) */
+Vtx dMarioModel_gap_0x4A60_sub_0x19E0[7] = {
+	#include <MarioModel/gap_0x4A60_sub_0x19E0.vtx.inc.c>
 };
 
-/* gap sub-block @ 0x6528 (was gap+0x1AC8, 40 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1AC8[40] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1AC8.data.inc.c>
+/* Gfx DL @ 0x64B0 (112 B / 14 cmds) */
+Gfx dMarioModel_DL_0x64B0[14] = {
+	#include <MarioModel/DL_0x64B0.dl.inc.c>
 };
 
-/* gap sub-block @ 0x6550 (was gap+0x1AF0, 40 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1AF0[40] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1AF0.data.inc.c>
-};
+PAD(8);  /* trailing zeros after gap+0x19E0 DL */
 
-/* gap sub-block @ 0x6578 (was gap+0x1B18, 40 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1B18[40] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1B18.data.inc.c>
+/* MObjSub.palettes frames (RGBA5551 16-color palette + 8 bytes pad each).
+ * Five frames cycled via gap_0x26D0_sub_0x384[5] / gap_0x4A60 equivalent. */
+u16 dMarioModel_gap_0x4A60_sub_0x1AC8[16] = {
+	#include <MarioModel/gap_0x4A60_sub_0x1AC8.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0x65A0 (was gap+0x1B40, 40 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1B40[40] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1B40.data.inc.c>
+u16 dMarioModel_gap_0x4A60_sub_0x1AF0[16] = {
+	#include <MarioModel/gap_0x4A60_sub_0x1AF0.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0x65C8 (was gap+0x1B68, 40 bytes) */
-u8 dMarioModel_gap_0x4A60_sub_0x1B68[40] = {
-	#include <MarioModel/gap_0x4A60_sub_0x1B68.data.inc.c>
+u16 dMarioModel_gap_0x4A60_sub_0x1B18[16] = {
+	#include <MarioModel/gap_0x4A60_sub_0x1B18.palette.inc.c>
 };
+PAD(8);
 
-/* Texture data @ 0x65F0 (1672 bytes) */
-/* @tex fmt=CI4 dim=96x32 */
-u8 dMarioModel_Tex_0x65F0[1672] = {
+u16 dMarioModel_gap_0x4A60_sub_0x1B40[16] = {
+	#include <MarioModel/gap_0x4A60_sub_0x1B40.palette.inc.c>
+};
+PAD(8);
+
+u16 dMarioModel_gap_0x4A60_sub_0x1B68[16] = {
+	#include <MarioModel/gap_0x4A60_sub_0x1B68.palette.inc.c>
+};
+PAD(8);
+
+/* Texture data @ 0x65F0 (1512 bytes — CI4). The original 1672-byte chunk
+ * was split: 1512 bytes of texture proper, then four 40-byte RGBA5551
+ * palette frames (sub_0x3A8 cycles them). */
+/* @tex fmt=CI4 dim=32x24 */
+u8 dMarioModel_Tex_0x65F0[432] = {
 	#include <MarioModel/Tex_0x65F0.tex.inc.c>
 };
 
-/* Texture data @ 0x6C78 (760 bytes) */
-u8 dMarioModel_Tex_0x6C78[760] = {
+/* @tex fmt=CI4 dim=32x35 */
+u8 dMarioModel_Tex_0x67A0[560] = {
+	#include <MarioModel/Tex_0x67A0.tex.inc.c>
+};
+
+/* @tex fmt=CI4 dim=32x32 */
+u8 dMarioModel_Tex_0x69D0[520] = {
+	#include <MarioModel/Tex_0x69D0.tex.inc.c>
+};
+
+/* RGBA5551 palette frames embedded after Tex_0x65F0. Each is 16 colors
+ * + 8 bytes pad (40 bytes), referenced by gap_0x26D0_sub_0x3A8. */
+u16 dMarioModel_palette_0x6BD8[16] = {
+	#include <MarioModel/palette_0x6BD8.palette.inc.c>
+};
+PAD(8);
+
+u16 dMarioModel_palette_0x6C00[16] = {
+	#include <MarioModel/palette_0x6C00.palette.inc.c>
+};
+PAD(8);
+
+u16 dMarioModel_palette_0x6C28[16] = {
+	#include <MarioModel/palette_0x6C28.palette.inc.c>
+};
+PAD(8);
+
+u16 dMarioModel_palette_0x6C50[16] = {
+	#include <MarioModel/palette_0x6C50.palette.inc.c>
+};
+PAD(8);
+
+/* Texture data @ 0x6C78 (240 bytes — CI4). Original 760-byte chunk was
+ * split: 240 bytes referenced by Joint DLs at +0x0, then a separate
+ * Tex_0x6D68 sprite frame referenced by gap_0x26D0_sub_0x398[1]. */
+/* @tex fmt=CI4 dim=16x24 */
+u8 dMarioModel_Tex_0x6C78[240] = {
 	#include <MarioModel/Tex_0x6C78.tex.inc.c>
+};
+
+/* CI4 sprite frame @ 0x6D68 (520 bytes) — referenced as
+ * gap_0x26D0_sub_0x398[1]. Split out of the original Tex_0x6C78 region
+ * so the chain pointer resolves to a typed symbol. */
+/* @tex fmt=CI4 dim=32x32 */
+u8 dMarioModel_Tex_0x6D68[520] = {
+	#include <MarioModel/Tex_0x6D68.tex.inc.c>
 };
 
 /* Palette: Lut_0x6F70 @ 0x6F70 (16 colors RGBA5551) */
@@ -1509,15 +2594,15 @@ u16 dMarioModel_Lut_0x6F70_palette[16] = {
 	#include <MarioModel/Lut_0x6F70.palette.inc.c>
 };
 
-/* Raw data from file offset 0x6F90 to 0x71A8 (536 bytes) */
-/* gap sub-block @ 0x6F90 (was gap+0x0, 8 bytes) */
-u8 dMarioModel_gap_0x6F90[8] = {
-	#include <MarioModel/gap_0x6F90.data.inc.c>
-};
+/* 8-byte alignment pad after Lut_0x6F70 before the next CI4 texture frame. */
+PAD(8);
 
-/* gap sub-block @ 0x6F98 (was gap+0x8, 528 bytes) */
-u8 dMarioModel_gap_0x6F90_sub_0x8[528] = {
-	#include <MarioModel/gap_0x6F90_sub_0x8.data.inc.c>
+/* CI4 texture frame @ file 0x6F98 (528 bytes = 32x32 CI4 + 16-byte pad)
+ * referenced by MObjSub.sprites tables (gap_0x26D0_sub_0x398[0] and
+ * Joint_0x0040_post_sub_0x38[0]). */
+/* @tex fmt=CI4 dim=32x33 */
+u8 dMarioModel_Tex_0x6F98[528] = {
+	#include <MarioModel/Tex_0x6F98.tex.inc.c>
 };
 
 /* Texture data for sprite Stock */
@@ -1529,35 +2614,32 @@ u8 dMarioModel_Stock_tex[88] = {
     #include <MarioModel/Stock.ci4.inc.c>
 };
 
-/* Palette: @ 0x7200 (16 colors RGBA5551) */
+/* "Stock LUTs" — 5 RGBA5551 16-color palette frames. MarioMain references
+ * all 5 as `dMarioMain_stock_luts[+0x0..+0x10]` (costume color frames for
+ * the Stock icon). First four are 16 colors + 8 bytes trailing pad
+ * (40 bytes each); the last is exactly 32 bytes (no trailing pad). */
 u16 dMarioModel_palette_0x7200[16] = {
 	#include <MarioModel/palette_0x7200.palette.inc.c>
 };
+PAD(8);
 
-/* Raw data from file offset 0x7220 to 0x72C0 (160 bytes) */
-/* gap sub-block @ 0x7220 (was gap+0x0, 8 bytes) */
-u8 dMarioModel_gap_0x7220[8] = {
-	#include <MarioModel/gap_0x7220.data.inc.c>
+u16 dMarioModel_gap_0x7220_sub_0x8[16] = {
+	#include <MarioModel/gap_0x7220_sub_0x8.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0x7228 (was gap+0x8, 40 bytes) */
-u8 dMarioModel_gap_0x7220_sub_0x8[40] = {
-	#include <MarioModel/gap_0x7220_sub_0x8.data.inc.c>
+u16 dMarioModel_gap_0x7220_sub_0x30[16] = {
+	#include <MarioModel/gap_0x7220_sub_0x30.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0x7250 (was gap+0x30, 40 bytes) */
-u8 dMarioModel_gap_0x7220_sub_0x30[40] = {
-	#include <MarioModel/gap_0x7220_sub_0x30.data.inc.c>
+u16 dMarioModel_gap_0x7220_sub_0x58[16] = {
+	#include <MarioModel/gap_0x7220_sub_0x58.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0x7278 (was gap+0x58, 40 bytes) */
-u8 dMarioModel_gap_0x7220_sub_0x58[40] = {
-	#include <MarioModel/gap_0x7220_sub_0x58.data.inc.c>
-};
-
-/* gap sub-block @ 0x72A0 (was gap+0x80, 32 bytes) */
-u8 dMarioModel_gap_0x7220_sub_0x80[32] = {
-	#include <MarioModel/gap_0x7220_sub_0x80.data.inc.c>
+u16 dMarioModel_gap_0x7220_sub_0x80[16] = {
+	#include <MarioModel/gap_0x7220_sub_0x80.palette.inc.c>
 };
 
 /* Sprite: Stock */
@@ -1623,5 +2705,3 @@ Sprite dMarioModel_FTEmblem = {
 	(Gfx*)0x00000000,
 	0, 0,
 };
-
-PAD(4);

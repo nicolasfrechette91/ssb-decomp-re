@@ -2,9 +2,28 @@
 /* File size: 2256 bytes (0x8D0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dLuigiModel_FTEmblem[];
+extern AObjEvent32 **dLuigiModel_JointTree_0x49E8_post[];
+extern u32 dLuigiModel_Stock[];
+extern u8 dMarioShieldPose_data0[];
+extern u8 dMarioShieldPose_data0_end[];
+extern u8 dMarioShieldPose_shield_anim_joint_1[];
+extern u8 dMarioShieldPose_shield_anim_joint_2[];
+extern u8 dMarioShieldPose_shield_anim_joint_3[];
+extern u8 dMarioShieldPose_shield_anim_joint_4[];
+extern u8 dMarioShieldPose_shield_anim_joint_5[];
+extern u8 dMarioShieldPose_shield_anim_joint_6[];
+extern u8 dMarioShieldPose_shield_anim_joint_7[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x810[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x844[];
+extern AObjEvent32 **dLuigiModel_JointTree_post[];
 #include <ft/fttypes.h>
 
-extern u32 dLuigiMainMotion_0x0024[];
+extern u32 dLuigiMainMotion_EggLay_0x0024[];
 extern DObjDesc dLuigiModel_JointTree[];
 extern DObjDesc dLuigiModel_JointTree_0x49E8[];
 extern Gfx dLuigiModel_Joint_0x1AB0_DisplayList[];
@@ -18,14 +37,14 @@ extern u8 dLuigiModel_gap_0x28E0_sub_0x384[];
 extern u8 dLuigiModel_gap_0x28E0_sub_0x3A0[];
 extern u8 dLuigiModel_gap_0x28E0_sub_0xC50[];
 extern u8 dLuigiModel_gap_0x28E0_sub_0xC84[];
-extern u8 dLuigiModel_gap_0x4E8C_sub_0x13E4[];
+extern u8 dLuigiModel_DL_0x6270[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x16A4[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x17B4[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x18A4[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x19A4[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x1AC4[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x1BD4[];
-extern u8 dLuigiModel_gap_0x4E8C_sub_0x1CB4[];
+extern u8 dLuigiModel_DL_0x6B40[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x384[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x3A8[];
 extern u8 dLuigiModel_gap_0x4E8C_sub_0x534[];
@@ -51,11 +70,11 @@ extern DObjDesc dMarioSpecial2_EntryDokanDObjDesc[];
 
 /* Pre-attributes data (352 words, 0x0580 bytes) */
 /* @ 0x0000, 12 bytes: FTAttributes.file_handles target (was dLuigiMain_pre+0x0) */
-u32 dLuigiMain_file_handles[3] = {
+void *dLuigiMain_file_handles[3] = {
 
-	(u32)&dLuigiMainMotion_0x0024, /* extern -> 0x0024 */
-	(u32)&dMarioSpecial2_EntryDokanDObjDesc, /* extern -> 0x0608 */
-	(u32)&dLuigiSpecial1_Fireball_WeaponAttributes, /* extern -> 0x0000 */
+	&dLuigiMainMotion_EggLay_0x0024, /* extern -> 0x0024 */
+	&dMarioSpecial2_EntryDokanDObjDesc, /* extern -> 0x0608 */
+	&dLuigiSpecial1_Fireball_WeaponAttributes, /* extern -> 0x0000 */
 };
 
 /* @ 0x000C, 8 bytes: FTAttributes.animlock target (was dLuigiMain_pre+0xC) */
@@ -80,7 +99,7 @@ FTHiddenPart dLuigiMain_hiddenparts[4] = {
 
 /* @ 0x005C, 80 bytes: FTAttributes.sub_0x05C target (was dLuigiMain_pre+0x5C) */
 FTModelPart dLuigiMain_modelparts_desc_0x05C[4] = {
-	{ (Gfx*)&dLuigiModel_Joint_0x1AB0_DisplayList, (MObjSub**)((u8*)dLuigiModel_gap_0x0000_sub_0x18 + 0x898), (AObjEvent32**)&dLuigiModel_gap_0x28E0_sub_0x360, NULL, 0x00 },
+	{ (Gfx*)&dLuigiModel_Joint_0x1AB0_DisplayList, (MObjSub**)dLuigiModel_Joint_0x00A0_post_sub_0x810, (AObjEvent32**)&dLuigiModel_gap_0x28E0_sub_0x360, NULL, 0x00 },
 	{ (Gfx*)&dLuigiModel_Joint_0x4248_DisplayList, (MObjSub**)&dLuigiModel_gap_0x28E0_sub_0xC50, (AObjEvent32**)&dLuigiModel_gap_0x4E8C_sub_0x384, NULL, 0x00 },
 	{ (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0xA84, NULL, (AObjEvent32**)&dLuigiModel_gap_0x4E8C_sub_0xBF0, NULL, 0x00 },
 	{ (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0xD14, (MObjSub**)&dLuigiModel_gap_0x4E8C_sub_0xE14, (AObjEvent32**)&dLuigiModel_gap_0x4E8C_sub_0xE60, NULL, 0x00 },
@@ -88,7 +107,7 @@ FTModelPart dLuigiMain_modelparts_desc_0x05C[4] = {
 
 /* @ 0x00AC, 80 bytes: FTAttributes.sub_0x0AC target (was dLuigiMain_pre+0xAC) */
 FTModelPart dLuigiMain_modelparts_desc_0x0AC[4] = {
-	{ (Gfx*)&dLuigiModel_Joint_0x1FC0_DisplayList, (MObjSub**)((u8*)dLuigiModel_gap_0x0000_sub_0x18 + 0x8CC), (AObjEvent32**)&dLuigiModel_gap_0x28E0_sub_0x384, NULL, 0x00 },
+	{ (Gfx*)&dLuigiModel_Joint_0x1FC0_DisplayList, (MObjSub**)dLuigiModel_Joint_0x00A0_post_sub_0x844, (AObjEvent32**)&dLuigiModel_gap_0x28E0_sub_0x384, NULL, 0x00 },
 	{ (Gfx*)&dLuigiModel_Joint_0x46B8_DisplayList, (MObjSub**)&dLuigiModel_gap_0x28E0_sub_0xC84, (AObjEvent32**)&dLuigiModel_gap_0x4E8C_sub_0x3A8, NULL, 0x00 },
 	{ (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x534, (MObjSub**)&dLuigiModel_gap_0x4E8C_sub_0x654, (AObjEvent32**)&dLuigiModel_gap_0x4E8C_sub_0x6A0, NULL, 0x00 },
 	{ (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x7C4, (MObjSub**)&dLuigiModel_gap_0x4E8C_sub_0x8C4, (AObjEvent32**)&dLuigiModel_gap_0x4E8C_sub_0x910, NULL, 0x00 },
@@ -104,15 +123,13 @@ FTModelPartDesc *dLuigiMain_modelparts_container[25] = {
 };
 
 /* @ 0x0160, 4 bytes: FTAttributes.textureparts_container target (was dLuigiMain_pre+0x160) */
-u32 dLuigiMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dLuigiMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x0164, 32 bytes: FTAttributes.commonparts_container target (was dLuigiMain_pre+0x164) */
 FTCommonPartContainer dLuigiMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dLuigiModel_JointTree, (MObjSub***)&dLuigiModel_gap_0x0000, (AObjEvent32***)((u8*)dLuigiModel_JointTree + 0x480), 0x00 },
-		{ (DObjDesc*)&dLuigiModel_JointTree_0x49E8, (MObjSub***)&dLuigiModel_gap_0x28E0_sub_0x3A0, (AObjEvent32***)((u8*)dLuigiModel_JointTree_0x49E8 + 0x478), 0x00 },
+		{ (DObjDesc*)&dLuigiModel_JointTree, (MObjSub***)&dLuigiModel_gap_0x0000, (AObjEvent32***)dLuigiModel_JointTree_post, 0x00 },
+		{ (DObjDesc*)&dLuigiModel_JointTree_0x49E8, (MObjSub***)&dLuigiModel_gap_0x28E0_sub_0x3A0, (AObjEvent32***)dLuigiModel_JointTree_0x49E8_post, 0x00 },
 	},
 };
 
@@ -175,94 +192,41 @@ FTThrownStatus dLuigiMain_thrown_status[54] = {
 };
 
 /* @ 0x0334, 348 bytes: FTAttributes.translate_scales target (was dLuigiMain_pre+0x334) */
-u32 dLuigiMain_translate_scales[87] = {
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F91A6B5,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F94B5DD,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F9FD8AE,
-	0x3F800000,
-	0x3F800000,
-	0x4038B439,
-	0x3F800000,
-	0x3F800000,
-	0x3F94B5DD,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
-	0x3F800000,
+/* One per-joint Vec3f translation-scale vector for each of Luigi's 29 joints.
+ * Identity except the Y axis of joints 3, 7, 11, 12, 13 — retargets Mario's
+ * shared animation data onto Luigi's taller build. Applied by
+ * lbCommonPlayTranslateScaledDObjAnim() (multiplies translation tracks only;
+ * rotation tracks are left untouched). */
+Vec3f dLuigiMain_translate_scales[29] = {
+	{ 1.0f, 1.0f,    1.0f }, /* joint  0 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  1 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  2 */
+	{ 1.0f, 1.1379f, 1.0f }, /* joint  3 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  4 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  5 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  6 */
+	{ 1.0f, 1.1618f, 1.0f }, /* joint  7 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  8 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint  9 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 10 */
+	{ 1.0f, 1.2488f, 1.0f }, /* joint 11 */
+	{ 1.0f, 2.886f,  1.0f }, /* joint 12 */
+	{ 1.0f, 1.1618f, 1.0f }, /* joint 13 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 14 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 15 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 16 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 17 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 18 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 19 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 20 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 21 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 22 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 23 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 24 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 25 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 26 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 27 */
+	{ 1.0f, 1.0f,    1.0f }, /* joint 28 */
 };
 
 /* @ 0x0490, 16 bytes: FTAttributes.sub_0x490 target (was dLuigiMain_pre+0x490) */
@@ -275,9 +239,9 @@ int *dLuigiMain_stock_luts[4] = {
 
 /* @ 0x04A0, 12 bytes: FTAttributes.sprites target (was dLuigiMain_pre+0x4A0) */
 FTSprites dLuigiMain_sprites = {
-	(Sprite*)((u8*)dLuigiModel_gap_0x7C50_sub_0x68 + 0x20), /* stock_sprite */
+	(Sprite*)dLuigiModel_Stock, /* stock_sprite */
 	(int**)dLuigiMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dLuigiModel_gap_0x7C50_sub_0x68 + 0x210), /* emblem */
+	(Sprite*)dLuigiModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x04AC, 200 bytes: FTAttributes.sub_0x4AC target (was dLuigiMain_pre+0x4AC) */
@@ -290,7 +254,7 @@ FTSkeleton dLuigiMain_skeleton_dls[25] = {
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x16A4 }, 0 },
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x18A4 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x13E4 }, 0 },
+	{ { (Gfx*)&dLuigiModel_DL_0x6270 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x17B4 }, 0 },
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x16A4 }, 0 },
@@ -300,12 +264,12 @@ FTSkeleton dLuigiMain_skeleton_dls[25] = {
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x1AC4 }, 0 },
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x1BD4 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x1CB4 }, 0 },
+	{ { (Gfx*)&dLuigiModel_DL_0x6B40 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x1AC4 }, 0 },
 	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x1BD4 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dLuigiModel_gap_0x4E8C_sub_0x1CB4 }, 0 },
+	{ { (Gfx*)&dLuigiModel_DL_0x6B40 }, 0 },
 	{ { NULL }, 0 },
 };
 
@@ -438,8 +402,8 @@ FTAttributes dLuigiMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dLuigiMain_hiddenparts, /* hiddenparts */
 	&dLuigiMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dMarioShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dMarioShieldPose_data0_end, (void *)&dMarioShieldPose_shield_anim_joint_1, (void *)&dMarioShieldPose_shield_anim_joint_2, (void *)&dMarioShieldPose_shield_anim_joint_3, (void *)&dMarioShieldPose_shield_anim_joint_4, (void *)&dMarioShieldPose_shield_anim_joint_5, (void *)&dMarioShieldPose_shield_anim_joint_6, (void *)&dMarioShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	23, /* joint_rfoot_id */
 	60.891f, /* joint_rfoot_rotate */
 	18, /* joint_lfoot_id */
@@ -447,10 +411,10 @@ FTAttributes dLuigiMain_attr = {
 	{ 0x00, 0x00, 0x00, 0x0D, 0x42, 0x0F, 0xA6, 0xE9, 0x00, 0x00, 0x00, 0x07, 0x42, 0x0F, 0x8B, 0x44 }, /* filler_0x30C */
 	50.0f, /* unk_0x31C */
 	0.5235988f, /* unk_0x320 */
-	(Vec3f*)dLuigiMain_translate_scales, /* translate_scales */
+	dLuigiMain_translate_scales, /* translate_scales */
 	(FTModelPartContainer*)dLuigiMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dLuigiMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dLuigiMain_textureparts_container, /* textureparts_container */
 	28, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dLuigiMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

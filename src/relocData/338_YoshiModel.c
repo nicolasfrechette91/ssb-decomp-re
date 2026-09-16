@@ -6,7 +6,141 @@
 
 #include "relocdata_types.h"
 #include <sys/objdef.h>
-extern u8 dYoshiModel_gap_0x38F4_sub_0x708[];
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dYoshiModel_Lut_0x9EC8_palette[];
+extern u8 dYoshiModel_Tex_0x9518[];
+extern u8 dYoshiModel_Tex_0x9BD0[];
+extern u8 dYoshiModel_Tex_0x9D70[];
+extern u8 dYoshiModel_Tex_0x9E80[];
+extern u8 dYoshiModel_Tex_0x9EF0[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern MObjSub *dYoshiModel_Joint_0x0060_post[];
+extern u8 *dYoshiModel_Joint_0x0060_post_sprites[];
+extern u8 dYoshiModel_Tex_0x9FF8[];
+extern u8 dYoshiModel_Tex_0xA020[];
+extern u8 dYoshiModel_Tex_0xA820[];
+extern Vtx dYoshiModel_Vtx_0x0E90_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x0EE0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x0F20_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x0F80_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1000_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1020_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1050_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x10E0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1100_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1150_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1230_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x13F0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1450_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x14B0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1630_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1670_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x16E0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1710_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1780_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x17F0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1820_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1890_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x18B0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x18C0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x18D0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x18F0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1900_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x19E0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1AE0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1B40_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1CA0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1D80_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1E80_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x1EE0_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4D98_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4DF8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4E78_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4E88_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4EE8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4F18_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4F68_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x4FF8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5138_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5198_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x51F8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5228_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x52E8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5338_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5378_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x53C8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5418_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5458_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x54A8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x54D8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x54F8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5508_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x55A8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5668_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x56E8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x57C8_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5868_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x5928_Vtx[];
+extern Vtx dYoshiModel_Vtx_0x59A8_Vtx[];
+extern MObjSub *dYoshiModel_gap_0x0000_sub_0x18[];
+extern MObjSub *dYoshiModel_gap_0x0000_sub_0x8[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x13D0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x15A0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x15F0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1720[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1780[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1870[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1A00[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1C30[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1D40[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1E50[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1F00[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x1FB0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x20C0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x21D0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x2280[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x2330[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x2490[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0x9C0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xA50[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xB80[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xBE0[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xC40[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xE40[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xE60[];
+extern Vtx dYoshiModel_gap_0x6E70_sub_0xE90[];
+extern u8 dYoshiModel_Tex_0x9700[];
+extern u16 dYoshiModel_palette_0x9BA8[];
+extern Gfx dYoshiModel_DL_0x9140[];
+extern u16 dYoshiModel_palette_0x9C58[];
+extern u16 dYoshiModel_palette_0x9C80[];
+extern u16 dYoshiModel_palette_0x9CA8[];
+extern u16 dYoshiModel_palette_0x9CD0[];
+extern u16 dYoshiModel_palette_0x9CF8[];
+extern u16 dYoshiModel_palette_0x9D20[];
+extern u16 dYoshiModel_palette_0x9D48[];
+extern u16 dYoshiModel_palette_0x9DB8[];
+extern u16 dYoshiModel_palette_0x9DE0[];
+extern u16 dYoshiModel_palette_0x9E08[];
+extern u16 dYoshiModel_palette_0x9E30[];
+extern u16 dYoshiModel_palette_0x9E58[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x708[];
 
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x1410[];
 extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6E8[];
@@ -38,8 +172,77 @@ extern MObjSub dYoshiModel_gap_0x6E70_sub_0x840[];
 extern MObjSub dYoshiModel_gap_0x6E70_sub_0x8B8[];
 extern MObjSub dYoshiModel_gap_0x6E70_sub_0x930[];
 extern u32 dYoshiModel_gap_0x6E70_sub_0xDC[];
-extern u8 dYoshiModel_Joint_0x0080_post[];
-extern u8 dYoshiModel_Tex_0x9518[];
+extern u8 *dYoshiModel_Joint_0x0080_post[];
+extern u16 *dYoshiModel_Joint_0x0080_post_palettes_0x28[];
+extern void *dYoshiModel_Joint_0x0080_post_sprites_0x60[];
+extern u16 *dYoshiModel_Joint_0x0080_post_palettes_0x98[];
+extern u16 *dYoshiModel_Joint_0x0080_post_palettes_0xD0[];
+extern u16 *dYoshiModel_Joint_0x0080_post_palettes_0xE8[];
+extern u16 *dYoshiModel_Joint_0x0080_post_palettes_0x100[];
+extern u16 *dYoshiModel_Joint_0x0080_post_palettes_0x118[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x130[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x1A8[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x220[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x298[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x310[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x388[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x400[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x478[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x4F0[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x568[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x5E0[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x658[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x6D0[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x748[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x7C0[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x838[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x8B0[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x928[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0x9A0[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xA18[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xA90[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xB08[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xB80[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xBF8[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xC70[];
+extern MObjSub dYoshiModel_Joint_0x0080_post_sub_0xCE8[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD60[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD74[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD7C[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD94[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD9C[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDA4[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDAC[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDB4[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDBC[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDC4[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDCC[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDD4[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDDC[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDE8[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDF0[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDF8[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xE04[];
+extern u16 dYoshiModel_palette_0x9560[];
+extern u16 dYoshiModel_palette_0x9588[];
+extern u16 dYoshiModel_palette_0x95B0[];
+extern u16 dYoshiModel_palette_0x95D8[];
+extern u16 dYoshiModel_palette_0x9600[];
+extern u16 dYoshiModel_palette_0x9628[];
+extern u8 dYoshiModel_Tex_0x9650[];
+extern u16 dYoshiModel_palette_0x96D8[];
+extern u16 dYoshiModel_palette_0x9788[];
+extern u8 dYoshiModel_Tex_0x97B0[];
+extern u16 dYoshiModel_palette_0x9838[];
+extern u8 dYoshiModel_Tex_0x9860[];
+extern u16 dYoshiModel_palette_0x98E8[];
+extern u8 dYoshiModel_Tex_0x9910[];
+extern u16 dYoshiModel_palette_0x9998[];
+extern u8 dYoshiModel_Tex_0x99C0[];
+extern u16 dYoshiModel_palette_0x9A48[];
+extern u8 dYoshiModel_Tex_0x9A70[];
+extern u16 dYoshiModel_palette_0x9AF8[];
+extern u8 dYoshiModel_Tex_0x9B20[];
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x13FC[];
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x1408[];
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x1428[];
@@ -56,6 +259,23 @@ extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x147C[];
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x1484[];
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x148C[];
 extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x1498[];
+extern AObjEvent32 * dYoshiModel_gap_0x38F4_sub_0x728[];
+extern AObjEvent32 * dYoshiModel_gap_0x38F4_sub_0x72C[];
+extern AObjEvent32 * dYoshiModel_gap_0x38F4_sub_0x730[];
+extern AObjEvent32 * dYoshiModel_gap_0x38F4_sub_0x738[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6BC[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6C0[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6C4[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6C8[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6CC[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6D0[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6D4[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6D8[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6DC[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6E4[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6E8[];
+extern AObjEvent32 * dYoshiModel_gap_0x6E70_sub_0x6EC[];
+extern void *dYoshiModel_gap_0x6E70_sub_0x6F4[];
 
 /* Forward DObjDesc chain-target decls for fixRelocChain.py */
 /* commonparts[0].p_mobjsubs target — per-joint MObjSub** table indexed
@@ -70,13 +290,13 @@ extern MObjSub *dYoshiModel_gap_0x38F4_sub_0x1498[];
 /* slots [0..1] (joints 0..1) */
 MObjSub *dYoshiModel_gap_0x0000[2] = {
 	NULL,                                                          /* joint 0 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xD60),      /* joint 1 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xD60,            /* joint 1 */
 };
 
 /* slots [2..5] (joints 2..5) */
 MObjSub *dYoshiModel_gap_0x0000_sub_0x8[4] = {
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xD74),      /* joint 2 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xD7C),      /* joint 3 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xD74,            /* joint 2 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xD7C,            /* joint 3 */
 	NULL,                                                          /* joint 4 */
 	NULL,                                                          /* joint 5 */
 };
@@ -84,49 +304,1050 @@ MObjSub *dYoshiModel_gap_0x0000_sub_0x8[4] = {
 /* slots [6..7] (joints 6..7) */
 MObjSub *dYoshiModel_gap_0x0000_sub_0x18[2] = {
 	NULL,                                                          /* joint 6 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xD94),      /* joint 7 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xD94,            /* joint 7 */
 };
 
 /* slots [8..15] (joints 8..15) */
 MObjSub *dYoshiModel_Joint_0x0020_post[8] = {
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xD9C),      /* joint 8 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDA4),      /* joint 9 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xD9C,            /* joint 8 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDA4,            /* joint 9 */
 	NULL,                                                          /* joint 10 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDAC),      /* joint 11 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDB4),      /* joint 12 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDBC),      /* joint 13 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDAC,            /* joint 11 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDB4,            /* joint 12 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDBC,            /* joint 13 */
 	NULL,                                                          /* joint 14 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDC4),      /* joint 15 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDC4,            /* joint 15 */
 };
 
 /* slots [16..23] (joints 16..23) */
 MObjSub *dYoshiModel_Joint_0x0040_post[8] = {
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDCC),      /* joint 16 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDCC,            /* joint 16 */
 	NULL,                                                          /* joint 17 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDD4),      /* joint 18 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDDC),      /* joint 19 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDD4,            /* joint 18 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDDC,            /* joint 19 */
 	NULL,                                                          /* joint 20 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDE8),      /* joint 21 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDE8,            /* joint 21 */
 	NULL,                                                          /* joint 22 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDF0),      /* joint 23 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDF0,            /* joint 23 */
 };
 
-/* slots [24..31] (joints 24..31) */
-MObjSub *dYoshiModel_Joint_0x0060_post[8] = {
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xDF8),      /* joint 24 */
+/* slots [24..27] (joints 24..27) */
+MObjSub *dYoshiModel_Joint_0x0060_post[4] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xDF8,            /* joint 24 */
 	NULL,                                                          /* joint 25 */
-	(MObjSub *)((u8 *)dYoshiModel_Joint_0x0080_post + 0xE04),      /* joint 26 */
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xE04,            /* joint 26 */
 	NULL,                                                          /* joint 27 */
-	(MObjSub *)((u8 *)dYoshiModel_Tex_0x9518 + 0x6B8),             /* joint 28 (lives in Tex_0x9518) */
-	NULL,                                                          /* joint 29 */
-	NULL,                                                          /* joint 30 */
-	NULL,                                                          /* joint 31 */
 };
 
-/* Raw data from file offset 0x0080 to 0x0E90 (3600 bytes) */
-u8 dYoshiModel_Joint_0x0080_post[3600] = {
-	#include <YoshiModel/Joint_0x0080_post.data.inc.c>
+/* Sprite pointer array @ Joint_0x0060_post+0x10 (4 slots) —
+ * sub_0x1A8.sprites target. Single texture frame + 3 NULL trailing. */
+u8 *dYoshiModel_Joint_0x0060_post_sprites[4] = {
+	dYoshiModel_Tex_0x9BD0,
+	NULL,
+	NULL,
+	NULL,
 };
+
+/* Sprite/palette pointer tables @ file 0x80..0x1B0 (304 bytes, 76 slots).
+ * Four sprite-pointer sub-tables and four palette-pointer sub-tables,
+ * each used by one or more MObjSubs (sprites field at MObjSub+0x4,
+ * palettes field at MObjSub+0x2C). The MObjSubs themselves live at
+ * file offsets 0x1B0..0xDE0, and 17 MObjSub* trailing-index cells
+ * follow at 0xDE0..0xE90. */
+extern u16 dYoshiModel_palette_0x9560[];
+extern u16 dYoshiModel_palette_0x9588[];
+extern u16 dYoshiModel_palette_0x95B0[];
+extern u16 dYoshiModel_palette_0x95D8[];
+extern u16 dYoshiModel_palette_0x9600[];
+extern u16 dYoshiModel_palette_0x9628[];
+extern u8 dYoshiModel_Tex_0x9650[];
+extern u16 dYoshiModel_palette_0x96D8[];
+extern u8 dYoshiModel_Tex_0x9700[];
+extern u16 dYoshiModel_palette_0x9788[];
+extern u8 dYoshiModel_Tex_0x97B0[];
+extern u16 dYoshiModel_palette_0x9838[];
+extern u8 dYoshiModel_Tex_0x9860[];
+extern u16 dYoshiModel_palette_0x98E8[];
+extern u8 dYoshiModel_Tex_0x9910[];
+extern u16 dYoshiModel_palette_0x9998[];
+extern u8 dYoshiModel_Tex_0x99C0[];
+extern u16 dYoshiModel_palette_0x9A48[];
+extern u8 dYoshiModel_Tex_0x9A70[];
+extern u16 dYoshiModel_palette_0x9AF8[];
+extern u8 dYoshiModel_Tex_0x9B20[];
+extern u16 dYoshiModel_palette_0x9BA8[];
+extern u8 dYoshiModel_Tex_0x9BD0[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2680[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x25B8[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x25E0[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2608[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2630[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2658[];
+extern u16 dYoshiModel_palette_0x9D20[];
+extern u16 dYoshiModel_palette_0x9DB8[];
+extern u16 dYoshiModel_palette_0x9DE0[];
+extern u16 dYoshiModel_palette_0x9E08[];
+extern u16 dYoshiModel_palette_0x9E30[];
+extern u16 dYoshiModel_palette_0x9E58[];
+/* +0x00..+0x27 (10 slots) — Yoshi face sprite frames A (8 textures
+ * + 2 trailing NULL). No MObjSub references this directly; preserved
+ * for byte identity. Slot 0 is also the post-block chain head. */
+/* Yoshi face sprite frames A — 8 textures + 2 trailing NULL.
+ * Combined back from Joint_0x0080_post[1] + data_0x0084[9 ptrs]. */
+u8 *dYoshiModel_Joint_0x0080_post[10] = {
+	dYoshiModel_Tex_0x9700,
+	dYoshiModel_Tex_0x97B0,
+	dYoshiModel_Tex_0x9650,
+	dYoshiModel_Tex_0x9860,
+	dYoshiModel_Tex_0x9910,
+	dYoshiModel_Tex_0x99C0,
+	dYoshiModel_Tex_0x9B20,
+	dYoshiModel_Tex_0x9A70,
+	NULL,
+	NULL,
+};
+
+
+/* +0x28..+0x5F (14 slots) — sub_0x1A8.palettes target.
+ * 14 palette frames (each u16[16]+PAD(8) at 0x9560..0x9BA8, formerly
+ * mistyped as 40-byte u8 textures alongside CI4 textures). */
+u16 *dYoshiModel_Joint_0x0080_post_palettes_0x28[14] = {
+	dYoshiModel_palette_0x9BA8,
+	dYoshiModel_palette_0x9560,
+	dYoshiModel_palette_0x9588,
+	dYoshiModel_palette_0x95B0,
+	dYoshiModel_palette_0x96D8,
+	dYoshiModel_palette_0x9788,
+	dYoshiModel_palette_0x9628,
+	dYoshiModel_palette_0x9838,
+	dYoshiModel_palette_0x98E8,
+	dYoshiModel_palette_0x9998,
+	dYoshiModel_palette_0x9AF8,
+	dYoshiModel_palette_0x9A48,
+	dYoshiModel_palette_0x95D8,
+	dYoshiModel_palette_0x9600,
+};
+
+/* +0x60..+0x6F (4 slots) — sub_0x220.sprites target.
+ * Single-texture sprite array + 3 trailing NULL. */
+void *dYoshiModel_Joint_0x0080_post_sprites_0x60[4] = {
+	(void *)dYoshiModel_Tex_0x9BD0,
+	NULL,
+	NULL,
+	NULL,
+};
+
+/* +0x70..+0x97 (10 slots) — Yoshi face sprite frames B (8 textures
+ * + 2 trailing NULL; same set as Joint_0x0080_post but with slot 6/7
+ * reordered). No MObjSub references this directly. */
+void *dYoshiModel_Joint_0x0080_post_sprites_0x70[10] = {
+	(void *)dYoshiModel_Tex_0x9700,
+	(void *)dYoshiModel_Tex_0x97B0,
+	(void *)dYoshiModel_Tex_0x9650,
+	(void *)dYoshiModel_Tex_0x9860,
+	(void *)dYoshiModel_Tex_0x9910,
+	(void *)dYoshiModel_Tex_0x99C0,
+	(void *)dYoshiModel_Tex_0x9A70,
+	(void *)dYoshiModel_Tex_0x9B20,
+	NULL,
+	NULL,
+};
+
+/* +0x98..+0xCF (14 slots) — sub_0x220.palettes target.
+ * Same 14 palette frames as +0x28 (slot 10/11 reordered). */
+u16 *dYoshiModel_Joint_0x0080_post_palettes_0x98[14] = {
+	dYoshiModel_palette_0x9BA8,
+	dYoshiModel_palette_0x9560,
+	dYoshiModel_palette_0x9588,
+	dYoshiModel_palette_0x95B0,
+	dYoshiModel_palette_0x96D8,
+	dYoshiModel_palette_0x9788,
+	dYoshiModel_palette_0x9628,
+	dYoshiModel_palette_0x9838,
+	dYoshiModel_palette_0x98E8,
+	dYoshiModel_palette_0x9998,
+	dYoshiModel_palette_0x9A48,
+	dYoshiModel_palette_0x9AF8,
+	dYoshiModel_palette_0x95D8,
+	dYoshiModel_palette_0x9600,
+};
+
+/* +0xD0..+0xE7 (6 slots) — sub_0x388.palettes target.
+ * Palette frame pointers (gap_0x6E70_sub_0x*). */
+u16 *dYoshiModel_Joint_0x0080_post_palettes_0xD0[6] = {
+	dYoshiModel_gap_0x6E70_sub_0x2680,
+	dYoshiModel_gap_0x6E70_sub_0x25B8,
+	dYoshiModel_gap_0x6E70_sub_0x25E0,
+	dYoshiModel_gap_0x6E70_sub_0x2608,
+	dYoshiModel_gap_0x6E70_sub_0x2630,
+	dYoshiModel_gap_0x6E70_sub_0x2658,
+};
+
+/* +0xE8..+0xFF (6 slots) — sub_0x838.palettes target. Palette frames. */
+u16 *dYoshiModel_Joint_0x0080_post_palettes_0xE8[6] = {
+	dYoshiModel_palette_0x9E58,
+	dYoshiModel_palette_0x9D20,
+	dYoshiModel_palette_0x9DB8,
+	dYoshiModel_palette_0x9DE0,
+	dYoshiModel_palette_0x9E08,
+	dYoshiModel_palette_0x9E30,
+};
+
+/* +0x100..+0x117 (6 slots) — sub_0x8B0.palettes target. */
+u16 *dYoshiModel_Joint_0x0080_post_palettes_0x100[6] = {
+	dYoshiModel_palette_0x9E58,
+	dYoshiModel_palette_0x9D20,
+	dYoshiModel_palette_0x9DB8,
+	dYoshiModel_palette_0x9DE0,
+	dYoshiModel_palette_0x9E08,
+	dYoshiModel_palette_0x9E30,
+};
+
+/* +0x118..+0x12F (6 slots) — sub_0x928.palettes target. */
+u16 *dYoshiModel_Joint_0x0080_post_palettes_0x118[6] = {
+	dYoshiModel_palette_0x9E58,
+	dYoshiModel_palette_0x9D20,
+	dYoshiModel_palette_0x9DB8,
+	dYoshiModel_palette_0x9DE0,
+	dYoshiModel_palette_0x9E08,
+	dYoshiModel_palette_0x9E30,
+};
+
+/* MObjSub @ 0x1B0 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x130[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x228 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x1A8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)dYoshiModel_Joint_0x0060_post_sprites,
+		0x006A, 0x0009, 0x0010, 0x0010,
+		0,
+		0.5364000201225281f, 0.010400000028312206f,
+		0.30000001192092896f, 0.4000000059604645f,
+		0.5364000201225281f, 0.30000001192092896f,
+		(void**)dYoshiModel_Joint_0x0080_post_palettes_0x28,
+		0x0005,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0010,
+		0x0010, 0x0010, 0x0010,
+		0.5364000201225281f, 0.010400000028312206f,
+		0.5364000201225281f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFD, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x2A0 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x220[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)dYoshiModel_Joint_0x0080_post_sprites_0x60,
+		0x006A, 0x0009, 0x0010, 0x0010,
+		0,
+		0.5404009819030762f, 0.010400000028312206f,
+		0.30000001192092896f, 0.4000000059604645f,
+		0.5404009819030762f, 0.30000001192092896f,
+		(void**)dYoshiModel_Joint_0x0080_post_palettes_0x98,
+		0x0005,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0010,
+		0x0010, 0x0010, 0x0010,
+		0.5404009819030762f, 0.010400000028312206f,
+		0.5404009819030762f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x318 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x298[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x390 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x310[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x408 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x388[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0140, 0x0007, 0x0008, 0x0008,
+		0,
+		0.7692000269889832f, 0.038600001484155655f,
+		0.10000000149011612f, 0.15000000596046448f,
+		0.7692000269889832f, 0.10000000149011612f,
+		(void**)dYoshiModel_Joint_0x0080_post_palettes_0xD0,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0008,
+		0x0008, 0x0008, 0x0008,
+		0.7692000269889832f, 0.038600001484155655f,
+		0.7692000269889832f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x480 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x400[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x4F8 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x478[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x570 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x4F0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x5E8 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x568[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x660 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x5E0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x6D8 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x658[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x750 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x6D0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x7C8 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x748[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x840 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x7C0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x8B8 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x838[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x005A, 0x0001, 0x0008, 0x0008,
+		0,
+		0.06544999778270721f, -0.03359999880194664f,
+		0.3555000126361847f, 0.3919999897480011f,
+		0.06544999778270721f, 0.3555000126361847f,
+		(void**)dYoshiModel_Joint_0x0080_post_palettes_0xE8,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0008,
+		0x0008, 0x0008, 0x0008,
+		0.06544999778270721f, -0.03359999880194664f,
+		0.06544999778270721f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x930 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x8B0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x006A, 0x0003, 0x0008, 0x0008,
+		0,
+		0.3124000132083893f, 0.009999999776482582f,
+		0.30000001192092896f, 0.30000001192092896f,
+		0.3124000132083893f, 0.30000001192092896f,
+		(void**)dYoshiModel_Joint_0x0080_post_palettes_0x100,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0008,
+		0x0008, 0x0008, 0x0008,
+		0.3124000132083893f, 0.009999999776482582f,
+		0.3124000132083893f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0x9A8 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x928[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x006A, 0x0005, 0x0008, 0x0008,
+		0,
+		0.5289999842643738f, 0.0f,
+		0.30000001192092896f, 1.0f,
+		0.5289999842643738f, 0.30000001192092896f,
+		(void**)dYoshiModel_Joint_0x0080_post_palettes_0x118,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0008,
+		0x0008, 0x0008, 0x0008,
+		0.5289999842643738f, 0.0f,
+		0.5289999842643738f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xA20 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0x9A0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0x66, 0x00, 0xFF, 0x00 } },
+		{ { 0x26, 0x00, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xA98 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xA18[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xB10 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xA90[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0x66, 0x00, 0xFF, 0x00 } },
+		{ { 0x26, 0x00, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xB88 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xB08[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xC00 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xB80[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xC78 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xBF8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0x66, 0x00, 0xFF, 0x00 } },
+		{ { 0x26, 0x00, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xCF0 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xC70[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0x29, 0x63, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+/* MObjSub @ 0xD68 */
+MObjSub dYoshiModel_Joint_0x0080_post_sub_0xCE8[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0x66, 0x00, 0xFF, 0x00 } },
+		{ { 0x26, 0x00, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub* trailing-index cells, NULL-terminated lists indexed by
+ * dYoshiModel_gap_0x0000[joint] dispatch. */
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD60[5] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x7C0,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x838,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x8B0,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x928,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD74[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x130,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD7C[6] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x1A8,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x220,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x298,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x310,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x388,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD94[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x4F0,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD9C[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x400,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDA4[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x478,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDAC[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x658,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDB4[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x568,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDBC[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x5E0,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDC4[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x6D0,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDCC[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x748,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDD4[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xB08,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDDC[3] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xA18,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xA90,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDE8[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0x9A0,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDF0[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xB80,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xDF8[3] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xC70,
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xCE8,
+	NULL,
+};
+MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xE04[2] = {
+	(MObjSub *)dYoshiModel_Joint_0x0080_post_sub_0xBF8,
+	NULL,
+};
+PAD(4);
 
 /* Vtx: Vtx_0x0E90 @ 0xE90 (5 vertices) */
 Vtx dYoshiModel_Vtx_0x0E90_Vtx[5] = {
@@ -429,7 +1650,9 @@ Gfx *dYoshiModel_Joint_0x3148_post_post_post[38] = {
 	NULL,                                       dYoshiModel_Joint_0x3148_DisplayList,
 };
 
-/* DObjDesc: JointTree @ 0x33A0 (31 entries) */
+/* DObjDesc: JointTree @ 0x33A0 (29 entries, 0x4FC bytes — array proper.
+ * Immediately followed by JointTree_post (22-slot AObjEvent32** per-joint
+ * dispatch table) which together span up to 0x38F4. */
 DObjDesc dYoshiModel_JointTree[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 168.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dYoshiModel_Joint_0x3148_post_post_post, { 0.0f, 0.0f, 0.0f }, { -0.00133500003721565f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
@@ -460,55 +1683,110 @@ DObjDesc dYoshiModel_JointTree[] = {
 	{ 6, (void*)&dYoshiModel_Joint_0x3148_post_post_post[36], { 9.999999974752427e-07f, 0.0f, 0.0f }, { 3.1415929794311523f, 0.0f, -0.5888599753379822f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, -168.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 2.0961795183637217e-30f, 2.1085062223241845e-30f, 2.157810216979594e-30f }, { 0.0f, 0.0f, 0.0f }, { 2.170137109019153e-30f, 2.1824632487423273e-30f, 2.20711534010958e-30f } },
-	{ 0, (void *)dYoshiModel_gap_0x38F4_sub_0x708, { 2.231767619555929e-30f, 2.2564197109231817e-30f, 0.0f }, { 2.268745850646356e-30f, 2.293397942013609e-30f, 0.0f }, { 2.3057240817367833e-30f, 2.330376173104036e-30f, 0.0f } },
+};
+
+/* AObjEvent32 ** dispatch table @ file 0x389C (88 bytes, 22 slots).
+ * Lives immediately after JointTree (no PAD); references AObjEvent32 *
+ * scripts in the gap_0x38F4 region. */
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6D4[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6E4[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6FC[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x700[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x704[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x70C[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x710[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x714[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x718[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x71C[];
+extern AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x720[];
+PAD(4);
+
+AObjEvent32 **dYoshiModel_JointTree_post[21] = {
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x6D4,   /* slot 2  (+0x8) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x6E4,   /* slot 3  (+0xC) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x6E8,   /* slot 4  (+0x10) */
+	NULL, NULL, NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x6FC,   /* slot 8  (+0x20) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x700,   /* slot 9  (+0x24) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x704,   /* slot 10 (+0x28) */
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x708,   /* slot 12 (+0x30) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x70C,   /* slot 13 (+0x34) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x710,   /* slot 14 (+0x38) */
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x714,   /* slot 16 (+0x40) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x718,   /* slot 17 (+0x44) */
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x71C,   /* slot 19 (+0x4C) */
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x720,   /* slot 20 (+0x50) */
+	NULL,
 };
 
 /* Raw data from file offset 0x38F4 to 0x4D98 (5284 bytes) */
 /* gap sub-block @ 0x38F4 (was gap+0x0, 28 bytes) */
-u8 dYoshiModel_gap_0x38F4[28] = {
-	#include <YoshiModel/gap_0x38F4.data.inc.c>
+AObjEvent32 **dYoshiModel_gap_0x38F4[7] = {
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x728,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x72C,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x730,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x38F4_sub_0x738,
+	NULL,
 };
 
 /* gap sub-block @ 0x3910 (was gap+0x1C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x1C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x1C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x1C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3948 (was gap+0x54, 140 bytes) */
 u32 dYoshiModel_gap_0x38F4_sub_0x54[35] = {
-	aobjEvent32SetValAfter(0x200, 0),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x001, 0),
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x001, 50),
+	aobjEvent32SetVal(AOBJ_MATFLAG_TEXID, 50),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
 	aobjEvent32Wait(46),
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfter(0x001, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
 	    0x41300000,  /* 11.0f */
 	aobjEvent32Wait(43),
 	aobjEvent32End(),
@@ -516,38 +1794,38 @@ u32 dYoshiModel_gap_0x38F4_sub_0x54[35] = {
 
 /* gap sub-block @ 0x39D4 (was gap+0xE0, 140 bytes) */
 u32 dYoshiModel_gap_0x38F4_sub_0xE0[35] = {
-	aobjEvent32SetValAfter(0x200, 0),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x001, 0),
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x001, 50),
+	aobjEvent32SetVal(AOBJ_MATFLAG_TEXID, 50),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
 	aobjEvent32Wait(46),
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfter(0x001, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
 	    0x41300000,  /* 11.0f */
 	aobjEvent32Wait(43),
 	aobjEvent32End(),
@@ -555,166 +1833,453 @@ u32 dYoshiModel_gap_0x38F4_sub_0xE0[35] = {
 
 /* gap sub-block @ 0x3A60 (was gap+0x16C, 56 bytes) */
 u32 dYoshiModel_gap_0x38F4_sub_0x16C[14] = {
-	aobjEvent32SetExtValAfterBlock(0x001, 0),
-	    0x40FF15FF,  /* 7.971435070037842f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF2963FF,  /* -2.2515874069109466e+38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0x00F4FFFF,  /* 2.2499695157409383e-38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFFFF00FF,  /* nanf */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF84C6FF,  /* nanf */
-	aobjEvent32SetExtValAfter(0x001, 1),
-	    0x3910DEFF,  /* 0.00013815982674714178f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3A98 (was gap+0x1A4, 56 bytes) */
 u32 dYoshiModel_gap_0x38F4_sub_0x1A4[14] = {
-	aobjEvent32SetExtValAfterBlock(0x001, 0),
-	    0x40FF15FF,  /* 7.971435070037842f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF2963FF,  /* -2.2515874069109466e+38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0x00F4FFFF,  /* 2.2499695157409383e-38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFFFF00FF,  /* nanf */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF84C6FF,  /* nanf */
-	aobjEvent32SetExtValAfter(0x001, 1),
-	    0x3910DEFF,  /* 0.00013815982674714178f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3AD0 (was gap+0x1DC, 56 bytes) */
 u32 dYoshiModel_gap_0x38F4_sub_0x1DC[14] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3B08 (was gap+0x214, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x214[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x214.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x214[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3B40 (was gap+0x24C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x24C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x24C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x24C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3B78 (was gap+0x284, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x284[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x284.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x284[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3BB0 (was gap+0x2BC, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x2BC[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x2BC.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x2BC[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3BE8 (was gap+0x2F4, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x2F4[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x2F4.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x2F4[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3C20 (was gap+0x32C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x32C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x32C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x32C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3C58 (was gap+0x364, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x364[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x364.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x364[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3C90 (was gap+0x39C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x39C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x39C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x39C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3CC8 (was gap+0x3D4, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x3D4[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x3D4.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x3D4[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3D00 (was gap+0x40C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x40C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x40C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x40C[14] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40A00000,  /* 5.0f */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3D38 (was gap+0x444, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x444[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x444.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x444[14] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40A00000,  /* 5.0f */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3D70 (was gap+0x47C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x47C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x47C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x47C[14] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40A00000,  /* 5.0f */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3DA8 (was gap+0x4B4, 80 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x4B4[80] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x4B4.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x4B4[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3DF8 (was gap+0x504, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x504[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x504.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x504[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3E30 (was gap+0x53C, 80 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x53C[80] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x53C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x53C[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3E80 (was gap+0x58C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x58C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x58C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x58C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3EB8 (was gap+0x5C4, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x5C4[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x5C4.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x5C4[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3EF0 (was gap+0x5FC, 80 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x5FC[80] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x5FC.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x5FC[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3F40 (was gap+0x64C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x64C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x64C.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x64C[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3F78 (was gap+0x684, 80 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x684[80] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x684.data.inc.c>
+u32 dYoshiModel_gap_0x38F4_sub_0x684[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x3FC8 (was gap+0x6D4, 16 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x6D4[16] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x6D4.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6D4[4] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x3D4,
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x40C,
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x444,
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x47C,
 };
 
 /* gap sub-block @ 0x3FD8 (was gap+0x6E4, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x6E4[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x6E4.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6E4[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x1C,
 };
 
 /* gap sub-block @ 0x3FDC (was gap+0x6E8, 20 bytes) */
@@ -727,152 +2292,227 @@ AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6E8[5] = {
 };
 
 /* gap sub-block @ 0x3FF0 (was gap+0x6FC, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x6FC[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x6FC.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x6FC[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x284,
 };
 
 /* gap sub-block @ 0x3FF4 (was gap+0x700, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x700[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x700.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x700[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x214,
 };
 
 /* gap sub-block @ 0x3FF8 (was gap+0x704, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x704[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x704.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x704[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x24C,
 };
 
 /* gap sub-block @ 0x3FFC (was gap+0x708, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x708[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x708.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x708[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x32C,
 };
 
 /* gap sub-block @ 0x4000 (was gap+0x70C, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x70C[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x70C.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x70C[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x2BC,
 };
 
 /* gap sub-block @ 0x4004 (was gap+0x710, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x710[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x710.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x710[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x2F4,
 };
 
 /* gap sub-block @ 0x4008 (was gap+0x714, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x714[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x714.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x714[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x364,
 };
 
 /* gap sub-block @ 0x400C (was gap+0x718, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x718[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x718.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x718[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x39C,
 };
 
 /* gap sub-block @ 0x4010 (was gap+0x71C, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x71C[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x71C.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x71C[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x58C,
 };
 
 /* gap sub-block @ 0x4014 (was gap+0x720, 8 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x720[8] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x720.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x720[2] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x504,
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x53C,
 };
 
 /* gap sub-block @ 0x401C (was gap+0x728, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x728[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x728.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x728[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x4B4,
 };
 
 /* gap sub-block @ 0x4020 (was gap+0x72C, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x72C[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x72C.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x72C[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x5C4,
 };
 
 /* gap sub-block @ 0x4024 (was gap+0x730, 8 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x730[8] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x730.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x730[2] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x64C,
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x684,
 };
 
 /* gap sub-block @ 0x402C (was gap+0x738, 4 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x738[4] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x738.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x38F4_sub_0x738[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x38F4_sub_0x5FC,
 };
 
 /* gap sub-block @ 0x4030 (was gap+0x73C, 112 bytes) */
-MObjSub *dYoshiModel_gap_0x38F4_sub_0x73C[28] = {
+MObjSub **dYoshiModel_gap_0x38F4_sub_0x73C[28] = {
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x13FC,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1408,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1410,
+	dYoshiModel_gap_0x38F4_sub_0x13FC,
+	dYoshiModel_gap_0x38F4_sub_0x1408,
+	dYoshiModel_gap_0x38F4_sub_0x1410,
 	NULL,
 	NULL,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1428,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1430,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1438,
+	dYoshiModel_gap_0x38F4_sub_0x1428,
+	dYoshiModel_gap_0x38F4_sub_0x1430,
+	dYoshiModel_gap_0x38F4_sub_0x1438,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1440,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1448,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1450,
+	dYoshiModel_gap_0x38F4_sub_0x1440,
+	dYoshiModel_gap_0x38F4_sub_0x1448,
+	dYoshiModel_gap_0x38F4_sub_0x1450,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1458,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1460,
+	dYoshiModel_gap_0x38F4_sub_0x1458,
+	dYoshiModel_gap_0x38F4_sub_0x1460,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1468,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1470,
+	dYoshiModel_gap_0x38F4_sub_0x1468,
+	dYoshiModel_gap_0x38F4_sub_0x1470,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x147C,
+	dYoshiModel_gap_0x38F4_sub_0x147C,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1484,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x148C,
+	dYoshiModel_gap_0x38F4_sub_0x1484,
+	dYoshiModel_gap_0x38F4_sub_0x148C,
 	NULL,
-	(MObjSub *)dYoshiModel_gap_0x38F4_sub_0x1498,
+	dYoshiModel_gap_0x38F4_sub_0x1498,
 	NULL,
 };
 
-/* gap sub-block @ 0x40A0 (was gap+0x7AC, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x7AC[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x7AC.data.inc.c>
+/* Sprite pointer array @ 0x40A0 (14 entries) — MObjSub.sprites target.
+ * `Tex_0x9518 + 0xN` byte-offsets resolve to existing Tex_0x* texture
+ * symbols (Tex_0x9518 is 72 bytes; +0xN > 0x48 lands in later textures). */
+u8 *dYoshiModel_gap_0x38F4_sub_0x7AC[14] = {
+	dYoshiModel_Tex_0x9BD0,    /* Tex_0x9518 + 0x6B8 */
+	NULL,
+	NULL,
+	NULL,
+	dYoshiModel_Tex_0x9700,    /* Tex_0x9518 + 0x1E8 */
+	dYoshiModel_Tex_0x97B0,    /* Tex_0x9518 + 0x298 */
+	dYoshiModel_Tex_0x9650,    /* Tex_0x9518 + 0x138 */
+	dYoshiModel_Tex_0x9860,    /* Tex_0x9518 + 0x348 */
+	dYoshiModel_Tex_0x9910,    /* Tex_0x9518 + 0x3F8 */
+	dYoshiModel_Tex_0x99C0,    /* Tex_0x9518 + 0x4A8 */
+	dYoshiModel_Tex_0x9B20,    /* Tex_0x9518 + 0x608 */
+	dYoshiModel_Tex_0x9A70,    /* Tex_0x9518 + 0x558 */
+	NULL,
+	NULL,
 };
 
-/* gap sub-block @ 0x40D8 (was gap+0x7E4, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x7E4[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x7E4.data.inc.c>
+/* Palette pointer array @ 0x40D8 (14 entries) — MObjSub.palettes target.
+ * Combined from gap_0x38F4_sub_0x7E4[1] + data_0x40DC[13 ptrs]. */
+u16 *dYoshiModel_gap_0x38F4_sub_0x7E4[14] = {
+	dYoshiModel_palette_0x9BA8,
+	dYoshiModel_palette_0x9560,
+	dYoshiModel_palette_0x9588,
+	dYoshiModel_palette_0x95B0,
+	dYoshiModel_palette_0x96D8,
+	dYoshiModel_palette_0x9788,
+	dYoshiModel_palette_0x9628,
+	dYoshiModel_palette_0x9838,
+	dYoshiModel_palette_0x98E8,
+	dYoshiModel_palette_0x9998,
+	dYoshiModel_palette_0x9AF8,
+	dYoshiModel_palette_0x9A48,
+	dYoshiModel_palette_0x95D8,
+	dYoshiModel_palette_0x9600,
 };
 
-/* gap sub-block @ 0x4110 (was gap+0x81C, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x81C[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x81C.data.inc.c>
+
+/* Sprite pointer array @ 0x4110 (14 entries) — MObjSub.sprites target.
+ * Same Yoshi face texture set as sub_0x7AC (slot 10/11 reordered). */
+u8 *dYoshiModel_gap_0x38F4_sub_0x81C[14] = {
+	dYoshiModel_Tex_0x9BD0,    /* Tex_0x9518 + 0x6B8 */
+	NULL,
+	NULL,
+	NULL,
+	dYoshiModel_Tex_0x9700,    /* Tex_0x9518 + 0x1E8 */
+	dYoshiModel_Tex_0x97B0,    /* Tex_0x9518 + 0x298 */
+	dYoshiModel_Tex_0x9650,    /* Tex_0x9518 + 0x138 */
+	dYoshiModel_Tex_0x9860,    /* Tex_0x9518 + 0x348 */
+	dYoshiModel_Tex_0x9910,    /* Tex_0x9518 + 0x3F8 */
+	dYoshiModel_Tex_0x99C0,    /* Tex_0x9518 + 0x4A8 */
+	dYoshiModel_Tex_0x9A70,    /* Tex_0x9518 + 0x558 */
+	dYoshiModel_Tex_0x9B20,    /* Tex_0x9518 + 0x608 */
+	NULL,
+	NULL,
 };
 
-/* gap sub-block @ 0x4148 (was gap+0x854, 56 bytes) */
-u8 dYoshiModel_gap_0x38F4_sub_0x854[56] = {
-	#include <YoshiModel/gap_0x38F4_sub_0x854.data.inc.c>
+/* Palette pointer array @ 0x4148 (14 entries) — MObjSub.palettes target.
+ * Combined from gap_0x38F4_sub_0x854[1] + data_0x414C[13 ptrs] (same
+ * content as sub_0x7E4 except slots 10/11, which are in 0x9A48/0x9AF8
+ * order here). */
+u16 *dYoshiModel_gap_0x38F4_sub_0x854[14] = {
+	dYoshiModel_palette_0x9BA8,
+	dYoshiModel_palette_0x9560,
+	dYoshiModel_palette_0x9588,
+	dYoshiModel_palette_0x95B0,
+	dYoshiModel_palette_0x96D8,
+	dYoshiModel_palette_0x9788,
+	dYoshiModel_palette_0x9628,
+	dYoshiModel_palette_0x9838,
+	dYoshiModel_palette_0x98E8,
+	dYoshiModel_palette_0x9998,
+	dYoshiModel_palette_0x9A48,
+	dYoshiModel_palette_0x9AF8,
+	dYoshiModel_palette_0x95D8,
+	dYoshiModel_palette_0x9600,
 };
 
-/* u32 pointer array @ 0x4180 (6 entries) */
-u32 dYoshiModel_gap_0x38F4_sub_0x88C[6] = {
-	0x1061253C,
-	0x1062250A,
-	0x10632514,
-	0x1064251E,
-	0x10652528,
-	0x10662532,
+
+/* Palette pointer array @ 0x4180 (6 entries) — MObjSub.palettes target */
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2680[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x25B8[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x25E0[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2608[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2630[];
+extern u16 dYoshiModel_gap_0x6E70_sub_0x2658[];
+u16 *dYoshiModel_gap_0x38F4_sub_0x88C[6] = {
+	dYoshiModel_gap_0x6E70_sub_0x2680,
+	dYoshiModel_gap_0x6E70_sub_0x25B8,
+	dYoshiModel_gap_0x6E70_sub_0x25E0,
+	dYoshiModel_gap_0x6E70_sub_0x2608,
+	dYoshiModel_gap_0x6E70_sub_0x2630,
+	dYoshiModel_gap_0x6E70_sub_0x2658,
 };
 
-/* u32 pointer array @ 0x4198 (6 entries) */
-u32 dYoshiModel_gap_0x38F4_sub_0x8A4[6] = {
-	0x10672752,
-	0x10682716,
-	0x10692720,
-	0x106A272A,
-	0x106B2734,
-	0x106D273E,
+/* Palette pointer array @ 0x4198 (6 entries) — MObjSub.palettes target */
+extern u16 dYoshiModel_palette_0x9C58[];
+extern u16 dYoshiModel_palette_0x9C80[];
+extern u16 dYoshiModel_palette_0x9CA8[];
+extern u16 dYoshiModel_palette_0x9CD0[];
+extern u16 dYoshiModel_palette_0x9CF8[];
+extern u16 dYoshiModel_palette_0x9D48[];
+u16 *dYoshiModel_gap_0x38F4_sub_0x8A4[6] = {
+	dYoshiModel_palette_0x9D48,
+	dYoshiModel_palette_0x9C58,
+	dYoshiModel_palette_0x9C80,
+	dYoshiModel_palette_0x9CA8,
+	dYoshiModel_palette_0x9CD0,
+	dYoshiModel_palette_0x9CF8,
 };
 
 /* MObjSub @ 0x41B0 */
 MObjSub dYoshiModel_gap_0x38F4_sub_0x8BC[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)dYoshiModel_gap_0x38F4_sub_0x7AC,
 		0x006A, 0x0009, 0x0010, 0x0010,
 		0,
@@ -881,7 +2521,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x8BC[1] = {
 		0.5364000201225281f, 0.30000001192092896f,
 		(void**)dYoshiModel_gap_0x38F4_sub_0x7E4,
 		0x0005,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0010,
 		0x0010, 0x0010, 0x0010,
 		0.5364000201225281f, 0.010400000028312206f,
@@ -902,7 +2542,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x8BC[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x934[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)dYoshiModel_gap_0x38F4_sub_0x81C,
 		0x006A, 0x0009, 0x0010, 0x0010,
 		0,
@@ -911,7 +2551,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x934[1] = {
 		0.5404009819030762f, 0.30000001192092896f,
 		(void**)dYoshiModel_gap_0x38F4_sub_0x854,
 		0x0005,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0010,
 		0x0010, 0x0010, 0x0010,
 		0.5404009819030762f, 0.010400000028312206f,
@@ -932,7 +2572,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x934[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x9AC[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -941,7 +2581,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x9AC[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -962,7 +2602,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x9AC[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xA24[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -971,7 +2611,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xA24[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -992,7 +2632,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xA24[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xA9C[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0140, 0x0007, 0x0008, 0x0008,
 		0,
@@ -1001,7 +2641,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xA9C[1] = {
 		0.7692000269889832f, 0.10000000149011612f,
 		(void**)dYoshiModel_gap_0x38F4_sub_0x88C,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0008,
 		0x0008, 0x0008, 0x0008,
 		0.7692000269889832f, 0.038600001484155655f,
@@ -1022,7 +2662,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xA9C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xB14[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1031,7 +2671,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xB14[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1052,7 +2692,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xB14[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xB8C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1061,7 +2701,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xB8C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1082,7 +2722,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xB8C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xC04[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1091,7 +2731,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xC04[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1112,7 +2752,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xC04[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xC7C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1121,7 +2761,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xC7C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1142,7 +2782,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xC7C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xCF4[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1151,7 +2791,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xCF4[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1172,7 +2812,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xCF4[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xD6C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1181,7 +2821,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xD6C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1202,7 +2842,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xD6C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xDE4[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1211,7 +2851,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xDE4[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1232,7 +2872,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xDE4[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xE5C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1241,7 +2881,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xE5C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1262,7 +2902,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xE5C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xED4[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1271,7 +2911,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xED4[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1292,7 +2932,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xED4[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xF4C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1301,7 +2941,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xF4C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1322,7 +2962,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xF4C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0xFC4[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1331,7 +2971,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xFC4[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1352,7 +2992,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0xFC4[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x103C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1361,7 +3001,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x103C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1382,7 +3022,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x103C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x10B4[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1391,7 +3031,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x10B4[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1412,7 +3052,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x10B4[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x112C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1421,7 +3061,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x112C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1442,7 +3082,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x112C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x11A4[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1451,7 +3091,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x11A4[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1472,7 +3112,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x11A4[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x121C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1481,7 +3121,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x121C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1502,7 +3142,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x121C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x1294[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1511,7 +3151,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x1294[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1532,7 +3172,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x1294[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x130C[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1541,7 +3181,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x130C[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -1562,7 +3202,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x130C[1] = {
 MObjSub dYoshiModel_gap_0x38F4_sub_0x1384[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0037, 0x0006, 0x0010, 0x0008,
 		0,
@@ -1571,7 +3211,7 @@ MObjSub dYoshiModel_gap_0x38F4_sub_0x1384[1] = {
 		0.32630598545074463f, 0.6929879784584045f,
 		(void**)dYoshiModel_gap_0x38F4_sub_0x8A4,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0008,
 		0x0008, 0x0010, 0x0008,
 		0.32630598545074463f, -0.23539100587368011f,
@@ -1968,7 +3608,9 @@ Gfx *dYoshiModel_Joint_0x6738_post_post_post[36] = {
 	NULL,                                       dYoshiModel_Joint_0x6738_DisplayList,
 };
 
-/* DObjDesc: JointTree_0x6948 @ 0x6948 (30 entries) */
+/* DObjDesc: JointTree_0x6948 @ 0x6948 (29 entries, 0x4FC bytes — array
+ * proper. Immediately followed by JointTree_0x6948_post (11-slot
+ * AObjEvent32** per-joint dispatch table) spanning up to gap_0x6E70. */
 DObjDesc dYoshiModel_JointTree_0x6948[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 168.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dYoshiModel_Joint_0x6738_post_post_post, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
@@ -1999,49 +3641,84 @@ DObjDesc dYoshiModel_JointTree_0x6948[] = {
 	{ 6, (void*)&dYoshiModel_Joint_0x6738_post_post_post[34], { 0.0f, -1.9999999949504854e-06f, 0.0f }, { 3.1415929794311523f, 0.0f, -0.5891119837760925f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, -168.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 2.4834325794767167e-22f }, { 2.4999766965987566e-22f, 2.5661513980384885e-22f, 0.0f }, { 0.0f, 0.0f, 2.5826962724669974e-22f } },
+};
+
+/* AObjEvent32 ** dispatch table @ file 0x6E44 (44 bytes, 11 slots).
+ * Lives immediately after JointTree_0x6948; trailing space is followed
+ * by gap_0x6E70. */
+extern AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x698[];
+extern AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6A0[];
+extern AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6B8[];
+PAD(12);
+
+AObjEvent32 **dYoshiModel_JointTree_0x6948_post[8] = {
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x698,   /* slot 4  (+0x10) */
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6A0,   /* slot 5  (+0x14) */
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6A4,   /* slot 6  (+0x18) */
+	NULL, NULL, NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6B8,   /* slot 10 (+0x28) */
 };
 
 /* Raw data from file offset 0x6E70 to 0x9518 (9896 bytes) */
 /* gap sub-block @ 0x6E70 (was gap+0x0, 80 bytes) */
-u8 dYoshiModel_gap_0x6E70[80] = {
-	#include <YoshiModel/gap_0x6E70.data.inc.c>
+AObjEvent32 **dYoshiModel_gap_0x6E70[20] = {
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6BC,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6C0,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6C4,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6C8,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6CC,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6D0,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6D4,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6D8,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6DC,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6E4,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6E8,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6EC,
+	NULL,
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x6F4,
+	NULL,
 };
 
 /* gap sub-block @ 0x6EC0 (was gap+0x50, 140 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x50[35] = {
-	aobjEvent32SetValAfter(0x200, 0),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x001, 0),
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x001, 50),
+	aobjEvent32SetVal(AOBJ_MATFLAG_TEXID, 50),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
 	aobjEvent32Wait(46),
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfter(0x001, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
 	    0x41300000,  /* 11.0f */
 	aobjEvent32Wait(43),
 	aobjEvent32End(),
@@ -2049,38 +3726,38 @@ u32 dYoshiModel_gap_0x6E70_sub_0x50[35] = {
 
 /* gap sub-block @ 0x6F4C (was gap+0xDC, 140 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0xDC[35] = {
-	aobjEvent32SetValAfter(0x200, 0),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x001, 0),
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal(0x001, 50),
+	aobjEvent32SetVal(AOBJ_MATFLAG_TEXID, 50),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
 	aobjEvent32Wait(46),
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfter(0x001, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
 	    0x41300000,  /* 11.0f */
 	aobjEvent32Wait(43),
 	aobjEvent32End(),
@@ -2088,161 +3765,433 @@ u32 dYoshiModel_gap_0x6E70_sub_0xDC[35] = {
 
 /* gap sub-block @ 0x6FD8 (was gap+0x168, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x168[14] = {
-	aobjEvent32SetExtValAfterBlock(0x001, 0),
-	    0x40FF15FF,  /* 7.971435070037842f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF2963FF,  /* -2.2515874069109466e+38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0x00F4FFFF,  /* 2.2499695157409383e-38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFFFF00FF,  /* nanf */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF84C6FF,  /* nanf */
-	aobjEvent32SetExtValAfter(0x001, 1),
-	    0x3910DEFF,  /* 0.00013815982674714178f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7010 (was gap+0x1A0, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x1A0[14] = {
-	aobjEvent32SetExtValAfterBlock(0x001, 0),
-	    0x40FF15FF,  /* 7.971435070037842f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF2963FF,  /* -2.2515874069109466e+38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0x00F4FFFF,  /* 2.2499695157409383e-38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFFFF00FF,  /* nanf */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF84C6FF,  /* nanf */
-	aobjEvent32SetExtValAfter(0x001, 1),
-	    0x3910DEFF,  /* 0.00013815982674714178f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7048 (was gap+0x1D8, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x1D8[14] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7080 (was gap+0x210, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x210[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x210.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x210[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x70B8 (was gap+0x248, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x248[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x248.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x248[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x70F0 (was gap+0x280, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x280[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x280.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x280[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7128 (was gap+0x2B8, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2B8[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2B8.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x2B8[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7160 (was gap+0x2F0, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2F0[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2F0.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x2F0[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7198 (was gap+0x328, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x328[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x328.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x328[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x71D0 (was gap+0x360, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x360[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x360.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x360[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7208 (was gap+0x398, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x398[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x398.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x398[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7240 (was gap+0x3D0, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x3D0[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x3D0.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x3D0[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7278 (was gap+0x408, 80 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x408[80] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x408.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x408[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x72C8 (was gap+0x458, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x458[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x458.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x458[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7300 (was gap+0x490, 80 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x490[80] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x490.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x490[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7350 (was gap+0x4E0, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x4E0[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x4E0.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x4E0[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7388 (was gap+0x518, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x518[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x518.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x518[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x73C0 (was gap+0x550, 80 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x550[80] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x550.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x550[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7410 (was gap+0x5A0, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x5A0[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x5A0.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x5A0[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7448 (was gap+0x5D8, 80 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x5D8[80] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x5D8.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x5D8[20] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFF000000,  /* RGBA(255, 0, 0, 0) */
+	    0x4C000000,  /* RGBA(76, 0, 0, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x6600FF00,  /* RGBA(102, 0, 255, 0) */
+	    0x26004C00,  /* RGBA(38, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x8000FF00,  /* RGBA(128, 0, 255, 0) */
+	    0x33004C00,  /* RGBA(51, 0, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0x17E61800,  /* RGBA(23, 230, 24, 0) */
+	    0x174B1A00,  /* RGBA(23, 75, 26, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE61800,  /* RGBA(255, 230, 24, 0) */
+	    0x564B1A00,  /* RGBA(86, 75, 26, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xB300B300,  /* RGBA(179, 0, 179, 0) */
+	    0x40004000,  /* RGBA(64, 0, 64, 0) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7498 (was gap+0x628, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x628[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x628.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x628[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x74D0 (was gap+0x660, 56 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x660[56] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x660.data.inc.c>
+u32 dYoshiModel_gap_0x6E70_sub_0x660[14] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40A00000,  /* 5.0f */
+	aobjEvent32Wait(96),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x7508 (was gap+0x698, 8 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x698[8] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x698.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x698[2] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x628,
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x660,
 };
 
 /* gap sub-block @ 0x7510 (was gap+0x6A0, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6A0[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6A0.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6A0[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x2B8,
 };
 
 /* gap sub-block @ 0x7514 (was gap+0x6A4, 20 bytes) */
@@ -2255,111 +4204,126 @@ AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6A4[5] = {
 };
 
 /* gap sub-block @ 0x7528 (was gap+0x6B8, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6B8[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6B8.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6B8[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x280,
 };
 
 /* gap sub-block @ 0x752C (was gap+0x6BC, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6BC[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6BC.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6BC[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x210,
 };
 
 /* gap sub-block @ 0x7530 (was gap+0x6C0, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6C0[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6C0.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6C0[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x248,
 };
 
 /* gap sub-block @ 0x7534 (was gap+0x6C4, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6C4[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6C4.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6C4[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x360,
 };
 
 /* gap sub-block @ 0x7538 (was gap+0x6C8, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6C8[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6C8.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6C8[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x2F0,
 };
 
 /* gap sub-block @ 0x753C (was gap+0x6CC, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6CC[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6CC.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6CC[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x328,
 };
 
 /* gap sub-block @ 0x7540 (was gap+0x6D0, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6D0[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6D0.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6D0[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x398,
 };
 
 /* gap sub-block @ 0x7544 (was gap+0x6D4, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6D4[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6D4.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6D4[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x3D0,
 };
 
 /* gap sub-block @ 0x7548 (was gap+0x6D8, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6D8[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6D8.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6D8[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x4E0,
 };
 
 /* gap sub-block @ 0x754C (was gap+0x6DC, 8 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6DC[8] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6DC.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6DC[2] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x458,
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x490,
 };
 
 /* gap sub-block @ 0x7554 (was gap+0x6E4, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6E4[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6E4.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6E4[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x408,
 };
 
 /* gap sub-block @ 0x7558 (was gap+0x6E8, 4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6E8[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6E8.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6E8[1] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x518,
 };
 
 /* gap sub-block @ 0x755C (was gap+0x6EC, 8 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6EC[8] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6EC.data.inc.c>
+AObjEvent32 *dYoshiModel_gap_0x6E70_sub_0x6EC[2] = {
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x5A0,
+	(AObjEvent32 *)dYoshiModel_gap_0x6E70_sub_0x5D8,
 };
 
-/* gap sub-block @ 0x7564 (was gap+0x6F4, 16 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x6F4[16] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x6F4.data.inc.c>
+/* Pointer table @ 0x7564 (4 slots) — referenced as AObjEvent32** but
+ * holds mixed pointer types (slot 0 = AObjEvent32 script, slot 3 =
+ * MObjSub* dispatch list). */
+extern u32 dYoshiModel_gap_0x6E70_sub_0x550[];
+void *dYoshiModel_gap_0x6E70_sub_0x6F4[4] = {
+	(void *)dYoshiModel_gap_0x6E70_sub_0x550,
+	NULL,
+	NULL,
+	(void *)dYoshiModel_gap_0x6E70_sub_0x9A8,
 };
 
-/* u32 pointer array @ 0x7574 (6 entries) */
-u32 dYoshiModel_gap_0x6E70_sub_0x704[6] = {
-	0x1D5E26EA,
-	0x1D5F2558,
-	0x1D602562,
-	0x1D61256C,
-	0x1D622576,
-	0x1D632580,
+/* Palette pointer array @ 0x7574 (6 entries) — MObjSub.palettes target */
+extern u16 dYoshiModel_palette_0x9560[];
+extern u16 dYoshiModel_palette_0x9588[];
+extern u16 dYoshiModel_palette_0x95B0[];
+extern u16 dYoshiModel_palette_0x95D8[];
+extern u16 dYoshiModel_palette_0x9600[];
+extern u16 dYoshiModel_palette_0x9BA8[];
+u16 *dYoshiModel_gap_0x6E70_sub_0x704[6] = {
+	dYoshiModel_palette_0x9BA8,
+	dYoshiModel_palette_0x9560,
+	dYoshiModel_palette_0x9588,
+	dYoshiModel_palette_0x95B0,
+	dYoshiModel_palette_0x95D8,
+	dYoshiModel_palette_0x9600,
 };
 
-/* u32 pointer array @ 0x758C (6 entries) */
-u32 dYoshiModel_gap_0x6E70_sub_0x71C[6] = {
-	0x1D6426EA,
-	0x1D652558,
-	0x1D662562,
-	0x1D67256C,
-	0x1D682576,
-	0x1D692580,
+/* Palette pointer array @ 0x758C (6 entries) — MObjSub.palettes target */
+u16 *dYoshiModel_gap_0x6E70_sub_0x71C[6] = {
+	dYoshiModel_palette_0x9BA8,
+	dYoshiModel_palette_0x9560,
+	dYoshiModel_palette_0x9588,
+	dYoshiModel_palette_0x95B0,
+	dYoshiModel_palette_0x95D8,
+	dYoshiModel_palette_0x9600,
 };
 
-/* u32 pointer array @ 0x75A4 (7 entries) */
-u32 dYoshiModel_gap_0x6E70_sub_0x734[7] = {
-	0x1D6A253C,
-	0x1D6B250A,
-	0x1D6C2514,
-	0x1D6D251E,
-	0x1D6E2528,
-	0x1D992532,
-	0x00000000,
+/* Palette pointer array @ 0x75A4 (7 entries) — MObjSub.palettes target;
+ * 6 palette frames + NULL terminator */
+u16 *dYoshiModel_gap_0x6E70_sub_0x734[7] = {
+	dYoshiModel_gap_0x6E70_sub_0x2680,
+	dYoshiModel_gap_0x6E70_sub_0x25B8,
+	dYoshiModel_gap_0x6E70_sub_0x25E0,
+	dYoshiModel_gap_0x6E70_sub_0x2608,
+	dYoshiModel_gap_0x6E70_sub_0x2630,
+	dYoshiModel_gap_0x6E70_sub_0x2658,
+	NULL,
 };
 
 /* MObjSub @ 0x75C0 */
 MObjSub dYoshiModel_gap_0x6E70_sub_0x750[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -2368,7 +4332,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x750[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -2389,7 +4353,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x750[1] = {
 MObjSub dYoshiModel_gap_0x6E70_sub_0x7C8[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x006A, 0x0009, 0x0010, 0x0010,
 		0,
@@ -2398,7 +4362,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x7C8[1] = {
 		0.5404009819030762f, 0.30000001192092896f,
 		(void**)dYoshiModel_gap_0x6E70_sub_0x704,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0010,
 		0x0010, 0x0010, 0x0010,
 		0.5404009819030762f, 0.0f,
@@ -2419,7 +4383,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x7C8[1] = {
 MObjSub dYoshiModel_gap_0x6E70_sub_0x840[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x006A, 0x0009, 0x0010, 0x0010,
 		0,
@@ -2428,7 +4392,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x840[1] = {
 		0.5364000201225281f, 0.30000001192092896f,
 		(void**)dYoshiModel_gap_0x6E70_sub_0x71C,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0010,
 		0x0010, 0x0010, 0x0010,
 		0.5364000201225281f, 0.0f,
@@ -2449,7 +4413,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x840[1] = {
 MObjSub dYoshiModel_gap_0x6E70_sub_0x8B8[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -2458,7 +4422,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x8B8[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -2479,7 +4443,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x8B8[1] = {
 MObjSub dYoshiModel_gap_0x6E70_sub_0x930[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0140, 0x0007, 0x0008, 0x0008,
 		0,
@@ -2488,7 +4452,7 @@ MObjSub dYoshiModel_gap_0x6E70_sub_0x930[1] = {
 		0.7675999999046326f, 0.10000000149011612f,
 		(void**)dYoshiModel_gap_0x6E70_sub_0x734,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0008,
 		0x0008, 0x0008, 0x0008,
 		0.7675999999046326f, 0.0714000016450882f,
@@ -2561,41 +4525,41 @@ Gfx dYoshiModel_gap_0x6E70_sub_0xEA0[128] = {
 };
 
 /* Raw tail after 1 DL(s) @ 0x8110 (4 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0xEA0_post[4] = {
-	#include <YoshiModel/gap_0x6E70_sub_0xEA0_post.data.inc.c>
+AObjEvent32 **dYoshiModel_gap_0x6E70_sub_0xEA0_post[1] = {
+	(AObjEvent32 **)dYoshiModel_gap_0x6E70_sub_0x13BC,
 };
 
 /* gap sub-block @ 0x8114 (was gap+0x12A4, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x12A4[14] = {
-	aobjEvent32SetExtValAfterBlock(0x001, 0),
-	    0x40FF15FF,  /* 7.971435070037842f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF2963FF,  /* -2.2515874069109466e+38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0x00F4FFFF,  /* 2.2499695157409383e-38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFFFF00FF,  /* nanf */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF84C6FF,  /* nanf */
-	aobjEvent32SetExtValAfter(0x001, 1),
-	    0x3910DEFF,  /* 0.00013815982674714178f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x814C (was gap+0x12DC, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x12DC[14] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
@@ -2603,17 +4567,17 @@ u32 dYoshiModel_gap_0x6E70_sub_0x12DC[14] = {
 
 /* gap sub-block @ 0x8184 (was gap+0x1314, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x1314[14] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
@@ -2621,35 +4585,35 @@ u32 dYoshiModel_gap_0x6E70_sub_0x1314[14] = {
 
 /* gap sub-block @ 0x81BC (was gap+0x134C, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x134C[14] = {
-	aobjEvent32SetExtValAfterBlock(0x001, 0),
-	    0x40FF15FF,  /* 7.971435070037842f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF2963FF,  /* -2.2515874069109466e+38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0x00F4FFFF,  /* 2.2499695157409383e-38f */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFFFF00FF,  /* nanf */
-	aobjEvent32SetExtValAfterBlock(0x001, 1),
-	    0xFF84C6FF,  /* nanf */
-	aobjEvent32SetExtValAfter(0x001, 1),
-	    0x3910DEFF,  /* 0.00013815982674714178f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x40FF15FF,  /* RGBA(64, 255, 21, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF2963FF,  /* RGBA(255, 41, 99, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00F4FFFF,  /* RGBA(0, 244, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFF00FF,  /* RGBA(255, 255, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF84C6FF,  /* RGBA(255, 132, 198, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x3910DEFF,  /* RGBA(57, 16, 222, 255) */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x81F4 (was gap+0x1384, 56 bytes) */
 u32 dYoshiModel_gap_0x6E70_sub_0x1384[14] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfter(0x200, 1),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
 	aobjEvent32Wait(96),
 	aobjEvent32End(),
@@ -2797,8 +4761,14 @@ Gfx dYoshiModel_DL_0x9090[12] = {
 };
 
 /* gap sub-block @ 0x90F0 (was gap+0x2280, 176 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2280[176] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2280.data.inc.c>
+/* Vtx data @ 0x90F0 (80 B / 5 vertices) */
+Vtx dYoshiModel_gap_0x6E70_sub_0x2280[5] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x2280.vtx.inc.c>
+};
+
+/* Gfx DL @ 0x9140 (96 B / 12 cmds) */
+Gfx dYoshiModel_DL_0x9140[12] = {
+	#include <YoshiModel/DL_0x9140.dl.inc.c>
 };
 
 /* gap sub-block @ 0x91A0 (was gap+0x2330, 128 bytes) */
@@ -2824,49 +4794,232 @@ Gfx dYoshiModel_gap_0x6E70_sub_0x24E0[26] = {
 PAD(8);
 
 /* gap sub-block @ 0x9428 (was gap+0x25B8, 40 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x25B8[40] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x25B8.data.inc.c>
+u16 dYoshiModel_gap_0x6E70_sub_0x25B8[16] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x25B8.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x9450 (was gap+0x25E0, 40 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x25E0[40] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x25E0.data.inc.c>
+u16 dYoshiModel_gap_0x6E70_sub_0x25E0[16] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x25E0.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x9478 (was gap+0x2608, 40 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2608[40] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2608.data.inc.c>
+u16 dYoshiModel_gap_0x6E70_sub_0x2608[16] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x2608.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x94A0 (was gap+0x2630, 40 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2630[40] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2630.data.inc.c>
+u16 dYoshiModel_gap_0x6E70_sub_0x2630[16] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x2630.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x94C8 (was gap+0x2658, 40 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2658[40] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2658.data.inc.c>
+u16 dYoshiModel_gap_0x6E70_sub_0x2658[16] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x2658.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x94F0 (was gap+0x2680, 40 bytes) */
-u8 dYoshiModel_gap_0x6E70_sub_0x2680[40] = {
-	#include <YoshiModel/gap_0x6E70_sub_0x2680.data.inc.c>
+u16 dYoshiModel_gap_0x6E70_sub_0x2680[16] = {
+	#include <YoshiModel/gap_0x6E70_sub_0x2680.palette.inc.c>
 };
+PAD(8);
 
 /* Texture data @ 0x9518 (2136 bytes) */
-/* @tex fmt=CI4 dim=139x97 */
-u8 dYoshiModel_Tex_0x9518[2136] = {
+/* Texture: 0x9518 (CI4 — trailing 0x118 bytes split as palette frames) */
+/* @tex fmt=CI4 dim=16x8 */
+u8 dYoshiModel_Tex_0x9518[72] = {
 	#include <YoshiModel/Tex_0x9518.tex.inc.c>
 };
 
+u16 dYoshiModel_palette_0x9560[16] = {
+	#include <YoshiModel/palette_0x9560.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9588[16] = {
+	#include <YoshiModel/palette_0x9588.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x95B0[16] = {
+	#include <YoshiModel/palette_0x95B0.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x95D8[16] = {
+	#include <YoshiModel/palette_0x95D8.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9600[16] = {
+	#include <YoshiModel/palette_0x9600.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9628[16] = {
+	#include <YoshiModel/palette_0x9628.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9628 */
+u8 dYoshiModel_Tex_0x9650[136] = {
+	#include <YoshiModel/Tex_0x9650.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x96D8[16] = {
+	#include <YoshiModel/palette_0x96D8.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x96D8 */
+u8 dYoshiModel_Tex_0x9700[136] = {
+	#include <YoshiModel/Tex_0x9700.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9788[16] = {
+	#include <YoshiModel/palette_0x9788.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9788 */
+u8 dYoshiModel_Tex_0x97B0[136] = {
+	#include <YoshiModel/Tex_0x97B0.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9838[16] = {
+	#include <YoshiModel/palette_0x9838.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9838 */
+u8 dYoshiModel_Tex_0x9860[136] = {
+	#include <YoshiModel/Tex_0x9860.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x98E8[16] = {
+	#include <YoshiModel/palette_0x98E8.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x98E8 */
+u8 dYoshiModel_Tex_0x9910[136] = {
+	#include <YoshiModel/Tex_0x9910.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9998[16] = {
+	#include <YoshiModel/palette_0x9998.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9998 */
+u8 dYoshiModel_Tex_0x99C0[136] = {
+	#include <YoshiModel/Tex_0x99C0.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9A48[16] = {
+	#include <YoshiModel/palette_0x9A48.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9A48 */
+u8 dYoshiModel_Tex_0x9A70[136] = {
+	#include <YoshiModel/Tex_0x9A70.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9AF8[16] = {
+	#include <YoshiModel/palette_0x9AF8.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9AF8 */
+u8 dYoshiModel_Tex_0x9B20[136] = {
+	#include <YoshiModel/Tex_0x9B20.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9BA8[16] = {
+	#include <YoshiModel/palette_0x9BA8.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=16x16 lut=dYoshiModel_palette_0x9BA8 */
+u8 dYoshiModel_Tex_0x9BD0[136] = {
+	#include <YoshiModel/Tex_0x9BD0.tex.inc.c>
+};
+
+u16 dYoshiModel_palette_0x9C58[16] = {
+	#include <YoshiModel/palette_0x9C58.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9C80[16] = {
+	#include <YoshiModel/palette_0x9C80.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9CA8[16] = {
+	#include <YoshiModel/palette_0x9CA8.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9CD0[16] = {
+	#include <YoshiModel/palette_0x9CD0.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9CF8[16] = {
+	#include <YoshiModel/palette_0x9CF8.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9D20[16] = {
+	#include <YoshiModel/palette_0x9D20.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9D48[16] = {
+	#include <YoshiModel/palette_0x9D48.palette.inc.c>
+};
+PAD(8);
+
 /* Texture data @ 0x9D70 (272 bytes) */
-/* @tex fmt=CI4 dim=32x27 */
-u8 dYoshiModel_Tex_0x9D70[272] = {
+/* Texture: 0x9D70 (CI4 — trailing 0xC8 bytes split as palette frames) */
+/* @tex fmt=CI4 dim=16x8 */
+u8 dYoshiModel_Tex_0x9D70[72] = {
 	#include <YoshiModel/Tex_0x9D70.tex.inc.c>
 };
 
+u16 dYoshiModel_palette_0x9DB8[16] = {
+	#include <YoshiModel/palette_0x9DB8.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9DE0[16] = {
+	#include <YoshiModel/palette_0x9DE0.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9E08[16] = {
+	#include <YoshiModel/palette_0x9E08.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9E30[16] = {
+	#include <YoshiModel/palette_0x9E30.palette.inc.c>
+};
+PAD(8);
+
+u16 dYoshiModel_palette_0x9E58[16] = {
+	#include <YoshiModel/palette_0x9E58.palette.inc.c>
+};
+PAD(8);
+
 /* Texture data @ 0x9E80 (72 bytes) */
-/* @tex fmt=CI4 dim=38x13 */
+/* @tex fmt=CI4 dim=16x8 */
 u8 dYoshiModel_Tex_0x9E80[72] = {
 	#include <YoshiModel/Tex_0x9E80.tex.inc.c>
 };
@@ -2880,8 +5033,21 @@ PAD(8);
 
 /* Texture data @ 0x9EF0 (2416 bytes) */
 /* @tex fmt=CI4 dim=32x16 lut=dYoshiModel_Lut_0x9EC8_palette */
-u8 dYoshiModel_Tex_0x9EF0[2416] = {
+u8 dYoshiModel_Tex_0x9EF0[264] = {
 	#include <YoshiModel/Tex_0x9EF0.tex.inc.c>
+};
+
+u8 dYoshiModel_Tex_0x9FF8[40] = {
+	#include <YoshiModel/Tex_0x9FF8.tex.inc.c>
+};
+
+/* @tex fmt=CI4 dim=64x64 lut=dYoshiModel_Tex_0x9FF8 */
+u8 dYoshiModel_Tex_0xA020[2048] = {
+	#include <YoshiModel/Tex_0xA020.tex.inc.c>
+};
+
+u8 dYoshiModel_Tex_0xA820[64] = {
+	#include <YoshiModel/Tex_0xA820.tex.inc.c>
 };
 
 /* Gfx DL: gap_0xA860 @ 0xA860 (29 cmds) */
@@ -2889,10 +5055,8 @@ Gfx dYoshiModel_gap_0xA860[29] = {
 	#include <YoshiModel/gap_0xA860.dl.inc.c>
 };
 
-/* Raw tail after DL @ 0xA948 (16 bytes) */
-u8 dYoshiModel_gap_0xA860_post[16] = {
-	#include <YoshiModel/gap_0xA860_post.data.inc.c>
-};
+/* 16 trailing zero bytes after the DL — padding, not a script. */
+PAD(16);
 
 /* Texture data for sprite Stock */
 /* Split out from .sprite.c so the palette blocks can sit at
@@ -2908,35 +5072,36 @@ u16 dYoshiModel_palette_0xA9B0[16] = {
 	#include <YoshiModel/palette_0xA9B0.palette.inc.c>
 };
 
-/* Raw data from file offset 0xA9D0 to 0xAA98 (200 bytes) */
-/* gap sub-block @ 0xA9D0 (was gap+0x0, 8 bytes) */
-u8 dYoshiModel_gap_0xA9D0[8] = {
-	#include <YoshiModel/gap_0xA9D0.data.inc.c>
+/* "Stock LUTs" — palette frames cycled by FTSprites.stock_luts (YoshiMain).
+ * dYoshiMain_stock_luts[6] targets palette_0xA9B0, gap_0xA9D0_sub_0x{8,30,58,80,A8}.
+ * Each frame is 16 colors RGBA5551 (32 bytes); first 5 trail an 8-byte pad,
+ * last has none. The standalone gap_0xA9D0[8] is the trailing pad of palette_0xA9B0. */
+u16 dYoshiModel_gap_0xA9D0[4] = {
+	#include <YoshiModel/gap_0xA9D0.palette.inc.c>
 };
 
-/* gap sub-block @ 0xA9D8 (was gap+0x8, 40 bytes) */
-u8 dYoshiModel_gap_0xA9D0_sub_0x8[40] = {
-	#include <YoshiModel/gap_0xA9D0_sub_0x8.data.inc.c>
+u16 dYoshiModel_gap_0xA9D0_sub_0x8[16] = {
+	#include <YoshiModel/gap_0xA9D0_sub_0x8.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0xAA00 (was gap+0x30, 40 bytes) */
-u8 dYoshiModel_gap_0xA9D0_sub_0x30[40] = {
-	#include <YoshiModel/gap_0xA9D0_sub_0x30.data.inc.c>
+u16 dYoshiModel_gap_0xA9D0_sub_0x30[16] = {
+	#include <YoshiModel/gap_0xA9D0_sub_0x30.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0xAA28 (was gap+0x58, 40 bytes) */
-u8 dYoshiModel_gap_0xA9D0_sub_0x58[40] = {
-	#include <YoshiModel/gap_0xA9D0_sub_0x58.data.inc.c>
+u16 dYoshiModel_gap_0xA9D0_sub_0x58[16] = {
+	#include <YoshiModel/gap_0xA9D0_sub_0x58.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0xAA50 (was gap+0x80, 40 bytes) */
-u8 dYoshiModel_gap_0xA9D0_sub_0x80[40] = {
-	#include <YoshiModel/gap_0xA9D0_sub_0x80.data.inc.c>
+u16 dYoshiModel_gap_0xA9D0_sub_0x80[16] = {
+	#include <YoshiModel/gap_0xA9D0_sub_0x80.palette.inc.c>
 };
+PAD(8);
 
-/* gap sub-block @ 0xAA78 (was gap+0xA8, 32 bytes) */
-u8 dYoshiModel_gap_0xA9D0_sub_0xA8[32] = {
-	#include <YoshiModel/gap_0xA9D0_sub_0xA8.data.inc.c>
+u16 dYoshiModel_gap_0xA9D0_sub_0xA8[16] = {
+	#include <YoshiModel/gap_0xA9D0_sub_0xA8.palette.inc.c>
 };
 
 /* Sprite: Stock */
@@ -3002,5 +5167,3 @@ Sprite dYoshiModel_FTEmblem = {
 	(Gfx*)0x00000000,
 	0, 0,
 };
-
-PAD(4);

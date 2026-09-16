@@ -5,11 +5,14 @@
  * at extract time. */
 
 #include "relocdata_types.h"
+#include <gr/grtypes.h>  // GRAttackColl
 
 /* Item-randomizer weights — referenced by header.item_weights */
-u8 dGRZebesMap_gap_0x0000[20] = {
-	#include <GRZebesMap/gap_0x0000.data.inc.c>
-};
+#if defined(REGION_JP)
+MPItemWeights dGRZebesMap_item_weights = { { 0x0A, 0x0A, 0xC8, 0x00, 0x0A, 0x07, 0x03, 0x0F, 0x05, 0x08, 0x06, 0x1E, 0x0F, 0x07, 0x14, 0x0A, 0x0A, 0x05, 0x05, 0x12 } };
+#else
+MPItemWeights dGRZebesMap_item_weights = { { 0x14, 0x08, 0xC8, 0x00, 0x0A, 0x05, 0x05, 0x14, 0x05, 0x08, 0x0C, 0x1E, 0x0F, 0x08, 0x16, 0x0C, 0x0E, 0x05, 0x07, 0x10 } };
+#endif
 
 /* MPGroundData (typed via tools/typeStageMap.py) */
 
@@ -17,10 +20,10 @@ u8 dGRZebesMap_gap_0x0000[20] = {
 extern Sprite dStageZebes_sprite_0x26C88[];
 extern DObjDesc dStageZebesFile2_Layer1DObj[];
 extern u32 dStageZebesFile2_Layer1Anim_AnimJoint[];
-extern MObjSub dStageZebesFile2_Layer1MObj_MObjSub[];
+extern MObjSub **dStageZebesFile2_Layer1MObj_MObjSub[];
 extern u32 dStageZebesFile2_Layer1MatAnim_MatAnimJoint[];
 extern u32 dStageZebesFile2_MPGeometryData_0x6160[];
-extern u32 dStageZebesFile2_gap_0x0000[];
+extern u32 dStageZebesFile3_DObjDesc_0x0B08[];
 MPGroundData dGRZebesMap_MapHeader_0x0014 =
 {
     /* gr_desc[4] */
@@ -53,8 +56,8 @@ MPGroundData dGRZebesMap_MapHeader_0x0014 =
     9500,  /* map_bound_right */
     -9500,  /* map_bound_left */
     nSYAudioBGMZebes,  /* bgm_id */
-    (void *)((u8 *)dStageZebesFile2_gap_0x0000 + 0xB08),  /* map_nodes */
-    dGRZebesMap_gap_0x0000,  /* item_weights */
+    (void *)dStageZebesFile3_DObjDesc_0x0B08,  /* map_nodes */
+    &dGRZebesMap_item_weights,  /* item_weights */
     -2900,  /* alt_warning */
     4400,  /* camera_bound_team_top */
     -2100,  /* camera_bound_team_bottom */
@@ -68,8 +71,6 @@ MPGroundData dGRZebesMap_MapHeader_0x0014 =
     { 0, 0, 15000 },  /* zoom_end */
 };
 
-/* Raw data from file offset 0x00BC to 0x00E0 (36 bytes) */
-u8 dGRZebesMap_Acid_GRAttackColl[36] = {
-	#include <GRZebesMap/Acid_GRAttackColl.data.inc.c>
-};
-
+/* GRAttackColl @ 0xBC — acid-hazard hit params; read by grzebes.c via
+ * llGRZebesMapAcidGRAttackColl. 8 B trailing pad. */
+GRAttackColl dGRZebesMap_Acid_GRAttackColl = { 0, 16, 80, 130, 0, 30, 1 };

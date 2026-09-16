@@ -5,14 +5,18 @@
  * at extract time. */
 
 #include "relocdata_types.h"
+#include <ft/fttypes.h>  // FTThrowHitDesc
 
 /* Cross-file references resolved by fixRelocChain.py — see .reloc */
 extern u16 dStageJungleFile2_Lut_0x0A98_palette[];
+extern u32 dStageJungleFile3_DObjDesc_0x0A98[];
 
 /* Item-randomizer weights — referenced by header.item_weights */
-u8 dGRJungleMap_gap_0x0000[20] = {
-	#include <GRJungleMap/gap_0x0000.data.inc.c>
-};
+#if defined(REGION_JP)
+MPItemWeights dGRJungleMap_item_weights = { { 0x50, 0x96, 0x32, 0x00, 0x0A, 0x07, 0x06, 0x0A, 0x05, 0x0A, 0x0A, 0x08, 0x0A, 0x0C, 0x0A, 0x0A, 0x0A, 0x05, 0x05, 0x12 } };
+#else
+MPItemWeights dGRJungleMap_item_weights = { { 0x50, 0x78, 0x32, 0x00, 0x0A, 0x05, 0x06, 0x0C, 0x05, 0x08, 0x0A, 0x05, 0x12, 0x0D, 0x0A, 0x0A, 0x0E, 0x03, 0x07, 0x14 } };
+#endif
 
 /* MPGroundData (typed via tools/typeStageMap.py) */
 
@@ -24,7 +28,6 @@ extern u32 dStageJungleFile2_Layer1Anim_AnimJoint[];
 extern DObjDesc dStageJungleFile2_Layer2DObj[];
 extern DObjDesc dStageJungleFile2_Layer3DObj[];
 extern u32 dStageJungleFile2_MPGeometryData_0x9AFC[];
-extern u32 dStageJungleFile2_gap_0x0000[];
 MPGroundData dGRJungleMap_MapHeader_0x0014 =
 {
     /* gr_desc[4] */
@@ -57,8 +60,8 @@ MPGroundData dGRJungleMap_MapHeader_0x0014 =
     8100,  /* map_bound_right */
     -8100,  /* map_bound_left */
     nSYAudioBGMJungle,  /* bgm_id */
-    (void *)((u8 *)dStageJungleFile2_gap_0x0000 + 0xA98),  /* map_nodes */
-    dGRJungleMap_gap_0x0000,  /* item_weights */
+    (void *)dStageJungleFile3_DObjDesc_0x0A98,  /* map_nodes */
+    &dGRJungleMap_item_weights,  /* item_weights */
     -1900,  /* alt_warning */
     4000,  /* camera_bound_team_top */
     -2000,  /* camera_bound_team_bottom */
@@ -72,8 +75,6 @@ MPGroundData dGRJungleMap_MapHeader_0x0014 =
     { 0, 0, 15000 },  /* zoom_end */
 };
 
-/* Raw data from file offset 0x00BC to 0x00E0 (36 bytes) */
-u8 dGRJungleMap_TaruCannThrow_HitDesc[36] = {
-	#include <GRJungleMap/TaruCannThrow_HitDesc.data.inc.c>
-};
-
+/* FTThrowHitDesc @ 0xBC — hit params for the barrel cannon's fighter-throw.
+ * Read by ftCommonTaruCann* via llGRJungleMapTaruCannThrowHitDesc. */
+FTThrowHitDesc dGRJungleMap_TaruCannThrow_HitDesc = { 3, 0, 90, 0, 0, 180, 0 };

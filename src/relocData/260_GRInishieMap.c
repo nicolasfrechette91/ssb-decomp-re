@@ -5,15 +5,26 @@
  * at extract time. */
 
 #include "relocdata_types.h"
+#include <it/ittypes.h>  // ITAttributes
+#include <gr/grtypes.h>  // GRAttackColl
+#include <gm/gmsound.h>  // gmFGMVoiceID
 
 /* Cross-file references resolved by fixRelocChain.py — see .reloc */
 extern u8 dStageInishieFile2_Tex_0x02E0[];
 extern u8 dStageInishieFile2_Tex_0x12E8[];
+extern u32 dStageInishieFile3_mobjlink_0x0A68[];
+extern u32 dStageInishieFile3_DObjDesc_0x0C30[];
+extern u32 dStageInishieFile3_DObjDesc_0x11F8[];
+extern u32 dStageInishieFile3_mobjlink_0x13B0[];
+extern Gfx dStageInishieFile3_DL_0x05F0[];
+extern MObjSub **dStageInishieFile2_Layer0MObj_MObjSub[];
 
 /* Item-randomizer weights — referenced by header.item_weights */
-u8 dGRInishieMap_gap_0x0000[20] = {
-	#include <GRInishieMap/gap_0x0000.data.inc.c>
-};
+#if defined(REGION_JP)
+MPItemWeights dGRInishieMap_item_weights = { { 0x50, 0x28, 0x78, 0x00, 0x0A, 0x07, 0x0A, 0x0A, 0x05, 0x0A, 0x0A, 0x08, 0x14, 0x12, 0x0A, 0x0E, 0x0A, 0x05, 0x05, 0x12 } };
+#else
+MPItemWeights dGRInishieMap_item_weights = { { 0x50, 0x28, 0x78, 0x00, 0x0A, 0x05, 0x0A, 0x0A, 0x05, 0x08, 0x08, 0x07, 0x14, 0x12, 0x08, 0x0E, 0x06, 0x19, 0x0A, 0x12 } };
+#endif
 
 /* MPGroundData (typed via tools/typeStageMap.py) */
 
@@ -21,18 +32,16 @@ u8 dGRInishieMap_gap_0x0000[20] = {
 extern Sprite dStageInishieBackground_0x26c88[];
 extern DObjDesc dStageInishieFile2_Layer0DObj[];
 extern u32 dStageInishieFile2_Layer0Anim_AnimJoint[];
-extern MObjSub dStageInishieFile2_Layer0MObj_MObjSub[];
 extern u32 dStageInishieFile2_Layer0MatAnim_MatAnimJoint[];
 extern DObjDesc dStageInishieFile2_Layer1DObj[];
 extern DObjDesc dStageInishieFile2_Layer2DObj[];
 extern DObjDesc dStageInishieFile2_Layer3DObj[];
 extern u32 dStageInishieFile2_MPGeometryData_0x6698[];
-extern u32 dStageInishieFile2_gap_0x0000[];
 MPGroundData dGRInishieMap_MapHeader_0x0014 =
 {
     /* gr_desc[4] */
     {
-        { dStageInishieFile2_Layer0DObj, dStageInishieFile2_Layer0Anim_AnimJoint, dStageInishieFile2_Layer0MObj_MObjSub, dStageInishieFile2_Layer0MatAnim_MatAnimJoint },
+        { dStageInishieFile2_Layer0DObj, dStageInishieFile2_Layer0Anim_AnimJoint, (MObjSub *)dStageInishieFile2_Layer0MObj_MObjSub, dStageInishieFile2_Layer0MatAnim_MatAnimJoint },
         { dStageInishieFile2_Layer1DObj, NULL, NULL, NULL },
         { dStageInishieFile2_Layer2DObj, NULL, NULL, NULL },
         { dStageInishieFile2_Layer3DObj, NULL, NULL, NULL },
@@ -60,8 +69,8 @@ MPGroundData dGRInishieMap_MapHeader_0x0014 =
     7400,  /* map_bound_right */
     -7400,  /* map_bound_left */
     nSYAudioBGMInishie,  /* bgm_id */
-    (void *)((u8 *)dStageInishieFile2_gap_0x0000 + 0x5F0),  /* map_nodes */
-    dGRInishieMap_gap_0x0000,  /* item_weights */
+    (void *)dStageInishieFile3_DL_0x05F0,  /* map_nodes */
+    &dGRInishieMap_item_weights,  /* item_weights */
     -2200,  /* alt_warning */
     3000,  /* camera_bound_team_top */
     -1000,  /* camera_bound_team_bottom */
@@ -75,18 +84,86 @@ MPGroundData dGRInishieMap_MapHeader_0x0014 =
     { 0, 0, 15000 },  /* zoom_end */
 };
 
-/* Raw data from file offset 0x00BC to 0x00D8 (28 bytes) */
-u8 dGRInishieMap_PowerBlock_GRAttackColl[28] = {
-	#include <GRInishieMap/PowerBlock_GRAttackColl.data.inc.c>
-};
+/* GRAttackColl @ 0xBC — POW-block hazard hit params; read by grinishie.c
+ * via llGRInishieMapPowerBlockGRAttackColl. */
+GRAttackColl dGRInishieMap_PowerBlock_GRAttackColl = { 1, 20, 90, 130, 0, 30, 0 };
 
-/* Raw data from file offset 0x00D8 to 0x0120 (72 bytes) */
-u8 dGRInishieMap_PowerBlock_ItemAttributes[72] = {
-	#include <GRInishieMap/PowerBlock_ItemAttributes.data.inc.c>
-};
+/* ITAttributes @ 0xD8 */
+ITAttributes dGRInishieMap_PowerBlock_ItemAttributes[1] = {{
+	(void *)dStageInishieFile3_DObjDesc_0x11F8,  /* data */
+	NULL,  /* p_mobjsubs */
+	(void *)dStageInishieFile3_mobjlink_0x13B0,  /* anim_joints */
+	NULL,  /* p_matanim_joints */
+	0, 0, 0, 1, 1,  /* xlu,dobjs,colanim,hitlag,weight */
+	0, 0, 0,  /* attack_offset0 x/y/z */
+	0, 0, 0,  /* attack_offset1 x/y/z */
+	{ 0, 0, 0 },  /* damage_coll_offset */
+	{ 400, 300, 300 },  /* damage_coll_size */
+	110, 0, -110, 159,  /* map_coll top/center/bottom/width */
+	10,  /* size */
+	361,  /* angle */
+	100,  /* ks */
+	5,  /* dmg */
+	0,  /* elem */
+	0,  /* kw */
+	0,  /* sd */
+	1,  /* ac */
+	1,  /* cso */
+	nSYAudioFGMPunchL,  /* hit_sfx */
+	1,  /* pri */
+	1,  /* cri */
+	0,  /* crf */
+	1,  /* hop */
+	0,  /* refl */
+	1,  /* shield */
+	20,  /* kb */
+	6,  /* type */
+	0,  /* hitstatus */
+	0,  /* b6 */
+	0,  /* b7 */
+	nSYAudioFGMItemThrow,  /* drop */
+	nSYAudioFGMItemThrow,  /* throw */
+	nSYAudioFGMItemThrow,  /* smash */
+	100,  /* vel */
+	0,  /* spin */
+}};
 
-/* Raw data from file offset 0x0120 to 0x0170 (80 bytes) */
-u8 dGRInishieMap_Pakkun_ItemAttributes[80] = {
-	#include <GRInishieMap/Pakkun_ItemAttributes.data.inc.c>
-};
-
+/* ITAttributes @ 0x120 */
+ITAttributes dGRInishieMap_Pakkun_ItemAttributes[1] = {{
+	(void *)dStageInishieFile3_DObjDesc_0x0C30,  /* data */
+	(void *)dStageInishieFile3_mobjlink_0x0A68,  /* p_mobjsubs */
+	NULL,  /* anim_joints */
+	NULL,  /* p_matanim_joints */
+	0, 0, 0, 1, 1,  /* xlu,dobjs,colanim,hitlag,weight */
+	0, 0, 0,  /* attack_offset0 x/y/z */
+	0, 0, 0,  /* attack_offset1 x/y/z */
+	{ 0, 0, 0 },  /* damage_coll_offset */
+	{ 450, 490, 450 },  /* damage_coll_size */
+	110, 0, -110, 159,  /* map_coll top/center/bottom/width */
+	200,  /* size */
+	80,  /* angle */
+	80,  /* ks */
+	5,  /* dmg */
+	0,  /* elem */
+	0,  /* kw */
+	0,  /* sd */
+	1,  /* ac */
+	1,  /* cso */
+	nSYAudioFGMPunchL,  /* hit_sfx */
+	1,  /* pri */
+	1,  /* cri */
+	1,  /* crf */
+	0,  /* hop */
+	0,  /* refl */
+	1,  /* shield */
+	80,  /* kb */
+	6,  /* type */
+	1,  /* hitstatus */
+	0,  /* b6 */
+	0,  /* b7 */
+	nSYAudioFGMItemThrow,  /* drop */
+	nSYAudioFGMItemThrow,  /* throw */
+	nSYAudioFGMItemThrow,  /* smash */
+	100,  /* vel */
+	0,  /* spin */
+}};

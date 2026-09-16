@@ -9,6 +9,10 @@
 
 /* Raw data from file offset 0x0000 to 0x0F98 (3992 bytes) */
 /* gap sub-block @ 0x0000 (was gap+0x0, 64 bytes) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Vtx dLBTransitionRotScale_gap_0x0000[];
+extern Vtx dLBTransitionRotScale_gap_0x0000_sub_0x40[];
 Vtx dLBTransitionRotScale_gap_0x0000[4] = {
 	#include <LBTransitionRotScale/gap_0x0000.vtx.inc.c>
 };
@@ -26,7 +30,7 @@ Gfx dLBTransitionRotScale_DL_0x05A0[319] = {
 /* DObjDesc: - @ 0xF98 (3 entries) */
 DObjDesc dLBTransitionRotScale_DObjDesc_0x0F98[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dLBTransitionRotScale_gap_0x0000 + 0x5A0), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 1.5436489582061768f }, { 0.7031279802322388f, 0.7031279802322388f, 0.7031279802322388f } },
+	{ 1, (void*)dLBTransitionRotScale_DL_0x05A0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 1.5436489582061768f }, { 0.7031279802322388f, 0.7031279802322388f, 0.7031279802322388f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
@@ -42,24 +46,21 @@ AObjEvent32 *dLBTransitionRotScale_AnimJoint_0x101C[2] = {
 };
 
 u32 dLBTransitionRotScale_AnimJoint_0x1024[] = {
-	aobjEvent32SetValAfter(0x003, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_ROTX | AOBJ_FLAG_ROTY, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0Rate(0x004, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_ROTZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x380, 0),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 0),
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValRate(0x004, 64),
+	aobjEvent32SetValRate(AOBJ_FLAG_ROTZ, 64),
 	    0x41FB53D1,  /* 31.415925979614258f */
 	    0x3FA53483,  /* 1.2906650304794312f */
-	aobjEvent32SetValBlock(0x380, 64),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 64),
 	    0x3727C5AC,  /* 9.999999747378752e-06f */
 	    0x3727C5AC,  /* 9.999999747378752e-06f */
 	    0x3727C5AC,  /* 9.999999747378752e-06f */
 	aobjEvent32End(),
 };
-
-PAD(8);
-

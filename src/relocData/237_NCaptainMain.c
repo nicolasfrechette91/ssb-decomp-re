@@ -2,16 +2,27 @@
 /* File size: 1520 bytes (0x5F0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern ftMotionCommand dCaptainMainMotion_EggLay_0x006C[];
+extern u32 dMasterHandIcon_FTEmblem[];
+extern u8 dCaptainShieldPose_data0[];
+extern u8 dCaptainShieldPose_data0_end[];
+extern u8 dCaptainShieldPose_shield_anim_joint_1[];
+extern u8 dCaptainShieldPose_shield_anim_joint_2[];
+extern u8 dCaptainShieldPose_shield_anim_joint_3[];
+extern u8 dCaptainShieldPose_shield_anim_joint_4[];
+extern u8 dCaptainShieldPose_shield_anim_joint_5[];
+extern u8 dCaptainShieldPose_shield_anim_joint_6[];
+extern u8 dCaptainShieldPose_shield_anim_joint_7[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dNCaptainModel_JointTree[];
 
-/* Pre-attributes data (167 words, 0x029C bytes) */
-/* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNCaptainMain_pre+0x0) */
-u32 dNCaptainMain_file_handles[1] = {
+ftMotionCommand * dNCaptainMain_file_handles[1] = { dCaptainMainMotion_EggLay_0x006C };
 
-	0x0030001B, /* extern -> 0x006C */
-};
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNCaptainMain_pre+0x4) */
 u32 dNCaptainMain_animlock[2] = {
@@ -43,9 +54,7 @@ FTModelPartDesc *dNCaptainMain_modelparts_container[26] = {
 };
 
 /* @ 0x00BC, 4 bytes: FTAttributes.textureparts_container target (was dNCaptainMain_pre+0xBC) */
-u32 dNCaptainMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dNCaptainMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x00C0, 32 bytes: FTAttributes.commonparts_container target (was dNCaptainMain_pre+0xC0) */
 FTCommonPartContainer dNCaptainMain_commonparts_container = {
@@ -117,7 +126,7 @@ FTThrownStatus dNCaptainMain_thrown_status[54] = {
 FTSprites dNCaptainMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x015D00AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNCaptainMain_attr = {
@@ -217,8 +226,8 @@ FTAttributes dNCaptainMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNCaptainMain_hiddenparts, /* hiddenparts */
 	&dNCaptainMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dCaptainShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dCaptainShieldPose_data0_end, (void *)&dCaptainShieldPose_shield_anim_joint_1, (void *)&dCaptainShieldPose_shield_anim_joint_2, (void *)&dCaptainShieldPose_shield_anim_joint_3, (void *)&dCaptainShieldPose_shield_anim_joint_4, (void *)&dCaptainShieldPose_shield_anim_joint_5, (void *)&dCaptainShieldPose_shield_anim_joint_6, (void *)&dCaptainShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	176.271f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */
@@ -229,7 +238,7 @@ FTAttributes dNCaptainMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dNCaptainMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dNCaptainMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dNCaptainMain_textureparts_container, /* textureparts_container */
 	29, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dNCaptainMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

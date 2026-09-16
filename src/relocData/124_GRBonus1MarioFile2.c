@@ -9,6 +9,74 @@
 
 /* Raw data from file offset 0x0000 to 0x0A60 (2656 bytes) */
 /* gap sub-block @ 0x0000 (was gap+0x0, 64 bytes) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dBonus1CommonImages1_Lut_0x03F0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x04E8_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x02F8[];
+extern u8 dBonus1CommonImages1_Tex_0x0418[];
+extern u8 dBonus1CommonImages1_Tex_0x0460[];
+extern u8 dBonus1CommonImages1_Tex_0x0510[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern Gfx dGRBonus1MarioFile2_DL_0x19D8[];
+extern u16 dBonus1CommonImages1_Lut_0x03F0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x04E8_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x02F8[];
+extern u8 dBonus1CommonImages1_Tex_0x0418[];
+extern u8 dBonus1CommonImages1_Tex_0x0460[];
+extern u8 dBonus1CommonImages1_Tex_0x0510[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern u16 dBonus1CommonImages1_Lut_0x03F0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x04E8_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x02F8[];
+extern u8 dBonus1CommonImages1_Tex_0x0418[];
+extern u8 dBonus1CommonImages1_Tex_0x0460[];
+extern u8 dBonus1CommonImages1_Tex_0x0510[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern u16 dBonus1CommonImages1_Lut_0x03F0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x04E8_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x02F8[];
+extern u8 dBonus1CommonImages1_Tex_0x0418[];
+extern u8 dBonus1CommonImages1_Tex_0x0460[];
+extern u8 dBonus1CommonImages1_Tex_0x0510[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x100[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x140[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x180[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x1C0[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x200[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x240[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x280[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x2C0[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x300[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x340[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x380[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x3C0[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x40[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x400[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x440[];
+extern Gfx dGRBonus1MarioFile2_gap_0x0000_sub_0x480[];
+extern Gfx dGRBonus1MarioFile2_gap_0x0000_sub_0x580[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0x80[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0000_sub_0xC0[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x20C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x2CC[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x2EC[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x3AC[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x46C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x66C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x72C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x7EC[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x94C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0x96C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0xB4C[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0xC[];
+extern Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0xC8C[];
 Vtx dGRBonus1MarioFile2_gap_0x0000[4] = {
 	#include <GRBonus1MarioFile2/gap_0x0000.vtx.inc.c>
 };
@@ -169,10 +237,7 @@ DObjDesc dGRBonus1MarioFile2_Layer0DObj[] = {
 };
 
 /* Raw data from file offset 0x0B94 to 0x1EB0 (4892 bytes) */
-/* gap sub-block @ 0x0B94 (was gap+0x0, 12 bytes) */
-u8 dGRBonus1MarioFile2_gap_0x0B94[12] = {
-	#include <GRBonus1MarioFile2/gap_0x0B94.data.inc.c>
-};
+PAD(12);
 
 /* Vtx: gap_0x0B94_sub_0xC @ 0xBA0 (32 vertices) */
 Vtx dGRBonus1MarioFile2_gap_0x0B94_sub_0xC[32] = {
@@ -257,215 +322,158 @@ Gfx dGRBonus1MarioFile2_DL_0x1E48[13] = {
 /* DObjDesc: Layer1DObj @ 0x1EB0 (4 entries) */
 DObjDesc dGRBonus1MarioFile2_Layer1DObj[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1MarioFile2_gap_0x0B94 + 0xDCC), { 0.0f, 0.0f, 1.1000000085914508e-05f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1MarioFile2_gap_0x0B94 + 0x12B4), { 2700.0f, 1500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1MarioFile2_DL_0x1960, { 0.0f, 0.0f, 1.1000000085914508e-05f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1MarioFile2_DL_0x1E48, { 2700.0f, 1500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
 /* Raw data from file offset 0x1F60 to 0x20E8 (392 bytes) */
-/* gap sub-block @ 0x1F60 (was gap+0x0, 156 bytes) */
-u8 dGRBonus1MarioFile2_gap_0x1F60[156] = {
-	#include <GRBonus1MarioFile2/gap_0x1F60.data.inc.c>
+/* MPVertexData[26] @ 0x1F60 — vertex positions (MPGeometryData.vertex_data) */
+MPVertexData dGRBonus1MarioFile2_gap_0x1F60[26] = {
+	{ {  -2100,  -2850 }, 0x0000 },
+	{ {  -2100,   3000 }, 0x0000 },
+	{ {  -1200,   3000 }, 0x0000 },
+	{ {  -1200,   2700 }, 0x0000 },
+	{ {  -1800,   2700 }, 0x0000 },
+	{ {  -1800,  -2550 }, 0x0000 },
+	{ {   2100,  -2550 }, 0x0000 },
+	{ {   2100,   -450 }, 0x0000 },
+	{ {   3300,   -450 }, 0x0000 },
+	{ {   3300,   -750 }, 0x0000 },
+	{ {   2400,   -750 }, 0x0000 },
+	{ {   2400,  -2850 }, 0x0000 },
+	{ {  -3000,  -2250 }, 0x0000 },
+	{ {  -3900,  -2250 }, 0x0000 },
+	{ {  -3900,  -1950 }, 0x0000 },
+	{ {  -2700,  -1950 }, 0x0000 },
+	{ {  -2700,  -2850 }, 0x0000 },
+	{ {  -3600,  -3750 }, 0x0000 },
+	{ {  -3600,  -4050 }, 0x0000 },
+	{ {  -3900,  -4050 }, 0x0000 },
+	{ {  -3900,  -3750 }, 0x0000 },
+	{ {  -3000,  -2850 }, 0x0000 },
+	{ {   2100,  -1500 }, 0x4000 },
+	{ {   1200,  -1500 }, 0x0000 },
+	{ {    600,    300 }, 0x4000 },
+	{ {   -600,    300 }, 0x0000 },
 };
 
-/* gap sub-block @ 0x1FFC (was gap+0x9C, 88 bytes) */
-u8 dGRBonus1MarioFile2_gap_0x1F60_sub_0x9C[88] = {
-	#include <GRBonus1MarioFile2/gap_0x1F60_sub_0x9C.data.inc.c>
+/* MPVertexArray (44 IDs) @ 0x1FFC — vertex_id table (MPGeometryData.vertex_id) */
+u16 dGRBonus1MarioFile2_gap_0x1F60_sub_0x9C[44] = {
+	  1,   2,   7,   8,  22,  23,  14,  15,   5,   6,  18,  19,  11,   0,  12,  13,
+	  9,  10,   3,   4,   8,   9,  10,  11,   2,   3,   4,   5,  15,  16,  17,  18,
+	 13,  14,  19,  20,  21,  12,   0,   1,   6,   7,  24,  25,
 };
 
-/* gap sub-block @ 0x2054 (was gap+0xF4, 80 bytes) */
-u8 dGRBonus1MarioFile2_gap_0x1F60_sub_0xF4[80] = {
-	#include <GRBonus1MarioFile2/gap_0x1F60_sub_0xF4.data.inc.c>
+/* MPVertexLinks[20] @ 0x2054 — line vertex pairs (MPGeometryData.vertex_links) */
+MPVertexLinks dGRBonus1MarioFile2_gap_0x1F60_sub_0xF4[20] = {
+	{   0, 2 }, {   2, 2 }, {   4, 2 }, {   6, 2 }, {   8, 2 }, {  10, 2 },
+	{  12, 2 }, {  14, 2 }, {  16, 2 }, {  18, 2 }, {  20, 2 }, {  22, 2 },
+	{  24, 2 }, {  26, 2 }, {  28, 4 }, {  32, 2 }, {  34, 4 }, {  38, 2 },
+	{  40, 2 }, {  42, 2 },
 };
 
-/* gap sub-block @ 0x20A4 (was gap+0x144, 36 bytes) */
-u8 dGRBonus1MarioFile2_gap_0x1F60_sub_0x144[36] = {
-	#include <GRBonus1MarioFile2/gap_0x1F60_sub_0x144.data.inc.c>
+/* MPLineInfo[2] @ 0x20A4 — yakumono line groups (MPGeometryData.line_info) */
+MPLineInfo dGRBonus1MarioFile2_gap_0x1F60_sub_0x144[2] = {
+	{ 1, { {  0,   5}, {  5,   5}, { 10,   5}, { 15,   4} } },
+	{ 2, { { 19,   1}, { 20,   0}, { 20,   0}, { 20,   0} } },
 };
 
-/* gap sub-block @ 0x20C8 (was gap+0x168, 32 bytes) */
-u8 dGRBonus1MarioFile2_gap_0x1F60_sub_0x168[32] = {
-	#include <GRBonus1MarioFile2/gap_0x1F60_sub_0x168.data.inc.c>
+/* MPMapObjData[5] @ 0x20C8 — map objects (MPGeometryData.mapobjs); 2 bytes pad to align next decl */
+MPMapObjData dGRBonus1MarioFile2_gap_0x1F60_sub_0x168[5] = {
+	{  33, {     0, -2547 } },
+	{   0, {     0, -2547 } },
+	{   1, {  1500, -2547 } },
+	{   2, {   750, -2547 } },
+	{   3, {  -750, -2547 } },
 };
 
-/* Raw data from file offset 0x20E8 to 0x2110 (40 bytes) */
-u8 dGRBonus1MarioFile2_MPGeometryData_0x20E8[40] = {
-	#include <GRBonus1MarioFile2/MPGeometryData_0x20E8.data.inc.c>
+/* MPGeometryData @ 0x20E8 (28 bytes + 12 bytes pad) */
+MPGeometryData dGRBonus1MarioFile2_MPGeometryData_0x20E8 = {
+	2,
+	(MPVertexPosContainer*)dGRBonus1MarioFile2_gap_0x1F60,
+	(MPVertexArray*)dGRBonus1MarioFile2_gap_0x1F60_sub_0x9C,
+	dGRBonus1MarioFile2_gap_0x1F60_sub_0xF4,
+	dGRBonus1MarioFile2_gap_0x1F60_sub_0x144,
+	5,
+	(MPMapObjContainer*)dGRBonus1MarioFile2_gap_0x1F60_sub_0x168,
+};
+PAD(12);
+
+extern u32 dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data[];
+extern u32 dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data_0x27C[];
+
+/* AObjEvent32 *[3] joint table 1 -> script 1. */
+AObjEvent32 *dGRBonus1MarioFile2_Layer1Anim_AnimJoint[3] = {
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data,
 };
 
-/* Raw data from file offset 0x2110 to 0x23C0 (688 bytes) */
-u32 dGRBonus1MarioFile2_Layer1Anim_AnimJoint[172] = {
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1MarioFile2_Layer1Anim_AnimJoint + 0xC),
-	aobjEvent32SetVal0Rate(0x020, 0),
+/* AObjEvent32 script 1 (loops via SetAnim). */
+u32 dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data[11] = {
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAY, 0),
 	    0x44BB8000,  /* 1500.0f */
-	aobjEvent32SetValAfterBlock(0x050, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 0),
 	    0x4528C000,  /* 2700.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x454E4000,  /* 3300.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
 	    0x44BB8000,  /* 1500.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1MarioFile2_Layer1Anim_AnimJoint + 0xC),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC4A8C000,
-	    0xC50CA000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC557A000,
-	    0xC51F6000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x4528C000,
-	    0x45034000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x459AB000,
-	    0xC4E10000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x36A7C5AC,
-	    0xC4610000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x37A7C5AC,
-	    0x43960000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC54E4000,
-	    0x454E4000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x44CE4000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC54E4000,
-	    0x44160000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x44CE4000,
-	    0xC50CA000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 18),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1MarioFile2_Layer1Anim_AnimJoint + 0x27C),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32SetVal0Rate(0x020, 0),
-	    0x45034000,  /* 2100.0f */
-	aobjEvent32SetValAfterBlock(0x050, 0),
-	    0x4528C000,  /* 2700.0f */
-	    0x00000000,  /* 0.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
-	    0x4573C000,  /* 3900.0f */
-	aobjEvent32SetVal0RateBlock(0x020, 150),
-	    0x45034000,  /* 2100.0f */
-	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1MarioFile2_Layer1Anim_AnimJoint + 0x27C),
-	aobjEvent32End(),
-	aobjEvent32End(),
+	(u32)dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data,
 };
 
+/* 8 B pad. */
+PAD(8);
+
+/* DObjDesc[12] — Layer1 scene-object list; entry [11] id=18 ends it. */
+DObjDesc dGRBonus1MarioFile2_Layer1Anim_DObjDesc[12] = {
+	{ 0, NULL, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -1350.0f, -2250.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -3450.0f, -2550.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 2700.0f, 2100.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 4950.0f, -1800.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 4.999999873689376e-06f, -900.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 1.9999999494757503e-05f, 300.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -3300.0f, 3300.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 0.0f, 1650.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -3300.0f, 600.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 1650.0f, -2250.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 18, NULL, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
+};
+
+/* 4 B pad before joint table 2. */
+PAD(4);
+
+/* AObjEvent32 *[10] joint table 2 -> script 2. */
+AObjEvent32 *dGRBonus1MarioFile2_Layer1Anim_AnimJoint_ptrs_0x254[10] = {
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data_0x27C,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
+
+/* AObjEvent32 script 2 (loops via SetAnim). */
+u32 dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data_0x27C[11] = {
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAY, 0),
+	    0x45034000,  /* 2100.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 0),
+	    0x4528C000,  /* 2700.0f */
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
+	    0x4573C000,  /* 3900.0f */
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAY, 150),
+	    0x45034000,  /* 2100.0f */
+	aobjEvent32SetAnim(0x000, 0),
+	(u32)dGRBonus1MarioFile2_Layer1Anim_AnimJoint_data_0x27C,
+};
+
+/* 8 B pad — end of file. */

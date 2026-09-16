@@ -5,6 +5,22 @@
  * at extract time. */
 
 #include "relocdata_types.h"
+#include <sys/objdef.h>  // aobjEvent32* macros
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dLinkSpecial3_BoomerangDL_post_DL_0x468[];
+extern u16 dLinkSpecial3_Lut_0x0008_palette[];
+extern u8 dLinkSpecial3_Tex_0x0030[];
+extern Vtx dLinkSpecial3_Vtx_0x0150_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x0180_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x01B0_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x01E0_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x0210_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x0240_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x0270_Vtx[];
+extern Vtx dLinkSpecial3_Vtx_0x02A0_Vtx[];
+
+extern u32 dLinkSpecial3_BoomerangDL_post_anim_script[];
 
 PAD(8);
 
@@ -95,6 +111,7 @@ Gfx dLinkSpecial3_BoomerangDL_post_DL_0x580[2] = {
  * gsSPEndDisplayList terminator. Nothing references this address from
  * the .reloc, so it's likely a fragment kept for engine reuse rather
  * than executed via the normal DL chain. */
+/* @dl-prefix: no EndDL by design — engine-run setup/prefix fragment */
 Gfx dLinkSpecial3_BoomerangDL_post_DL_0x590[16] = {
 	#include <LinkSpecial3/BoomerangDL_post_DL_0x590.dl.inc.c>
 };
@@ -108,9 +125,23 @@ DObjDesc dLinkSpecial3_BoomerangDL_post_DObjDesc[] = {
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
-/* Trailing 48-byte structure @ 0x6C0 — two chain pointers (at +0x4 and
- * +0x20) both target +0xC of this block. Purpose TBD (likely some
- * boomerang attachment metadata; possibly a small MObj-related struct). */
-u8 dLinkSpecial3_BoomerangDL_post_tail[48] = {
-	#include <LinkSpecial3/BoomerangDL_post_tail.data.inc.c>
+/* @ 0x6C0, 12 bytes: AObjEvent32* pointer array — slot [1] points at the
+ * accompanying anim_script. */
+AObjEvent32 *dLinkSpecial3_BoomerangDL_post_anim_ptrs[3] = {
+	NULL,
+	(AObjEvent32 *)dLinkSpecial3_BoomerangDL_post_anim_script,
+	NULL,
 };
+
+/* @ 0x6CC, 28 bytes: AObjEvent32 script — SetValBlock pair + SetAnim loopback. */
+u32 dLinkSpecial3_BoomerangDL_post_anim_script[7] = {
+	aobjEvent32SetValBlock(AOBJ_FLAG_ROTX, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValBlock(AOBJ_FLAG_ROTX, 6),
+	    0x40C90FDB,  /* 6.2831854820251465f */
+	aobjEvent32SetAnim(0x000, 0),
+	(u32)dLinkSpecial3_BoomerangDL_post_anim_script,
+	aobjEvent32End(),
+};
+
+/* @ 0x6E8: 8 bytes of trailing zero padding. */

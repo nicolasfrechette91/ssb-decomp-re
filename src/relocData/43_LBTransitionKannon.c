@@ -8,6 +8,12 @@
 #include <sys/objdef.h>  // aobjEvent32* macros
 
 /* Vtx: Vtx_0x0000_Vtx @ 0x0 (90 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dLBTransitionKannon_DL_0x0B88[];
+extern Vtx dLBTransitionKannon_Vtx_0x0000_Vtx[];
+extern Vtx dLBTransitionKannon_Vtx_0x05A0_Vtx[];
+extern Vtx dLBTransitionKannon_Vtx_0x05E0_Vtx[];
 Vtx dLBTransitionKannon_Vtx_0x0000_Vtx[90] = {
 	#include <LBTransitionKannon/Vtx_0x0000.vtx.inc.c>
 };
@@ -42,7 +48,7 @@ Gfx dLBTransitionKannon_DL_0x1538[313] = {
 DObjDesc dLBTransitionKannon_DObjDesc_0x1F00[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dLBTransitionKannon_DL_0x0B40, { -1500.0f, 0.0f, 0.0f }, { 0.0f, 3.1415929794311523f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dLBTransitionKannon_DL_0x0B40 + 0x9F8), { 1500.0f, 0.0f, 0.0f }, { 0.0f, -3.1415929794311523f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dLBTransitionKannon_DL_0x1538, { 1500.0f, 0.0f, 0.0f }, { 0.0f, -3.1415929794311523f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
@@ -60,28 +66,25 @@ AObjEvent32 *dLBTransitionKannon_AnimJoint_0x1FB0[3] = {
 };
 
 u32 dLBTransitionKannon_AnimJoint_0x1FBC[] = {
-	aobjEvent32SetVal0Rate(0x002, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_ROTY, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x005, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_ROTX | AOBJ_FLAG_ROTZ, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRateBlock(0x002, 64),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_ROTY, 64),
 	    0x40490FDB,  /* 3.1415927410125732f */
 	    0x3E04918C,  /* 0.12946146726608276f */
 	aobjEvent32End(),
 };
 
 u32 dLBTransitionKannon_AnimJoint_0x1FE0[] = {
-	aobjEvent32SetVal0Rate(0x002, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_ROTY, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x005, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_ROTX | AOBJ_FLAG_ROTZ, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRateBlock(0x002, 64),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_ROTY, 64),
 	    0xC0490FDB,  /* -3.1415927410125732f */
 	    0xBE0700FD,  /* -0.13183970749378204f */
 	aobjEvent32End(),
 };
-
-PAD(12);
-

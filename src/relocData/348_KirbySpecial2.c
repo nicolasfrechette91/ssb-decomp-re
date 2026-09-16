@@ -7,10 +7,33 @@
 #include "relocdata_types.h"
 #include <sys/objdef.h>  // aobjEvent32* macros
 
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dKirbySpecial2_Joint_0x09B0_post[];
+extern u16 dKirbySpecial2_Lut_0x0BB8_palette[];
+extern u16 dKirbySpecial2_Lut_0x2538_palette[];
+extern u8 dKirbySpecial2_Tex_0x0008[];
+extern u8 dKirbySpecial2_Tex_0x0090[];
+extern u8 dKirbySpecial2_Tex_0x0BE0[];
+extern u8 dKirbySpecial2_Tex_0x14B8[];
+extern u8 dKirbySpecial2_Tex_0x2560[];
+extern Vtx dKirbySpecial2_Vtx_0x0890_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x0970_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x0C20_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x0C50_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x0EB0_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x0FB0_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x10B0_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x1CB8_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x1F10_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x1FD0_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x2090_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x2150_Vtx[];
+extern Vtx dKirbySpecial2_Vtx_0x2760_Vtx[];
+
 PAD(8);
 
 /* Raw data from file offset 0x0008 to 0x0090 (136 bytes) */
-/* @tex fmt=I4 dim=32x32 */
+/* @tex fmt=I4 dim=16x16 */
 u8 dKirbySpecial2_Tex_0x0008[128] = {
 	#include <KirbySpecial2/Tex_0x0008.tex.inc.c>
 };
@@ -18,7 +41,7 @@ u8 dKirbySpecial2_Tex_0x0008[128] = {
 PAD(8);
 
 /* Raw data from file offset 0x0090 to 0x0890 (2048 bytes) */
-/* @tex fmt=RGBA32 dim=512x32 */
+/* @tex fmt=RGBA32 dim=16x32 */
 u8 dKirbySpecial2_Tex_0x0090[2048] = {
 	#include <KirbySpecial2/Tex_0x0090.tex.inc.c>
 };
@@ -48,9 +71,10 @@ Gfx dKirbySpecial2_Joint_0x0A78_DisplayList[17] = {
 	#include <KirbySpecial2/Joint_0x0A78.dl.inc.c>
 };
 
-/* Raw data from file offset 0x0B00 to 0x0B10 (16 bytes) */
-u8 dKirbySpecial2_JointCmd_0x0B00[16] = {
-	#include <KirbySpecial2/JointCmd_0x0B00.data.inc.c>
+/* DObjDLLink @ 0x0B00 (2 entries) — DL slot for a DObjDesc entry. */
+DObjDLLink dKirbySpecial2_JointCmd_0x0B00[] = {
+	{ 1, dKirbySpecial2_Joint_0x09B0_DisplayList },
+	{ 4, NULL },
 };
 
 /* DObjDLLink @ 0x0B10 (2 entries) — DL slot for a DObjDesc entry. */
@@ -182,30 +206,30 @@ u32 dKirbySpecial2_CutterTrailAnimJoint_AnimJoint_0x13FC[] = {
 };
 
 u32 dKirbySpecial2_CutterTrailAnimJoint_AnimJoint_0x1404[] = {
-	aobjEvent32SetVal0RateBlock(0x100, 0),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_SCAY, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal0Rate(0x100, 50),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_SCAY, 50),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32Cmd12(0x100, 49),
-	aobjEvent32SetVal0Rate(0x040, 0),
+	aobjEvent32Cmd12(AOBJ_FLAG_SCAY, 49),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAZ, 0),
 	    0xC3C30000,  /* -390.0f */
-	aobjEvent32SetValAfterBlock(0x030, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0x00000000,  /* 0.0f */
 	    0x43520000,  /* 210.0f */
-	aobjEvent32SetValRateBlock(0x040, 1),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_TRAZ, 1),
 	    0xC4430000,  /* -780.0f */
 	    0xC39D7FF7,  /* -314.9997253417969f */
-	aobjEvent32SetVal0Rate(0x100, 2),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_SCAY, 2),
 	    0x3727C5AC,  /* 9.999999747378752e-06f */
-	aobjEvent32SetVal0RateBlock(0x040, 1),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAZ, 1),
 	    0xC47F0000,  /* -1020.0f */
-	aobjEvent32SetVal0Rate(0x040, 6),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAZ, 6),
 	    0xC47F0000,  /* -1020.0f */
 	aobjEvent32Wait(1),
-	aobjEvent32SetVal0Rate(0x100, 48),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_SCAY, 48),
 	    0x3727C5AC,  /* 9.999999747378752e-06f */
 	aobjEvent32Wait(5),
-	aobjEvent32SetVal0Rate(0x040, 3),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAZ, 3),
 	    0xC1F00000,  /* -30.0f */
 	aobjEvent32Wait(2),
 	aobjEvent32End(),
@@ -215,7 +239,7 @@ u32 dKirbySpecial2_CutterTrailAnimJoint_AnimJoint_0x1404[] = {
 /* Script-table split: leading chain-pointer table at the
  * start of the AnimJoint, followed by per-joint AObjEvent32
  * scripts. Forward decls so the table can reference them. */
-extern u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x1484[];
+extern u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x1484[4];
 extern u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x1494[];
 extern u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x14A0[];
 
@@ -227,16 +251,16 @@ AObjEvent32 *dKirbySpecial2_CutterUpAnimJoint_AnimJoint[5] = {
 	(AObjEvent32 *)dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x14A0,
 };
 
-u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x1484[] = {
-	    0x04000001,
-	    0x1E000002,
-	    0x1E010001,
-	    0x00000000,
+u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x1484[4] = {
+	aobjEvent32Wait(1),
+	aobjEvent32SetFlags(0x000, 2),
+	aobjEvent32SetFlags(0x002, 1),
+	aobjEvent32End(),
 };
 
 u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x1494[] = {
-	    0x1E000002,
-	    0x1E010002,
+	aobjEvent32SetFlags(0x000, 2),
+	aobjEvent32SetFlags(0x002, 2),
 	aobjEvent32End(),
 };
 
@@ -250,7 +274,7 @@ u32 dKirbySpecial2_CutterUpAnimJoint_AnimJoint_0x14A0[] = {
 PAD(8);
 
 /* Raw data from file offset 0x14B8 to 0x1CB8 (2048 bytes) */
-/* @tex fmt=RGBA32 dim=32x32 */
+/* @tex fmt=RGBA32 dim=16x32 */
 u8 dKirbySpecial2_Tex_0x14B8[2048] = {
 	#include <KirbySpecial2/Tex_0x14B8.tex.inc.c>
 };
@@ -293,22 +317,22 @@ AObjEvent32 *dKirbySpecial2_EntryStarL_AnimJoint[2] = {
 };
 
 u32 dKirbySpecial2_EntryStarL_AnimJoint_0x1E38[] = {
-	aobjEvent32SetVal0Rate(0x020, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAY, 0),
 	    0x458CA000,  /* 4500.0f */
-	aobjEvent32SetValBlock(0x050, 0),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 0),
 	    0x458CA000,  /* 4500.0f */
 	    0xC53B8000,  /* -3000.0f */
-	aobjEvent32SetValRate(0x020, 60),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAY, 60),
 	    0x00000000,  /* 0.0f */
 	    0xC3160000,  /* -150.0f */
-	aobjEvent32SetValBlock(0x050, 60),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 60),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
 	aobjEvent32End(),
 };
 
 u32 dKirbySpecial2_EntryStarL_AnimJoint_0x1E68[] = {
-	aobjEvent32SetValAfter(0x3F7, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_ROTXYZ | AOBJ_FLAG_TRAXYZ | AOBJ_FLAG_SCAXYZ, 0),
 	    0x3FC90FDB,  /* 1.5707963705062866f */
 	    0xBFC90FDB,  /* -1.5707963705062866f */
 	    0x00000000,  /* 0.0f */
@@ -337,22 +361,22 @@ AObjEvent32 *dKirbySpecial2_EntryStarR_AnimJoint[2] = {
 };
 
 u32 dKirbySpecial2_EntryStarR_AnimJoint_0x1EA8[] = {
-	aobjEvent32SetVal0Rate(0x020, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_TRAY, 0),
 	    0x458CA000,  /* 4500.0f */
-	aobjEvent32SetValBlock(0x050, 0),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 0),
 	    0xC58CA000,  /* -4500.0f */
 	    0xC53B8000,  /* -3000.0f */
-	aobjEvent32SetValRate(0x020, 60),
+	aobjEvent32SetValRate(AOBJ_FLAG_TRAY, 60),
 	    0x00000000,  /* 0.0f */
 	    0xC3160000,  /* -150.0f */
-	aobjEvent32SetValBlock(0x050, 60),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAZ, 60),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
 	aobjEvent32End(),
 };
 
 u32 dKirbySpecial2_EntryStarR_AnimJoint_0x1ED8[] = {
-	aobjEvent32SetValAfter(0x3F7, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_ROTXYZ | AOBJ_FLAG_TRAXYZ | AOBJ_FLAG_SCAXYZ, 0),
 	    0xBFC90FDB,  /* -1.5707963705062866f */
 	    0xBFC90FDB,  /* -1.5707963705062866f */
 	    0x00000000,  /* 0.0f */
@@ -440,9 +464,9 @@ AObjEvent32 *dKirbySpecial2_CutterDownAnimJoint_AnimJoint[6] = {
 };
 
 u32 dKirbySpecial2_CutterDownAnimJoint_AnimJoint_0x24E8[] = {
-	    0x04000001,
-	    0x1E000002,
-	    0x1E010002,
+	aobjEvent32Wait(1),
+	aobjEvent32SetFlags(0x000, 2),
+	aobjEvent32SetFlags(0x002, 2),
 	aobjEvent32End(),
 };
 
@@ -497,5 +521,3 @@ DObjDesc dKirbySpecial2_CutterDraw[] = {
 	{ 1, (void*)dKirbySpecial2_Joint_0x27A0_DisplayList, { 0.0f, 150.0f, 52.5f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
-
-PAD(4);

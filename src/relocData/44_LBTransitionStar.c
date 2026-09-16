@@ -8,6 +8,9 @@
 #include <sys/objdef.h>  // aobjEvent32* macros
 
 /* Vtx: data_0x0000 @ 0x0 (307 vertices) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Vtx dLBTransitionStar_data_0x0000[];
 Vtx dLBTransitionStar_data_0x0000[307] = {
 	#include <LBTransitionStar/data_0x0000.vtx.inc.c>
 };
@@ -36,22 +39,19 @@ AObjEvent32 *dLBTransitionStar_AnimJoint_0x24D4[2] = {
 };
 
 u32 dLBTransitionStar_AnimJoint_0x24DC[] = {
-	aobjEvent32SetValAfter(0x200, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_SCAZ, 0),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal0Rate(0x180, 0),
+	aobjEvent32SetVal0Rate(AOBJ_FLAG_SCAX | AOBJ_FLAG_SCAY, 0),
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValBlock(0x004, 0),
+	aobjEvent32SetValBlock(AOBJ_FLAG_ROTZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValRate(0x180, 64),
+	aobjEvent32SetValRate(AOBJ_FLAG_SCAX | AOBJ_FLAG_SCAY, 64),
 	    0x428C0000,  /* 70.0f */
 	    0x40177777,  /* 2.366666555404663f */
 	    0x428C0000,  /* 70.0f */
 	    0x40177777,  /* 2.366666555404663f */
-	aobjEvent32SetValBlock(0x004, 64),
+	aobjEvent32SetValBlock(AOBJ_FLAG_ROTZ, 64),
 	    0xBFC90FDB,  /* -1.5707963705062866f */
 	aobjEvent32End(),
 };
-
-PAD(8);
-

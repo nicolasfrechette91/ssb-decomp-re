@@ -2,15 +2,42 @@
 /* File size: 2640 bytes (0xA50) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern DObjDesc dLinkModel_DObjDesc_0x11908[];
+extern void *dLinkModel_data_0x11990[];
+extern u32 dLinkModel_FTEmblem[];
+extern u32 dLinkModel_Stock[];
+extern DObjDesc dLinkSpecial2_SpinAttackMatAnimJoint_MatAnimJoint_data_at_0x5E0[];
+extern u8 dLinkShieldPose_data0[];
+extern u8 dLinkShieldPose_data0_end[];
+extern u8 dLinkShieldPose_shield_anim_joint_1[];
+extern u8 dLinkShieldPose_shield_anim_joint_2[];
+extern u8 dLinkShieldPose_shield_anim_joint_3[];
+extern u8 dLinkShieldPose_shield_anim_joint_4[];
+extern u8 dLinkShieldPose_shield_anim_joint_5[];
+extern u8 dLinkShieldPose_shield_anim_joint_6[];
+extern u8 dLinkShieldPose_shield_anim_joint_7[];
+extern MObjSub *dLinkModel_Joint_0x0040_post_sub_0x550[];
+extern MObjSub *dLinkModel_Joint_0x0040_post_sub_0x560[];
+extern void *dLinkModel_data_0x110A8[];
+extern void *dLinkModel_data_0x11A40[];
+extern AObjEvent32 *dLinkSpecial2_SpinAttackMatAnimJoint_MatAnimJoint_data_at_0x698[];
 #include <ft/fttypes.h>
+#include <wp/wptypes.h>  // WPAttributes
+#include <it/ittypes.h>  // ITAttributes, ITAttackEvent
+#include <gm/gmsound.h>  // nSYAudioFGM*
+#include <gm/gmdef.h>    // nGMHitElement*
 
 extern Gfx dLinkBoomerangModel_Joint_0x00F8_DisplayList[];
-extern u32 dLinkMainMotion_0x0014[];
+extern u32 dLinkMainMotion_EggLay_0x0014[];
 extern DObjDesc dLinkModel_JointTree[];
 extern DObjDesc dLinkModel_JointTree_0x74B0[];
 extern Gfx dLinkModel_Joint_0x2630_DisplayList[];
 extern Gfx dLinkModel_Joint_0x2C88_DisplayList[];
-extern Gfx dLinkModel_Joint_0x2E08_DisplayList[];
+extern u8 dLinkModel_Joint_0x2E08_DisplayList[];
 extern Gfx dLinkModel_Joint_0x2EF0_DisplayList[];
 extern Gfx dLinkModel_Joint_0x3398_DisplayList[];
 extern Gfx dLinkModel_Joint_0x6370_DisplayList[];
@@ -34,6 +61,14 @@ extern u8 dLinkModel_gap_0x40EC_sub_0x244[];
 extern u8 dLinkModel_gap_0x40EC_sub_0x254[];
 extern u8 dLinkModel_gap_0x40EC_sub_0x7E4[];
 extern u8 dLinkModel_gap_0x40EC_sub_0x7F4[];
+#if defined(REGION_JP)
+extern Gfx dLinkModel_Joint_0x6250_DisplayList[];
+extern Gfx dLinkModel_Joint_0x39E0_DisplayList[];
+extern u8 dLinkModel_data_0x2EB8[];
+extern u8 dLinkModel_gap_0x40EC_sub_0x228[];
+extern u8 dLinkModel_gap_0x40EC_sub_0x234[];
+extern u8 dLinkModel_gap_0x40EC_sub_0x7D4[];
+#endif
 extern u8 dLinkModel_gap_0x7AE0_sub_0x204[];
 extern u8 dLinkModel_gap_0x7AE0_sub_0x210[];
 extern u8 dLinkModel_gap_0x8110_sub_0x270[];
@@ -42,18 +77,18 @@ extern u8 dLinkModel_gap_0x8110_sub_0x5C0[];
 extern u8 dLinkModel_gap_0x8110_sub_0xB0[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0x1048[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0x10F8[];
-extern u8 dLinkModel_gap_0x9DA8_sub_0x12B8[];
+extern u8 dLinkModel_DL_0xB060[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0x1378[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0x358[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0x618[];
-extern u8 dLinkModel_gap_0x9DA8_sub_0x6E8[];
+extern u8 dLinkModel_DL_0xA490[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0x958[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0xB58[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0xC68[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0xCC[];
-extern u8 dLinkModel_gap_0x9DA8_sub_0xD48[];
+extern u8 dLinkModel_DL_0xAAF0[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0xD8[];
-extern u8 dLinkModel_gap_0x9DA8_sub_0xE28[];
+extern u8 dLinkModel_DL_0xABD0[];
 extern u8 dLinkModel_gap_0x9DA8_sub_0xF38[];
 extern u16 dLinkModel_palette_0x11CA0[];
 extern WPAttributes dLinkSpecial1_Boomerang_WeaponAttributes;
@@ -61,101 +96,115 @@ extern DObjDesc dLinkSpecial2_EntryWaveDObjDesc[];
 extern DObjDesc dLinkSpecial2_SpinAttackDObjDesc[];
 
 /* Pre-attributes data (450 words, 0x0708 bytes) */
-/* @ 0x0000, 192 bytes: FTAttributes.file_handles target (was dLinkMain_pre+0x0) */
-u32 dLinkMain_file_handles[48] = {
+/* @ 0x0000, 12 bytes: 3 cross-file handle pointers (chain-rewritten). */
+void *dLinkMain_file_handles[3] = {
 
-	(u32)&dLinkMainMotion_0x0014, /* extern -> 0x0014 */
-	(u32)&dLinkSpecial2_EntryWaveDObjDesc, /* extern -> 0x03F8 */
-	(u32)&dLinkSpecial1_Boomerang_WeaponAttributes, /* extern -> 0x0000 */
-	(u32)((u8*)dLinkModel_Tex_0xE338 + 0x35D0), /* extern -> 0x11908 */
-	(u32)((u8*)dLinkModel_Tex_0xE338 + 0x2D70), /* extern -> 0x110A8 */
-	(u32)((u8*)dLinkModel_Tex_0xE338 + 0x3658), /* extern -> 0x11990 */
-	(u32)((u8*)dLinkModel_Tex_0xE338 + 0x3708), /* extern -> 0x11A40 */
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00960000,
-	0xFF6A0096,
-	0x01900780,
-	0x0C814000,
+	(void *)&dLinkMainMotion_EggLay_0x0014, /* extern -> 0x0014 */
+	(void *)&dLinkSpecial2_EntryWaveDObjDesc, /* extern -> 0x03F8 */
+	(void *)&dLinkSpecial1_Boomerang_WeaponAttributes, /* extern -> 0x0000 */
+};
+
+/* @ 0x000C, 52 bytes: WPAttributes for the Spin Attack slash effect.
+ * Referenced from wp/wplink/wplinkspinattack.c via llLinkMainSpinAttackWeaponAttributes (0x0C). */
+WPAttributes dLinkMain_SpinAttackWeaponAttributes = {
+	(void *)dLinkModel_DObjDesc_0x11908,      /* data */
+	(MObjSub ***)dLinkModel_data_0x110A8,     /* p_mobjsubs */
+	(AObjEvent32 **)dLinkModel_data_0x11990,  /* anim_joints */
+	(AObjEvent32 ***)dLinkModel_data_0x11A40, /* p_matanim_joints */
+	{ { 0, 0, 0 }, { 0, 0, 0 } },             /* attack_offsets */
+	150, 0, -150, 150,                        /* map_coll top/center/bottom/width */
+	400,                  /* size             : 16 */
+	30,                   /* angle            : 10 */
+	50,                   /* knockback_scale  : 10 */
+	5,                    /* damage           :  8 */
+	nGMHitElementNormal,  /* element          :  4 */
+	0,                    /* knockback_weight : 10 */
+	1,                    /* shield_damage    :  8 */
+	2,                    /* attack_count     :  2 */
+	1,                    /* can_setoff       :  1 */
+	nSYAudioFGMKickM,     /* sfx              : 10 */
+	1,                    /* priority         :  3 */
+	1,                    /* can_rehit_item   :  1 */
+	0,                    /* can_rehit_fighter:  1 */
+	0,                    /* can_hop          :  1 */
+	0,                    /* can_reflect      :  1 */
+	0,                    /* can_absorb       :  1 */
+	1,                    /* can_shield       :  1 */
+	0,                    /* unused_0x2F_b6   :  1 */
+	0,                    /* unused_0x2F_b7   :  1 */
+	30,                   /* knockback_base   : 10 */
+};
+
+/* @ 0x0040, 72 bytes: ITAttributes for Link's Bomb (the held/thrown item).
+ * Referenced from it/itfighter/itlinkbomb.c via llLinkMainBombItemAttributes (0x40). */
+ITAttributes dLinkMain_BombItemAttributes = {
+	(void *)dLinkSpecial2_SpinAttackMatAnimJoint_MatAnimJoint_data_at_0x5E0,        /* data */
+	NULL,                                                                           /* p_mobjsubs */
+	(AObjEvent32 **)dLinkSpecial2_SpinAttackMatAnimJoint_MatAnimJoint_data_at_0x698, /* anim_joints */
+	NULL,                                                                           /* p_matanim_joints */
+	1, 0, 1, 1, 1,     /* xlu,dobjs,colanim,hitlag,weight */
+	0, 0, 0,           /* attack_offset0 x/y/z */
+	0, 0, 0,           /* attack_offset1 x/y/z */
+	{ 0, 0, 0 },       /* damage_coll_offset */
+	{ 100, 100, 100 }, /* damage_coll_size */
+	113, 0, -113, 113, /* map_coll top/center/bottom/width */
+	220,               /* size */
+	80,                /* angle */
 #if defined(REGION_JP)
-	0x01A0F984,
+	65,                /* knockback_scale */
+	1,                 /* damage */
 #else
-	0x01A10184,
+	20,                /* knockback_scale */
+	2,                 /* damage */
 #endif
-	0x07800000,
-	(u32)((u8*)dLinkSpecial2_SpinAttackDObjDesc + 0x718), /* extern -> 0x18D8 */
-	0x00000000,
-	(u32)((u8*)dLinkSpecial2_SpinAttackDObjDesc + 0x7D0), /* extern -> 0x1990 */
-	0x00000000,
-	0xB8000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00640064,
-	0x00640071,
-	0x0000FF8F,
-	0x007100DC,
+	nGMHitElementNormal, /* element */
+	0,                 /* knockback_weight */
+	0,                 /* shield_damage */
+	1,                 /* attack_count */
+	0,                 /* can_setoff */
+	nSYAudioFGMKickM,  /* hit_sfx */
+	1,                 /* priority */
+	0,                 /* can_rehit_item */
+	0,                 /* can_rehit_fighter */
+	1,                 /* can_hop */
+	1,                 /* can_reflect */
+	1,                 /* can_shield */
 #if defined(REGION_JP)
-	0x14041010,
+	10,                /* knockback_base */
 #else
-	0x14014020,
+	60,                /* knockback_base */
 #endif
+	3,                 /* type */
+	0,                 /* hitstatus */
+	0,                 /* unk_atca_0x3C_b6 */
+	0,                 /* unk_atca_0x3C_b7 */
+	nSYAudioFGMItemThrow, /* drop_sfx */
+	nSYAudioFGMItemThrow, /* throw_sfx */
+	nSYAudioFGMItemThrow, /* smash_sfx */
+	60,                /* vel_scale */
+	0,                 /* spin_speed */
+};
+
+/* @ 0x0088, 32 bytes: ITAttackEvent[4] for the Bomb explosion (shrinking hitbox).
+ * Referenced from it/itfighter/itlinkbomb.c via llLinkMainBombAttackEvents (0x88). */
+ITAttackEvent dLinkMain_BombAttackEvents[4] = {
 #if defined(REGION_JP)
-	0x0000103E,
+	{ 0, 361, 8, 350 },
+	{ 2, 361, 6, 250 },
+	{ 4, 361, 4, 150 },
+	{ 6, 361, 1, 0 },
 #else
-	0x00001040,
+	{ 0, 361, 5, 300 },
+	{ 2, 361, 5, 230 },
+	{ 4, 361, 5, 150 },
+	{ 6, 361, 5, 0 },
 #endif
-#if defined(REGION_JP)
-	0x27028C00,
-#else
-	0x270F0C00,
-#endif
-#if defined(REGION_JP)
-	0x0D4350D4,
-#else
-	0x0E4390E4,
-#endif
-	0x1E000000,
-#if defined(REGION_JP)
-	0x005A4200,
-#else
-	0x005A4140,
-#endif
-#if defined(REGION_JP)
-	0x015E0000,
-#else
-	0x012C0000,
-#endif
-#if defined(REGION_JP)
-	0x025A4180,
-#else
-	0x025A4140,
-#endif
-#if defined(REGION_JP)
-	0x00FA0000,
-#else
-	0x00E60000,
-#endif
-#if defined(REGION_JP)
-	0x045A4100,
-#else
-	0x045A4140,
-#endif
-	0x00960000,
-#if defined(REGION_JP)
-	0x065A4040,
-#else
-	0x065A4140,
-#endif
-	0x00000000,
-	0x3F4CCCCD,
-	0x3F800000,
-	0x3F99999A,
-	0x3FB33333,
-	0x3FCCCCCD,
-	0x3FE66666,
+};
+
+/* @ 0x00A8, 24 bytes: f32[6] model scale ramp for the Bomb's pre-explosion bloat.
+ * Referenced from it/itfighter/itlinkbomb.c via llLinkMainBombBloatScales (0xA8). */
+f32 dLinkMain_BombBloatScales[6] = {
+	0.8F, 1.0F, 1.2F, 1.4F, 1.6F, 1.8F,
 };
 
 /* @ 0x00C0, 8 bytes: FTAttributes.animlock target (was dLinkMain_pre+0xC0) */
@@ -183,7 +232,12 @@ FTHiddenPart dLinkMain_hiddenparts[6] = {
 /* @ 0x0130, 120 bytes: FTAttributes.sub_0x130 target (was dLinkMain_pre+0x130) */
 FTModelPart dLinkMain_modelparts_desc_0x130[6] = {
 	{ (Gfx*)&dLinkModel_Joint_0x2630_DisplayList, NULL, NULL, NULL, 0x00 },
+#if defined(REGION_JP)
+	/* JP: Joint_0x6370_DisplayList is 16 bytes earlier in JP (chain target at +0x110 of preceding Joint_0x6250). */
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x6250_DisplayList + 0x110), NULL, NULL, NULL, 0x00 },
+#else
 	{ (Gfx*)&dLinkModel_Joint_0x6370_DisplayList, NULL, NULL, NULL, 0x00 },
+#endif
 	{ (Gfx*)&dLinkBoomerangModel_Joint_0x00F8_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dLinkBoomerangModel_Joint_0x00F8_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_gap_0x9DA8_sub_0x358, NULL, NULL, NULL, 0x00 },
@@ -210,8 +264,14 @@ FTModelPart dLinkMain_modelparts_desc_0x1F8[2] = {
 
 /* @ 0x0220, 40 bytes: FTAttributes.sub_0x220 target (was dLinkMain_pre+0x220) */
 FTModelPart dLinkMain_modelparts_desc_0x220[2] = {
+#if defined(REGION_JP)
+	/* JP DL has 16 setup bytes at the start; DObjDesc.dl entry-point is +0x10. */
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2C88_DisplayList + 0x10), NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2C88_DisplayList + 0x10), NULL, NULL, NULL, 0x00 },
+#else
 	{ (Gfx*)&dLinkModel_Joint_0x2C88_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x2C88_DisplayList, NULL, NULL, NULL, 0x00 },
+#endif
 };
 
 /* @ 0x0248, 40 bytes: FTAttributes.sub_0x248 target (was dLinkMain_pre+0x248) */
@@ -222,13 +282,22 @@ FTModelPart dLinkMain_modelparts_desc_0x248[2] = {
 
 /* @ 0x0270, 40 bytes: FTAttributes.sub_0x270 target (was dLinkMain_pre+0x270) */
 FTModelPart dLinkMain_modelparts_desc_0x270[2] = {
+#if defined(REGION_JP)
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2C88_DisplayList + 0x10), NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2C88_DisplayList + 0x10), NULL, NULL, NULL, 0x00 },
+#else
 	{ (Gfx*)&dLinkModel_Joint_0x2C88_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x2C88_DisplayList, NULL, NULL, NULL, 0x00 },
+#endif
 };
 
 /* @ 0x0298, 80 bytes: FTAttributes.sub_0x298 target (was dLinkMain_pre+0x298) */
 FTModelPart dLinkMain_modelparts_desc_0x298[4] = {
+#if defined(REGION_JP)
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2C88_DisplayList + 0x170), NULL, NULL, NULL, 0x00 },
+#else
 	{ (Gfx*)&dLinkModel_Joint_0x2E08_DisplayList, NULL, NULL, NULL, 0x00 },
+#endif
 	{ (Gfx*)&dLinkModel_Joint_0x6950_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x93B8_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x93B8_DisplayList, NULL, NULL, NULL, 0x00 },
@@ -236,16 +305,27 @@ FTModelPart dLinkMain_modelparts_desc_0x298[4] = {
 
 /* @ 0x02E8, 80 bytes: FTAttributes.sub_0x2E8 target (was dLinkMain_pre+0x2E8) */
 FTModelPart dLinkMain_modelparts_desc_0x2E8[4] = {
-	{ (Gfx*)&dLinkModel_Joint_0x2EF0_DisplayList, (MObjSub**)((u8*)dLinkModel_gap_0x0000_sub_0x18 + 0x578), (AObjEvent32**)&dLinkModel_gap_0x40EC_sub_0x238, NULL, 0x00 },
+#if defined(REGION_JP)
+	/* JP layout shifts these targets by -0x10 (Joint_0x2EF0 -> data_0x2EB8+0x28, sub_0x238 -> sub_0x228, sub_0x7E4 -> sub_0x7D4). */
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2E08_DisplayList + 0xD8), (MObjSub**)dLinkModel_Joint_0x0040_post_sub_0x550, (AObjEvent32**)&dLinkModel_gap_0x40EC_sub_0x228, NULL, 0x00 },
+	{ (Gfx*)&dLinkModel_Joint_0x6A30_DisplayList, (MObjSub**)&dLinkModel_gap_0x40EC_sub_0x7D4, (AObjEvent32**)&dLinkModel_gap_0x7AE0_sub_0x204, NULL, 0x00 },
+#else
+	{ (Gfx*)&dLinkModel_Joint_0x2EF0_DisplayList, (MObjSub**)dLinkModel_Joint_0x0040_post_sub_0x550, (AObjEvent32**)&dLinkModel_gap_0x40EC_sub_0x238, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x6A30_DisplayList, (MObjSub**)&dLinkModel_gap_0x40EC_sub_0x7E4, (AObjEvent32**)&dLinkModel_gap_0x7AE0_sub_0x204, NULL, 0x00 },
+#endif
 	{ (Gfx*)&dLinkModel_Joint_0x94F0_DisplayList, (MObjSub**)&dLinkModel_gap_0x8110_sub_0x5B0, (AObjEvent32**)&dLinkModel_gap_0x9DA8_sub_0xCC, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x94F0_DisplayList, (MObjSub**)&dLinkModel_gap_0x8110_sub_0x5B0, (AObjEvent32**)&dLinkModel_gap_0x9DA8_sub_0xCC, NULL, 0x00 },
 };
 
 /* @ 0x0338, 80 bytes: FTAttributes.sub_0x338 target (was dLinkMain_pre+0x338) */
 FTModelPart dLinkMain_modelparts_desc_0x338[4] = {
-	{ (Gfx*)&dLinkModel_Joint_0x3398_DisplayList, (MObjSub**)((u8*)dLinkModel_gap_0x0000_sub_0x18 + 0x588), (AObjEvent32**)&dLinkModel_gap_0x40EC_sub_0x244, NULL, 0x00 },
+#if defined(REGION_JP)
+	{ (Gfx*)((u8 *)dLinkModel_Joint_0x2EF0_DisplayList + 0x498), (MObjSub**)dLinkModel_Joint_0x0040_post_sub_0x560, (AObjEvent32**)&dLinkModel_gap_0x40EC_sub_0x234, NULL, 0x00 },
+	{ (Gfx*)&dLinkModel_Joint_0x6E08_DisplayList, (MObjSub**)&dLinkModel_gap_0x40EC_sub_0x7E4, (AObjEvent32**)&dLinkModel_gap_0x7AE0_sub_0x210, NULL, 0x00 },
+#else
+	{ (Gfx*)&dLinkModel_Joint_0x3398_DisplayList, (MObjSub**)dLinkModel_Joint_0x0040_post_sub_0x560, (AObjEvent32**)&dLinkModel_gap_0x40EC_sub_0x244, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x6E08_DisplayList, (MObjSub**)&dLinkModel_gap_0x40EC_sub_0x7F4, (AObjEvent32**)&dLinkModel_gap_0x7AE0_sub_0x210, NULL, 0x00 },
+#endif
 	{ (Gfx*)&dLinkModel_Joint_0x9B98_DisplayList, (MObjSub**)&dLinkModel_gap_0x8110_sub_0x5C0, (AObjEvent32**)&dLinkModel_gap_0x9DA8_sub_0xD8, NULL, 0x00 },
 	{ (Gfx*)&dLinkModel_Joint_0x9B98_DisplayList, (MObjSub**)&dLinkModel_gap_0x8110_sub_0x5C0, (AObjEvent32**)&dLinkModel_gap_0x9DA8_sub_0xD8, NULL, 0x00 },
 };
@@ -269,12 +349,23 @@ FTTexturePartContainer dLinkMain_textureparts_container = {
 };
 
 /* @ 0x0410, 32 bytes: FTAttributes.commonparts_container target (was dLinkMain_pre+0x410) */
+#if defined(REGION_JP)
+/* JP layout shifts these targets 16 bytes earlier than US (JointTree starts at
+ * byte 0x3AD8 in JP vs 0x3AE8 in US; the surrounding offsets follow). */
+FTCommonPartContainer dLinkMain_commonparts_container = {
+	{
+		{ (DObjDesc*)((u8*)dLinkModel_Joint_0x39E0_DisplayList + 0xF8), (MObjSub***)&dLinkModel_gap_0x0000, (AObjEvent32***)((u8*)dLinkModel_JointTree + 0x5B8), 0x00 },
+		{ (DObjDesc*)&dLinkModel_JointTree_0x74B0, (MObjSub***)&dLinkModel_gap_0x40EC_sub_0x244, (AObjEvent32***)((u8*)dLinkModel_JointTree_0x74B0 + 0x5B0), 0x00 },
+	},
+};
+#else
 FTCommonPartContainer dLinkMain_commonparts_container = {
 	{
 		{ (DObjDesc*)&dLinkModel_JointTree, (MObjSub***)&dLinkModel_gap_0x0000, (AObjEvent32***)((u8*)dLinkModel_JointTree + 0x5B8), 0x00 },
 		{ (DObjDesc*)&dLinkModel_JointTree_0x74B0, (MObjSub***)&dLinkModel_gap_0x40EC_sub_0x254, (AObjEvent32***)((u8*)dLinkModel_JointTree_0x74B0 + 0x5B0), 0x00 },
 	},
 };
+#endif
 
 /* @ 0x0430, 432 bytes: FTAttributes.thrown_status target (was dLinkMain_pre+0x430) */
 FTThrownStatus dLinkMain_thrown_status[54] = {
@@ -344,25 +435,25 @@ int *dLinkMain_stock_luts[4] = {
 
 /* @ 0x05F0, 12 bytes: FTAttributes.sprites target (was dLinkMain_pre+0x5F0) */
 FTSprites dLinkMain_sprites = {
-	(Sprite*)((u8*)dLinkModel_gap_0x11CC0_sub_0x58 + 0x30), /* stock_sprite */
+	(Sprite*)dLinkModel_Stock, /* stock_sprite */
 	(int**)dLinkMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dLinkModel_gap_0x11CC0_sub_0x58 + 0x210), /* emblem */
+	(Sprite*)dLinkModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x05FC, 256 bytes: FTAttributes.sub_0x5FC target (was dLinkMain_pre+0x5FC) */
 FTSkeleton dLinkMain_skeleton_dls[32] = {
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0x618 }, 0 },
-	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0x6E8 }, 0 },
+	{ { (Gfx*)&dLinkModel_DL_0xA490 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0xC68 }, 0 },
 	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0xB58 }, 0 },
-	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0xD48 }, 0 },
-	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0x12B8 }, 0 },
+	{ { (Gfx*)&dLinkModel_DL_0xAAF0 }, 0 },
+	{ { (Gfx*)&dLinkModel_DL_0xB060 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0xC68 }, 0 },
 	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0xB58 }, 0 },
-	{ { (Gfx*)&dLinkModel_gap_0x9DA8_sub_0xE28 }, 0 },
+	{ { (Gfx*)&dLinkModel_DL_0xABD0 }, 0 },
 	{ { NULL }, 0 },
 	{ { NULL }, 0 },
 	{ { NULL }, 0 },
@@ -501,8 +592,8 @@ FTAttributes dLinkMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dLinkMain_hiddenparts, /* hiddenparts */
 	&dLinkMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dLinkShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dLinkShieldPose_data0_end, (void *)&dLinkShieldPose_shield_anim_joint_1, (void *)&dLinkShieldPose_shield_anim_joint_2, (void *)&dLinkShieldPose_shield_anim_joint_3, (void *)&dLinkShieldPose_shield_anim_joint_4, (void *)&dLinkShieldPose_shield_anim_joint_5, (void *)&dLinkShieldPose_shield_anim_joint_6, (void *)&dLinkShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	30, /* joint_rfoot_id */
 	92.628f, /* joint_rfoot_rotate */
 	25, /* joint_lfoot_id */

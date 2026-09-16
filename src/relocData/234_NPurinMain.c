@@ -2,16 +2,27 @@
 /* File size: 1520 bytes (0x5F0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dMasterHandIcon_FTEmblem[];
+extern ftMotionCommand dPurinMainMotion_EggLay_0x0034[];
+extern u8 dPurinShieldPose_data0[];
+extern u8 dPurinShieldPose_data0_end[];
+extern u8 dPurinShieldPose_shield_anim_joint_1[];
+extern u8 dPurinShieldPose_shield_anim_joint_2[];
+extern u8 dPurinShieldPose_shield_anim_joint_3[];
+extern u8 dPurinShieldPose_shield_anim_joint_4[];
+extern u8 dPurinShieldPose_shield_anim_joint_5[];
+extern u8 dPurinShieldPose_shield_anim_joint_6[];
+extern u8 dPurinShieldPose_shield_anim_joint_7[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dNPurinModel_JointTree[];
 
-/* Pre-attributes data (168 words, 0x02A0 bytes) */
-/* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNPurinMain_pre+0x0) */
-u32 dNPurinMain_file_handles[1] = {
+ftMotionCommand * dNPurinMain_file_handles[1] = { dPurinMainMotion_EggLay_0x0034 };
 
-	0x0031000D, /* extern -> 0x0034 */
-};
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNPurinMain_pre+0x4) */
 u32 dNPurinMain_animlock[2] = {
@@ -120,7 +131,7 @@ FTThrownStatus dNPurinMain_thrown_status[54] = {
 FTSprites dNPurinMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x015E00AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNPurinMain_attr = {
@@ -220,8 +231,8 @@ FTAttributes dNPurinMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNPurinMain_hiddenparts, /* hiddenparts */
 	&dNPurinMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dPurinShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dPurinShieldPose_data0_end, (void *)&dPurinShieldPose_shield_anim_joint_1, (void *)&dPurinShieldPose_shield_anim_joint_2, (void *)&dPurinShieldPose_shield_anim_joint_3, (void *)&dPurinShieldPose_shield_anim_joint_4, (void *)&dPurinShieldPose_shield_anim_joint_5, (void *)&dPurinShieldPose_shield_anim_joint_6, (void *)&dPurinShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	61.848f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */

@@ -8,15 +8,35 @@
 #include <sys/objdef.h>  // aobjEvent32* macros
 
 /* Raw data from file offset 0x0000 to 0x0690 (1680 bytes) */
-/* gap sub-block @ 0x0000 (was gap+0x0, 88 bytes) */
-u8 dCaptainSpecial3_gap_0x0000[88] = {
-	#include <CaptainSpecial3/gap_0x0000.data.inc.c>
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dCaptainSpecial3_gap_0x0000_sub_0x58[];
+extern Vtx dCaptainSpecial3_gap_0x0708_sub_0x18[];
+extern MObjSub *dCaptainSpecial3_gap_0x0708_sub_0x10[];
+/* Three 16-colour CI4 palettes — one per FalconPunch sprite frame
+ * (Tex_0x80 / Tex_0x288 / Tex_0x490). Each palette is preceded by
+ * PAD(8); DL_0x0760 loads sub_0x58 as a TLUT. */
+PAD(8);
+
+u16 dCaptainSpecial3_gap_0x0000_sub_0x8[16] = {
+	#include <CaptainSpecial3/gap_0x0000_sub_0x8.palette.inc.c>
 };
+PAD(8);
+
+u16 dCaptainSpecial3_gap_0x0000_sub_0x30[16] = {
+	#include <CaptainSpecial3/gap_0x0000_sub_0x30.palette.inc.c>
+};
+PAD(8);
 
 /* gap sub-block @ 0x0058 (was gap+0x58, 40 bytes) */
-u16 dCaptainSpecial3_gap_0x0000_sub_0x58[20] = {
+u16 dCaptainSpecial3_gap_0x0000_sub_0x58[16] = {
 	#include <CaptainSpecial3/gap_0x0000_sub_0x58.palette.inc.c>
 };
+PAD(8);
 
 /* gap sub-block @ 0x0080 (was gap+0x80, 520 bytes) */
 /* @tex fmt=CI4 dim=32x32 */
@@ -39,9 +59,8 @@ u8 dCaptainSpecial3_Tex_0x490[512] = {
 
 /* MObjSub-list head @ 0x690 — 4-entry MObjSub** array.
  * The real MObjSub data starts at +0x10 (dCaptainSpecial3_FalconPunchMObjSub_MObjSub_real below). */
-MObjSub **dCaptainSpecial3_FalconPunchMObjSub_MObjSub[1] = {
-	NULL,
-};
+MObjSub ** dCaptainSpecial3_FalconPunchMObjSub_MObjSub[1] = { dCaptainSpecial3_gap_0x0708_sub_0x10 };
+
 
 /* Texture-pointer sprites array (was MObjSub**[] tail starting at +0x4). */
 void *dCaptainSpecial3_FalconPunchMObjSub_MObjSub_sprites[3] = {
@@ -103,29 +122,27 @@ Gfx dCaptainSpecial3_DL_0x0760[26] = {
  * start of the AnimJoint, followed by per-joint AObjEvent32
  * scripts. Forward decls so the table can reference them. */
 extern u32 dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x834[];
-extern u32 dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x86C[];
+extern u32* dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x86C[];
 
 AObjEvent32 *dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint[1] = {
 	(AObjEvent32 *)dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x86C,
 };
 
 u32 dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x834[] = {
-	aobjEvent32SetValAfterBlock(0x01F, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID | AOBJ_MATFLAG_TRAU | AOBJ_MATFLAG_TRAV | AOBJ_MATFLAG_SCAU | AOBJ_MATFLAG_SCAV, 0),
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
 	    0x00000000,  /* 0.0f */
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x001, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
 	    0x00000000,  /* 0.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)(dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x834),
 };
 
-u32 dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x86C[] = {
-	(u32)(dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x834),
-};
+u32 * dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x86C[] = { dCaptainSpecial3_FalconPunchMatAnimJoint_MatAnimJoint_0x834 };

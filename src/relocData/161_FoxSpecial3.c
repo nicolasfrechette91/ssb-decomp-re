@@ -7,6 +7,75 @@
 #include "relocdata_types.h"
 #include <sys/objdef.h>  // aobjEvent32* macros
 
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dFoxSpecial3_Joint_0x1FA0_post[];
+extern u8 dStageSectorFile2_Tex_0x19F8[];
+extern Gfx dFoxSpecial3_Joint_0x2920_post[];
+extern u8 dStageSectorFile2_Tex_0x19F8[];
+extern u16 dFoxSpecial3_Lut_0x0008_palette[];
+extern u16 dFoxSpecial3_Lut_0x00B8_palette[];
+extern u16 dFoxSpecial3_Lut_0x0168_palette[];
+extern u16 dFoxSpecial3_Lut_0x01D8_palette[];
+extern u16 dFoxSpecial3_Lut_0x0308_palette[];
+extern u16 dFoxSpecial3_Lut_0x0538_palette[];
+extern u16 dFoxSpecial3_Lut_0x0668_palette[];
+extern u16 dFoxSpecial3_Lut_0x0798_palette[];
+extern u16 dFoxSpecial3_Lut_0x0808_palette[];
+extern u16 dFoxSpecial3_Lut_0x08B8_palette[];
+extern u16 dFoxSpecial3_Lut_0x0998_palette[];
+extern u16 dFoxSpecial3_Lut_0x0AC8_palette[];
+extern u16 dFoxSpecial3_Lut_0x0BF8_palette[];
+extern u16 dFoxSpecial3_Lut_0x0E28_palette[];
+extern u16 dFoxSpecial3_Lut_0x1058_palette[];
+extern u16 dFoxSpecial3_Lut_0x1178_palette[];
+extern u8 dFoxSpecial3_Tex_0x0030[];
+extern u8 dFoxSpecial3_Tex_0x00E0[];
+extern u8 dFoxSpecial3_Tex_0x0190[];
+extern u8 dFoxSpecial3_Tex_0x0200[];
+extern u8 dFoxSpecial3_Tex_0x0330[];
+extern u8 dFoxSpecial3_Tex_0x0560[];
+extern u8 dFoxSpecial3_Tex_0x0690[];
+extern u8 dFoxSpecial3_Tex_0x07C0[];
+extern u8 dFoxSpecial3_Tex_0x0830[];
+extern u8 dFoxSpecial3_Tex_0x08E0[];
+extern u8 dFoxSpecial3_Tex_0x0928[];
+extern u8 dFoxSpecial3_Tex_0x0950[];
+extern u8 dFoxSpecial3_Tex_0x09C0[];
+extern u8 dFoxSpecial3_Tex_0x0AF0[];
+extern u8 dFoxSpecial3_Tex_0x0C20[];
+extern u8 dFoxSpecial3_Tex_0x0E50[];
+extern u8 dFoxSpecial3_Tex_0x1080[];
+extern u8 dFoxSpecial3_Tex_0x11A0[];
+extern Vtx dFoxSpecial3_Vtx_0x11E0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1220_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1260_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x12C0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x14A0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1680_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x16C0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x17A0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1830_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1870_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x18C0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1930_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1980_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x19E0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1A40_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1AA0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1B00_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1B40_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1D80_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1DE0_Vtx[];
+extern Vtx dFoxSpecial3_Vtx_0x1EC0_Vtx[];
+extern Vtx dFoxSpecial3_gap_0x1B80[];
+extern Vtx dFoxSpecial3_gap_0x1E60[];
+extern Vtx dFoxSpecial3_gap_0x1F00[];
+extern Vtx dFoxSpecial3_gap_0x1F00_sub_0x40[];
+extern Vtx dFoxSpecial3_gap_0x1F00_sub_0x60[];
+extern u8 dStageSectorFile2_Tex_0x19F8[];
+extern u32 dFoxSpecial3__2EB4__AnimJoint[];
+extern u8 dStageSectorFile2_Tex_0x19F8[];
+
 PAD(8);
 
 /* Palette: Lut_0x0008 @ 0x8 (16 colors RGBA5551) */
@@ -17,7 +86,7 @@ u16 dFoxSpecial3_Lut_0x0008_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x0030 to 0x00B8 (136 bytes) */
-/* @tex fmt=CI4 dim=8x64 lut=dFoxSpecial3_Lut_0x0008_palette */
+/* @tex fmt=CI4 dim=16x16 lut=dFoxSpecial3_Lut_0x0008_palette */
 u8 dFoxSpecial3_Tex_0x0030[136] = {
 	#include <FoxSpecial3/Tex_0x0030.tex.inc.c>
 };
@@ -30,7 +99,7 @@ u16 dFoxSpecial3_Lut_0x00B8_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x00E0 to 0x0168 (136 bytes) */
-/* @tex fmt=CI4 dim=96x16 lut=dFoxSpecial3_Lut_0x00B8_palette */
+/* @tex fmt=CI4 dim=16x16 lut=dFoxSpecial3_Lut_0x00B8_palette */
 u8 dFoxSpecial3_Tex_0x00E0[128] = {
 	#include <FoxSpecial3/Tex_0x00E0.tex.inc.c>
 };
@@ -120,7 +189,7 @@ u16 dFoxSpecial3_Lut_0x0798_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x07C0 to 0x0808 (72 bytes) */
-/* @tex fmt=CI4 dim=32x8 lut=dFoxSpecial3_Lut_0x0798_palette */
+/* @tex fmt=CI4 dim=16x8 lut=dFoxSpecial3_Lut_0x0798_palette */
 u8 dFoxSpecial3_Tex_0x07C0[64] = {
 	#include <FoxSpecial3/Tex_0x07C0.tex.inc.c>
 };
@@ -151,8 +220,18 @@ PAD(8);
 
 /* Raw data from file offset 0x08E0 to 0x0998 (184 bytes) */
 /* @tex fmt=CI4 dim=16x8 lut=dFoxSpecial3_Lut_0x08B8_palette */
-u8 dFoxSpecial3_Tex_0x08E0[184] = {
+/* Three sequential textures previously combined into one 184-byte
+ * Tex_0x08E0 with byte-offset arithmetic references at +0x48 and +0x70. */
+/* @tex fmt=CI4 dim=16x8 lut=dFoxSpecial3_Lut_0x08B8_palette */
+u8 dFoxSpecial3_Tex_0x08E0[72] = {
 	#include <FoxSpecial3/Tex_0x08E0.tex.inc.c>
+};
+u8 dFoxSpecial3_Tex_0x0928[40] = {
+	#include <FoxSpecial3/Tex_0x0928.tex.inc.c>
+};
+/* @tex fmt=CI4 dim=16x8 lut=dFoxSpecial3_Tex_0x0928 */
+u8 dFoxSpecial3_Tex_0x0950[72] = {
+	#include <FoxSpecial3/Tex_0x0950.tex.inc.c>
 };
 
 /* Palette: Lut_0x0998 @ 0x998 (16 colors RGBA5551) */
@@ -163,7 +242,7 @@ u16 dFoxSpecial3_Lut_0x0998_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x09C0 to 0x0AC8 (264 bytes) */
-/* @tex fmt=CI4 dim=32x32 lut=dFoxSpecial3_Lut_0x0998_palette */
+/* @tex fmt=CI4 dim=16x32 lut=dFoxSpecial3_Lut_0x0998_palette */
 u8 dFoxSpecial3_Tex_0x09C0[256] = {
 	#include <FoxSpecial3/Tex_0x09C0.tex.inc.c>
 };
@@ -178,7 +257,7 @@ u16 dFoxSpecial3_Lut_0x0AC8_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x0AF0 to 0x0BF8 (264 bytes) */
-/* @tex fmt=CI4 dim=32x32 lut=dFoxSpecial3_Lut_0x0AC8_palette */
+/* @tex fmt=CI4 dim=16x32 lut=dFoxSpecial3_Lut_0x0AC8_palette */
 u8 dFoxSpecial3_Tex_0x0AF0[256] = {
 	#include <FoxSpecial3/Tex_0x0AF0.tex.inc.c>
 };
@@ -221,7 +300,7 @@ u16 dFoxSpecial3_Lut_0x1058_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x1080 to 0x1178 (248 bytes) */
-/* @tex fmt=CI4 dim=192x8 lut=dFoxSpecial3_Lut_0x1058_palette */
+/* @tex fmt=CI4 dim=16x8 lut=dFoxSpecial3_Lut_0x1058_palette */
 u8 dFoxSpecial3_Tex_0x1080[248] = {
 	#include <FoxSpecial3/Tex_0x1080.tex.inc.c>
 };
@@ -234,7 +313,7 @@ u16 dFoxSpecial3_Lut_0x1178_palette[16] = {
 PAD(8);
 
 /* Raw data from file offset 0x11A0 to 0x11E0 (64 bytes) */
-/* @tex fmt=CI4 dim=8x8 lut=dFoxSpecial3_Lut_0x1178_palette */
+/* @tex fmt=CI4 dim=16x8 lut=dFoxSpecial3_Lut_0x1178_palette */
 u8 dFoxSpecial3_Tex_0x11A0[64] = {
 	#include <FoxSpecial3/Tex_0x11A0.tex.inc.c>
 };
@@ -426,87 +505,136 @@ DObjDLLink dFoxSpecial3_JointCmd_0x2BB0[] = {
 	{ 4, NULL },
 };
 
-/* Raw data from file offset 0x2BC0 to 0x2C30 (112 bytes) */
-u8 dFoxSpecial3_JointCmd_0x2BC0[112] = {
-	#include <FoxSpecial3/JointCmd_0x2BC0.data.inc.c>
+/* Raw data from file offset 0x2BC0 to 0x2C30 (112 bytes) — 7 sequential
+ * DObjDLLink[2] terminator-pairs, one per Joint display list. Originally
+ * a single u8[112] blob with byte-offset references from gap_0x2C88. */
+DObjDLLink dFoxSpecial3_JointCmd_0x2BC0[2] = {
+	{ 1, dFoxSpecial3_Joint_0x2920_DisplayList },
+	{ 4, NULL },
+};
+DObjDLLink dFoxSpecial3_JointCmd_0x2BD0[2] = {
+	{ 1, dFoxSpecial3_Joint_0x2920_post_post },
+	{ 4, NULL },
+};
+DObjDLLink dFoxSpecial3_JointCmd_0x2BE0[2] = {
+	{ 1, dFoxSpecial3_Joint_0x2920_post_post_post },
+	{ 4, NULL },
+};
+DObjDLLink dFoxSpecial3_JointCmd_0x2BF0[2] = {
+	{ 1, dFoxSpecial3_Joint_0x2920_post_post_post_post },
+	{ 4, NULL },
+};
+DObjDLLink dFoxSpecial3_JointCmd_0x2C00[2] = {
+	{ 0, dFoxSpecial3_Joint_0x1FA0_post_post },
+	{ 4, NULL },
+};
+DObjDLLink dFoxSpecial3_JointCmd_0x2C10[2] = {
+	{ 1, dFoxSpecial3_Joint_0x2920_post_post_post_post_post },
+	{ 4, NULL },
+};
+DObjDLLink dFoxSpecial3_JointCmd_0x2C20[2] = {
+	{ 1, dFoxSpecial3_Joint_0x2920_post_post_post_post_post_post },
+	{ 4, NULL },
 };
 
-/* DObjDesc: EntryArwing @ 0x2C30 (2 entries) */
-DObjDesc dFoxSpecial3_EntryArwing[] = {
-	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)dFoxSpecial3_JointCmd_0x2BB0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+/* DObjDesc: EntryArwing @ 0x2C30 (13 entries) — previously split into
+ * a 2-entry "EntryArwing" + 492-byte gap_0x2C88 blob; in fact it's one
+ * 13-entry scene graph ending with the {18, ...} sentinel at index 12,
+ * followed by 8 bytes of trailer whose chain ptr at +0x240 targets
+ * __2E74__AnimJoint. Entry cmd ids 0x8002 / 0x8003 carry high-bit
+ * flags on top of cmd=2/3. */
+DObjDesc dFoxSpecial3_EntryArwing[13] = {
+	{ 0x0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x1, (void*)dFoxSpecial3_JointCmd_0x2BB0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x8002, (void*)dFoxSpecial3_JointCmd_0x2BC0, { 213.48599243164062f, -97.46099853515625f, 394.4850158691406f }, { 0.0f, 0.0f, 0.0f }, { 9.999999747378752e-06f, 9.999999747378752e-06f, 9.999999747378752e-06f } },
+	{ 0x8002, (void*)dFoxSpecial3_JointCmd_0x2BD0, { -213.48602294921875f, -97.46099853515625f, 394.4850158691406f }, { 0.0f, 0.0f, 0.0f }, { 9.999999747378752e-06f, 9.999999747378752e-06f, 9.999999747378752e-06f } },
+	{ 0x8002, (void*)dFoxSpecial3_JointCmd_0x2BE0, { 213.48599243164062f, -97.46099853515625f, 394.4850158691406f }, { 0.0f, 0.0f, 0.0f }, { 9.999999747378752e-06f, 9.999999747378752e-06f, 9.999999747378752e-06f } },
+	{ 0x8002, (void*)dFoxSpecial3_JointCmd_0x2BF0, { -213.48602294921875f, -97.46099853515625f, 394.4850158691406f }, { 0.0f, 0.0f, 0.0f }, { 9.999999747378752e-06f, 9.999999747378752e-06f, 9.999999747378752e-06f } },
+	{ 0x2, (void*)dFoxSpecial3_JointCmd_0x2C00, { 0.0f, 168.23626708984375f, -261.0562744140625f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x2, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x8003, (void*)dFoxSpecial3_JointCmd_0x2C10, { 0.0f, -41.76900100708008f, -696.1500244140625f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x2, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x8003, (void*)dFoxSpecial3_JointCmd_0x2C20, { 0.0f, -41.76900100708008f, -696.1500244140625f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x1, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 0x12, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
-/* Raw data from file offset 0x2C88 to 0x2E74 (492 bytes) */
-u8 dFoxSpecial3_gap_0x2C88[492] = {
-	#include <FoxSpecial3/gap_0x2C88.data.inc.c>
+/* 8-byte trailer past the DObjDesc sentinel — a 4-byte pad followed by
+ * a chain pointer to the AnimJoint script at __2E74__AnimJoint. */
+PAD(4);
+extern u32 dFoxSpecial3__2E74__AnimJoint[];
+AObjEvent32 *dFoxSpecial3_EntryArwing_post[1] = {
+	(AObjEvent32 *)dFoxSpecial3__2E74__AnimJoint,
 };
 
-/* Raw data from file offset 0x2E74 to 0x2EB4 (64 bytes) */
-u32 dFoxSpecial3__2E74__AnimJoint[16] = {
-	aobjEvent32SetVal0RateBlock(0x380, 0),
+u32 dFoxSpecial3__2E74__AnimJoint[15] = {
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_SCAXYZ, 0),
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetVal0RateBlock(0x380, 3),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_SCAXYZ, 3),
 	    0x3F570A40,  /* 0.8400001525878906f */
 	    0x3F570A40,  /* 0.8400001525878906f */
 	    0x3F59999C,  /* 0.8500001430511475f */
-	aobjEvent32SetVal0RateBlock(0x380, 3),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_SCAXYZ, 3),
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
 	    0x3F800000,  /* 1.0f */
 	aobjEvent32SetAnim(0x000, 0),
 	(u32)dFoxSpecial3__2E74__AnimJoint,
 	aobjEvent32End(),
-	(u32)0x2EB4,
 };
+
+AObjEvent32 *dFoxSpecial3__2E74__AnimJoint_chain[1] = {
+	(AObjEvent32 *)dFoxSpecial3__2EB4__AnimJoint,
+};
+
 
 /* Raw data from file offset 0x2EB4 to 0x2F80 (204 bytes) */
 u32 dFoxSpecial3__2EB4__AnimJoint[50] = {
-	aobjEvent32SetValBlock(0x380, 0),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 0),
 	    0x3F800000,
 	    0x3F800000,
 	    0x3F800000,
-	aobjEvent32SetValBlock(0x380, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 1),
 	    0x3FC911F1,
 	    0x3FC911F1,
 	    0x3FCB76B4,
-	aobjEvent32SetValBlock(0x380, 2),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 2),
 	    0x3F570A3D,
 	    0x3F570A3D,
 	    0x3F59999A,
-	aobjEvent32SetValBlock(0x380, 2),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 2),
 	    0x3FB9999A,
 	    0x3FB9999A,
 	    0x3FB9999A,
-	aobjEvent32SetValBlock(0x380, 3),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 3),
 	    0x3F570A3D,
 	    0x3F570A3D,
 	    0x3F59999A,
-	aobjEvent32SetValBlock(0x380, 3),
+	aobjEvent32SetValBlock(AOBJ_FLAG_SCAXYZ, 3),
 	    0x3F873C60,
 	    0x3F873C60,
 	    0x3F873C60,
-	aobjEvent32SetTargetRate(0x380, 0),
+	aobjEvent32SetTargetRate(AOBJ_FLAG_SCAXYZ, 0),
 	    0xBE09E117,
 	    0xBE1A2A2E,
 	    0xBE0F4EC7,
-	aobjEvent32SetValRateBlock(0x380, 8),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_SCAXYZ, 8),
 	    0x3F000000,
 	    0xBC63F461,
 	    0x3F000000,
 	    0xBC63F461,
 	    0x3F000000,
 	    0xBC63F461,
-	aobjEvent32SetValRateBlock(0x380, 32),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_SCAXYZ, 32),
 	    0x3F000003,
 	    0x3C47CE0C,
 	    0x3F000003,
 	    0x3C47CE0C,
 	    0x3F000003,
 	    0x3C47CE0C,
-	aobjEvent32SetValRateBlock(0x380, 9),
+	aobjEvent32SetValRateBlock(AOBJ_FLAG_SCAXYZ, 9),
 	    0x3F800000,
 	    0x3CE81B4A,
 	    0x3F800000,

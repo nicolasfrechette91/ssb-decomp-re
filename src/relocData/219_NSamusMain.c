@@ -2,19 +2,31 @@
 /* File size: 1808 bytes (0x710) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+extern u8 dSamusShieldPose_data0[];
+extern u8 dSamusShieldPose_data0_end[];
+extern u8 dSamusShieldPose_shield_anim_joint_1[];
+extern u8 dSamusShieldPose_shield_anim_joint_2[];
+extern u8 dSamusShieldPose_shield_anim_joint_3[];
+extern u8 dSamusShieldPose_shield_anim_joint_4[];
+extern u8 dSamusShieldPose_shield_anim_joint_5[];
+extern u8 dSamusShieldPose_shield_anim_joint_6[];
+extern u8 dSamusShieldPose_shield_anim_joint_7[];
+extern u32 dMasterHandIcon_FTEmblem[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dNSamusModel_JointTree[];
 extern Gfx dNSamusModel_Joint_0x1C00_DisplayList[];
 extern u8 dNSamusModel_gap_0x2FE8_sub_0x1978[];
-extern u8 dNSamusModel_gap_0x2FE8_sub_0xC08[];
-extern u32 dSamusMainMotion_0x0084[];
+extern u8 dNSamusModel_DL_0x3BF0[];
+extern u32 dSamusMainMotion_EggLay_0x0084[];
 
 /* Pre-attributes data (239 words, 0x03BC bytes) */
 /* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNSamusMain_pre+0x0) */
-u32 dNSamusMain_file_handles[1] = {
+u32 *dNSamusMain_file_handles[1] = {
 
-	(u32)&dSamusMainMotion_0x0084, /* extern -> 0x0084 */
+	(u32 *)&dSamusMainMotion_EggLay_0x0084, /* extern -> 0x0084 */
 };
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNSamusMain_pre+0x4) */
@@ -50,8 +62,8 @@ FTHiddenPart dNSamusMain_hiddenparts[13] = {
 FTModelPart dNSamusMain_modelparts_desc_0x0E4[6] = {
 	{ (Gfx*)&dNSamusModel_Joint_0x1C00_DisplayList, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dNSamusModel_Joint_0x1C00_DisplayList, NULL, NULL, NULL, 0x00 },
-	{ (Gfx*)&dNSamusModel_gap_0x2FE8_sub_0xC08, NULL, NULL, NULL, 0x00 },
-	{ (Gfx*)&dNSamusModel_gap_0x2FE8_sub_0xC08, NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)&dNSamusModel_DL_0x3BF0, NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)&dNSamusModel_DL_0x3BF0, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dNSamusModel_gap_0x2FE8_sub_0x1978, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dNSamusModel_gap_0x2FE8_sub_0x1978, NULL, NULL, NULL, 0x00 },
 };
@@ -136,7 +148,7 @@ FTThrownStatus dNSamusMain_thrown_status[54] = {
 FTSprites dNSamusMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x01A500AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNSamusMain_attr = {
@@ -236,8 +248,8 @@ FTAttributes dNSamusMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNSamusMain_hiddenparts, /* hiddenparts */
 	&dNSamusMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dSamusShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dSamusShieldPose_data0_end, (void *)&dSamusShieldPose_shield_anim_joint_1, (void *)&dSamusShieldPose_shield_anim_joint_2, (void *)&dSamusShieldPose_shield_anim_joint_3, (void *)&dSamusShieldPose_shield_anim_joint_4, (void *)&dSamusShieldPose_shield_anim_joint_5, (void *)&dSamusShieldPose_shield_anim_joint_6, (void *)&dSamusShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	31, /* joint_rfoot_id */
 	176.271f, /* joint_rfoot_rotate */
 	26, /* joint_lfoot_id */

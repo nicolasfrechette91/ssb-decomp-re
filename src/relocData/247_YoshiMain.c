@@ -2,7 +2,31 @@
 /* File size: 2000 bytes (0x7D0) */
 
 #include "relocdata_types.h"
+extern u32 dYoshiMainMotion_EggLay_0x0034[];
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dYoshiModel_FTEmblem[];
+extern MObjSub *dYoshiModel_Joint_0x0080_post_sub_0xD7C[];
+extern u32 dYoshiModel_Stock[];
+extern Gfx dYoshiModel_gap_0xA860[];
+extern Gfx dYoshiSpecial2_gap_0x0530[];
+extern u8 dYoshiShieldPose_data0[];
+extern u8 dYoshiShieldPose_data0_end[];
+extern u8 dYoshiShieldPose_shield_anim_joint_1[];
+extern u8 dYoshiShieldPose_shield_anim_joint_2[];
+extern u8 dYoshiShieldPose_shield_anim_joint_3[];
+extern u8 dYoshiShieldPose_shield_anim_joint_4[];
+extern u8 dYoshiShieldPose_shield_anim_joint_5[];
+extern u8 dYoshiShieldPose_shield_anim_joint_6[];
+extern u8 dYoshiShieldPose_shield_anim_joint_7[];
+extern AObjEvent32 **dYoshiModel_JointTree_post[];
+extern AObjEvent32 **dYoshiModel_JointTree_0x6948_post[];
 #include <ft/fttypes.h>
+#include <wp/wptypes.h>  // WPAttributes
+#include <gm/gmsound.h>  // nSYAudioFGM*
+#include <gm/gmdef.h>    // nGMHitElement*
 
 extern u8 dITCommonObject_StarRod_Weapon_data[];
 extern DObjDesc dYoshiModel_JointTree[];
@@ -16,17 +40,17 @@ extern u8 dYoshiModel_gap_0x38F4_sub_0x1410[];
 extern u8 dYoshiModel_gap_0x38F4_sub_0x6E8[];
 extern u8 dYoshiModel_gap_0x38F4_sub_0x73C[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x13BC[];
-extern u8 dYoshiModel_gap_0x6E70_sub_0x1490[];
+extern u8 dYoshiModel_DL_0x8300[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x1620[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x1A40[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x1CD0[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x1DE0[];
-extern u8 dYoshiModel_gap_0x6E70_sub_0x1EA0[];
-extern u8 dYoshiModel_gap_0x6E70_sub_0x1F50[];
+extern u8 dYoshiModel_DL_0x8D10[];
+extern u8 dYoshiModel_DL_0x8DC0[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x2050[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x2160[];
-extern u8 dYoshiModel_gap_0x6E70_sub_0x2220[];
-extern u8 dYoshiModel_gap_0x6E70_sub_0x23B0[];
+extern u8 dYoshiModel_DL_0x9090[];
+extern u8 dYoshiModel_DL_0x9220[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x24E0[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x6A4[];
 extern u8 dYoshiModel_gap_0x6E70_sub_0x9A8[];
@@ -41,46 +65,75 @@ extern u8 dYoshiSpecial2_gap_0x04D8_sub_0x18[];
 extern DObjDesc dYoshiSpecial3_EggLay[];
 
 /* Pre-attributes data (287 words, 0x047C bytes) */
-/* @ 0x0000, 116 bytes: FTAttributes.file_handles target (was dYoshiMain_pre+0x0) */
-u32 dYoshiMain_file_handles[29] = {
+/* @ 0x0000, 12 bytes: 3 cross-file handle pointers (chain-rewritten). */
+void *dYoshiMain_file_handles[3] = {
 
-	0x0001000D, /* extern -> 0x0034 */
-	(u32)((u8*)dYoshiSpecial2_gap_0x04D8_sub_0x18 + 0x40), /* extern -> 0x0530 */
-	(u32)&dYoshiSpecial3_EggLay, /* extern -> 0x0960 */
-	(u32)((u8*)dYoshiModel_Tex_0x9EF0 + 0x970), /* extern -> 0xA860 */
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00960000,
-	0xFF6A0096,
-	0x00C85A40,
-	0x0C838000,
-#if defined(REGION_JP)
-	0x0660F134,
-#else
-	0x0660F934,
-#endif
-	0x0C800000,
-	(u32)&dITCommonObject_StarRod_Weapon_data, /* extern -> 0x5458 */
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00640000,
-	0xFF9C0060,
-	0x00A05A40,
-	0x1901001E,
-#if defined(REGION_JP)
-	0xFD6101BC,
-#else
-	0xFD6111BC,
-#endif
-	0x00000000,
+	(void *)&dYoshiMainMotion_EggLay_0x0034, /* extern */
+	(void *)dYoshiSpecial2_gap_0x0530, /* extern -> 0x0530 */
+	(void *)&dYoshiSpecial3_EggLay, /* extern -> 0x0960 */
+};
+
+/* @ 0x000C, 52 bytes: WPAttributes for the thrown Egg Throw egg.
+ * Referenced from wp/wpyoshi/wpyoshieggthrow.c via llYoshiMainEggThrowWeaponAttributes (0x0C). */
+WPAttributes dYoshiMain_EggThrowWeaponAttributes = {
+	(void *)dYoshiModel_gap_0xA860, /* data */
+	NULL,                           /* p_mobjsubs */
+	NULL,                           /* anim_joints */
+	NULL,                           /* p_matanim_joints */
+	{ { 0, 0, 0 }, { 0, 0, 0 } },   /* attack_offsets */
+	150, 0, -150, 150,              /* map_coll top/center/bottom/width */
+	200,                  /* size             : 16 */
+	361,                  /* angle            : 10 */
+	50,                   /* knockback_scale  : 10 */
+	14,                   /* damage           :  8 */
+	nGMHitElementNormal,  /* element          :  4 */
+	0,                    /* knockback_weight : 10 */
+	6,                    /* shield_damage    :  8 */
+	1,                    /* attack_count     :  2 */
+	1,                    /* can_setoff       :  1 */
+	nSYAudioFGMKickL,     /* sfx              : 10 */
+	1,                    /* priority         :  3 */
+	0,                    /* can_rehit_item   :  1 */
+	0,                    /* can_rehit_fighter:  1 */
+	1,                    /* can_hop          :  1 */
+	1,                    /* can_reflect      :  1 */
+	0,                    /* can_absorb       :  1 */
+	1,                    /* can_shield       :  1 */
+	0,                    /* unused_0x2F_b6   :  1 */
+	0,                    /* unused_0x2F_b7   :  1 */
+	50,                   /* knockback_base   : 10 */
+};
+
+/* @ 0x0040, 52 bytes: WPAttributes for the ground-pound impact stars (shares the
+ * Star Rod star model from ITCommonObject).
+ * Referenced from wp/wpyoshi/wpyoshistar.c via llYoshiMainStarWeaponAttributes (0x40). */
+WPAttributes dYoshiMain_StarWeaponAttributes = {
+	(void *)&dITCommonObject_StarRod_Weapon_data, /* data */
+	NULL,                                         /* p_mobjsubs */
+	NULL,                                         /* anim_joints */
+	NULL,                                         /* p_matanim_joints */
+	{ { 0, 0, 0 }, { 0, 0, 0 } },                 /* attack_offsets */
+	100, 0, -100, 96,                             /* map_coll top/center/bottom/width */
+	160,                  /* size             : 16 */
+	361,                  /* angle            : 10 */
+	100,                  /* knockback_scale  : 10 */
+	4,                    /* damage           :  8 */
+	nGMHitElementNormal,  /* element          :  4 */
+	30,                   /* knockback_weight : 10 */
+	-3,                   /* shield_damage    :  8 (heals shields) */
+	1,                    /* attack_count     :  2 */
+	1,                    /* can_setoff       :  1 */
+	nSYAudioFGMKickS,     /* sfx              : 10 */
+	1,                    /* priority         :  3 */
+	1,                    /* can_rehit_item   :  1 */
+	0,                    /* can_rehit_fighter:  1 */
+	1,                    /* can_hop          :  1 */
+	1,                    /* can_reflect      :  1 */
+	1,                    /* can_absorb       :  1 */
+	1,                    /* can_shield       :  1 */
+	0,                    /* unused_0x2F_b6   :  1 */
+	0,                    /* unused_0x2F_b7   :  1 */
+	0,                    /* knockback_base   : 10 */
 };
 
 /* @ 0x0074, 8 bytes: FTAttributes.animlock target (was dYoshiMain_pre+0x74) */
@@ -106,7 +159,7 @@ FTHiddenPart dYoshiMain_hiddenparts[5] = {
 
 /* @ 0x00D4, 80 bytes: FTAttributes.sub_0x0D4 target (was dYoshiMain_pre+0xD4) */
 FTModelPart dYoshiMain_modelparts_desc_0x0D4[4] = {
-	{ (Gfx*)&dYoshiModel_Joint_0x2398_DisplayList, (MObjSub**)((u8*)dYoshiModel_gap_0x0000_sub_0x18 + 0xDE4), (AObjEvent32**)&dYoshiModel_gap_0x38F4_sub_0x6E8, NULL, 0x00 },
+	{ (Gfx*)&dYoshiModel_Joint_0x2398_DisplayList, (MObjSub**)dYoshiModel_Joint_0x0080_post_sub_0xD7C, (AObjEvent32**)&dYoshiModel_gap_0x38F4_sub_0x6E8, NULL, 0x00 },
 	{ (Gfx*)&dYoshiModel_Joint_0x5CF8_DisplayList, (MObjSub**)&dYoshiModel_gap_0x38F4_sub_0x1410, (AObjEvent32**)&dYoshiModel_gap_0x6E70_sub_0x6A4, NULL, 0x00 },
 	{ (Gfx*)&dYoshiModel_gap_0x6E70_sub_0xEA0, (MObjSub**)&dYoshiModel_gap_0x6E70_sub_0x9A8, (AObjEvent32**)&dYoshiModel_gap_0x6E70_sub_0x13BC, NULL, 0x00 },
 	{ (Gfx*)&dYoshiModel_gap_0x6E70_sub_0xEA0, (MObjSub**)&dYoshiModel_gap_0x6E70_sub_0x9A8, (AObjEvent32**)&dYoshiModel_gap_0x6E70_sub_0x13BC, NULL, 0x00 },
@@ -132,8 +185,8 @@ FTTexturePartContainer dYoshiMain_textureparts_container = {
 /* @ 0x019C, 32 bytes: FTAttributes.commonparts_container target (was dYoshiMain_pre+0x19C) */
 FTCommonPartContainer dYoshiMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dYoshiModel_JointTree, (MObjSub***)&dYoshiModel_gap_0x0000, (AObjEvent32***)((u8*)dYoshiModel_JointTree + 0x500), 0x01 },
-		{ (DObjDesc*)&dYoshiModel_JointTree_0x6948, (MObjSub***)&dYoshiModel_gap_0x38F4_sub_0x73C, (AObjEvent32***)((u8*)dYoshiModel_JointTree_0x6948 + 0x508), 0x01 },
+		{ (DObjDesc*)&dYoshiModel_JointTree, (MObjSub***)&dYoshiModel_gap_0x0000, (AObjEvent32***)dYoshiModel_JointTree_post, 0x01 },
+		{ (DObjDesc*)&dYoshiModel_JointTree_0x6948, (MObjSub***)&dYoshiModel_gap_0x38F4_sub_0x73C, (AObjEvent32***)dYoshiModel_JointTree_0x6948_post, 0x01 },
 	},
 };
 
@@ -207,15 +260,15 @@ int *dYoshiMain_stock_luts[6] = {
 
 /* @ 0x0384, 12 bytes: FTAttributes.sprites target (was dYoshiMain_pre+0x384) */
 FTSprites dYoshiMain_sprites = {
-	(Sprite*)((u8*)dYoshiModel_gap_0xA9D0_sub_0xA8 + 0x30), /* stock_sprite */
+	(Sprite*)dYoshiModel_Stock, /* stock_sprite */
 	(int**)dYoshiMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dYoshiModel_gap_0xA9D0_sub_0xA8 + 0x220), /* emblem */
+	(Sprite*)dYoshiModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x0390, 224 bytes: FTAttributes.sub_0x390 target (was dYoshiMain_pre+0x390) */
 FTSkeleton dYoshiMain_skeleton_dls[28] = {
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1490 }, 0 },
+	{ { (Gfx*)&dYoshiModel_DL_0x8300 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1620 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1A40 }, 0 },
 	{ { NULL }, 0 },
@@ -223,24 +276,24 @@ FTSkeleton dYoshiMain_skeleton_dls[28] = {
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1DE0 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1CD0 }, 0 },
-	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1EA0 }, 0 },
+	{ { (Gfx*)&dYoshiModel_DL_0x8D10 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1DE0 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1CD0 }, 0 },
-	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x1F50 }, 0 },
+	{ { (Gfx*)&dYoshiModel_DL_0x8DC0 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x23B0 }, 0 },
+	{ { (Gfx*)&dYoshiModel_DL_0x9220 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x24E0 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x2050 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x2160 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x2220 }, 0 },
+	{ { (Gfx*)&dYoshiModel_DL_0x9090 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x2050 }, 0 },
 	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x2160 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dYoshiModel_gap_0x6E70_sub_0x2220 }, 0 },
+	{ { (Gfx*)&dYoshiModel_DL_0x9090 }, 0 },
 	{ { NULL }, 0 },
 };
 
@@ -364,8 +417,8 @@ FTAttributes dYoshiMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dYoshiMain_hiddenparts, /* hiddenparts */
 	&dYoshiMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dYoshiShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dYoshiShieldPose_data0_end, (void *)&dYoshiShieldPose_shield_anim_joint_1, (void *)&dYoshiShieldPose_shield_anim_joint_2, (void *)&dYoshiShieldPose_shield_anim_joint_3, (void *)&dYoshiShieldPose_shield_anim_joint_4, (void *)&dYoshiShieldPose_shield_anim_joint_5, (void *)&dYoshiShieldPose_shield_anim_joint_6, (void *)&dYoshiShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	26, /* joint_rfoot_id */
 	82.602f, /* joint_rfoot_rotate */
 	21, /* joint_lfoot_id */

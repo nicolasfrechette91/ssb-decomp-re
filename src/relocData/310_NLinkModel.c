@@ -8,6 +8,38 @@
 
 /* Vtx: JointVerts @ 0x0 (0 vertices — elided) */
 
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern Vtx dNLinkModel_Vtx_0x0200_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0240_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0420_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0610_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0640_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0840_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0880_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x09D0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0B90_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0C20_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0C60_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0E60_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0EA0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x0FF0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x11B0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1330_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1430_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1630_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x16C0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1780_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x18E0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x19A0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1A30_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1AF0_Vtx[];
+extern Vtx dNLinkModel_Vtx_0x1C50_Vtx[];
+extern Vtx dNLinkModel_gap_0x0000[];
 /* Placeholder wrapper: the description slot collapsed to
  * zero vertices because an extras block starts at the
  * same offset. No C declaration is emitted so IDO CFE
@@ -270,5 +302,3 @@ DObjDesc dNLinkModel_JointTree[] = {
 	{ 1, (void*)0x00000000, { 0.0f, -249.00003051757812f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
-
-PAD(4);

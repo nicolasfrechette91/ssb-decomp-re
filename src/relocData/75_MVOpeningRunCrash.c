@@ -6,223 +6,435 @@
 
 #include "relocdata_types.h"
 #include <sys/objdef.h>  // aobjEvent32* macros
-extern u8 dMVOpeningRunCrash_gap_0x2B20[];
 
-extern void *dMVOpeningRunCrash_gap_0x2B20_sub_0x320[];
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dMVOpeningRunCrash_DL_0x2FE8[];
+extern Gfx dMVOpeningRunCrash_DL_0x3450[];
+extern u8 dMVOpeningRunCrash_Tex_0x0528[];
+extern Vtx dMVOpeningRunCrash_gap_0x2B20_sub_0x340[];
+extern Vtx dMVOpeningRunCrash_gap_0x2B20_sub_0x380[];
+extern Vtx dMVOpeningRunCrash_gap_0x2B20_sub_0x400[];
+
+extern MObjSub *dMVOpeningRunCrash_gap_0x2B20_sub_0x320[];
+extern MObjSub *dMVOpeningRunCrash_gap_0x2B20_sub_0x328[];
+extern MObjSub *dMVOpeningRunCrash_gap_0x2B20_sub_0x330[];
+extern MObjSub *dMVOpeningRunCrash_gap_0x2B20_sub_0x338[];
 
 extern u32 dMVOpeningRunCrash_MatAnimJoint_0x3714[];
 extern u32 dMVOpeningRunCrash_MatAnimJoint_0x37F4[];
 extern u32 dMVOpeningRunCrash_MatAnimJoint_0x38D4[];
 extern u32 dMVOpeningRunCrash_MatAnimJoint_0x39B4[];
-extern u32 dMVOpeningRunCrash_MatAnimJoint_0x3A94[];
-extern u32 dMVOpeningRunCrash_MatAnimJoint_0x3A98[];
-extern u32 dMVOpeningRunCrash_MatAnimJoint_0x3A9C[];
-extern u32 dMVOpeningRunCrash_MatAnimJoint_0x3AA0[];
+extern AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3A94[];
+extern AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3A98[];
+extern AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3A9C[];
+extern AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3AA0[];
 
 
 /* MObjSub chain targets (forward decl + cross-file) resolved by fixRelocChain.py */
 /* Raw data from file offset 0x0000 to 0x2AA8 (10920 bytes) */
-/* gap sub-block @ 0x0000 (was gap+0x0, 280 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000[280] = {
-	#include <MVOpeningRunCrash/gap_0x0000.data.inc.c>
+/* Orphan palette pool @ 0x0000 (7 palettes; not referenced by any visible MObjSub).
+ * Trailing-PAD convention except palette_0xD0 → palette_0xF0 (naturally 16-aligned). */
+PAD(8);
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x8.palette.inc.c>
 };
+
+PAD(8);
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x30[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x30.palette.inc.c>
+};
+
+PAD(8);
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x58[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x58.palette.inc.c>
+};
+
+PAD(8);
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x80[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x80.palette.inc.c>
+};
+
+PAD(8);
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0xA8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0xA8.palette.inc.c>
+};
+
+PAD(8);
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0xD0[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0xD0.palette.inc.c>
+};
+
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0xF0[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0xF0.palette.inc.c>
+};
+
+PAD(8);
 
 /* gap sub-block @ 0x0118 (was gap+0x118, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x118[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x118.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x118[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x118.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0140 (was gap+0x140, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x140[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x140.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x140[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x140.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0168 (was gap+0x168, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x168[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x168.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x168[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x168.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0190 (was gap+0x190, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x190[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x190.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x190[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x190.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x01B8 (was gap+0x1B8, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x1B8[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x1B8.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x1B8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x1B8.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x01E0 (was gap+0x1E0, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x1E0[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x1E0.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x1E0[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x1E0.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0208 (was gap+0x208, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x208[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x208.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x208[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x208.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0230 (was gap+0x230, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x230[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x230.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x230[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x230.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0258 (was gap+0x258, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x258[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x258.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x258[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x258.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0280 (was gap+0x280, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x280[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x280.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x280[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x280.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x02A8 (was gap+0x2A8, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x2A8[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x2A8.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x2A8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x2A8.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x02D0 (was gap+0x2D0, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x2D0[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x2D0.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x2D0[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x2D0.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x02F8 (was gap+0x2F8, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x2F8[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x2F8.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x2F8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x2F8.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0320 (was gap+0x320, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x320[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x320.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x320[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x320.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0348 (was gap+0x348, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x348[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x348.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x348[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x348.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0370 (was gap+0x370, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x370[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x370.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x370[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x370.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0398 (was gap+0x398, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x398[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x398.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x398[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x398.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x03C0 (was gap+0x3C0, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x3C0[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x3C0.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x3C0[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x3C0.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x03E8 (was gap+0x3E8, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x3E8[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x3E8.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x3E8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x3E8.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0410 (was gap+0x410, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x410[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x410.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x410[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x410.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0438 (was gap+0x438, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x438[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x438.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x438[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x438.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0460 (was gap+0x460, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x460[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x460.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x460[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x460.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0488 (was gap+0x488, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x488[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x488.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x488[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x488.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x04B0 (was gap+0x4B0, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x4B0[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x4B0.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x4B0[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x4B0.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x04D8 (was gap+0x4D8, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x4D8[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x4D8.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x4D8[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x4D8.palette.inc.c>
 };
+
+PAD(8);
 
 /* gap sub-block @ 0x0500 (was gap+0x500, 40 bytes) */
-u8 dMVOpeningRunCrash_gap_0x0000_sub_0x500[40] = {
-	#include <MVOpeningRunCrash/gap_0x0000_sub_0x500.data.inc.c>
+u16 dMVOpeningRunCrash_gap_0x0000_sub_0x500[16] = {
+	#include <MVOpeningRunCrash/gap_0x0000_sub_0x500.palette.inc.c>
 };
 
+PAD(8);
+
 /* gap sub-block @ 0x0528 (was gap+0x528, 9600 bytes) */
+/* @tex fmt=CI8 dim=80x120 */
 u8 dMVOpeningRunCrash_Tex_0x0528[9600] = {
 	#include <MVOpeningRunCrash/Tex_0x0528.tex.inc.c>
 };
 
-/* MObjSub: - @ 0x2AA8 */
-MObjSub dMVOpeningRunCrash_MObjSub_0x2AA8_MObjSub[1] = {
-	{
-		0x0000,
-		G_IM_FMT_RGBA, G_IM_SIZ_4b,
-		(void**)(dMVOpeningRunCrash_gap_0x2B20_sub_0x320),
-		0x0AAD, 0x0B92, 0x0AAE, 0x0B94,
-		179243926,
-		1.6948653708348004e-32f, 1.704493551188798e-32f,
-		1.7141217315427957e-32f, 1.7237499118967934e-32f,
-		1.733378092250791e-32f, 1.7430062726047887e-32f,
-		(void**)(dMVOpeningRunCrash_gap_0x0000_sub_0x410),
-		0x0AB7,
-		0x00, 0xFA,
-		0x0AB8,
-		0x00F0, 0x0AB9, 0x00E6,
-		1.791147174374777e-32f, 1.8007753547287746e-32f,
-		1.8104035350827723e-32f, 1.82003171543677e-32f,
-		0x0ABE00B4,
-		{ { 0x0A, 0xBF, 0x00, 0xAA } },
-		0x0A, 0xC0, { 0x00, 0xA0 },
-		{ { 0x0A, 0xC1, 0x00, 0x96 } },
-		{ { 0x0A, 0xC2, 0x00, 0x8C } },
-		{ { 0x0A, 0xC3, 0x00, 0x82 } },
-		{ { 0x0A, 0xC4, 0x00, 0x78 } },
-		180682862, 180748388,
-		180813914, 180879440,
-	}
+/* MObjSub-set dispatch table @ 0x2AA8 (5 entries; was the head of a
+ * fused void *[30] mis-typed as MObjSub). */
+MObjSub **dMVOpeningRunCrash_MObjSub_0x2AA8_MObjSub[5] = {
+	NULL,
+	dMVOpeningRunCrash_gap_0x2B20_sub_0x320,
+	dMVOpeningRunCrash_gap_0x2B20_sub_0x328,
+	dMVOpeningRunCrash_gap_0x2B20_sub_0x330,
+	dMVOpeningRunCrash_gap_0x2B20_sub_0x338,
+};
+
+/* Palette-frame pointer array @ 0x2ABC (25 u16[16] frames, reverse order). */
+u16 *dMVOpeningRunCrash_palettes_0x2ABC[25] = {
+	dMVOpeningRunCrash_gap_0x0000_sub_0x500,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4D8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4B0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x488,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x460,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x438,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x410,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3E8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3C0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x398,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x370,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x348,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x320,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2F8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2D0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2A8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x280,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x258,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x230,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x208,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1E0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1B8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x190,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x168,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x140,
 };
 
 /* Raw data from file offset 0x2B20 to 0x35F8 (2776 bytes) */
-/* gap sub-block @ 0x2B20 (was gap+0x0, 4 bytes) */
-u8 dMVOpeningRunCrash_gap_0x2B20[4] = {
-	#include <MVOpeningRunCrash/gap_0x2B20.data.inc.c>
+/* Single palette pointer slot @ 0x2B20 */
+u16 *dMVOpeningRunCrash_gap_0x2B20[1] = {
+	dMVOpeningRunCrash_gap_0x0000_sub_0x118,
 };
 
-/* gap sub-block @ 0x2B24 (was gap+0x4, 104 bytes) */
-u8 dMVOpeningRunCrash_gap_0x2B20_sub_0x4[104] = {
-	#include <MVOpeningRunCrash/gap_0x2B20_sub_0x4.data.inc.c>
+/* Palette pointer table @ 0x2B24 (26 palettes, no terminator) */
+u16 *dMVOpeningRunCrash_gap_0x2B20_sub_0x4[26] = {
+	dMVOpeningRunCrash_gap_0x0000_sub_0x500,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4D8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4B0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x488,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x460,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x438,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x410,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3E8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3C0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x398,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x370,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x348,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x320,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2F8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2D0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2A8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x280,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x258,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x230,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x208,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1E0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1B8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x190,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x168,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x140,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x118,
 };
 
-/* gap sub-block @ 0x2B8C (was gap+0x6C, 104 bytes) */
-u8 dMVOpeningRunCrash_gap_0x2B20_sub_0x6C[104] = {
-	#include <MVOpeningRunCrash/gap_0x2B20_sub_0x6C.data.inc.c>
+/* Palette pointer table @ 0x2B8C (26 palettes, no terminator) */
+u16 *dMVOpeningRunCrash_gap_0x2B20_sub_0x6C[26] = {
+	dMVOpeningRunCrash_gap_0x0000_sub_0x500,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4D8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4B0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x488,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x460,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x438,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x410,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3E8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3C0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x398,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x370,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x348,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x320,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2F8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2D0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2A8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x280,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x258,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x230,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x208,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1E0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1B8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x190,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x168,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x140,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x118,
 };
 
-/* gap sub-block @ 0x2BF4 (was gap+0xD4, 108 bytes) */
-u8 dMVOpeningRunCrash_gap_0x2B20_sub_0xD4[108] = {
-	#include <MVOpeningRunCrash/gap_0x2B20_sub_0xD4.data.inc.c>
+/* Palette pointer table @ 0x2BF4 (26 palettes + NULL terminator) */
+u16 *dMVOpeningRunCrash_gap_0x2B20_sub_0xD4[27] = {
+	dMVOpeningRunCrash_gap_0x0000_sub_0x500,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4D8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x4B0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x488,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x460,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x438,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x410,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3E8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x3C0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x398,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x370,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x348,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x320,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2F8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2D0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x2A8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x280,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x258,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x230,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x208,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1E0,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x1B8,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x190,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x168,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x140,
+	dMVOpeningRunCrash_gap_0x0000_sub_0x118,
+	NULL,
 };
 
-/* gap sub-block @ 0x2C60 (was gap+0x140, 120 bytes) */
-u8 dMVOpeningRunCrash_gap_0x2B20_sub_0x140[120] = {
-	#include <MVOpeningRunCrash/gap_0x2B20_sub_0x140.data.inc.c>
+/* MObjSub @ 0x2C60 (palettes pointer aliased to MObjSub_0x2AA8+0x14, the inline palette pool) */
+MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x140[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0020, 0x0000, 0x00A0, 0x0078,
+		0,
+		0.0f, 0.0f,
+		1.0f, 1.0f,
+		0.0f, 1.0f,
+		(void**)dMVOpeningRunCrash_palettes_0x2ABC,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x00A0,
+		0x0078, 0x00A0, 0x0078,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00002005,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x26, 0x26, 0x26, 0x00 } },
+		0, 0,
+		0, 0,
+	}
 };
 
 /* MObjSub @ 0x2CD8 */
 MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x1B8[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0020, 0x0000, 0x00A0, 0x0078,
 		0,
@@ -231,7 +443,7 @@ MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x1B8[1] = {
 		0.0f, 1.0f,
 		(void**)dMVOpeningRunCrash_gap_0x2B20_sub_0x4,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x00A0,
 		0x0078, 0x00A0, 0x0078,
 		0.0f, 0.0f,
@@ -252,7 +464,7 @@ MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x1B8[1] = {
 MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x230[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0020, 0x0000, 0x00A0, 0x0078,
 		0,
@@ -261,7 +473,7 @@ MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x230[1] = {
 		0.0f, 1.0f,
 		(void**)dMVOpeningRunCrash_gap_0x2B20_sub_0x6C,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x00A0,
 		0x0078, 0x00A0, 0x0078,
 		0.0f, 0.0f,
@@ -282,7 +494,7 @@ MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x230[1] = {
 MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x2A8[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0020, 0x0000, 0x00A0, 0x0078,
 		0,
@@ -291,7 +503,7 @@ MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x2A8[1] = {
 		0.0f, 1.0f,
 		(void**)dMVOpeningRunCrash_gap_0x2B20_sub_0xD4,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x00A0,
 		0x0078, 0x00A0, 0x0078,
 		0.0f, 0.0f,
@@ -310,8 +522,8 @@ MObjSub dMVOpeningRunCrash_gap_0x2B20_sub_0x2A8[1] = {
 
 /* gap sub-block @ 0x2E40 (was gap+0x320, 8 bytes) */
 /* MObjSub.sprites pointer table @ +0x2E40 (2 ptrs) — each entry is a void* texture-data pointer fed to gDPSetTextureImage. */
-void *dMVOpeningRunCrash_gap_0x2B20_sub_0x320[2] = {
-	(void *)dMVOpeningRunCrash_gap_0x2B20_sub_0x140,
+MObjSub *dMVOpeningRunCrash_gap_0x2B20_sub_0x320[2] = {
+	dMVOpeningRunCrash_gap_0x2B20_sub_0x140,
 	NULL,
 };
 
@@ -381,10 +593,10 @@ Gfx dMVOpeningRunCrash_DL_0x35C8[6] = {
 /* DObjDesc: - @ 0x35F8 (6 entries) */
 DObjDesc dMVOpeningRunCrash_DObjDesc_0x35F8[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dMVOpeningRunCrash_gap_0x2B20 + 0x480), { 0.0f, 0.0f, 0.0f }, { 0.0f, 3.1415929794311523f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dMVOpeningRunCrash_gap_0x2B20 + 0x640), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 3.1415929794311523f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dMVOpeningRunCrash_gap_0x2B20 + 0x7B8), { 0.0f, 0.0f, 0.0f }, { 3.1415929794311523f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dMVOpeningRunCrash_gap_0x2B20 + 0xAA8), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dMVOpeningRunCrash_DL_0x2FA0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 3.1415929794311523f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dMVOpeningRunCrash_DL_0x3160, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 3.1415929794311523f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dMVOpeningRunCrash_DL_0x32D8, { 0.0f, 0.0f, 0.0f }, { 3.1415929794311523f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dMVOpeningRunCrash_DL_0x35C8, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
@@ -392,266 +604,263 @@ DObjDesc dMVOpeningRunCrash_DObjDesc_0x35F8[] = {
 /* Script-table split: leading chain-pointer table at the
  * start of the AnimJoint, followed by per-joint AObjEvent32
  * scripts. Forward decls so the table can reference them. */
-AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3700[5] = {
+AObjEvent32 **dMVOpeningRunCrash_MatAnimJoint_0x3700[5] = {
 	NULL,
-	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x3A94,
-	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x3A98,
-	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x3A9C,
-	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x3AA0,
+	dMVOpeningRunCrash_MatAnimJoint_0x3A94,
+	dMVOpeningRunCrash_MatAnimJoint_0x3A98,
+	dMVOpeningRunCrash_MatAnimJoint_0x3A9C,
+	dMVOpeningRunCrash_MatAnimJoint_0x3AA0,
 };
 
 u32 dMVOpeningRunCrash_MatAnimJoint_0x3714[] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41300000,  /* 11.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41600000,  /* 14.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41700000,  /* 15.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41880000,  /* 17.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41900000,  /* 18.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41980000,  /* 19.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A00000,  /* 20.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A80000,  /* 21.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B00000,  /* 22.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B80000,  /* 23.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C00000,  /* 24.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C80000,  /* 25.0f */
-	aobjEvent32SetValAfter(0x200, 8),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 8),
 	    0x41C80000,  /* 25.0f */
 	aobjEvent32Wait(1),
 	aobjEvent32End(),
 };
 
 u32 dMVOpeningRunCrash_MatAnimJoint_0x37F4[] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41300000,  /* 11.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41600000,  /* 14.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41700000,  /* 15.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41880000,  /* 17.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41900000,  /* 18.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41980000,  /* 19.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A00000,  /* 20.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A80000,  /* 21.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B00000,  /* 22.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B80000,  /* 23.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C00000,  /* 24.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C80000,  /* 25.0f */
-	aobjEvent32SetValAfter(0x200, 8),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 8),
 	    0x41C80000,  /* 25.0f */
 	aobjEvent32Wait(1),
 	aobjEvent32End(),
 };
 
 u32 dMVOpeningRunCrash_MatAnimJoint_0x38D4[] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41300000,  /* 11.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41600000,  /* 14.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41700000,  /* 15.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41880000,  /* 17.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41900000,  /* 18.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41980000,  /* 19.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A00000,  /* 20.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A80000,  /* 21.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B00000,  /* 22.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B80000,  /* 23.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C00000,  /* 24.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C80000,  /* 25.0f */
-	aobjEvent32SetValAfter(0x200, 8),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 8),
 	    0x41C80000,  /* 25.0f */
 	aobjEvent32Wait(1),
 	aobjEvent32End(),
 };
 
 u32 dMVOpeningRunCrash_MatAnimJoint_0x39B4[] = {
-	aobjEvent32SetValAfterBlock(0x200, 0),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x3F800000,  /* 1.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40000000,  /* 2.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40400000,  /* 3.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40800000,  /* 4.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40A00000,  /* 5.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40C00000,  /* 6.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x40E00000,  /* 7.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41000000,  /* 8.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41100000,  /* 9.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41200000,  /* 10.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41300000,  /* 11.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41400000,  /* 12.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41500000,  /* 13.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41600000,  /* 14.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41700000,  /* 15.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41800000,  /* 16.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41880000,  /* 17.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41900000,  /* 18.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41980000,  /* 19.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A00000,  /* 20.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41A80000,  /* 21.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B00000,  /* 22.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41B80000,  /* 23.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C00000,  /* 24.0f */
-	aobjEvent32SetValAfterBlock(0x200, 1),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
 	    0x41C80000,  /* 25.0f */
-	aobjEvent32SetValAfter(0x200, 8),
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 8),
 	    0x41C80000,  /* 25.0f */
 	aobjEvent32Wait(1),
 	aobjEvent32End(),
 };
 
-u32 dMVOpeningRunCrash_MatAnimJoint_0x3A94[] = {
-	(u32)((u8*)dMVOpeningRunCrash_MatAnimJoint_0x3700 + 0x14),
+AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3A94[] = {
+	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x3714,
 };
 
-u32 dMVOpeningRunCrash_MatAnimJoint_0x3A98[] = {
-	(u32)((u8*)dMVOpeningRunCrash_MatAnimJoint_0x3700 + 0xF4),
+AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3A98[] = {
+	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x37F4,
 };
 
-u32 dMVOpeningRunCrash_MatAnimJoint_0x3A9C[] = {
-	(u32)((u8*)dMVOpeningRunCrash_MatAnimJoint_0x3700 + 0x1D4),
+AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3A9C[] = {
+	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x38D4,
 };
 
-u32 dMVOpeningRunCrash_MatAnimJoint_0x3AA0[] = {
-	(u32)((u8*)dMVOpeningRunCrash_MatAnimJoint_0x3700 + 0x2B4),
-	aobjEvent32End(),
+AObjEvent32 *dMVOpeningRunCrash_MatAnimJoint_0x3AA0[] = {
+	(AObjEvent32 *)dMVOpeningRunCrash_MatAnimJoint_0x39B4,
+	NULL,
 };
-
-PAD(8);
-

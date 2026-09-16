@@ -2,9 +2,26 @@
 /* File size: 1904 bytes (0x770) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dMarioModel_FTEmblem[];
+extern AObjEvent32 **dMarioModel_JointTree_0x4590_post[];
+extern AObjEvent32 **dMarioModel_JointTree_post[];
+extern u32 dMarioModel_Stock[];
+extern u8 dMarioShieldPose_data0[];
+extern u8 dMarioShieldPose_data0_end[];
+extern u8 dMarioShieldPose_shield_anim_joint_1[];
+extern u8 dMarioShieldPose_shield_anim_joint_2[];
+extern u8 dMarioShieldPose_shield_anim_joint_3[];
+extern u8 dMarioShieldPose_shield_anim_joint_4[];
+extern u8 dMarioShieldPose_shield_anim_joint_5[];
+extern u8 dMarioShieldPose_shield_anim_joint_6[];
+extern u8 dMarioShieldPose_shield_anim_joint_7[];
 #include <ft/fttypes.h>
 
-extern u32 dMarioMainMotion_0x0024[];
+extern u32 dMarioMainMotion_Wait_0x0024[];
 extern DObjDesc dMarioModel_JointTree[];
 extern DObjDesc dMarioModel_JointTree_0x4590[];
 extern Gfx dMarioModel_Joint_0x18D8_DisplayList[];
@@ -13,14 +30,14 @@ extern Gfx dMarioModel_Joint_0x3E60_DisplayList[];
 extern Gfx dMarioModel_Joint_0x4278_DisplayList[];
 extern u8 dMarioModel_gap_0x0000[];
 extern u8 dMarioModel_gap_0x26D0_sub_0x320[];
-extern u8 dMarioModel_gap_0x4A60_sub_0x10A0[];
+extern u8 dMarioModel_DL_0x5B00[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x1360[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x1470[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x1560[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x1660[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x1780[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x1890[];
-extern u8 dMarioModel_gap_0x4A60_sub_0x1970[];
+extern u8 dMarioModel_DL_0x63D0[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x4B0[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x690[];
 extern u8 dMarioModel_gap_0x4A60_sub_0x8A0[];
@@ -37,11 +54,11 @@ extern DObjDesc dMarioSpecial2_EntryDokanDObjDesc[];
 
 /* Pre-attributes data (266 words, 0x0428 bytes) */
 /* @ 0x0000, 12 bytes: FTAttributes.file_handles target (was dMarioMain_pre+0x0) */
-u32 dMarioMain_file_handles[3] = {
+void *dMarioMain_file_handles[3] = {
 
-	(u32)&dMarioMainMotion_0x0024, /* extern -> 0x0024 */
-	(u32)&dMarioSpecial2_EntryDokanDObjDesc, /* extern -> 0x0608 */
-	(u32)&dMarioSpecial1_Fireball_WeaponAttributes, /* extern -> 0x0000 */
+	&dMarioMainMotion_Wait_0x0024, /* extern -> 0x0024 */
+	&dMarioSpecial2_EntryDokanDObjDesc, /* extern -> 0x0608 */
+	&dMarioSpecial1_Fireball_WeaponAttributes, /* extern -> 0x0000 */
 };
 
 /* @ 0x000C, 8 bytes: FTAttributes.animlock target (was dMarioMain_pre+0xC) */
@@ -90,15 +107,13 @@ FTModelPartDesc *dMarioMain_modelparts_container[25] = {
 };
 
 /* @ 0x0160, 4 bytes: FTAttributes.textureparts_container target (was dMarioMain_pre+0x160) */
-u32 dMarioMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dMarioMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x0164, 32 bytes: FTAttributes.commonparts_container target (was dMarioMain_pre+0x164) */
 FTCommonPartContainer dMarioMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dMarioModel_JointTree, (MObjSub***)&dMarioModel_gap_0x0000, (AObjEvent32***)((u8*)dMarioModel_JointTree + 0x480), 0x00 },
-		{ (DObjDesc*)&dMarioModel_JointTree_0x4590, (MObjSub***)&dMarioModel_gap_0x26D0_sub_0x320, (AObjEvent32***)((u8*)dMarioModel_JointTree_0x4590 + 0x480), 0x00 },
+		{ (DObjDesc*)&dMarioModel_JointTree, (MObjSub***)&dMarioModel_gap_0x0000, (AObjEvent32***)dMarioModel_JointTree_post, 0x00 },
+		{ (DObjDesc*)&dMarioModel_JointTree_0x4590, (MObjSub***)&dMarioModel_gap_0x26D0_sub_0x320, (AObjEvent32***)dMarioModel_JointTree_0x4590_post, 0x00 },
 	},
 };
 
@@ -171,9 +186,9 @@ int *dMarioMain_stock_luts[5] = {
 
 /* @ 0x0348, 12 bytes: FTAttributes.sprites target (was dMarioMain_pre+0x348) */
 FTSprites dMarioMain_sprites = {
-	(Sprite*)((u8*)dMarioModel_gap_0x7220_sub_0x80 + 0x30), /* stock_sprite */
+	(Sprite*)dMarioModel_Stock, /* stock_sprite */
 	(int**)dMarioMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dMarioModel_gap_0x7220_sub_0x80 + 0x228), /* emblem */
+	(Sprite*)dMarioModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x0354, 200 bytes: FTAttributes.sub_0x354 target (was dMarioMain_pre+0x354) */
@@ -186,7 +201,7 @@ FTSkeleton dMarioMain_skeleton_dls[25] = {
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1360 }, 0 },
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1560 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x10A0 }, 0 },
+	{ { (Gfx*)&dMarioModel_DL_0x5B00 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1470 }, 0 },
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1360 }, 0 },
@@ -196,12 +211,12 @@ FTSkeleton dMarioMain_skeleton_dls[25] = {
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1780 }, 0 },
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1890 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1970 }, 0 },
+	{ { (Gfx*)&dMarioModel_DL_0x63D0 }, 0 },
 	{ { NULL }, 0 },
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1780 }, 0 },
 	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1890 }, 0 },
 	{ { NULL }, 0 },
-	{ { (Gfx*)&dMarioModel_gap_0x4A60_sub_0x1970 }, 0 },
+	{ { (Gfx*)&dMarioModel_DL_0x63D0 }, 0 },
 	{ { NULL }, 0 },
 };
 
@@ -317,8 +332,8 @@ FTAttributes dMarioMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dMarioMain_hiddenparts, /* hiddenparts */
 	&dMarioMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dMarioShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dMarioShieldPose_data0_end, (void *)&dMarioShieldPose_shield_anim_joint_1, (void *)&dMarioShieldPose_shield_anim_joint_2, (void *)&dMarioShieldPose_shield_anim_joint_3, (void *)&dMarioShieldPose_shield_anim_joint_4, (void *)&dMarioShieldPose_shield_anim_joint_5, (void *)&dMarioShieldPose_shield_anim_joint_6, (void *)&dMarioShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	23, /* joint_rfoot_id */
 	60.891f, /* joint_rfoot_rotate */
 	18, /* joint_lfoot_id */
@@ -329,7 +344,7 @@ FTAttributes dMarioMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dMarioMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dMarioMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dMarioMain_textureparts_container, /* textureparts_container */
 	28, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dMarioMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

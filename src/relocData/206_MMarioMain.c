@@ -2,23 +2,39 @@
 /* File size: 1520 bytes (0x5F0) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern ftMotionCommand dMMarioMainMotion_Dash[];
+extern u32 dMMarioModel_FTEmblem[];
+extern u32 dMMarioModel_Stock[];
+extern u8 dMarioShieldPose_data0[];
+extern u8 dMarioShieldPose_data0_end[];
+extern u8 dMarioShieldPose_shield_anim_joint_1[];
+extern u8 dMarioShieldPose_shield_anim_joint_2[];
+extern u8 dMarioShieldPose_shield_anim_joint_3[];
+extern u8 dMarioShieldPose_shield_anim_joint_4[];
+extern u8 dMarioShieldPose_shield_anim_joint_5[];
+extern u8 dMarioShieldPose_shield_anim_joint_6[];
+extern u8 dMarioShieldPose_shield_anim_joint_7[];
 #include <ft/fttypes.h>
 
-extern u32 dMMarioMainMotion_0x001C[];
+extern u32 dMMarioMainMotion_Walk3[];
 extern DObjDesc dMMarioModel_JointTree[];
 extern u16 dMMarioModel_palette_0x2CD0[];
-extern u32 dMarioMainMotion_0x0024[];
+extern u32 dMarioMainMotion_Wait_0x0024[];
 extern WPAttributes dMarioSpecial1_Fireball_WeaponAttributes;
 extern DObjDesc dMarioSpecial2_EntryDokanDObjDesc[];
 
 /* Pre-attributes data (170 words, 0x02A8 bytes) */
 /* @ 0x0000, 16 bytes: FTAttributes.file_handles target (was dMMarioMain_pre+0x0) */
-u32 dMMarioMain_file_handles[4] = {
+void *dMMarioMain_file_handles[4] = {
 
-	(u32)((u8*)dMMarioMainMotion_0x001C + 0x1C), /* extern -> 0x0038 */
-	(u32)&dMarioMainMotion_0x0024, /* extern -> 0x0024 */
-	(u32)&dMarioSpecial2_EntryDokanDObjDesc, /* extern -> 0x0608 */
-	(u32)&dMarioSpecial1_Fireball_WeaponAttributes, /* extern -> 0x0000 */
+	dMMarioMainMotion_Dash, /* extern -> 0x0038 */
+	&dMarioMainMotion_Wait_0x0024, /* extern -> 0x0024 */
+	&dMarioSpecial2_EntryDokanDObjDesc, /* extern -> 0x0608 */
+	&dMarioSpecial1_Fireball_WeaponAttributes, /* extern -> 0x0000 */
 };
 
 /* @ 0x0010, 8 bytes: FTAttributes.animlock target (was dMMarioMain_pre+0x10) */
@@ -51,9 +67,7 @@ FTModelPartDesc *dMMarioMain_modelparts_container[25] = {
 };
 
 /* @ 0x00C4, 4 bytes: FTAttributes.textureparts_container target (was dMMarioMain_pre+0xC4) */
-u32 dMMarioMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dMMarioMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x00C8, 32 bytes: FTAttributes.commonparts_container target (was dMMarioMain_pre+0xC8) */
 FTCommonPartContainer dMMarioMain_commonparts_container = {
@@ -128,9 +142,9 @@ int *dMMarioMain_stock_luts[1] = {
 
 /* @ 0x029C, 12 bytes: FTAttributes.sprites target (was dMMarioMain_pre+0x29C) */
 FTSprites dMMarioMain_sprites = {
-	(Sprite*)((u8*)dMMarioModel_palette_0x2CD0 + 0x30), /* stock_sprite */
+	(Sprite*)dMMarioModel_Stock, /* stock_sprite */
 	(int**)dMMarioMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dMMarioModel_palette_0x2CD0 + 0x228), /* emblem */
+	(Sprite*)dMMarioModel_FTEmblem, /* emblem */
 };
 
 FTAttributes dMMarioMain_attr = {
@@ -230,8 +244,8 @@ FTAttributes dMMarioMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dMMarioMain_hiddenparts, /* hiddenparts */
 	&dMMarioMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dMarioShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dMarioShieldPose_data0_end, (void *)&dMarioShieldPose_shield_anim_joint_1, (void *)&dMarioShieldPose_shield_anim_joint_2, (void *)&dMarioShieldPose_shield_anim_joint_3, (void *)&dMarioShieldPose_shield_anim_joint_4, (void *)&dMarioShieldPose_shield_anim_joint_5, (void *)&dMarioShieldPose_shield_anim_joint_6, (void *)&dMarioShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	23, /* joint_rfoot_id */
 	60.891f, /* joint_rfoot_rotate */
 	18, /* joint_lfoot_id */
@@ -242,7 +256,7 @@ FTAttributes dMMarioMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dMMarioMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dMMarioMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dMMarioMain_textureparts_container, /* textureparts_container */
 	28, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dMMarioMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

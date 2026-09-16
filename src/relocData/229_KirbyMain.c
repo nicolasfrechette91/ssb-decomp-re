@@ -2,13 +2,34 @@
 /* File size: 2896 bytes (0xB50) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u32 dKirbyModel_FTEmblem[];
+extern MObjSub *dKirbyModel_Joint_0x0020_post_sub_0x450[];
+extern u32 dKirbyModel_Stock[];
+extern AObjEvent32 **dKirbyModel_gap_0x31A0[];
+extern u8 dKirbyShieldPose_data0[];
+extern u8 dKirbyShieldPose_data0_end[];
+extern u8 dKirbyShieldPose_shield_anim_joint_1[];
+extern u8 dKirbyShieldPose_shield_anim_joint_2[];
+extern u8 dKirbyShieldPose_shield_anim_joint_3[];
+extern u8 dKirbyShieldPose_shield_anim_joint_4[];
+extern u8 dKirbyShieldPose_shield_anim_joint_5[];
+extern u8 dKirbyShieldPose_shield_anim_joint_6[];
+extern u8 dKirbyShieldPose_shield_anim_joint_7[];
+extern AObjEvent32 **dKirbyModel_gap_0x1920[];
 #include <ft/fttypes.h>
+#include <wp/wptypes.h>  // WPAttributes
+#include <gm/gmsound.h>  // nSYAudioFGM*
+#include <gm/gmdef.h>    // nGMHitElement*
 
 extern Gfx dFoxUnknown_DL[];
-extern u32 dKirbyMainMotion_0x0154[];
+extern u32 dKirbyMainMotion_EggLay_0x0154[];
 extern DObjDesc dKirbyModel_JointTree[];
 extern DObjDesc dKirbyModel_JointTree_0x2CD0[];
-extern Vtx dKirbyModel_JointVerts_Vtx[];
+extern MObjSub **dKirbyModel_JointVerts_Vtx[];
 extern Gfx dKirbyModel_Joint_0x0DB0_DisplayList[];
 extern Gfx dKirbyModel_Joint_0x198F8_DisplayList[];
 extern Gfx dKirbyModel_Joint_0x19B38_DisplayList[];
@@ -50,13 +71,13 @@ extern u8 dKirbyModel_gap_0x31CC_sub_0x129C[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x12A4[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x12A7C[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x12B7C[];
-extern u8 dKirbyModel_gap_0x31CC_sub_0x1328C[];
+extern u8 dKirbyModel_DL_0x16458[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x13A14[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x13B1C[];
-extern u8 dKirbyModel_gap_0x31CC_sub_0x1405C[];
+extern u8 dKirbyModel_DL_0x17228[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x14634[];
-extern u8 dKirbyModel_gap_0x31CC_sub_0x14684[];
-extern u8 dKirbyModel_gap_0x31CC_sub_0x155C[];
+extern u8 dKirbyModel_DL_0x17850[];
+extern u8 dKirbyModel_DL_0x4728[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x15894[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x1694[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0x1940[];
@@ -108,7 +129,7 @@ extern u8 dKirbyModel_gap_0x31CC_sub_0xB64C[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0xBE6C[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0xC4DC[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0xC61C[];
-extern u8 dKirbyModel_gap_0x31CC_sub_0xCAC[];
+extern u8 dKirbyModel_DL_0x3E78[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0xCC4C[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0xD23C[];
 extern u8 dKirbyModel_gap_0x31CC_sub_0xD37C[];
@@ -130,28 +151,42 @@ extern DObjDesc dKirbySpecial2_VulcanJab[];
 extern Gfx dLinkBoomerangModel_Joint_0x00F8_DisplayList[];
 
 /* Pre-attributes data (514 words, 0x0808 bytes) */
-/* @ 0x0000, 60 bytes: FTAttributes.file_handles target (was dKirbyMain_pre+0x0) */
-u32 dKirbyMain_file_handles[15] = {
+/* @ 0x0000, 8 bytes: 2 cross-file handle pointers (chain-rewritten). */
+void *dKirbyMain_file_handles[2] = {
 
-	(u32)&dKirbyMainMotion_0x0154, /* extern -> 0x0154 */
-	(u32)&dKirbySpecial2_VulcanJab, /* extern -> 0x0B20 */
-	(u32)&dKirbyModel_gap_0x1A2FC_sub_0x308C, /* extern -> 0x1D388 */
-	0x00000000,
-	(u32)&dKirbyModel_gap_0x1A2FC_sub_0x3114, /* extern -> 0x1D410 */
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00DC0000,
-	0xFF240032,
-	0x00FA5A40,
-	0x0C818C00,
-#if defined(REGION_JP)
-	0x0167E19C,
-#else
-	0x0168319C,
-#endif
-	0x11800000,
+	(void *)&dKirbyMainMotion_EggLay_0x0154, /* extern -> 0x0154 */
+	(void *)&dKirbySpecial2_VulcanJab, /* extern -> 0x0B20 */
+};
+
+/* @ 0x0008, 52 bytes: WPAttributes for Kirby Final Cutter beam.
+ * Referenced from wp/wpkirby/wpkirbycutter.c via llKirbyMainCutterWeaponAttributes (0x08). */
+WPAttributes dKirbyMain_CutterWeaponAttributes = {
+	(void *)&dKirbyModel_gap_0x1A2FC_sub_0x308C,         /* data */
+	NULL,                                                /* p_mobjsubs */
+	(AObjEvent32 **)&dKirbyModel_gap_0x1A2FC_sub_0x3114, /* anim_joints */
+	NULL,                                                /* p_matanim_joints */
+	{ { 0, 0, 0 }, { 0, 0, 0 } },                        /* attack_offsets */
+	220, 0, -220, 50,                                    /* map_coll top/center/bottom/width */
+	250,                  /* size             : 16 */
+	361,                  /* angle            : 10 */
+	50,                   /* knockback_scale  : 10 */
+	6,                    /* damage           :  8 */
+	nGMHitElementSlash,   /* element          :  4 */
+	0,                    /* knockback_weight : 10 */
+	1,                    /* shield_damage    :  8 */
+	1,                    /* attack_count     :  2 */
+	1,                    /* can_setoff       :  1 */
+	nSYAudioFGMSlashM,    /* sfx              : 10 */
+	1,                    /* priority         :  3 */
+	1,                    /* can_rehit_item   :  1 */
+	0,                    /* can_rehit_fighter:  1 */
+	0,                    /* can_hop          :  1 */
+	1,                    /* can_reflect      :  1 */
+	1,                    /* can_absorb       :  1 */
+	1,                    /* can_shield       :  1 */
+	0,                    /* unused_0x2F_b6   :  1 */
+	0,                    /* unused_0x2F_b7   :  1 */
+	70,                   /* knockback_base   : 10 */
 };
 
 /* @ 0x003C, 8 bytes: FTAttributes.animlock target (was dKirbyMain_pre+0x3C) */
@@ -180,10 +215,10 @@ FTHiddenPart dKirbyMain_hiddenparts[8] = {
 
 /* @ 0x00CC, 600 bytes: FTAttributes.sub_0x0CC target (was dKirbyMain_pre+0xCC) */
 FTModelPart dKirbyMain_modelparts_desc_0x0CC[30] = {
-	{ (Gfx*)&dKirbyModel_Joint_0x0DB0_DisplayList, (MObjSub**)((u8*)dKirbyModel_JointVerts_Vtx + 0x470), (AObjEvent32**)&dKirbyModel_gap_0x1970_sub_0x2A0, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_Joint_0x0DB0_DisplayList, (MObjSub**)dKirbyModel_Joint_0x0020_post_sub_0x450, (AObjEvent32**)&dKirbyModel_gap_0x1970_sub_0x2A0, NULL, 0x00 },
 	{ (Gfx*)&dKirbyModel_Joint_0x27B0_DisplayList, (MObjSub**)&dKirbyModel_gap_0x1970_sub_0x730, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x2E4, NULL, 0x00 },
-	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0xCAC, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x8DC, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x1194, NULL, 0x00 },
-	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x155C, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x129C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x1940, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_DL_0x3E78, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x8DC, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x1194, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_DL_0x4728, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x129C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x1940, NULL, 0x00 },
 	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x15894, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x15894, NULL, NULL, NULL, 0x00 },
 	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x211C, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x1A8C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x25EC, NULL, 0x00 },
@@ -208,8 +243,8 @@ FTModelPart dKirbyMain_modelparts_desc_0x0CC[30] = {
 	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x110AC, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x10BBC, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x1150C, NULL, 0x00 },
 	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x11BCC, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x1164C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x1205C, NULL, 0x00 },
 	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x1263C, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x1219C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x12A7C, NULL, 0x00 },
-	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x1328C, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x12B7C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x13A14, NULL, 0x00 },
-	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x1405C, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x13B1C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x14634, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_DL_0x16458, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x12B7C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x13A14, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_DL_0x17228, (MObjSub**)&dKirbyModel_gap_0x31CC_sub_0x13B1C, (AObjEvent32**)&dKirbyModel_gap_0x31CC_sub_0x14634, NULL, 0x00 },
 };
 
 /* @ 0x0324, 40 bytes: FTAttributes.sub_0x324 target (was dKirbyMain_pre+0x324) */
@@ -226,8 +261,8 @@ FTModelPart dKirbyMain_modelparts_desc_0x34C[2] = {
 
 /* @ 0x0374, 40 bytes: FTAttributes.sub_0x374 target (was dKirbyMain_pre+0x374) */
 FTModelPart dKirbyMain_modelparts_desc_0x374[2] = {
-	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x14684, NULL, NULL, NULL, 0x00 },
-	{ (Gfx*)&dKirbyModel_gap_0x31CC_sub_0x14684, NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_DL_0x17850, NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)&dKirbyModel_DL_0x17850, NULL, NULL, NULL, 0x00 },
 };
 
 /* @ 0x039C, 40 bytes: FTAttributes.sub_0x39C target (was dKirbyMain_pre+0x39C) */
@@ -252,15 +287,13 @@ FTModelPartDesc *dKirbyMain_modelparts_container[27] = {
 };
 
 /* @ 0x0458, 4 bytes: FTAttributes.textureparts_container target (was dKirbyMain_pre+0x458) */
-u32 dKirbyMain_textureparts_container[1] = {
-	0x06000000,
-};
+FTTexturePart dKirbyMain_textureparts_container = { 0x06, { 0x00, 0x00 } };
 
 /* @ 0x045C, 32 bytes: FTAttributes.commonparts_container target (was dKirbyMain_pre+0x45C) */
 FTCommonPartContainer dKirbyMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dKirbyModel_JointTree, (MObjSub***)&dKirbyModel_JointVerts_Vtx, (AObjEvent32***)((u8*)dKirbyModel_JointTree + 0x4D8), 0x00 },
-		{ (DObjDesc*)&dKirbyModel_JointTree_0x2CD0, (MObjSub***)&dKirbyModel_gap_0x1970_sub_0x2C0, (AObjEvent32***)((u8*)dKirbyModel_JointTree_0x2CD0 + 0x4D0), 0x00 },
+		{ (DObjDesc*)&dKirbyModel_JointTree, (MObjSub***)&dKirbyModel_JointVerts_Vtx, (AObjEvent32***)dKirbyModel_gap_0x1920, 0x00 },
+		{ (DObjDesc*)&dKirbyModel_JointTree_0x2CD0, (MObjSub***)&dKirbyModel_gap_0x1970_sub_0x2C0, (AObjEvent32***)dKirbyModel_gap_0x31A0, 0x00 },
 	},
 };
 
@@ -333,9 +366,9 @@ int *dKirbyMain_stock_luts[5] = {
 
 /* @ 0x0640, 12 bytes: FTAttributes.sprites target (was dKirbyMain_pre+0x640) */
 FTSprites dKirbyMain_sprites = {
-	(Sprite*)((u8*)dKirbyModel_gap_0x1D530_sub_0x80 + 0x30), /* stock_sprite */
+	(Sprite*)dKirbyModel_Stock, /* stock_sprite */
 	(int**)dKirbyMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dKirbyModel_gap_0x1D530_sub_0x80 + 0x228), /* emblem */
+	(Sprite*)dKirbyModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x064C, 216 bytes: FTAttributes.sub_0x64C target (was dKirbyMain_pre+0x64C) */
@@ -535,8 +568,8 @@ FTAttributes dKirbyMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dKirbyMain_hiddenparts, /* hiddenparts */
 	&dKirbyMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dKirbyShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dKirbyShieldPose_data0_end, (void *)&dKirbyShieldPose_shield_anim_joint_1, (void *)&dKirbyShieldPose_shield_anim_joint_2, (void *)&dKirbyShieldPose_shield_anim_joint_3, (void *)&dKirbyShieldPose_shield_anim_joint_4, (void *)&dKirbyShieldPose_shield_anim_joint_5, (void *)&dKirbyShieldPose_shield_anim_joint_6, (void *)&dKirbyShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	25, /* joint_rfoot_id */
 	61.848f, /* joint_rfoot_rotate */
 	20, /* joint_lfoot_id */
@@ -547,7 +580,7 @@ FTAttributes dKirbyMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dKirbyMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dKirbyMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dKirbyMain_textureparts_container, /* textureparts_container */
 	30, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dKirbyMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

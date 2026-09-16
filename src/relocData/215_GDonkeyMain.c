@@ -4,7 +4,31 @@
 #include "relocdata_types.h"
 #include <ft/fttypes.h>
 
-extern u32 dDonkeyMainMotion_0x0000[];
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern FTModelPart dGDonkeyMain_modelparts_desc_0x058[];
+extern FTModelPart dGDonkeyMain_modelparts_desc_0x0A8[];
+extern FTModelPart dGDonkeyMain_modelparts_desc_0x120[];
+extern FTThrownStatus dGDonkeyMain_thrown_status[];
+extern u32 dDkIcon_Stock[];
+extern u16 dDkIcon_Stock_lut0[];
+extern u16 dDkIcon_Stock_lut1[];
+extern u16 dDkIcon_Stock_lut2[];
+extern u16 dDkIcon_Stock_lut3[];
+extern u16 dDkIcon_Stock_lut4[];
+extern u32 dDkIcon_FTEmblem[];
+extern AObjEvent32 **dDonkeyModel_gap_0x3E50[];
+extern AObjEvent32 **dDonkeyModel_gap_0x7370[];
+extern u8 dDonkeyShieldPose_data0[];
+extern u8 dDonkeyShieldPose_data0_end[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_1[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_2[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_3[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_4[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_5[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_6[];
+extern u8 dDonkeyShieldPose_shield_anim_joint_7[];
+
+extern u32 dDonkeyMainMotion_EggLay_0x0000[];
 extern DObjDesc dDonkeyModel_JointTree[];
 extern DObjDesc dDonkeyModel_JointTree_0x6EC0[];
 extern Gfx dDonkeyModel_Joint_0x2760_DisplayList[];
@@ -13,8 +37,10 @@ extern Gfx dDonkeyModel_Joint_0x2F08_DisplayList[];
 extern Gfx dDonkeyModel_Joint_0x6188_DisplayList[];
 extern Gfx dDonkeyModel_Joint_0x61F8_DisplayList[];
 extern Gfx dDonkeyModel_Joint_0x6748_DisplayList[];
-extern u8 dDonkeyModel_gap_0x0000[];
-extern u8 dDonkeyModel_gap_0x0000_sub_0x18[];
+extern MObjSub **dDonkeyModel_gap_0x0000[];
+extern MObjSub *dDonkeyModel_Joint_0x0080_post_sub_0xE98[];
+extern MObjSub *dDonkeyModel_Joint_0x0080_post_sub_0xEA8[];
+extern MObjSub *dDonkeyModel_Joint_0x0080_post_sub_0xED0[];
 extern u8 dDonkeyModel_gap_0x3E78_sub_0x11F8[];
 extern u8 dDonkeyModel_gap_0x3E78_sub_0x1200[];
 extern u8 dDonkeyModel_gap_0x3E78_sub_0x1228[];
@@ -53,10 +79,10 @@ extern DObjDesc dDonkeySpecial2_EntryTaruDObjDesc[];
 
 /* Pre-attributes data (242 words, 0x03C8 bytes) */
 /* @ 0x0000, 8 bytes: FTAttributes.file_handles target (was dGDonkeyMain_pre+0x0) */
-u32 dGDonkeyMain_file_handles[2] = {
+void *dGDonkeyMain_file_handles[2] = {
 
-	(u32)&dDonkeyMainMotion_0x0000, /* extern -> 0x0000 */
-	(u32)&dDonkeySpecial2_EntryTaruDObjDesc, /* extern -> 0x07C8 */
+	&dDonkeyMainMotion_EggLay_0x0000, /* extern -> 0x0000 */
+	&dDonkeySpecial2_EntryTaruDObjDesc, /* extern -> 0x07C8 */
 };
 
 /* @ 0x0008, 8 bytes: FTAttributes.animlock target (was dGDonkeyMain_pre+0x8) */
@@ -81,7 +107,7 @@ FTHiddenPart dGDonkeyMain_hiddenparts[4] = {
 
 /* @ 0x0058, 80 bytes: FTAttributes.sub_0x058 target (was dGDonkeyMain_pre+0x58) */
 FTModelPart dGDonkeyMain_modelparts_desc_0x058[4] = {
-	{ (Gfx*)&dDonkeyModel_Joint_0x2760_DisplayList, (MObjSub**)((u8*)dDonkeyModel_gap_0x0000_sub_0x18 + 0xF00), (AObjEvent32**)&dDonkeyModel_gap_0x3E78_sub_0x5D4, NULL, 0x00 },
+	{ (Gfx*)&dDonkeyModel_Joint_0x2760_DisplayList, (MObjSub**)&dDonkeyModel_Joint_0x0080_post_sub_0xE98, (AObjEvent32**)&dDonkeyModel_gap_0x3E78_sub_0x5D4, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_Joint_0x6188_DisplayList, (MObjSub**)&dDonkeyModel_gap_0x3E78_sub_0x11F8, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0x4A4, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_gap_0x7390_sub_0xBA8, (MObjSub**)&dDonkeyModel_gap_0x7390_sub_0xAC0, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0xD08, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_gap_0x7390_sub_0xE48, (MObjSub**)&dDonkeyModel_gap_0x7390_sub_0xDA0, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0xF78, NULL, 0x00 },
@@ -89,7 +115,7 @@ FTModelPart dGDonkeyMain_modelparts_desc_0x058[4] = {
 
 /* @ 0x00A8, 120 bytes: FTAttributes.sub_0x0A8 target (was dGDonkeyMain_pre+0xA8) */
 FTModelPart dGDonkeyMain_modelparts_desc_0x0A8[6] = {
-	{ (Gfx*)&dDonkeyModel_Joint_0x2930_DisplayList, (MObjSub**)((u8*)dDonkeyModel_gap_0x0000_sub_0x18 + 0xF10), (AObjEvent32**)&dDonkeyModel_gap_0x3E78_sub_0x5E0, NULL, 0x00 },
+	{ (Gfx*)&dDonkeyModel_Joint_0x2930_DisplayList, (MObjSub**)&dDonkeyModel_Joint_0x0080_post_sub_0xEA8, (AObjEvent32**)&dDonkeyModel_gap_0x3E78_sub_0x5E0, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_Joint_0x61F8_DisplayList, (MObjSub**)&dDonkeyModel_gap_0x3E78_sub_0x1200, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0x4A8, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_gap_0x7390_sub_0x16C8, (MObjSub**)&dDonkeyModel_gap_0x7390_sub_0x1230, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0x1B94, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_gap_0x7390_sub_0x2228, (MObjSub**)&dDonkeyModel_gap_0x7390_sub_0x1E60, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0x26B4, NULL, 0x00 },
@@ -99,7 +125,7 @@ FTModelPart dGDonkeyMain_modelparts_desc_0x0A8[6] = {
 
 /* @ 0x0120, 80 bytes: FTAttributes.sub_0x120 target (was dGDonkeyMain_pre+0x120) */
 FTModelPart dGDonkeyMain_modelparts_desc_0x120[4] = {
-	{ (Gfx*)&dDonkeyModel_Joint_0x2F08_DisplayList, (MObjSub**)((u8*)dDonkeyModel_gap_0x0000_sub_0x18 + 0xF38), (AObjEvent32**)&dDonkeyModel_gap_0x3E78_sub_0x5FC, NULL, 0x00 },
+	{ (Gfx*)&dDonkeyModel_Joint_0x2F08_DisplayList, (MObjSub**)&dDonkeyModel_Joint_0x0080_post_sub_0xED0, (AObjEvent32**)&dDonkeyModel_gap_0x3E78_sub_0x5FC, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_Joint_0x6748_DisplayList, (MObjSub**)&dDonkeyModel_gap_0x3E78_sub_0x1228, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0x4C4, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_gap_0x7390_sub_0x658, (MObjSub**)&dDonkeyModel_gap_0x7390_sub_0x570, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0x7B8, NULL, 0x00 },
 	{ (Gfx*)&dDonkeyModel_gap_0x7390_sub_0x8F8, (MObjSub**)&dDonkeyModel_gap_0x7390_sub_0x850, (AObjEvent32**)&dDonkeyModel_gap_0x7390_sub_0xA28, NULL, 0x00 },
@@ -117,8 +143,8 @@ FTModelPartDesc *dGDonkeyMain_modelparts_container[26] = {
 /* @ 0x01D8, 32 bytes: FTAttributes.commonparts_container target (was dGDonkeyMain_pre+0x1D8) */
 FTCommonPartContainer dGDonkeyMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dDonkeyModel_JointTree, (MObjSub***)&dDonkeyModel_gap_0x0000, (AObjEvent32***)((u8*)dDonkeyModel_JointTree + 0x4A8), 0x00 },
-		{ (DObjDesc*)&dDonkeyModel_JointTree_0x6EC0, (MObjSub***)&dDonkeyModel_gap_0x3E78_sub_0x628, (AObjEvent32***)((u8*)dDonkeyModel_JointTree_0x6EC0 + 0x4B0), 0x00 },
+		{ (DObjDesc*)&dDonkeyModel_JointTree, (MObjSub***)&dDonkeyModel_gap_0x0000, (AObjEvent32***)dDonkeyModel_gap_0x3E50, 0x00 },
+		{ (DObjDesc*)&dDonkeyModel_JointTree_0x6EC0, (MObjSub***)&dDonkeyModel_gap_0x3E78_sub_0x628, (AObjEvent32***)dDonkeyModel_gap_0x7370, 0x00 },
 	},
 };
 
@@ -180,20 +206,22 @@ FTThrownStatus dGDonkeyMain_thrown_status[54] = {
 	{                          -1, nFTCommonStatusThrownCommon },
 };
 
-/* @ 0x03A8, 20 bytes: FTAttributes.sub_0x3A8 target (was dGDonkeyMain_pre+0x3A8) */
-int *dGDonkeyMain_stock_luts[5] = {
-	(int*)0x00EB0018,
-	(int*)0x00EC0022,
-	(int*)0x00ED002C,
-	(int*)0x00EE0036,
-	(int*)0x00EF0040,
-};
+u32 dGDonkeyMain_stock_luts[1] = { (u32)dDkIcon_Stock_lut0 };
+
+u32 dGDonkeyMain_data_0x03AC[1] = { (u32)dDkIcon_Stock_lut1 };
+
+u32 dGDonkeyMain_data_0x03B0[1] = { (u32)dDkIcon_Stock_lut2 };
+
+u32 dGDonkeyMain_data_0x03B4[1] = { (u32)dDkIcon_Stock_lut3 };
+
+u32 dGDonkeyMain_data_0x03B8[1] = { (u32)dDkIcon_Stock_lut4 };
+
 
 /* @ 0x03BC, 12 bytes: FTAttributes.sprites target (was dGDonkeyMain_pre+0x3BC) */
 FTSprites dGDonkeyMain_sprites = {
-	(Sprite*)0x00F1004C, /* stock_sprite */
+	(Sprite*)dDkIcon_Stock, /* stock_sprite */
 	(int**)dGDonkeyMain_stock_luts, /* stock_luts */
-	(Sprite*)0x01A800BE, /* emblem */
+	(Sprite*)dDkIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dGDonkeyMain_attr = {
@@ -293,8 +321,8 @@ FTAttributes dGDonkeyMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dGDonkeyMain_hiddenparts, /* hiddenparts */
 	&dGDonkeyMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dDonkeyShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dDonkeyShieldPose_data0_end, (void *)&dDonkeyShieldPose_shield_anim_joint_1, (void *)&dDonkeyShieldPose_shield_anim_joint_2, (void *)&dDonkeyShieldPose_shield_anim_joint_3, (void *)&dDonkeyShieldPose_shield_anim_joint_4, (void *)&dDonkeyShieldPose_shield_anim_joint_5, (void *)&dDonkeyShieldPose_shield_anim_joint_6, (void *)&dDonkeyShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	152.787f, /* joint_rfoot_rotate */
 	19, /* joint_lfoot_id */

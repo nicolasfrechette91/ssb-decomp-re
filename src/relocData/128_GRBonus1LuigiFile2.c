@@ -9,6 +9,70 @@
 
 /* Raw data from file offset 0x0000 to 0x0950 (2384 bytes) */
 /* gap sub-block @ 0x0000 (was gap+0x0, 64 bytes) */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u16 dBonus1CommonImages1_Lut_0x0380_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x06B0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x0720_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x03A8[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern u8 dBonus1CommonImages1_Tex_0x06D8[];
+extern u8 dBonus1CommonImages1_Tex_0x0748[];
+extern Gfx dGRBonus1LuigiFile2_DL_0x17E8[];
+extern u16 dBonus1CommonImages1_Lut_0x0380_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x06B0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x0720_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x03A8[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern u8 dBonus1CommonImages1_Tex_0x06D8[];
+extern u8 dBonus1CommonImages1_Tex_0x0748[];
+extern u16 dBonus1CommonImages1_Lut_0x0380_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x06B0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x0720_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x03A8[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern u8 dBonus1CommonImages1_Tex_0x06D8[];
+extern u8 dBonus1CommonImages1_Tex_0x0748[];
+extern u16 dBonus1CommonImages1_Lut_0x0380_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x06B0_palette[];
+extern u16 dBonus1CommonImages1_Lut_0x0720_palette[];
+extern u8 dBonus1CommonImages1_Tex_0x03A8[];
+extern u16 dBonus1CommonImages1_Tex_0x0598[];
+extern u8 dBonus1CommonImages1_Tex_0x05A8[];
+extern u8 dBonus1CommonImages1_Tex_0x06D8[];
+extern u8 dBonus1CommonImages1_Tex_0x0748[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x100[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x140[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x180[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x1C0[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x200[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x240[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x280[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x2C0[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x300[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x340[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x380[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x3C0[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x40[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x400[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x440[];
+extern Gfx dGRBonus1LuigiFile2_gap_0x0000_sub_0x580[];
+extern Gfx dGRBonus1LuigiFile2_gap_0x0000_sub_0x680[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0x80[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0000_sub_0xC0[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x208[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x3C8[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x5C8[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x648[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x8[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x828[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x968[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0xAA8[];
+extern Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0xCA8[];
 Vtx dGRBonus1LuigiFile2_gap_0x0000[4] = {
 	#include <GRBonus1LuigiFile2/gap_0x0000.vtx.inc.c>
 };
@@ -157,10 +221,7 @@ DObjDesc dGRBonus1LuigiFile2_Layer0DObj[] = {
 };
 
 /* Raw data from file offset 0x0A58 to 0x1BA0 (4424 bytes) */
-/* gap sub-block @ 0x0A58 (was gap+0x0, 8 bytes) */
-u8 dGRBonus1LuigiFile2_gap_0x0A58[8] = {
-	#include <GRBonus1LuigiFile2/gap_0x0A58.data.inc.c>
-};
+PAD(8);
 
 /* gap sub-block @ 0x0A60 (was gap+0x8, 512 bytes) */
 Vtx dGRBonus1LuigiFile2_gap_0x0A58_sub_0x8[32] = {
@@ -235,245 +296,211 @@ Gfx dGRBonus1LuigiFile2_DL_0x1B08[19] = {
 /* DObjDesc: Layer1DObj @ 0x1BA0 (6 entries) */
 DObjDesc dGRBonus1LuigiFile2_Layer1DObj[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1LuigiFile2_gap_0x0A58 + 0xD28), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1LuigiFile2_gap_0x0A58 + 0xF60), { -484.3667907714844f, -1500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1LuigiFile2_gap_0x0A58 + 0x1008), { -2400.0f, 1248.9796142578125f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dGRBonus1LuigiFile2_gap_0x0A58 + 0x10B0), { 2400.0f, 1307.5472412109375f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1LuigiFile2_DL_0x1780, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1LuigiFile2_DL_0x19B8, { -484.3667907714844f, -1500.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1LuigiFile2_DL_0x1A60, { -2400.0f, 1248.9796142578125f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dGRBonus1LuigiFile2_DL_0x1B08, { 2400.0f, 1307.5472412109375f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
 /* Raw data from file offset 0x1CA8 to 0x1F38 (656 bytes) */
-/* gap sub-block @ 0x1CA8 (was gap+0x0, 240 bytes) */
-u8 dGRBonus1LuigiFile2_gap_0x1CA8[240] = {
-	#include <GRBonus1LuigiFile2/gap_0x1CA8.data.inc.c>
+/* MPVertexData[40] @ 0x1CA8 — vertex positions (MPGeometryData.vertex_data) */
+MPVertexData dGRBonus1LuigiFile2_gap_0x1CA8[40] = {
+	{ {   -900,   1500 }, 0x0000 },
+	{ {   -900,      0 }, 0x0000 },
+	{ {   1800,      0 }, 0x0000 },
+	{ {   1800,   -300 }, 0x0000 },
+	{ {    900,   -300 }, 0x0000 },
+	{ {    900,   -600 }, 0x0000 },
+	{ {    600,   -600 }, 0x0000 },
+	{ {    600,   -300 }, 0x0000 },
+	{ {  -1200,   -300 }, 0x0000 },
+	{ {  -1200,   1200 }, 0x0000 },
+	{ {  -1500,   1200 }, 0x0000 },
+	{ {  -1500,   1500 }, 0x0000 },
+	{ {   3900,   4800 }, 0x0000 },
+	{ {   1800,   4800 }, 0x0000 },
+	{ {   1800,   3300 }, 0x0000 },
+	{ {   2100,   3300 }, 0x0000 },
+	{ {   2100,   4500 }, 0x0000 },
+	{ {   3600,   4500 }, 0x0000 },
+	{ {   3600,   1200 }, 0x0000 },
+	{ {   3900,   1200 }, 0x0000 },
+	{ {  -2100,  -1200 }, 0x0000 },
+	{ {  -2400,  -1200 }, 0x0000 },
+	{ {  -2400,   -300 }, 0x0000 },
+	{ {  -2700,   -300 }, 0x0000 },
+	{ {  -2700,      0 }, 0x0000 },
+	{ {  -2100,      0 }, 0x0000 },
+	{ {    300,      0 }, 0x0000 },
+	{ {   -900,      0 }, 0x0000 },
+	{ {   -900,    300 }, 0x0000 },
+	{ {    300,    300 }, 0x0000 },
+	{ {    300,    600 }, 0x4000 },
+	{ {   -600,    600 }, 0x0000 },
+	{ {   -300,  -2700 }, 0x0000 },
+	{ {   -600,  -2700 }, 0x0000 },
+	{ {   -600,    300 }, 0x0000 },
+	{ {    600,    300 }, 0x0000 },
+	{ {    600,  -3300 }, 0x0000 },
+	{ {    300,  -3300 }, 0x0000 },
+	{ {    300,      0 }, 0x0000 },
+	{ {   -300,      0 }, 0x0000 },
 };
 
-/* gap sub-block @ 0x1D98 (was gap+0xF0, 156 bytes) */
-u8 dGRBonus1LuigiFile2_gap_0x1CA8_sub_0xF0[156] = {
-	#include <GRBonus1LuigiFile2/gap_0x1CA8_sub_0xF0.data.inc.c>
+/* MPVertexArray (78 IDs) @ 0x1D98 — vertex_id table (MPGeometryData.vertex_id) */
+u16 dGRBonus1LuigiFile2_gap_0x1CA8_sub_0xF0[78] = {
+	 12,  13,  11,   0,   1,   2,  24,  25,  20,  21,   5,   6,   7,   8,  22,  23,
+	  3,   4,   9,  10,  18,  19,  14,  15,  16,  17,  19,  12,  15,  16,   2,   3,
+	  4,   5,   0,   1,  25,  20,  23,  24,  21,  22,  10,  11,   8,   9,   6,   7,
+	 13,  14,  17,  18,  28,  29,  26,  27,  29,  26,  27,  28,  30,  31,  34,  35,
+	 36,  37,  32,  33,  38,  39,  35,  36,  39,  32,  33,  34,  37,  38,
 };
 
-/* gap sub-block @ 0x1E34 (was gap+0x18C, 156 bytes) */
-u8 dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x18C[156] = {
-	#include <GRBonus1LuigiFile2/gap_0x1CA8_sub_0x18C.data.inc.c>
+/* MPVertexLinks[39] @ 0x1E34 — line vertex pairs (MPGeometryData.vertex_links) */
+MPVertexLinks dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x18C[39] = {
+	{   0, 2 }, {   2, 2 }, {   4, 2 }, {   6, 2 }, {   8, 2 }, {  10, 2 },
+	{  12, 2 }, {  14, 2 }, {  16, 2 }, {  18, 2 }, {  20, 2 }, {  22, 2 },
+	{  24, 2 }, {  26, 2 }, {  28, 2 }, {  30, 2 }, {  32, 2 }, {  34, 2 },
+	{  36, 2 }, {  38, 2 }, {  40, 2 }, {  42, 2 }, {  44, 2 }, {  46, 2 },
+	{  48, 2 }, {  50, 2 }, {  52, 2 }, {  54, 2 }, {  56, 2 }, {  58, 2 },
+	{  60, 2 }, {  62, 2 }, {  64, 2 }, {  66, 2 }, {  68, 2 }, {  70, 2 },
+	{  72, 2 }, {  74, 2 }, {  76, 2 },
 };
 
-/* gap sub-block @ 0x1ED0 (was gap+0x228, 72 bytes) */
-u8 dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x228[72] = {
-	#include <GRBonus1LuigiFile2/gap_0x1CA8_sub_0x228.data.inc.c>
+/* MPLineInfo[4] @ 0x1ED0 — yakumono line groups (MPGeometryData.line_info) */
+MPLineInfo dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x228[4] = {
+	{ 1, { {  0,   4}, {  4,   9}, { 13,   6}, { 19,   7} } },
+	{ 2, { { 26,   1}, { 27,   1}, { 28,   1}, { 29,   1} } },
+	{ 3, { { 30,   1}, { 31,   0}, { 31,   0}, { 31,   0} } },
+	{ 4, { { 31,   1}, { 32,   3}, { 35,   2}, { 37,   2} } },
 };
 
-/* gap sub-block @ 0x1F18 (was gap+0x270, 32 bytes) */
-u8 dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x270[32] = {
-	#include <GRBonus1LuigiFile2/gap_0x1CA8_sub_0x270.data.inc.c>
+/* MPMapObjData[5] @ 0x1F18 — map objects (MPGeometryData.mapobjs); 2 bytes pad to align next decl */
+MPMapObjData dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x270[5] = {
+	{  33, {   300,     3 } },
+	{   0, {   300,     3 } },
+	{   1, {   900,     3 } },
+	{   2, {  1500,     3 } },
+	{   3, {  -300,     2 } },
 };
 
-/* Raw data from file offset 0x1F38 to 0x1F60 (40 bytes) */
-u8 dGRBonus1LuigiFile2_MPGeometryData_0x1F38[40] = {
-	#include <GRBonus1LuigiFile2/MPGeometryData_0x1F38.data.inc.c>
+/* MPGeometryData @ 0x1F38 (28 bytes + 12 bytes pad) */
+MPGeometryData dGRBonus1LuigiFile2_MPGeometryData_0x1F38 = {
+	4,
+	(MPVertexPosContainer*)dGRBonus1LuigiFile2_gap_0x1CA8,
+	(MPVertexArray*)dGRBonus1LuigiFile2_gap_0x1CA8_sub_0xF0,
+	dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x18C,
+	dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x228,
+	5,
+	(MPMapObjContainer*)dGRBonus1LuigiFile2_gap_0x1CA8_sub_0x270,
+};
+PAD(12);
+
+extern u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x14[];
+extern u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x3C[];
+extern u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x94[];
+extern u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x2FC[];
+
+/* AObjEvent32 *[5] joint table 1. */
+AObjEvent32 *dGRBonus1LuigiFile2_Layer1Anim_AnimJoint[5] = {
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x14,
+	(AObjEvent32 *)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x3C,
+	(AObjEvent32 *)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x94,
 };
 
-/* Raw data from file offset 0x1F60 to 0x2280 (800 bytes) */
-u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint[200] = {
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x14),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x3C),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x94),
-	aobjEvent32SetVal0RateBlock(0x010, 0),
+u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x14[10] = {
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 0),
 	    0xC4160000,  /* -600.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 99),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 99),
 	    0x44160000,  /* 600.0f */
-	aobjEvent32SetVal0RateBlock(0x010, 100),
+	aobjEvent32SetVal0RateBlock(AOBJ_FLAG_TRAX, 100),
 	    0xC4160000,  /* -600.0f */
-	aobjEvent32SetValBlock(0x010, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX, 1),
 	    0xC4160000,  /* -600.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x14),
-	aobjEvent32SetVal(0x030, 0),
+	(u32)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x14,
+};
+
+u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x3C[22] = {
+	aobjEvent32SetVal(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 0),
 	    0xC5160000,  /* -2400.0f */
 	    0x44610000,  /* 900.0f */
-	aobjEvent32SetValAfter(0x040, 0),
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAZ, 0),
 	    0x00000000,  /* 0.0f */
-	aobjEvent32SetValBlock(0x030, 49),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 49),
 	    0xC5160000,  /* -2400.0f */
 	    0x44E10000,  /* 1800.0f */
-	aobjEvent32SetValBlock(0x030, 50),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 50),
 	    0xC53B8000,  /* -3000.0f */
 	    0x44E10000,  /* 1800.0f */
-	aobjEvent32SetValBlock(0x030, 50),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 50),
 	    0xC53B8000,  /* -3000.0f */
 	    0x44610000,  /* 900.0f */
-	aobjEvent32SetValBlock(0x030, 50),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 50),
 	    0xC5160000,  /* -2400.0f */
 	    0x44610000,  /* 900.0f */
-	aobjEvent32SetValBlock(0x030, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAX | AOBJ_FLAG_TRAY, 1),
 	    0xC5160000,  /* -2400.0f */
 	    0x44610000,  /* 900.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x3C),
-	aobjEvent32SetValBlock(0x020, 0),
+	(u32)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x3C,
+};
+
+u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x94[10] = {
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAY, 0),
 	    0x44960000,  /* 1200.0f */
-	aobjEvent32SetValBlock(0x020, 159),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAY, 159),
 	    0x45034000,  /* 2100.0f */
-	aobjEvent32SetValBlock(0x020, 40),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAY, 40),
 	    0x44960000,  /* 1200.0f */
-	aobjEvent32SetValBlock(0x020, 1),
+	aobjEvent32SetValBlock(AOBJ_FLAG_TRAY, 1),
 	    0x44960000,  /* 1200.0f */
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x94),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC51F6000,
-	    0x45C03000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x44160000,
-	    0x4587F000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x456A6000,
-	    0x443B8000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x45160000,
-	    0xC4610000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x44960000,
-	    0xC4160000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC51F6000,
-	    0x4573C000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x44160000,
-	    0x43960000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x44160000,
-	    0x44F3C000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0xC544E000,
-	    0xC3E10000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 1),
-	aobjEvent32End(),
-	    0x4528C000,
-	    0x459F6000,
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	    0x3F800000,
-	    0x3F800000,
-	    0x3F800000,
-	aobjEvent32EndRaw(0x000, 18),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x2FC),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32End(),
-	aobjEvent32SetValAfter(0x070, 0),
+	(u32)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x94,
+};
+
+PAD(4);
+
+/* DObjDesc[12] — Layer1 scene-object list. */
+DObjDesc dGRBonus1LuigiFile2_Layer1Anim_DObjDesc[12] = {
+	{ 0, NULL, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -2550.0f, 6150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 600.0f, 4350.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 3750.0f, 750.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 2400.0f, -900.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 1200.0f, -600.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -2550.0f, 3900.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 600.0f, 300.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 600.0f, 1950.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { -3150.0f, -450.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, NULL, { 2700.0f, 5100.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 18, NULL, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
+};
+
+/* AObjEvent32 *[11] joint table 2. */
+AObjEvent32 *dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_ptrs_0x2D0[11] = {
+	NULL,
+	NULL,
+	(AObjEvent32 *)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x2FC,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
+
+u32 dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x2FC[7] = {
+	aobjEvent32SetValAfter(AOBJ_FLAG_TRAXYZ, 0),
 	    0x44160000,  /* 600.0f */
 	    0x4587F000,  /* 4350.0f */
 	    0x00000000,  /* 0.0f */
 	aobjEvent32Wait(200),
 	aobjEvent32SetAnim(0x000, 0),
-	(u32)((u8*)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint + 0x2FC),
-	aobjEvent32End(),
-	aobjEvent32End(),
+	(u32)dGRBonus1LuigiFile2_Layer1Anim_AnimJoint_data_0x2FC,
 };
-

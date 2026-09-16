@@ -8,6 +8,31 @@
 
 /* Vtx: JointVerts @ 0x0 (0 vertices — elided) */
 
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern Vtx dNPurinModel_Vtx_0x0200_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x03F0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x05F0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x07D0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x07F0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x0800_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x09B0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x09D0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x0B90_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x0BA0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x0BC0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x0D60_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x0EE0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x10E0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x12A0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x14A0_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x1660_Vtx[];
+extern Vtx dNPurinModel_Vtx_0x1860_Vtx[];
+extern Vtx dNPurinModel_gap_0x0000[];
 /* Placeholder wrapper: the description slot collapsed to
  * zero vertices because an extras block starts at the
  * same offset. No C declaration is emitted so IDO CFE
@@ -174,5 +199,3 @@ DObjDesc dNPurinModel_JointTree[] = {
 	{ 1, (void*)0x00000000, { 0.0f, -150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
-
-PAD(4);

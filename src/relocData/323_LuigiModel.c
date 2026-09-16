@@ -6,7 +6,85 @@
 
 #include "relocdata_types.h"
 #include <sys/objdef.h>
-extern u8 dLuigiModel_gap_0x28E0_sub_0x37C[];
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u8 dLuigiModel_Tex_0x73C0[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u8 dLuigiModel_Tex_0x6D38[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern u16 dMarioSecondaryImage_Tex_0x0008[];
+extern u8 dMarioSecondaryImage_Tex_0x0018[];
+extern u16 dMarioSecondaryImage_Tex_0x0060[];
+extern u8 dMarioSecondaryImage_Tex_0x0078[];
+extern void *dLuigiModel_Joint_0x0060_post[];
+extern u8 *dLuigiModel_Joint_0x0060_post_sub_0x14[];
+extern Vtx dLuigiModel_Vtx_0x0910_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x0A90_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x0B40_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x0BA0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x1200_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x12B0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x1310_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x1410_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x14C0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x1520_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x1620_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x16D0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x1730_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3590_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x36A0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3710_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3740_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3C20_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3C90_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3CC0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3DC0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3E20_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3E50_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3EF0_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3F50_Vtx[];
+extern Vtx dLuigiModel_Vtx_0x3F80_Vtx[];
+extern MObjSub **dLuigiModel_gap_0x0000[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x10B4[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1114[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1314[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1384[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1604[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1714[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1824[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1924[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1A24[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1B34[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1C44[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x1D24[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x3C4[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x6A4[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0x914[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0xBF4[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0xE64[];
+extern Vtx dLuigiModel_gap_0x4E8C_sub_0xF54[];
+extern u32 dLuigiModel_gap_0x28E0_sub_0x304[];
+extern u32 dLuigiModel_gap_0x28E0_sub_0x32C[];
+extern Gfx dLuigiModel_DL_0x6C20[];
+extern u32 dLuigiModel_gap_0x4E8C_sub_0x328[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x37C[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x354[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x358[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x35C[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x364[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x380[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x388[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x38C[];
 
 extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x360[];
 extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x384[];
@@ -26,13 +104,15 @@ extern u32 dLuigiModel_gap_0x28E0_sub_0x3C[];
 extern MObjSub dLuigiModel_gap_0x28E0_sub_0x4B8[];
 extern MObjSub dLuigiModel_gap_0x28E0_sub_0x8F0[];
 extern u32 dLuigiModel_gap_0x4E8C_sub_0x250[];
-extern u8 dLuigiModel_gap_0x4E8C_sub_0x5DC[];
+extern MObjSub dLuigiModel_gap_0x4E8C_sub_0x5DC[];
 extern u32 dLuigiModel_gap_0x4E8C_sub_0x60[];
 extern u32 dLuigiModel_gap_0x4E8C_sub_0x668[];
-extern u8 dLuigiModel_gap_0x4E8C_sub_0x84C[];
+extern MObjSub dLuigiModel_gap_0x4E8C_sub_0x84C[];
 extern u32 dLuigiModel_gap_0x4E8C_sub_0x8D8[];
 extern u32 dLuigiModel_gap_0x4E8C_sub_0xBB8[];
-extern u8 dLuigiModel_gap_0x4E8C_sub_0xD9C[];
+extern MObjSub dLuigiModel_gap_0x4E8C_sub_0xB2C[];
+extern MObjSub *dLuigiModel_gap_0x4E8C_sub_0xBA4[];
+extern MObjSub dLuigiModel_gap_0x4E8C_sub_0xD9C[];
 extern u32 dLuigiModel_gap_0x4E8C_sub_0xE28[];
 extern MObjSub *dLuigiModel_gap_0x28E0_sub_0xC38[];
 extern MObjSub *dLuigiModel_gap_0x28E0_sub_0xC9C[];
@@ -44,51 +124,736 @@ extern MObjSub *dLuigiModel_gap_0x28E0_sub_0xC94[];
 extern MObjSub *dLuigiModel_gap_0x28E0_sub_0xC48[];
 extern MObjSub *dLuigiModel_gap_0x28E0_sub_0xC74[];
 extern MObjSub *dLuigiModel_gap_0x28E0_sub_0xC58[];
-extern u8 dLuigiModel_Tex_0x6D38[];
-extern u8 dLuigiModel_Tex_0x73C0[];
-extern u16 dLuigiModel_gap_0x4E8C_sub_0x1E0C[];
-extern u16 dLuigiModel_gap_0x4E8C_sub_0x1E34[];
-extern u16 dLuigiModel_gap_0x4E8C_sub_0x1E5C[];
-extern u16 dLuigiModel_gap_0x4E8C_sub_0x1E84[];
+extern u8 dLuigiModel_Tex_0x6EE8[];
+extern u8 dLuigiModel_Tex_0x7118[];
+extern u16 dLuigiModel_palette_0x7320[];
+extern u16 dLuigiModel_palette_0x7348[];
+extern u16 dLuigiModel_palette_0x7370[];
+extern u16 dLuigiModel_palette_0x7398[];
+extern u16 dLuigiModel_palette_0x7548[];
+extern u8 dLuigiModel_Tex_0x7570[];
+extern u8 dLuigiModel_Tex_0x77A0[];
+extern u16 dLuigiModel_palette_0x79A8[];
+extern u8 dLuigiModel_Tex_0x79D0[];
+extern u16 dLuigiModel_palette_0x6C98[];
+extern u16 dLuigiModel_palette_0x6CC0[];
+extern u16 dLuigiModel_palette_0x6CE8[];
+extern u16 dLuigiModel_palette_0x6D10[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x390[];
+extern AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x394[];
 
-/* Forward DObjDesc chain-target decls for fixRelocChain.py */
-/* Raw data from file offset 0x0000 to 0x0020 (32 bytes) */
-PAD(8);
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x7F8[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x800[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x808[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x810[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x818[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x834[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x83C[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x844[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x84C[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x854[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x85C[];
+extern MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x864[];
 
-/* gap sub-block @ 0x0008 (was gap+0x8, 16 bytes) */
-u8 dLuigiModel_gap_0x0000_sub_0x8[16] = {
-	#include <LuigiModel/gap_0x0000_sub_0x8.data.inc.c>
+/* MObjSub-dispatch table at file 0x0000 (96 bytes, 24 u32 slots).
+ * Sparse pointer array — chain-encoded `MObjSub **` pointers to the
+ * trailing-index cells inside Joint_0x00A0_post. Originally split
+ * across PAD(8) + gap_0x0000_sub_0x8[16] + gap_0x0000_sub_0x18[8] +
+ * Joint_0x0020_post[32] + Joint_0x0040_post[32]; merged here so the
+ * .reloc relationships are visible as one continuous table (mirrors
+ * MarioModel's gap_0x0000[25]). */
+MObjSub **dLuigiModel_gap_0x0000[24] = {
+	NULL,                                                       /* +0x00 */
+	NULL,                                                       /* +0x04 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x7F8,        /* +0x08 */
+	NULL,                                                       /* +0x0C */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x800,        /* +0x10 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x808,        /* +0x14 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x810,        /* +0x18 */
+	NULL,                                                       /* +0x1C */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x818,        /* +0x20 → 6-tuple cell */
+	NULL,                                                       /* +0x24 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x834,        /* +0x28 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x83C,        /* +0x2C */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x844,        /* +0x30 */
+	NULL,                                                       /* +0x34 */
+	NULL,                                                       /* +0x38 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x84C,        /* +0x3C */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x854,        /* +0x40 */
+	NULL,                                                       /* +0x44 */
+	NULL,                                                       /* +0x48 */
+	NULL,                                                       /* +0x4C */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x85C,        /* +0x50 */
+	(MObjSub **)dLuigiModel_Joint_0x00A0_post_sub_0x864,        /* +0x54 */
+	NULL,                                                       /* +0x58 */
+	NULL,                                                       /* +0x5C */
 };
 
-/* gap sub-block @ 0x0018 (was gap+0x18, 8 bytes) */
-u8 dLuigiModel_gap_0x0000_sub_0x18[8] = {
-	#include <LuigiModel/gap_0x0000_sub_0x18.data.inc.c>
+/* Joint_0x0060_post region @ 0x60 (32 bytes total, split into 3 sub-tables
+ * mirroring MarioModel's Joint_0x0040_post_sub_0x24/_0x38/_0x48 pattern). */
+
+/* Lead NULL slot @ 0x60 — referenced by `extern DL_0x6270+0x44 →
+ * Joint_0x0060_post` (cross-file ref from MarioSecondaryImage). */
+void *dLuigiModel_Joint_0x0060_post[1] = { NULL };
+
+/* Palette table @ 0x64 — 4 palette frames read by MObjSub_0x0.palettes. */
+u16 *dLuigiModel_Joint_0x0060_post_sub_0x4[4] = {
+	dLuigiModel_palette_0x6D10,
+	dLuigiModel_palette_0x6C98,
+	dLuigiModel_palette_0x6CC0,
+	dLuigiModel_palette_0x6CE8,
 };
 
-/* Raw data from file offset 0x0020 to 0x0040 (32 bytes) */
-u8 dLuigiModel_Joint_0x0020_post[32] = {
-	#include <LuigiModel/Joint_0x0020_post.data.inc.c>
+/* Sprite table @ 0x74 — 3 sprite frames read by MObjSub_0x1E0.sprites. */
+u8 *dLuigiModel_Joint_0x0060_post_sub_0x14[3] = {
+	dLuigiModel_Tex_0x79D0,
+	dLuigiModel_Tex_0x7570,
+	dLuigiModel_Tex_0x77A0,
 };
 
-/* Raw data from file offset 0x0040 to 0x0060 (32 bytes) */
-u8 dLuigiModel_Joint_0x0040_post[32] = {
-	#include <LuigiModel/Joint_0x0040_post.data.inc.c>
+/* Joint_0x0080_post region @ 0x80 (32 bytes total, split into 3 sub-tables).
+ * The same RGBA5551 texels are reinterpreted as TLUT payload when read via
+ * an MObjSub.palettes field — the N64 SetTextureImage/LoadTLUT pair lets
+ * texture data double as a palette. */
+
+/* Sprite table @ 0x80 — 2 sprite frames (no MObjSub references; left as a
+ * standalone table at the parent's base offset). */
+u8 *dLuigiModel_Joint_0x0080_post[2] = {
+	dLuigiModel_Tex_0x6EE8,
+	dLuigiModel_Tex_0x7118,
 };
 
-/* Raw data from file offset 0x0060 to 0x0080 (32 bytes) */
-u8 dLuigiModel_Joint_0x0060_post[32] = {
-	#include <LuigiModel/Joint_0x0060_post.data.inc.c>
+/* Palette/sprite table @ 0x88 — 2 entries read by MObjSub_0x1E0.palettes. */
+u16 *dLuigiModel_Joint_0x0080_post_sub_0x8[2] = {
+	dLuigiModel_palette_0x79A8,
+	dLuigiModel_palette_0x7548,
 };
 
-/* Raw data from file offset 0x0080 to 0x00A0 (32 bytes) */
-u8 dLuigiModel_Joint_0x0080_post[32] = {
-	#include <LuigiModel/Joint_0x0080_post.data.inc.c>
+/* Palette/sprite table @ 0x90 — 4 entries read by MObjSub_0x258.palettes. */
+u16 *dLuigiModel_Joint_0x0080_post_sub_0x10[4] = {
+	dLuigiModel_palette_0x7398,
+	dLuigiModel_palette_0x7320,
+	dLuigiModel_palette_0x7348,
+	dLuigiModel_palette_0x7370,
 };
 
-/* Raw data from file offset 0x00A0 to 0x0910 (2160 bytes) */
-u8 dLuigiModel_Joint_0x00A0_post[2160] = {
-	#include <LuigiModel/Joint_0x00A0_post.data.inc.c>
+/* === 17 MObjSub structs decoded from Joint_0x00A0_post[2160] === */
+
+/* MObjSub @ Joint_0x00A0_post+0x0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0040, 0x0000, 0x0040, 0x0018,
+		1,
+		0.0f, 0.15199999511241913f,
+		1.0f, 0.6000000238418579f,
+		0.0f, 1.0f,
+		(void**)dLuigiModel_Joint_0x0060_post_sub_0x4,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0020,
+		0x0018, 0x0040, 0x0018,
+		0.0f, 0.15199999511241913f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
 };
+
+/* MObjSub @ Joint_0x00A0_post+0x78 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x78[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0xF0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0xF0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x168 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x168[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x1E0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x1E0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)dLuigiModel_Joint_0x0060_post_sub_0x14,
+		0x006A, 0x000D, 0x0040, 0x0020,
+		1,
+		0.20000000298023224f, 0.328000009059906f,
+		0.6000000238418579f, 0.6200000047683716f,
+		0.20000000298023224f, 0.6000000238418579f,
+		(void**)dLuigiModel_Joint_0x0080_post_sub_0x8,
+		0x3005,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0020,
+		0x0020, 0x0040, 0x0020,
+		0.20000000298023224f, 0.328000009059906f,
+		0.20000000298023224f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x8C, 0x66, 0x66, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x258 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x258[1] = {
+	{
+		0x0000,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x006A, 0x000B, 0x0020, 0x0018,
+		0,
+		0.32499998807907104f, 0.057999998331069946f,
+		0.3499999940395355f, 0.30000001192092896f,
+		0.32499998807907104f, 0.3499999940395355f,
+		(void**)dLuigiModel_Joint_0x0080_post_sub_0x10,
+		0x0004,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
+		0x0020,
+		0x0018, 0x0020, 0x0018,
+		0.32499998807907104f, 0.057999998331069946f,
+		0.32499998807907104f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x2D0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x2D0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x348 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x348[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xE1, 0x99, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x8C, 0x66, 0x66, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x3C0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x3C0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xE1, 0x99, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x8C, 0x66, 0x66, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x438 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x438[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xE1, 0x99, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x8C, 0x66, 0x66, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x4B0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x4B0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x528 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x528[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x5A0 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x5A0[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x618 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x618[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x690 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x690[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x708 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x708[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* MObjSub @ Joint_0x00A0_post+0x780 */
+MObjSub dLuigiModel_Joint_0x00A0_post_sub_0x780[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x0200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+#if defined(REGION_JP)
+		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
+#endif
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
+};
+
+/* === 12 trailing-index cells (file 0x0898..0x0910, 0x78 bytes) === */
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x7F8[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x0,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x800[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x168,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x808[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0xF0,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x810[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x78,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x818[7] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x1E0,
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x258,
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x2D0,
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x348,
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x3C0,
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x438,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x834[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x5A0,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x83C[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x528,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x844[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x4B0,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x84C[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x690,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x854[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x618,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x85C[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x780,
+	NULL,
+};
+
+MObjSub *dLuigiModel_Joint_0x00A0_post_sub_0x864[2] = {
+	(MObjSub *)dLuigiModel_Joint_0x00A0_post_sub_0x708,
+	NULL,
+};
+
+PAD(4);  /* trailing 4 bytes after sub_0x864's NULL terminator */
+
 
 /* Vtx: Vtx_0x0910 @ 0x910 (24 vertices) */
 Vtx dLuigiModel_Vtx_0x0910_Vtx[24] = {
@@ -264,7 +1029,11 @@ Gfx dLuigiModel_Joint_0x2380_DisplayList[18] = {
 	#include <LuigiModel/Joint_0x2380.dl.inc.c>
 };
 
-/* DObjDesc: JointTree @ 0x2410 (28 entries) */
+/* DObjDesc: JointTree @ 0x2410 (26 entries, 0x478 bytes — array always
+ * terminates at the `{ 18, ... }` sentinel; the 108 bytes that formerly
+ * looked like two trailing DObjDesc entries + `gap_0x28E0[5]` are slots
+ * 0..26 of the AObjEvent32 ** dispatch immediately following — see
+ * JointTree_post below). Same shape as JointTree_0x49E8 / JointTree_0x49E8_post. */
 DObjDesc dLuigiModel_JointTree[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, 0.0001140000022132881f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
@@ -292,142 +1061,318 @@ DObjDesc dLuigiModel_JointTree[] = {
 	{ 6, (void*)dLuigiModel_Joint_0x2380_DisplayList, { 0.0f, 9.999999974752427e-07f, -3.999999989900971e-06f }, { 0.1259080022573471f, 0.4220089912414551f, 0.19265399873256683f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, 30.0f, 120.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 8.090984187375438e-33f }, { 0.0f, 8.139133170669088e-33f, 8.187282153962739e-33f }, { 8.28357938586607e-33f, 0.0f, 8.3798766177694e-33f } },
-	{ 0, (void *)dLuigiModel_gap_0x28E0_sub_0x37C, { 8.476178257776547e-33f, 8.620623738289559e-33f, 0.0f }, { 0.0f, 8.66877272158321e-33f, 8.861366450705902e-33f }, { 0.0f, 0.0f, 0.0f } },
+};
+
+/* AObjEvent32 ** dispatch table @ file 0x2888 (108 bytes, 27 slots).
+ * Lives immediately after JointTree's 26-entry DObjDesc array (which ends
+ * at +0x478) and folds in what was previously typed as the 20-byte
+ * `gap_0x28E0[5]` AObjEvent32* table (slots 22..26). All 12 chain pointers
+ * are declared in the .reloc so fixRelocChain rebuilds the chain encoding.
+ * Same shape as MarioModel's JointTree_post / LuigiModel's JointTree_0x49E8_post. */
+PAD(8);
+
+AObjEvent32 **dLuigiModel_JointTree_post[25] = {
+	NULL, NULL,
+	dLuigiModel_gap_0x28E0_sub_0x354,                    /* +0x10, slot 4 */
+	NULL,
+	dLuigiModel_gap_0x28E0_sub_0x358,                    /* +0x18, slot 6 */
+	dLuigiModel_gap_0x28E0_sub_0x35C,                    /* +0x1C, slot 7 */
+	dLuigiModel_gap_0x28E0_sub_0x360,                    /* +0x20, slot 8 */
+	NULL,
+	dLuigiModel_gap_0x28E0_sub_0x364,                    /* +0x28, slot 10 */
+	NULL,
+	dLuigiModel_gap_0x28E0_sub_0x37C,                    /* +0x30, slot 12 */
+	dLuigiModel_gap_0x28E0_sub_0x380,                    /* +0x34, slot 13 */
+	dLuigiModel_gap_0x28E0_sub_0x384,                    /* +0x38, slot 14 */
+	NULL, NULL,
+	dLuigiModel_gap_0x28E0_sub_0x388,                    /* +0x44, slot 17 */
+	dLuigiModel_gap_0x28E0_sub_0x38C,                    /* +0x48, slot 18 */
+	NULL, NULL, NULL,
+	dLuigiModel_gap_0x28E0_sub_0x390,                    /* +0x58, slot 22 (was gap_0x28E0+0x0) */
+	dLuigiModel_gap_0x28E0_sub_0x394,                    /* +0x5C, slot 23 (was gap_0x28E0+0x4) */
+	NULL, NULL, NULL,
 };
 
 /* Raw data from file offset 0x28E0 to 0x3590 (3248 bytes) */
-/* gap sub-block @ 0x28E0 (was gap+0x0, 20 bytes) */
-u8 dLuigiModel_gap_0x28E0[20] = {
-	#include <LuigiModel/gap_0x28E0.data.inc.c>
-};
 
-/* gap sub-block @ 0x28F4 (was gap+0x14, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x14[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x14.data.inc.c>
+/* AObjEvent32 script @ 0x28F4 (was gap+0x14, 40 bytes — was typed u16[20]
+ * "palette"). ScaY-track keyframe sequence (flags=0x200). */
+u32 dLuigiModel_gap_0x28E0_sub_0x14[10] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x291C (was gap+0x3C, 56 bytes) */
 u32 dLuigiModel_gap_0x28E0_sub_0x3C[14] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	aobjEvent32SetExtValAfterBlock(0x019, 1),
-	    0xFFB028FF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x59595900,  /* 3823620405067776.0f */
-	aobjEvent32SetExtValAfter(0x019, 1),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
 	aobjEvent32Wait(99),
 	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2954 (was gap+0x74, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x74[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x74.data.inc.c>
+/* AObjEvent32 script @ 0x2954 (was gap+0x74, 40 bytes — was typed u16[20]
+ * "palette"). ExtVal-track color keyframe sequence (flags=0x001). */
+u32 dLuigiModel_gap_0x28E0_sub_0x74[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x297C (was gap+0x9C, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x9C[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x9C.data.inc.c>
+/* AObjEvent32 script @ 0x297C (was gap+0x9C, 40 bytes — was typed u16[20]
+ * "palette"). ExtVal-track color keyframe sequence (flags=0x001). */
+u32 dLuigiModel_gap_0x28E0_sub_0x9C[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x29A4 (was gap+0xC4, 112 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0xC4[112] = {
-	#include <LuigiModel/gap_0x28E0_sub_0xC4.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0xC4[28] = {
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetVal(AOBJ_MATFLAG_TEXID, 50),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(49),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32Wait(48),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2A14 (was gap+0x134, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x134[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x134.data.inc.c>
+u16 dLuigiModel_gap_0x28E0_sub_0x134[20] = {
+	#include <LuigiModel/gap_0x28E0_sub_0x134.palette.inc.c>
 };
 
 /* gap sub-block @ 0x2A3C (was gap+0x15C, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x15C[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x15C.data.inc.c>
+u16 dLuigiModel_gap_0x28E0_sub_0x15C[20] = {
+	#include <LuigiModel/gap_0x28E0_sub_0x15C.palette.inc.c>
 };
 
 /* gap sub-block @ 0x2A64 (was gap+0x184, 56 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x184[56] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x184.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x184[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2A9C (was gap+0x1BC, 56 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x1BC[56] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x1BC.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x1BC[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2AD4 (was gap+0x1F4, 56 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x1F4[56] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x1F4.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x1F4[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2B0C (was gap+0x22C, 56 bytes) */
 u32 dLuigiModel_gap_0x28E0_sub_0x22C[14] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	aobjEvent32SetExtValAfterBlock(0x019, 1),
-	    0xFFB028FF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x59595900,  /* 3823620405067776.0f */
-	aobjEvent32SetExtValAfter(0x019, 1),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
 	aobjEvent32Wait(99),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2B44 (was gap+0x264, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x264[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x264.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x264[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2B6C (was gap+0x28C, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x28C[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x28C.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x28C[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2B94 (was gap+0x2B4, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x2B4[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x2B4.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x2B4[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x2BBC (was gap+0x2DC, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x2DC[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x2DC.data.inc.c>
+u32 dLuigiModel_gap_0x28E0_sub_0x2DC[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2BE4 (was gap+0x304, 40 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x304[40] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x304.data.inc.c>
+/* AObjEvent32 script @ gap+0x304 (file 0x2BE4, 40 bytes — was typed
+ * u16[20] "palette". Identical to sub_0x2B4 / sub_0x2DC scripts. */
+u32 dLuigiModel_gap_0x28E0_sub_0x304[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x2C0C (was gap+0x32C, 36 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x32C[36] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x32C.data.inc.c>
+/* AObjEvent32 script @ gap+0x32C (file 0x2C0C, 40 bytes — was typed
+ * u8[36] + PAD(4); the trailing 4 zero bytes were the script's
+ * aobjEvent32End() terminator misclassified as alignment pad. Same
+ * content as sub_0x304. */
+u32 dLuigiModel_gap_0x28E0_sub_0x32C[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
-
-PAD(4);
 
 /* gap sub-block @ 0x2C34 (was gap+0x354, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x354[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x354.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x354[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x14,
 };
 
 /* gap sub-block @ 0x2C38 (was gap+0x358, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x358[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x358.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x358[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x9C,
 };
 
 /* gap sub-block @ 0x2C3C (was gap+0x35C, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x35C[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x35C.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x35C[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x74,
 };
 
 /* gap sub-block @ 0x2C40 (was gap+0x360, 4 bytes) */
@@ -436,23 +1381,27 @@ AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x360[1] = {
 };
 
 /* gap sub-block @ 0x2C44 (was gap+0x364, 16 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x364[16] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x364.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x364[4] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0xC4,
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x134,
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x15C,
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x184,
 };
 
 /* gap sub-block @ 0x2C54 (was gap+0x374, 8 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x374[8] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x374.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x374[2] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x1BC,
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x1F4,
 };
 
 /* gap sub-block @ 0x2C5C (was gap+0x37C, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x37C[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x37C.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x37C[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x28C,
 };
 
 /* gap sub-block @ 0x2C60 (was gap+0x380, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x380[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x380.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x380[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x264,
 };
 
 /* gap sub-block @ 0x2C64 (was gap+0x384, 4 bytes) */
@@ -461,90 +1410,84 @@ AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x384[1] = {
 };
 
 /* gap sub-block @ 0x2C68 (was gap+0x388, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x388[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x388.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x388[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x2DC,
 };
 
 /* gap sub-block @ 0x2C6C (was gap+0x38C, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x38C[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x38C.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x38C[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x2B4,
 };
 
 /* gap sub-block @ 0x2C70 (was gap+0x390, 4 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x390[4] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x390.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x390[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x32C,
 };
 
 /* gap sub-block @ 0x2C74 (was gap+0x394, 12 bytes) */
-u8 dLuigiModel_gap_0x28E0_sub_0x394[12] = {
-	#include <LuigiModel/gap_0x28E0_sub_0x394.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x28E0_sub_0x394[3] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x28E0_sub_0x304,
+	NULL,
+	NULL,
 };
 
 /* gap sub-block @ 0x2C80 (was gap+0x3A0, 100 bytes) */
-MObjSub *dLuigiModel_gap_0x28E0_sub_0x3A0[25] = {
+MObjSub **dLuigiModel_gap_0x28E0_sub_0x3A0[25] = {
 	NULL,
 	NULL,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC38,
+	dLuigiModel_gap_0x28E0_sub_0xC38,
 	NULL,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC40,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC48,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC50,
+	dLuigiModel_gap_0x28E0_sub_0xC40,
+	dLuigiModel_gap_0x28E0_sub_0xC48,
+	dLuigiModel_gap_0x28E0_sub_0xC50,
 	NULL,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC58,
+	dLuigiModel_gap_0x28E0_sub_0xC58,
 	NULL,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC74,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC7C,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC84,
-	NULL,
-	NULL,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC8C,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC94,
+	dLuigiModel_gap_0x28E0_sub_0xC74,
+	dLuigiModel_gap_0x28E0_sub_0xC7C,
+	dLuigiModel_gap_0x28E0_sub_0xC84,
 	NULL,
 	NULL,
+	dLuigiModel_gap_0x28E0_sub_0xC8C,
+	dLuigiModel_gap_0x28E0_sub_0xC94,
 	NULL,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xC9C,
-	(MObjSub *)dLuigiModel_gap_0x28E0_sub_0xCA4,
+	NULL,
+	NULL,
+	dLuigiModel_gap_0x28E0_sub_0xC9C,
+	dLuigiModel_gap_0x28E0_sub_0xCA4,
 	NULL,
 	NULL,
 	NULL,
 };
 
 /* u32 pointer array @ 0x2CE4 (4 entries) */
-u32 dLuigiModel_gap_0x28E0_sub_0x404[4] = {
-	(u32)&dLuigiModel_gap_0x4E8C_sub_0x1E84,
-	(u32)&dLuigiModel_gap_0x4E8C_sub_0x1E0C,
-	(u32)&dLuigiModel_gap_0x4E8C_sub_0x1E34,
-	(u32)&dLuigiModel_gap_0x4E8C_sub_0x1E5C,
+u16 * dLuigiModel_gap_0x28E0_sub_0x404[4] = {
+	(u16 *)&dLuigiModel_palette_0x6D10,
+	(u16 *)&dLuigiModel_palette_0x6C98,
+	(u16 *)&dLuigiModel_palette_0x6CC0,
+	(u16 *)&dLuigiModel_palette_0x6CE8,
 };
 
 /* u32 pointer array @ 0x2CF4 (5 entries) */
 u32 dLuigiModel_gap_0x28E0_sub_0x414[5] = {
-	(u32)((u8*)&dLuigiModel_Tex_0x73C0 + 0x610),
-	(u32)((u8*)&dLuigiModel_Tex_0x73C0 + 0x1B0),
-	(u32)((u8*)&dLuigiModel_Tex_0x73C0 + 0x3E0),
-	(u32)((u8*)&dLuigiModel_Tex_0x6D38 + 0x1B0),
-	(u32)((u8*)&dLuigiModel_Tex_0x6D38 + 0x3E0),
+	dLuigiModel_Tex_0x79D0,
+	dLuigiModel_Tex_0x7570,
+	dLuigiModel_Tex_0x77A0,
+	dLuigiModel_Tex_0x6EE8,
+	dLuigiModel_Tex_0x7118,
 };
 
-/* u32 pointer array @ 0x2D08 (2 entries) */
-u32 dLuigiModel_gap_0x28E0_sub_0x428[2] = {
-	(u32)((u8*)&dLuigiModel_Tex_0x73C0 + 0x5E8),
-	(u32)((u8*)&dLuigiModel_Tex_0x73C0 + 0x188),
-};
+/* u32 pointer array @ 0x2D08 (2 entries) — palettes for gap_0x28E0_sub_0x620. */
+u16 * dLuigiModel_gap_0x28E0_sub_0x428[2] = { dLuigiModel_palette_0x79A8, dLuigiModel_palette_0x7548 };
 
-/* u32 pointer array @ 0x2D10 (4 entries) */
-u32 dLuigiModel_gap_0x28E0_sub_0x430[4] = {
-	(u32)((u8*)&dLuigiModel_Tex_0x6D38 + 0x660),
-	(u32)((u8*)&dLuigiModel_Tex_0x6D38 + 0x5E8),
-	(u32)((u8*)&dLuigiModel_Tex_0x6D38 + 0x610),
-	(u32)((u8*)&dLuigiModel_Tex_0x6D38 + 0x638),
-};
+/* u32 pointer array @ 0x2D10 (4 entries) — palettes for an MObjSub. */
+u16 * dLuigiModel_gap_0x28E0_sub_0x430[4] = { dLuigiModel_palette_0x7398, dLuigiModel_palette_0x7320, dLuigiModel_palette_0x7348, dLuigiModel_palette_0x7370 };
 
 /* MObjSub @ 0x2D20 */
 MObjSub dLuigiModel_gap_0x28E0_sub_0x440[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0040, 0x0000, 0x0040, 0x0018,
 		1,
@@ -553,7 +1496,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x440[1] = {
 		0.0f, 1.0f,
 		(void**)dLuigiModel_gap_0x28E0_sub_0x404,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0020,
 		0x0018, 0x0040, 0x0018,
 		0.0f, 0.15199999511241913f,
@@ -574,7 +1517,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x440[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x4B8[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -583,7 +1526,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x4B8[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -604,7 +1547,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x4B8[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x530[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -613,16 +1556,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x530[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x00, 0xB5, 0x00, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -638,7 +1581,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x530[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x5A8[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -647,16 +1590,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x5A8[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x00, 0xB5, 0x00, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -672,7 +1615,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x5A8[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x620[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)dLuigiModel_gap_0x28E0_sub_0x414,
 		0x006A, 0x0017, 0x0040, 0x0020,
 		0,
@@ -681,7 +1624,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x620[1] = {
 		0.3499999940395355f, 0.30000001192092896f,
 		(void**)dLuigiModel_gap_0x28E0_sub_0x428,
 		0x3005,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0020,
 		0x0020, 0x0040, 0x0020,
 		0.3499999940395355f, 0.38999998569488525f,
@@ -702,7 +1645,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x620[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x698[1] = {
 	{
 		0x0000,
-		0x02, 0x02,
+		G_IM_FMT_CI, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x006A, 0x000B, 0x0020, 0x0018,
 		0,
@@ -711,7 +1654,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x698[1] = {
 		0.32499998807907104f, 0.3499999940395355f,
 		(void**)dLuigiModel_gap_0x28E0_sub_0x430,
 		0x0004,
-		0x02, 0x00,
+		G_IM_FMT_CI, G_IM_SIZ_4b,
 		0x0020,
 		0x0018, 0x0020, 0x0018,
 		0.32499998807907104f, 0.07880000025033951f,
@@ -732,7 +1675,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x698[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x710[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -741,16 +1684,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x710[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x00, 0xB5, 0x00, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -766,7 +1709,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x710[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x788[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -775,7 +1718,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x788[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -796,7 +1739,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x788[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x800[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -805,7 +1748,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x800[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -826,7 +1769,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x800[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x878[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -835,7 +1778,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x878[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -856,7 +1799,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x878[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x8F0[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -865,7 +1808,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x8F0[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x3200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
@@ -886,7 +1829,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x8F0[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x968[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -895,16 +1838,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x968[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x00, 0xB5, 0x00, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -920,7 +1863,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x968[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0x9E0[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -929,16 +1872,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x9E0[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x00, 0xB5, 0x00, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0xAD, 0xDE, 0xFF } },
+#else
+		{ { 0x00, 0xB5, 0x00, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -954,7 +1897,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0x9E0[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0xA58[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -963,16 +1906,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xA58[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x84, 0x00, 0xFF, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -988,7 +1931,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xA58[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0xAD0[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -997,16 +1940,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xAD0[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x84, 0x00, 0xFF, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -1022,7 +1965,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xAD0[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0xB48[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1031,16 +1974,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xB48[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x84, 0x00, 0xFF, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -1056,7 +1999,7 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xB48[1] = {
 MObjSub dLuigiModel_gap_0x28E0_sub_0xBC0[1] = {
 	{
 		0x0000,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		(void**)0x00000000,
 		0x0000, 0x0000, 0x0000, 0x0000,
 		0,
@@ -1065,16 +2008,16 @@ MObjSub dLuigiModel_gap_0x28E0_sub_0xBC0[1] = {
 		0.0f, 0.0f,
 		(void**)0x00000000,
 		0x0200,
-		0x00, 0x02,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
 		0x0000,
 		0x0000, 0x0000, 0x0000,
 		0.0f, 0.0f,
 		0.0f, 0.0f,
 		0x00022205,
-#if defined(REGION_US)
-		{ { 0x84, 0x00, 0xFF, 0xFF } },
-#elif defined(REGION_JP)
+#if defined(REGION_JP)
 		{ { 0xFF, 0x00, 0x08, 0xFF } },
+#else
+		{ { 0x84, 0x00, 0xFF, 0xFF } },
 #endif
 		0x00, 0x00, { 0x00, 0x00 },
 		{ { 0x00, 0x00, 0x00, 0xFF } },
@@ -1338,7 +2281,10 @@ Gfx dLuigiModel_Joint_0x4978_DisplayList[14] = {
 	#include <LuigiModel/Joint_0x4978.dl.inc.c>
 };
 
-/* DObjDesc: JointTree_0x49E8 @ 0x49E8 (27 entries) */
+/* DObjDesc: JointTree_0x49E8 @ 0x49E8 (26 entries, 0x478 bytes — array
+ * always terminates at the `{ 18, ... }` sentinel; the 11 u32s that
+ * formerly looked like a 27th entry are slots 0..10 of the
+ * AObjEvent32 ** dispatch immediately following). */
 DObjDesc dLuigiModel_JointTree_0x49E8[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 150.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
@@ -1375,144 +2321,347 @@ DObjDesc dLuigiModel_JointTree_0x49E8[] = {
 	{ 6, (void*)dLuigiModel_Joint_0x4978_DisplayList, { 0.0f, 0.0f, 0.0f }, { 0.12841300666332245f, 0.4220089912414551f, 0.19265300035476685f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, 30.0f, 120.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
-	{ 0, (void*)0x00000000, { 3.940015480118909e-27f, 0.0f, 3.96525941427197e-27f }, { 3.990503348425031e-27f, 4.040990831545165e-27f, 0.0f }, { 4.0914783146652984e-27f, 0.0f, 4.116724174748304e-27f } },
 };
 
-/* Raw data from file offset 0x4E8C to 0x6D38 (7852 bytes) */
-/* gap sub-block @ 0x4E8C (was gap+0x0, 56 bytes) */
-u8 dLuigiModel_gap_0x4E8C[56] = {
-	#include <LuigiModel/gap_0x4E8C.data.inc.c>
+/* AObjEvent32 ** dispatch table @ file 0x4E60 (100 bytes, 25 slots).
+ * Lives immediately after JointTree_0x49E8's 26-entry DObjDesc array
+ * (which ends at +0x478) and is referenced from LuigiMain via
+ * commonparts_container+0x18. Same shape as MarioModel's JointTree_post:
+ * 12 chain pointers at slots 2, 4, 5, 6, 8, 10, 11, 12, 15, 16, 20, 21;
+ * the rest are NULL filler. Was previously split as a bogus 27th
+ * DObjDesc entry (slots 0..10) + `u8 gap_0x4E8C[56]` (slots 11..24). */
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x378[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x37C[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x380[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x388[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3A0[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3A4[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3AC[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3B0[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3B4[];
+extern AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3B8[];
+
+AObjEvent32 **dLuigiModel_JointTree_0x49E8_post[25] = {
+	NULL, NULL,
+	dLuigiModel_gap_0x4E8C_sub_0x378,    /* +0x08, slot 2 */
+	NULL,
+	dLuigiModel_gap_0x4E8C_sub_0x37C,    /* +0x10, slot 4 */
+	dLuigiModel_gap_0x4E8C_sub_0x380,    /* +0x14, slot 5 */
+	dLuigiModel_gap_0x4E8C_sub_0x384,    /* +0x18, slot 6 */
+	NULL,
+	dLuigiModel_gap_0x4E8C_sub_0x388,    /* +0x20, slot 8 */
+	NULL,
+	dLuigiModel_gap_0x4E8C_sub_0x3A0,    /* +0x28, slot 10 */
+	dLuigiModel_gap_0x4E8C_sub_0x3A4,    /* +0x2C, slot 11 (was gap_0x4E8C+0x0) */
+	dLuigiModel_gap_0x4E8C_sub_0x3A8,    /* +0x30, slot 12 (was gap_0x4E8C+0x4) */
+	NULL, NULL,
+	dLuigiModel_gap_0x4E8C_sub_0x3AC,    /* +0x3C, slot 15 (was gap_0x4E8C+0x10) */
+	dLuigiModel_gap_0x4E8C_sub_0x3B0,    /* +0x40, slot 16 (was gap_0x4E8C+0x14) */
+	NULL, NULL, NULL,
+	dLuigiModel_gap_0x4E8C_sub_0x3B4,    /* +0x50, slot 20 (was gap_0x4E8C+0x24) */
+	dLuigiModel_gap_0x4E8C_sub_0x3B8,    /* +0x54, slot 21 (was gap_0x4E8C+0x28) */
+	NULL, NULL, NULL,
 };
 
-/* gap sub-block @ 0x4EC4 (was gap+0x38, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x38[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x38.data.inc.c>
+/* Raw data from file offset 0x4EC4 to 0x6D38 (7796 bytes — original
+ * region 0x4E8C..0x6D38 minus the 56 bytes now folded into
+ * JointTree_0x49E8_post). */
+
+/* AObjEvent32 script @ gap+0x38 (file 0x4EC4, 40 bytes — was typed
+ * u16[20] "palette". ScaZ track animation (flags=0x200). */
+u32 dLuigiModel_gap_0x4E8C_sub_0x38[10] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x4EEC (was gap+0x60, 56 bytes) */
 u32 dLuigiModel_gap_0x4E8C_sub_0x60[14] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	aobjEvent32SetExtValAfterBlock(0x019, 1),
-	    0xFFB028FF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x59595900,  /* 3823620405067776.0f */
-	aobjEvent32SetExtValAfter(0x019, 1),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
 	aobjEvent32Wait(99),
 	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4F24 (was gap+0x98, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x98[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x98.data.inc.c>
+/* AObjEvent32 script @ gap+0x98 (file 0x4F24, 40 bytes — was typed
+ * u16[20] "palette". Identical content to sub_0xC0, sub_0x180,
+ * sub_0x288, sub_0x2B0. */
+u32 dLuigiModel_gap_0x4E8C_sub_0x98[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4F4C (was gap+0xC0, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xC0[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xC0.data.inc.c>
+/* AObjEvent32 script @ gap+0xC0 (file 0x4F4C, 40 bytes — same content). */
+u32 dLuigiModel_gap_0x4E8C_sub_0xC0[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x4F74 (was gap+0xE8, 112 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xE8[112] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xE8.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0xE8[28] = {
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetValBlock(AOBJ_MATFLAG_TEXID, 0),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetVal(AOBJ_MATFLAG_TEXID, 50),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(49),
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_TEXID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_TEXID, 1),
+	    0x40800000,  /* 4.0f */
+	aobjEvent32Wait(48),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x4FE4 (was gap+0x158, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x158[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x158.data.inc.c>
+/* AObjEvent32 script @ gap+0x158 (file 0x4FE4, 40 bytes — same as sub_0x38). */
+u32 dLuigiModel_gap_0x4E8C_sub_0x158[10] = {
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 0),
+	    0x00000000,  /* 0.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x3F800000,  /* 1.0f */
+	aobjEvent32SetValAfterBlock(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40000000,  /* 2.0f */
+	aobjEvent32SetValAfter(AOBJ_MATFLAG_PALETTEID, 1),
+	    0x40400000,  /* 3.0f */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x500C (was gap+0x180, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x180[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x180.data.inc.c>
+/* AObjEvent32 script @ gap+0x180 (file 0x500C, 40 bytes — same as sub_0x98). */
+u32 dLuigiModel_gap_0x4E8C_sub_0x180[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x5034 (was gap+0x1A8, 56 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x1A8[56] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1A8.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x1A8[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x506C (was gap+0x1E0, 56 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x1E0[56] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1E0.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x1E0[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x50A4 (was gap+0x218, 56 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x218[56] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x218.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x218[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFE199FF,  /* RGBA(255, 225, 153, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x8C666600,  /* RGBA(140, 102, 102, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x50DC (was gap+0x250, 56 bytes) */
 u32 dLuigiModel_gap_0x4E8C_sub_0x250[14] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	aobjEvent32SetExtValAfterBlock(0x019, 1),
-	    0xFFB028FF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x59595900,  /* 3823620405067776.0f */
-	aobjEvent32SetExtValAfter(0x019, 1),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
 	aobjEvent32Wait(99),
 	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x5114 (was gap+0x288, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x288[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x288.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x288[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x513C (was gap+0x2B0, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x2B0[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x2B0.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x2B0[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x00B500FF,  /* RGBA(0, 181, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x00D6FFFF,  /* RGBA(0, 214, 255, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFFADDEFF,  /* RGBA(255, 173, 222, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x5164 (was gap+0x2D8, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x2D8[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x2D8.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x2D8[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x518C (was gap+0x300, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x300[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x300.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x300[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x51B4 (was gap+0x328, 40 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x328[40] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x328.data.inc.c>
+u32 dLuigiModel_gap_0x4E8C_sub_0x328[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
-/* gap sub-block @ 0x51DC (was gap+0x350, 20 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x350[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x350.data.inc.c>
-};
-
-/* gap sub-block @ 0x51F0 (was gap+0x364, 20 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x364[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x364.data.inc.c>
+/* AObjEvent32 script @ gap+0x350 (file 0x51DC, 40 bytes — was split as
+ * sub_0x350[u8 20B] + sub_0x364[u32 20B]; the splitter mistook the
+ * script's third payload word (0x182129FF) for an `aobjEvent32Cmd12`
+ * opcode and forced a symbol boundary there. Same content as sub_0x328. */
+u32 dLuigiModel_gap_0x4E8C_sub_0x350[10] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 0),
+	    0x8400FFFF,  /* RGBA(132, 0, 255, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x006000FF,  /* RGBA(0, 96, 0, 255) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0x182129FF,  /* RGBA(24, 33, 41, 255) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR, 1),
+	    0xFF0008FF,  /* RGBA(255, 0, 8, 255) */
+	aobjEvent32Wait(98),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x5204 (was gap+0x378, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x378[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x378.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x378[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x38,
 };
 
 /* gap sub-block @ 0x5208 (was gap+0x37C, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x37C[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x37C.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x37C[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0xC0,
 };
 
 /* gap sub-block @ 0x520C (was gap+0x380, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x380[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x380.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x380[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x98,
 };
 
 /* gap sub-block @ 0x5210 (was gap+0x384, 4 bytes) */
@@ -1521,18 +2670,23 @@ AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x384[1] = {
 };
 
 /* gap sub-block @ 0x5214 (was gap+0x388, 24 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x388[24] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x388.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x388[6] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0xE8,
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x158,
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x180,
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x1A8,
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x1E0,
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x218,
 };
 
 /* gap sub-block @ 0x522C (was gap+0x3A0, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x3A0[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x3A0.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3A0[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x2B0,
 };
 
 /* gap sub-block @ 0x5230 (was gap+0x3A4, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x3A4[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x3A4.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3A4[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x288,
 };
 
 /* gap sub-block @ 0x5234 (was gap+0x3A8, 4 bytes) */
@@ -1541,23 +2695,25 @@ AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3A8[1] = {
 };
 
 /* gap sub-block @ 0x5238 (was gap+0x3AC, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x3AC[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x3AC.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3AC[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x300,
 };
 
 /* gap sub-block @ 0x523C (was gap+0x3B0, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x3B0[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x3B0.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3B0[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x2D8,
 };
 
 /* gap sub-block @ 0x5240 (was gap+0x3B4, 4 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x3B4[4] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x3B4.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3B4[1] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x350,
 };
 
 /* gap sub-block @ 0x5244 (was gap+0x3B8, 12 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x3B8[12] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x3B8.data.inc.c>
+AObjEvent32 *dLuigiModel_gap_0x4E8C_sub_0x3B8[3] = {
+	(AObjEvent32 *)dLuigiModel_gap_0x4E8C_sub_0x328,
+	NULL,
+	NULL,
 };
 
 /* Vtx: gap_0x4E8C_sub_0x3C4 @ 0x5250 (23 vertices) */
@@ -1571,42 +2727,71 @@ Gfx dLuigiModel_gap_0x4E8C_sub_0x534[20] = {
 };
 
 /* Raw tail after DL @ 0x5460 (8 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x534_post[8] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x534_post.data.inc.c>
+MObjSub **dLuigiModel_gap_0x4E8C_sub_0x534_post[2] = {
+	(MObjSub **)dLuigiModel_gap_0x4E8C_sub_0x654,
+	NULL,
 };
 
-/* gap sub-block @ 0x5468 (was gap+0x5DC, 88 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x5DC[88] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x5DC.data.inc.c>
-};
-
-/* gap sub-block @ 0x54C0 (was gap+0x634, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x634[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x634.data.inc.c>
+/* MObjSub @ gap+0x5DC (file 0x5468, 120 bytes — was split as
+ * sub_0x5DC[u32 88B] + sub_0x634[u16 32B]). Same content as the
+ * three other MObjSubs in this region (sub_0x84C, sub_0xB2C,
+ * sub_0xD9C); they share the same all-zero state with primary
+ * color = 0xFFFFFFFF and the standard SYColorPack tail. */
+MObjSub dLuigiModel_gap_0x4E8C_sub_0x5DC[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
 };
 
 /* gap sub-block @ 0x54E0 (was gap+0x654, 20 bytes) */
 MObjSub *dLuigiModel_gap_0x4E8C_sub_0x654[5] = {
-	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0x5DC,
+	dLuigiModel_gap_0x4E8C_sub_0x5DC,
 	NULL,
 	NULL,
 	NULL,
 	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0x6A0,
 };
 
-/* gap sub-block @ 0x54F4 (was gap+0x668, 24 bytes) */
-u32 dLuigiModel_gap_0x4E8C_sub_0x668[6] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	    0x240C8001,
-	    0xFFB028FF,
-};
-
-/* gap sub-block @ 0x550C (was gap+0x680, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x680[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x680.data.inc.c>
+/* AObjEvent32 script @ gap+0x668 (file 0x54F4, 56 bytes — was split
+ * as sub_0x668[u32 24B] + sub_0x680[u16 32B]). */
+u32 dLuigiModel_gap_0x4E8C_sub_0x668[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x552C (was gap+0x6A0, 4 bytes) */
@@ -1625,42 +2810,68 @@ Gfx dLuigiModel_gap_0x4E8C_sub_0x7C4[16] = {
 };
 
 /* Raw tail after DL @ 0x56D0 (8 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x7C4_post[8] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x7C4_post.data.inc.c>
+MObjSub **dLuigiModel_gap_0x4E8C_sub_0x7C4_post[2] = {
+	(MObjSub **)dLuigiModel_gap_0x4E8C_sub_0x8C4,
+	NULL,
 };
 
-/* gap sub-block @ 0x56D8 (was gap+0x84C, 88 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x84C[88] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x84C.data.inc.c>
-};
-
-/* gap sub-block @ 0x5730 (was gap+0x8A4, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x8A4[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x8A4.data.inc.c>
+/* MObjSub @ gap+0x84C (file 0x56D8, 120 bytes — was split as
+ * sub_0x84C[u32 88B] + sub_0x8A4[u16 32B]). */
+MObjSub dLuigiModel_gap_0x4E8C_sub_0x84C[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
 };
 
 /* gap sub-block @ 0x5750 (was gap+0x8C4, 20 bytes) */
 MObjSub *dLuigiModel_gap_0x4E8C_sub_0x8C4[5] = {
-	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0x84C,
+	dLuigiModel_gap_0x4E8C_sub_0x84C,
 	NULL,
 	NULL,
 	NULL,
 	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0x910,
 };
 
-/* gap sub-block @ 0x5764 (was gap+0x8D8, 24 bytes) */
-u32 dLuigiModel_gap_0x4E8C_sub_0x8D8[6] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	    0x240C8001,
-	    0xFFB028FF,
-};
-
-/* gap sub-block @ 0x577C (was gap+0x8F0, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x8F0[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x8F0.data.inc.c>
+/* AObjEvent32 script @ gap+0x8D8 (file 0x5764, 56 bytes — was split
+ * as sub_0x8D8[u32 24B] + sub_0x8F0[u16 32B]). */
+u32 dLuigiModel_gap_0x4E8C_sub_0x8D8[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x579C (was gap+0x910, 4 bytes) */
@@ -1678,34 +2889,72 @@ Gfx dLuigiModel_gap_0x4E8C_sub_0xA84[20] = {
 	#include <LuigiModel/gap_0x4E8C_sub_0xA84.dl.inc.c>
 };
 
-/* Raw tail after DL @ 0x59B0 (8 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xA84_post[8] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xA84_post.data.inc.c>
+/* Raw tail after DL @ 0x59B0 (8 bytes) — chain ptr → sub_0xBA4
+ * + NULL terminator, matching the sub_0x534_post / sub_0x7C4_post /
+ * sub_0xD14_post pattern. */
+MObjSub **dLuigiModel_gap_0x4E8C_sub_0xA84_post[2] = {
+	(MObjSub **)dLuigiModel_gap_0x4E8C_sub_0xBA4,
+	NULL,
 };
 
-/* gap sub-block @ 0x59B8 (was gap+0xB2C, 120 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xB2C[120] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xB2C.data.inc.c>
+/* MObjSub @ gap+0xB2C (file 0x59B8, 120 bytes — same content as the
+ * three other MObjSubs in this region). Was typed u32[30] before. */
+MObjSub dLuigiModel_gap_0x4E8C_sub_0xB2C[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
 };
 
-/* gap sub-block @ 0x5A30 (was gap+0xBA4, 20 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xBA4[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xBA4.data.inc.c>
+/* MObjSub *[5] dispatch @ gap+0xBA4 (file 0x5A30, 20 bytes) — was
+ * typed u8[20] before. Same shape as sub_0x654 / sub_0x8C4 / sub_0xE14. */
+MObjSub *dLuigiModel_gap_0x4E8C_sub_0xBA4[5] = {
+	dLuigiModel_gap_0x4E8C_sub_0xB2C,
+	NULL,
+	NULL,
+	NULL,
+	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0xBF0,
 };
 
-/* gap sub-block @ 0x5A44 (was gap+0xBB8, 24 bytes) */
-u32 dLuigiModel_gap_0x4E8C_sub_0xBB8[6] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	    0x240C8001,
-	    0xFFB028FF,
-};
-
-/* gap sub-block @ 0x5A5C (was gap+0xBD0, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xBD0[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xBD0.data.inc.c>
+/* AObjEvent32 script @ gap+0xBB8 (file 0x5A44, 56 bytes — was split
+ * as sub_0xBB8[u32 24B] + sub_0xBD0[u8 32B]). */
+u32 dLuigiModel_gap_0x4E8C_sub_0xBB8[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x5A7C (was gap+0xBF0, 4 bytes) */
@@ -1724,42 +2973,72 @@ Gfx dLuigiModel_gap_0x4E8C_sub_0xD14[16] = {
 };
 
 /* Raw tail after DL @ 0x5C20 (8 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xD14_post[8] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xD14_post.data.inc.c>
+MObjSub **dLuigiModel_gap_0x4E8C_sub_0xD14_post[2] = {
+	(MObjSub **)dLuigiModel_gap_0x4E8C_sub_0xE14,
+	NULL,
 };
 
-/* gap sub-block @ 0x5C28 (was gap+0xD9C, 88 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xD9C[88] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xD9C.data.inc.c>
-};
-
-/* gap sub-block @ 0x5C80 (was gap+0xDF4, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xDF4[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xDF4.data.inc.c>
+/* MObjSub @ gap+0xD9C (file 0x5C28, 120 bytes — was split as
+ * sub_0xD9C[u32 88B] + sub_0xDF4[u16 32B] before retyping). The 88B
+ * head decoded as a string of `aobjEvent32End()` words because most
+ * MObjSub fields here are zero; the 32B tail held the four trailing
+ * SYColorPack values + s32 zeros. */
+MObjSub dLuigiModel_gap_0x4E8C_sub_0xD9C[1] = {
+	{
+		0x0000,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		(void**)0x00000000,
+		0x0000, 0x0000, 0x0000, 0x0000,
+		0,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		(void**)0x00000000,
+		0x3200,
+		G_IM_FMT_RGBA, G_IM_SIZ_16b,
+		0x0000,
+		0x0000, 0x0000, 0x0000,
+		0.0f, 0.0f,
+		0.0f, 0.0f,
+		0x00022205,
+		{ { 0xFF, 0xFF, 0xFF, 0xFF } },
+		0x00, 0x00, { 0x00, 0x00 },
+		{ { 0x00, 0x00, 0x00, 0xFF } },
+		{ { 0x00, 0x00, 0x00, 0x08 } },
+		{ { 0xFF, 0xFF, 0xFF, 0x00 } },
+		{ { 0x4C, 0x4C, 0x4C, 0x00 } },
+		0, 0,
+		0, 0,
+	}
 };
 
 /* gap sub-block @ 0x5CA0 (was gap+0xE14, 20 bytes) */
 MObjSub *dLuigiModel_gap_0x4E8C_sub_0xE14[5] = {
-	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0xD9C,
+	dLuigiModel_gap_0x4E8C_sub_0xD9C,
 	NULL,
 	NULL,
 	NULL,
 	(MObjSub *)dLuigiModel_gap_0x4E8C_sub_0xE60,
 };
 
-/* gap sub-block @ 0x5CB4 (was gap+0xE28, 24 bytes) */
-u32 dLuigiModel_gap_0x4E8C_sub_0xE28[6] = {
-	aobjEvent32SetExtValAfterBlock(0x019, 0),
-	    0xFFFFFFFF,  /* nanf */
-	    0xFFFFFF00,  /* nanf */
-	    0x4C4C4C00,  /* 53555200.0f */
-	    0x240C8001,
-	    0xFFB028FF,
-};
-
-/* gap sub-block @ 0x5CCC (was gap+0xE40, 32 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0xE40[32] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0xE40.data.inc.c>
+/* AObjEvent32 script @ gap+0xE28 (file 0x5CB4, 56 bytes — was split as
+ * sub_0xE28[u32 24B] + sub_0xE40[u16 32B] before retyping; the tail
+ * held the last 8 event words including aobjEvent32Wait/End). */
+u32 dLuigiModel_gap_0x4E8C_sub_0xE28[14] = {
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 0),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32SetExtValAfterBlock(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFB028FF,  /* RGBA(255, 176, 40, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x59595900,  /* RGBA(89, 89, 89, 0) */
+	aobjEvent32SetExtValAfter(AOBJ_EXTFLAG_PRIMCOLOR | AOBJ_EXTFLAG_LIGHT1COLOR | AOBJ_EXTFLAG_LIGHT2COLOR, 1),
+	    0xFFFFFFFF,  /* RGBA(255, 255, 255, 255) */
+	    0xFFFFFF00,  /* RGBA(255, 255, 255, 0) */
+	    0x4C4C4C00,  /* RGBA(76, 76, 76, 0) */
+	aobjEvent32Wait(99),
+	aobjEvent32End(),
 };
 
 /* gap sub-block @ 0x5CEC (was gap+0xE60, 4 bytes) */
@@ -1899,39 +3178,106 @@ Gfx dLuigiModel_DL_0x6B40[14] = {
 };
 
 /* gap sub-block @ 0x6BB0 (was gap+0x1D24, 232 bytes) */
-u8 dLuigiModel_gap_0x4E8C_sub_0x1D24[232] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1D24.data.inc.c>
+/* Vtx data @ 0x6BB0 (112 B / 7 vertices) */
+Vtx dLuigiModel_gap_0x4E8C_sub_0x1D24[7] = {
+	#include <LuigiModel/gap_0x4E8C_sub_0x1D24.vtx.inc.c>
 };
 
-/* palette @ retyped from u8[40] to u16[20] */
-u16 dLuigiModel_gap_0x4E8C_sub_0x1E0C[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1E0C.palette.inc.c>
+/* Gfx DL @ 0x6C20 (112 B / 14 cmds) */
+Gfx dLuigiModel_DL_0x6C20[14] = {
+	#include <LuigiModel/DL_0x6C20.dl.inc.c>
 };
 
-/* palette @ retyped from u8[40] to u16[20] */
-u16 dLuigiModel_gap_0x4E8C_sub_0x1E34[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1E34.palette.inc.c>
-};
+PAD(8);
 
 /* palette @ retyped from u8[40] to u16[20] */
-u16 dLuigiModel_gap_0x4E8C_sub_0x1E5C[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1E5C.palette.inc.c>
+u16 dLuigiModel_palette_0x6C98[16] = {
+	#include <LuigiModel/palette_0x6C98.palette.inc.c>
 };
+PAD(8);
 
 /* palette @ retyped from u8[40] to u16[20] */
-u16 dLuigiModel_gap_0x4E8C_sub_0x1E84[20] = {
-	#include <LuigiModel/gap_0x4E8C_sub_0x1E84.palette.inc.c>
+u16 dLuigiModel_palette_0x6CC0[16] = {
+	#include <LuigiModel/palette_0x6CC0.palette.inc.c>
 };
+PAD(8);
+
+/* palette @ retyped from u8[40] to u16[20] */
+u16 dLuigiModel_palette_0x6CE8[16] = {
+	#include <LuigiModel/palette_0x6CE8.palette.inc.c>
+};
+PAD(8);
+
+/* palette @ retyped from u8[40] to u16[20] */
+u16 dLuigiModel_palette_0x6D10[16] = {
+	#include <LuigiModel/palette_0x6D10.palette.inc.c>
+};
+PAD(8);
 
 /* Texture data @ 0x6D38 (1672 bytes) */
-/* @tex fmt=CI4 dim=96x33 */
-u8 dLuigiModel_Tex_0x6D38[1672] = {
+/* @tex fmt=CI4 dim=32x24 lut=dLuigiModel_palette_0x6D10 */
+u8 dLuigiModel_Tex_0x6D38[432] = {
 	#include <LuigiModel/Tex_0x6D38.tex.inc.c>
 };
 
-/* Texture data @ 0x73C0 (2072 bytes) */
-u8 dLuigiModel_Tex_0x73C0[2072] = {
+/* @tex fmt=CI4 dim=32x35 lut=dLuigiModel_palette_0x7548 */
+u8 dLuigiModel_Tex_0x6EE8[560] = {
+	#include <LuigiModel/Tex_0x6EE8.tex.inc.c>
+};
+
+/* @tex fmt=CI4 dim=32x32 lut=dLuigiModel_palette_0x79A8 */
+u8 dLuigiModel_Tex_0x7118[520] = {
+	#include <LuigiModel/Tex_0x7118.tex.inc.c>
+};
+
+u16 dLuigiModel_palette_0x7320[16] = {
+	#include <LuigiModel/palette_0x7320.palette.inc.c>
+};
+PAD(8);
+
+u16 dLuigiModel_palette_0x7348[16] = {
+	#include <LuigiModel/palette_0x7348.palette.inc.c>
+};
+PAD(8);
+
+u16 dLuigiModel_palette_0x7370[16] = {
+	#include <LuigiModel/palette_0x7370.palette.inc.c>
+};
+PAD(8);
+
+u16 dLuigiModel_palette_0x7398[16] = {
+	#include <LuigiModel/palette_0x7398.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=32x24 */
+u8 dLuigiModel_Tex_0x73C0[392] = {
 	#include <LuigiModel/Tex_0x73C0.tex.inc.c>
+};
+
+u16 dLuigiModel_palette_0x7548[16] = {
+	#include <LuigiModel/palette_0x7548.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=32x35 lut=dLuigiModel_palette_0x7548 */
+u8 dLuigiModel_Tex_0x7570[560] = {
+	#include <LuigiModel/Tex_0x7570.tex.inc.c>
+};
+
+/* @tex fmt=CI4 dim=32x32 lut=dLuigiModel_palette_0x79A8 */
+u8 dLuigiModel_Tex_0x77A0[520] = {
+	#include <LuigiModel/Tex_0x77A0.tex.inc.c>
+};
+
+u16 dLuigiModel_palette_0x79A8[16] = {
+	#include <LuigiModel/palette_0x79A8.palette.inc.c>
+};
+PAD(8);
+
+/* @tex fmt=CI4 dim=32x32 lut=dLuigiModel_palette_0x79A8 */
+u8 dLuigiModel_Tex_0x79D0[520] = {
+	#include <LuigiModel/Tex_0x79D0.tex.inc.c>
 };
 
 /* Texture data for sprite Stock */
@@ -1940,7 +3286,7 @@ u8 dLuigiModel_Tex_0x73C0[2072] = {
    the bitmap array. */
 /* Texture: Stock (8(16)x10 ci4) */
 u8 dLuigiModel_Stock_tex[88] = {
-    #include <LuigiModel/Stock.ci4.inc.c>
+	#include <LuigiModel/Stock.ci4.inc.c>
 };
 
 /* Palette: @ 0x7C30 (16 colors RGBA5551) */
@@ -1948,40 +3294,41 @@ u16 dLuigiModel_palette_0x7C30[16] = {
 	#include <LuigiModel/palette_0x7C30.palette.inc.c>
 };
 
-/* Raw data from file offset 0x7C50 to 0x7CC8 (120 bytes) */
-/* gap sub-block @ 0x7C50 (was gap+0x0, 8 bytes) */
-u8 dLuigiModel_gap_0x7C50[8] = {
-	#include <LuigiModel/gap_0x7C50.data.inc.c>
+/* "Stock LUTs" — palette frames cycled by FTSprites.stock_luts (LuigiMain).
+ * dLuigiMain_stock_luts[4] targets palette_0x7C30, gap_0x7C50_sub_0x{8,30,58}.
+ * Each frame is 16 colors RGBA5551 (32 bytes); first 3 trail an 8-byte pad,
+ * last has none. Unlike other fighters, the extractor split each remaining
+ * frame into a leading 8-byte pad cell (sub_0x{8,30}) and a 32-byte color
+ * payload cell (sub_0x{10,38}) — no .reloc references inside this region,
+ * so the split is purely cosmetic. The last frame split as 16+16 follows
+ * the same pattern. The standalone gap_0x7C50[8] is the trailing pad of
+ * palette_0x7C30. */
+u16 dLuigiModel_gap_0x7C50[4] = {
+	#include <LuigiModel/gap_0x7C50.palette.inc.c>
 };
 
-/* gap sub-block @ 0x7C58 (was gap+0x8, 8 bytes) */
-u8 dLuigiModel_gap_0x7C50_sub_0x8[8] = {
-	#include <LuigiModel/gap_0x7C50_sub_0x8.data.inc.c>
+u16 dLuigiModel_gap_0x7C50_sub_0x8[4] = {
+	#include <LuigiModel/gap_0x7C50_sub_0x8.palette.inc.c>
 };
 
-/* gap sub-block @ 0x7C60 (was gap+0x10, 32 bytes) */
-u8 dLuigiModel_gap_0x7C50_sub_0x10[32] = {
-	#include <LuigiModel/gap_0x7C50_sub_0x10.data.inc.c>
+u16 dLuigiModel_gap_0x7C50_sub_0x10[16] = {
+	#include <LuigiModel/gap_0x7C50_sub_0x10.palette.inc.c>
 };
 
-/* gap sub-block @ 0x7C80 (was gap+0x30, 8 bytes) */
-u8 dLuigiModel_gap_0x7C50_sub_0x30[8] = {
-	#include <LuigiModel/gap_0x7C50_sub_0x30.data.inc.c>
+u16 dLuigiModel_gap_0x7C50_sub_0x30[4] = {
+	#include <LuigiModel/gap_0x7C50_sub_0x30.palette.inc.c>
 };
 
-/* gap sub-block @ 0x7C88 (was gap+0x38, 32 bytes) */
-u8 dLuigiModel_gap_0x7C50_sub_0x38[32] = {
-	#include <LuigiModel/gap_0x7C50_sub_0x38.data.inc.c>
+u16 dLuigiModel_gap_0x7C50_sub_0x38[16] = {
+	#include <LuigiModel/gap_0x7C50_sub_0x38.palette.inc.c>
 };
 
-/* gap sub-block @ 0x7CA8 (was gap+0x58, 16 bytes) */
-u8 dLuigiModel_gap_0x7C50_sub_0x58[16] = {
-	#include <LuigiModel/gap_0x7C50_sub_0x58.data.inc.c>
+u16 dLuigiModel_gap_0x7C50_sub_0x58[8] = {
+	#include <LuigiModel/gap_0x7C50_sub_0x58.palette.inc.c>
 };
 
-/* gap sub-block @ 0x7CB8 (was gap+0x68, 16 bytes) */
-u8 dLuigiModel_gap_0x7C50_sub_0x68[16] = {
-	#include <LuigiModel/gap_0x7C50_sub_0x68.data.inc.c>
+u16 dLuigiModel_gap_0x7C50_sub_0x68[8] = {
+	#include <LuigiModel/gap_0x7C50_sub_0x68.palette.inc.c>
 };
 
 /* Sprite: Stock */
@@ -2020,7 +3367,7 @@ Gfx dLuigiModel_FTEmblem_dl[] = { gsSPEndDisplayList() };
 
 /* Texture: FTEmblem (27(32)x25 i4) */
 u8 dLuigiModel_FTEmblem_tex[400] = {
-    #include <LuigiModel/FTEmblem.i4.inc.c>
+	#include <LuigiModel/FTEmblem.i4.inc.c>
 };
 
 Bitmap dLuigiModel_FTEmblem_bitmaps[] = {
@@ -2047,5 +3394,3 @@ Sprite dLuigiModel_FTEmblem = {
 	(Gfx*)0x00000000,
 	0, 0,
 };
-
-PAD(4);

@@ -2,9 +2,34 @@
 /* File size: 2400 bytes (0x960) */
 
 #include "relocdata_types.h"
-#include <ft/fttypes.h>
 
-extern u32 dSamusMainMotion_0x0084[];
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dSamusModel_DL_0xE0D8[];
+extern u32 dSamusModel_FTEmblem[];
+extern u32 dSamusModel_Stock[];
+extern MObjSub **dSamusModel_data_0xE008[];
+extern u8 dSamusShieldPose_data0[];
+extern u8 dSamusShieldPose_data0_end[];
+extern u8 dSamusShieldPose_shield_anim_joint_1[];
+extern u8 dSamusShieldPose_shield_anim_joint_2[];
+extern u8 dSamusShieldPose_shield_anim_joint_3[];
+extern u8 dSamusShieldPose_shield_anim_joint_4[];
+extern u8 dSamusShieldPose_shield_anim_joint_5[];
+extern u8 dSamusShieldPose_shield_anim_joint_6[];
+extern u8 dSamusShieldPose_shield_anim_joint_7[];
+extern MObjSub *dSamusModel_Joint_0x0040_post_sub_0xC34[];
+extern MObjSub *dSamusModel_Joint_0x0040_post_sub_0xC58[];
+extern u32 dSamusModel_gap_0x0000[];
+extern AObjEvent32 **dSamusModel_gap_0x3B00[];
+extern AObjEvent32 **dSamusModel_gap_0x6FB0[];
+#include <ft/fttypes.h>
+#include <wp/wptypes.h>  // WPAttributes
+#include <gm/gmsound.h>  // nSYAudioFGM*
+#include <gm/gmdef.h>    // nGMHitElement*
+
+extern u32 dSamusMainMotion_EggLay_0x0084[];
 extern DObjDesc dSamusModel_JointTree[];
 extern DObjDesc dSamusModel_JointTree_0x69D0[];
 extern Gfx dSamusModel_Joint_0x20C8_DisplayList[];
@@ -64,25 +89,43 @@ extern WPAttributes dSamusSpecial1_ChargeShot_WeaponAttributes;
 extern DObjDesc dSamusSpecial2_GrappleBeamDObjDesc[];
 
 /* Pre-attributes data (388 words, 0x0610 bytes) */
-/* @ 0x0000, 64 bytes: FTAttributes.file_handles target (was dSamusMain_pre+0x0) */
-u32 dSamusMain_file_handles[16] = {
+/* @ 0x0000, 12 bytes: 3 cross-file handle pointers (chain-rewritten). */
+void *dSamusMain_file_handles[3] = {
 
-	(u32)&dSamusMainMotion_0x0084, /* extern -> 0x0084 */
-	(u32)&dSamusSpecial2_GrappleBeamDObjDesc, /* extern -> 0x0380 */
-	(u32)&dSamusSpecial1_ChargeShot_WeaponAttributes, /* extern -> 0x0000 */
-	(u32)((u8*)dSamusModel_Tex_0xD618 + 0xAC0), /* extern -> 0xE0D8 */
-	(u32)((u8*)dSamusModel_Tex_0xD618 + 0x9F0), /* extern -> 0xE008 */
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x00000000,
-	0x004B0000,
-	0xFFB5004B,
-	0x00A05A40,
-	0x10424400,
-	0x0140E124,
-	0x02800000,
+	(void *)&dSamusMainMotion_EggLay_0x0084, /* extern -> 0x0084 */
+	(void *)&dSamusSpecial2_GrappleBeamDObjDesc, /* extern -> 0x0380 */
+	(void *)&dSamusSpecial1_ChargeShot_WeaponAttributes, /* extern -> 0x0000 */
+};
+
+/* @ 0x000C, 52 bytes: WPAttributes for Samus Bomb.
+ * Referenced from wp/wpsamus/wpsamusbomb.c via llSamusMainBombWeaponAttributes (0x0C). */
+WPAttributes dSamusMain_BombWeaponAttributes = {
+	(void *)dSamusModel_DL_0xE0D8,        /* data */
+	(MObjSub ***)dSamusModel_data_0xE008, /* p_mobjsubs */
+	NULL,                                 /* anim_joints */
+	NULL,                                 /* p_matanim_joints */
+	{ { 0, 0, 0 }, { 0, 0, 0 } },         /* attack_offsets */
+	75, 0, -75, 75,                       /* map_coll top/center/bottom/width */
+	160,                  /* size             : 16 */
+	361,                  /* angle            : 10 */
+	65,                   /* knockback_scale  : 10 */
+	9,                    /* damage           :  8 */
+	nGMHitElementFire,    /* element          :  4 */
+	0,                    /* knockback_weight : 10 */
+	1,                    /* shield_damage    :  8 */
+	1,                    /* attack_count     :  2 */
+	0,                    /* can_setoff       :  1 */
+	nSYAudioFGMBurnS,     /* sfx              : 10 */
+	1,                    /* priority         :  3 */
+	0,                    /* can_rehit_item   :  1 */
+	0,                    /* can_rehit_fighter:  1 */
+	1,                    /* can_hop          :  1 */
+	0,                    /* can_reflect      :  1 */
+	0,                    /* can_absorb       :  1 */
+	1,                    /* can_shield       :  1 */
+	0,                    /* unused_0x2F_b6   :  1 */
+	0,                    /* unused_0x2F_b7   :  1 */
+	10,                   /* knockback_base   : 10 */
 };
 
 /* @ 0x0040, 8 bytes: FTAttributes.animlock target (was dSamusMain_pre+0x40) */
@@ -116,7 +159,7 @@ FTHiddenPart dSamusMain_hiddenparts[13] = {
 
 /* @ 0x0120, 120 bytes: FTAttributes.sub_0x120 target (was dSamusMain_pre+0x120) */
 FTModelPart dSamusMain_modelparts_desc_0x120[6] = {
-	{ (Gfx*)&dSamusModel_Joint_0x20C8_DisplayList, (MObjSub**)0x004A031D, (AObjEvent32**)&dSamusModel_gap_0x3B24_sub_0x488, NULL, 0x00 },
+	{ (Gfx*)&dSamusModel_Joint_0x20C8_DisplayList, (MObjSub**)dSamusModel_Joint_0x0040_post_sub_0xC34, (AObjEvent32**)&dSamusModel_gap_0x3B24_sub_0x488, NULL, 0x00 },
 	{ (Gfx*)&dSamusModel_Joint_0x5960_DisplayList, (MObjSub**)&dSamusModel_gap_0x3B24_sub_0x1150, (AObjEvent32**)&dSamusModel_gap_0x6FD4_sub_0x488, NULL, 0x00 },
 	{ (Gfx*)&dSamusModel_gap_0x6FD4_sub_0x1184, (MObjSub**)&dSamusModel_gap_0x6FD4_sub_0xE4C, (AObjEvent32**)&dSamusModel_gap_0x6FD4_sub_0x13F0, NULL, 0x00 },
 	{ (Gfx*)&dSamusModel_gap_0x6FD4_sub_0x1184, (MObjSub**)&dSamusModel_gap_0x6FD4_sub_0xE4C, (AObjEvent32**)&dSamusModel_gap_0x6FD4_sub_0x13F0, NULL, 0x00 },
@@ -126,7 +169,7 @@ FTModelPart dSamusMain_modelparts_desc_0x120[6] = {
 
 /* @ 0x0198, 80 bytes: FTAttributes.sub_0x198 target (was dSamusMain_pre+0x198) */
 FTModelPart dSamusMain_modelparts_desc_0x198[4] = {
-	{ (Gfx*)&dSamusModel_Joint_0x2608_DisplayList, (MObjSub**)0x00680326, (AObjEvent32**)&dSamusModel_gap_0x3B24_sub_0x4A0, NULL, 0x00 },
+	{ (Gfx*)&dSamusModel_Joint_0x2608_DisplayList, (MObjSub**)dSamusModel_Joint_0x0040_post_sub_0xC58, (AObjEvent32**)&dSamusModel_gap_0x3B24_sub_0x4A0, NULL, 0x00 },
 	{ (Gfx*)&dSamusModel_Joint_0x5E00_DisplayList, (MObjSub**)&dSamusModel_gap_0x3B24_sub_0x1174, (AObjEvent32**)&dSamusModel_gap_0x6FD4_sub_0x4A0, NULL, 0x00 },
 	{ (Gfx*)&dSamusModel_gap_0x6FD4_sub_0x79C, (MObjSub**)&dSamusModel_gap_0x6FD4_sub_0x5FC, (AObjEvent32**)&dSamusModel_gap_0x6FD4_sub_0x9B0, NULL, 0x00 },
 	{ (Gfx*)&dSamusModel_gap_0x6FD4_sub_0xBEC, (MObjSub**)&dSamusModel_gap_0x6FD4_sub_0xADC, (AObjEvent32**)&dSamusModel_gap_0x6FD4_sub_0xDB0, NULL, 0x00 },
@@ -165,8 +208,8 @@ FTModelPartDesc *dSamusMain_modelparts_container[33] = {
 /* @ 0x030C, 32 bytes: FTAttributes.commonparts_container target (was dSamusMain_pre+0x30C) */
 FTCommonPartContainer dSamusMain_commonparts_container = {
 	{
-		{ (DObjDesc*)&dSamusModel_JointTree, (MObjSub***)0x00C50000, (AObjEvent32***)((u8*)dSamusModel_JointTree + 0x5E0), 0x00 },
-		{ (DObjDesc*)&dSamusModel_JointTree_0x69D0, (MObjSub***)&dSamusModel_gap_0x3B24_sub_0x4DC, (AObjEvent32***)((u8*)dSamusModel_JointTree_0x69D0 + 0x5E0), 0x00 },
+		{ (DObjDesc*)&dSamusModel_JointTree, (MObjSub***)dSamusModel_gap_0x0000, (AObjEvent32***)dSamusModel_gap_0x3B00, 0x00 },
+		{ (DObjDesc*)&dSamusModel_JointTree_0x69D0, (MObjSub***)&dSamusModel_gap_0x3B24_sub_0x4DC, (AObjEvent32***)dSamusModel_gap_0x6FB0, 0x00 },
 	},
 };
 
@@ -239,9 +282,9 @@ int *dSamusMain_stock_luts[5] = {
 
 /* @ 0x04F0, 12 bytes: FTAttributes.sprites target (was dSamusMain_pre+0x4F0) */
 FTSprites dSamusMain_sprites = {
-	(Sprite*)((u8*)dSamusModel_gap_0xE240_sub_0x80 + 0x30), /* stock_sprite */
+	(Sprite*)dSamusModel_Stock, /* stock_sprite */
 	(int**)dSamusMain_stock_luts, /* stock_luts */
-	(Sprite*)((u8*)dSamusModel_gap_0xE240_sub_0x80 + 0x248), /* emblem */
+	(Sprite*)dSamusModel_FTEmblem, /* emblem */
 };
 
 /* @ 0x04FC, 264 bytes: FTAttributes.sub_0x4FC target (was dSamusMain_pre+0x4FC) */
@@ -385,8 +428,8 @@ FTAttributes dSamusMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dSamusMain_hiddenparts, /* hiddenparts */
 	&dSamusMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dSamusShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dSamusShieldPose_data0_end, (void *)&dSamusShieldPose_shield_anim_joint_1, (void *)&dSamusShieldPose_shield_anim_joint_2, (void *)&dSamusShieldPose_shield_anim_joint_3, (void *)&dSamusShieldPose_shield_anim_joint_4, (void *)&dSamusShieldPose_shield_anim_joint_5, (void *)&dSamusShieldPose_shield_anim_joint_6, (void *)&dSamusShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	31, /* joint_rfoot_id */
 	176.271f, /* joint_rfoot_rotate */
 	26, /* joint_lfoot_id */

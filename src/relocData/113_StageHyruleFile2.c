@@ -6,6 +6,104 @@
 
 #include "relocdata_types.h"
 
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern Gfx dStageHyruleFile2_DL_0x3AA0[];
+extern Gfx dStageHyruleFile2_DL_0x5070[];
+extern Gfx dStageHyruleFile2_DL_0x658[];
+extern u16 dStageHyruleFile2_Lut_0x0008_palette[];
+extern u16 dStageHyruleFile2_Lut_0x0838_palette[];
+extern u16 dStageHyruleFile2_Lut_0x0C68_palette[];
+extern u16 dStageHyruleFile2_Lut_0x0E98_palette[];
+extern u16 dStageHyruleFile2_Lut_0x16C8_palette[];
+extern u16 dStageHyruleFile2_Lut_0x1AF8_palette[];
+extern u16 dStageHyruleFile2_Lut_0x1D28_palette[];
+extern u16 dStageHyruleFile2_Lut_0x2558_palette[];
+extern u16 dStageHyruleFile2_Lut_0x2788_palette[];
+extern u16 dStageHyruleFile2_Lut_0x2838_palette[];
+extern u16 dStageHyruleFile2_Lut_0x2A68_palette[];
+extern u16 dStageHyruleFile2_Lut_0x2C98_palette[];
+extern u16 dStageHyruleFile2_Lut_0x2EC8_palette[];
+extern u8 dStageHyruleFile2_Tex_0x0030[];
+extern u8 dStageHyruleFile2_Tex_0x0860[];
+extern u8 dStageHyruleFile2_Tex_0x0C90[];
+extern u8 dStageHyruleFile2_Tex_0x0EC0[];
+extern u8 dStageHyruleFile2_Tex_0x16F0[];
+extern u8 dStageHyruleFile2_Tex_0x1B20[];
+extern u8 dStageHyruleFile2_Tex_0x1D50[];
+extern u8 dStageHyruleFile2_Tex_0x2580[];
+extern u8 dStageHyruleFile2_Tex_0x27B0[];
+extern u8 dStageHyruleFile2_Tex_0x2860[];
+extern u8 dStageHyruleFile2_Tex_0x2A90[];
+extern u8 dStageHyruleFile2_Tex_0x2CC0[];
+extern u8 dStageHyruleFile2_Tex_0x2EF0[];
+extern Vtx dStageHyruleFile2_Vtx_0x148[];
+extern Vtx dStageHyruleFile2_Vtx_0x188[];
+extern Vtx dStageHyruleFile2_Vtx_0x1C8[];
+extern Vtx dStageHyruleFile2_Vtx_0x208[];
+extern Vtx dStageHyruleFile2_Vtx_0x288[];
+extern Vtx dStageHyruleFile2_Vtx_0x308[];
+extern Vtx dStageHyruleFile2_Vtx_0x30F0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3150_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3190_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3210_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3270_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x32B0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x32F0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3370_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x33D0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3450_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x348[];
+extern Vtx dStageHyruleFile2_Vtx_0x34D0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3510_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3550_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x35D0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3610_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3650_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x36B0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x36F0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3720_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3760_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x37A0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3820_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3860_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x388[];
+extern Vtx dStageHyruleFile2_Vtx_0x38E0_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3920_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3960_Vtx[];
+extern Vtx dStageHyruleFile2_Vtx_0x3C8[];
+extern Vtx dStageHyruleFile2_Vtx_0x408[];
+extern Vtx dStageHyruleFile2_Vtx_0x488[];
+extern Vtx dStageHyruleFile2_Vtx_0x508[];
+extern Vtx dStageHyruleFile2_Vtx_0x568[];
+extern Vtx dStageHyruleFile2_Vtx_0x598[];
+extern Vtx dStageHyruleFile2_Vtx_0x5D8[];
+extern Vtx dStageHyruleFile2_Vtx_0x618[];
+extern Vtx dStageHyruleFile2_Vtx_0x68[];
+extern Vtx dStageHyruleFile2_Vtx_0x8[];
+extern Vtx dStageHyruleFile2_Vtx_0xC8[];
+extern Vtx dStageHyruleFile2_gap_0x3990[];
+extern Vtx dStageHyruleFile2_gap_0x3990_sub_0x40[];
+extern Vtx dStageHyruleFile2_gap_0x3990_sub_0x80[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x10C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x14C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x1AC[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x22C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x2EC[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x32C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x3AC[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x3EC[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x41C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x45C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x4BC[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x63C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x83C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x87C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x8C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x90C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0x93C[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0xC[];
+extern Vtx dStageHyruleFile2_gap_0x4664_sub_0xCC[];
 PAD(8);
 
 /* Palette: Lut_0x0008 @ 0x8 (16 colors RGBA5551) */
@@ -16,7 +114,7 @@ u16 dStageHyruleFile2_Lut_0x0008_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x0030 (2056 bytes) */
-/* @tex fmt=CI4 dim=64x576 lut=dStageHyruleFile2_Lut_0x0008_palette */
+/* @tex fmt=CI4 dim=64x64 lut=dStageHyruleFile2_Lut_0x0008_palette */
 u8 dStageHyruleFile2_Tex_0x0030[2048] = {
 	#include <StageHyruleFile2/Tex_0x0030.tex.inc.c>
 };
@@ -31,7 +129,7 @@ u16 dStageHyruleFile2_Lut_0x0838_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x0860 (1032 bytes) */
-/* @tex fmt=CI4 dim=192x32 lut=dStageHyruleFile2_Lut_0x0838_palette */
+/* @tex fmt=CI4 dim=64x32 lut=dStageHyruleFile2_Lut_0x0838_palette */
 u8 dStageHyruleFile2_Tex_0x0860[1024] = {
 	#include <StageHyruleFile2/Tex_0x0860.tex.inc.c>
 };
@@ -46,7 +144,7 @@ u16 dStageHyruleFile2_Lut_0x0C68_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x0C90 (520 bytes) */
-/* @tex fmt=CI4 dim=128x32 lut=dStageHyruleFile2_Lut_0x0C68_palette */
+/* @tex fmt=CI4 dim=32x32 lut=dStageHyruleFile2_Lut_0x0C68_palette */
 u8 dStageHyruleFile2_Tex_0x0C90[512] = {
 	#include <StageHyruleFile2/Tex_0x0C90.tex.inc.c>
 };
@@ -61,7 +159,7 @@ u16 dStageHyruleFile2_Lut_0x0E98_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x0EC0 (2056 bytes) */
-/* @tex fmt=CI4 dim=512x64 lut=dStageHyruleFile2_Lut_0x0E98_palette */
+/* @tex fmt=CI4 dim=64x64 lut=dStageHyruleFile2_Lut_0x0E98_palette */
 u8 dStageHyruleFile2_Tex_0x0EC0[2048] = {
 	#include <StageHyruleFile2/Tex_0x0EC0.tex.inc.c>
 };
@@ -91,7 +189,7 @@ u16 dStageHyruleFile2_Lut_0x1AF8_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x1B20 (520 bytes) */
-/* @tex fmt=CI4 dim=224x224 lut=dStageHyruleFile2_Lut_0x1AF8_palette */
+/* @tex fmt=CI4 dim=32x32 lut=dStageHyruleFile2_Lut_0x1AF8_palette */
 u8 dStageHyruleFile2_Tex_0x1B20[512] = {
 	#include <StageHyruleFile2/Tex_0x1B20.tex.inc.c>
 };
@@ -106,7 +204,7 @@ u16 dStageHyruleFile2_Lut_0x1D28_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x1D50 (2056 bytes) */
-/* @tex fmt=CI4 dim=128x512 lut=dStageHyruleFile2_Lut_0x1D28_palette */
+/* @tex fmt=CI4 dim=64x64 lut=dStageHyruleFile2_Lut_0x1D28_palette */
 u8 dStageHyruleFile2_Tex_0x1D50[2048] = {
 	#include <StageHyruleFile2/Tex_0x1D50.tex.inc.c>
 };
@@ -136,6 +234,7 @@ u16 dStageHyruleFile2_Lut_0x2788_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x27B0 (136 bytes) */
+/* @tex fmt=CI4 dim=16x16 lut=dStageHyruleFile2_Lut_0x2788_palette */
 u8 dStageHyruleFile2_Tex_0x27B0[128] = {
 	#include <StageHyruleFile2/Tex_0x27B0.tex.inc.c>
 };
@@ -150,7 +249,7 @@ u16 dStageHyruleFile2_Lut_0x2838_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x2860 (520 bytes) */
-/* @tex fmt=CI4 dim=64x96 lut=dStageHyruleFile2_Lut_0x2838_palette */
+/* @tex fmt=CI4 dim=32x32 lut=dStageHyruleFile2_Lut_0x2838_palette */
 u8 dStageHyruleFile2_Tex_0x2860[512] = {
 	#include <StageHyruleFile2/Tex_0x2860.tex.inc.c>
 };
@@ -165,7 +264,7 @@ u16 dStageHyruleFile2_Lut_0x2A68_palette[16] = {
 PAD(8);
 
 /* Texture data @ 0x2A90 (520 bytes) */
-/* @tex fmt=CI4 dim=32x96 lut=dStageHyruleFile2_Lut_0x2A68_palette */
+/* @tex fmt=CI4 dim=32x32 lut=dStageHyruleFile2_Lut_0x2A68_palette */
 u8 dStageHyruleFile2_Tex_0x2A90[512] = {
 	#include <StageHyruleFile2/Tex_0x2A90.tex.inc.c>
 };
@@ -384,8 +483,10 @@ DObjDLLink dStageHyruleFile2_DLLink_0x4560[] = {
 };
 
 /* gap sub-block @ 0x4570 (was gap+0xBE0, 24 bytes) */
-u8 dStageHyruleFile2_gap_0x3990_sub_0xBE0[24] = {
-	#include <StageHyruleFile2/gap_0x3990_sub_0xBE0.data.inc.c>
+DObjDLLink dStageHyruleFile2_gap_0x3990_sub_0xBE0[3] = {
+	{ 0, dStageHyruleFile2_DL_0x4180 },
+	{ 1, dStageHyruleFile2_DL_0x44C8 },
+	{ 4, NULL },
 };
 
 /* DObjDesc: Layer0DObj @ 0x4588 (5 entries) */
@@ -393,15 +494,12 @@ DObjDesc dStageHyruleFile2_Layer0DObj[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)dStageHyruleFile2_DLLink_0x4550, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 2, (void*)dStageHyruleFile2_DLLink_0x4560, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)(dStageHyruleFile2_gap_0x3990_sub_0xBE0), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_gap_0x3990_sub_0xBE0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
 /* Raw data from file offset 0x4664 to 0x5700 (4252 bytes) */
-/* gap sub-block @ 0x4664 (was gap+0x0, 12 bytes) */
-u8 dStageHyruleFile2_gap_0x4664[12] = {
-	#include <StageHyruleFile2/gap_0x4664.data.inc.c>
-};
+PAD(12);
 
 /* gap sub-block @ 0x4670 (was gap+0xC, 128 bytes) */
 Vtx dStageHyruleFile2_gap_0x4664_sub_0xC[8] = {
@@ -516,57 +614,203 @@ Gfx dStageHyruleFile2_DL_0x55C0[40] = {
 /* DObjDesc: Layer1DObj @ 0x5700 (5 entries) */
 DObjDesc dStageHyruleFile2_Layer1DObj[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_gap_0x4664 + 0x9BC), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0x5020, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 1, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 2, (void*)((u8*)dStageHyruleFile2_gap_0x4664 + 0xF5C), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 2, (void*)dStageHyruleFile2_DL_0x55C0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
 
 /* Raw data from file offset 0x57DC to 0x599C (448 bytes) */
-/* gap sub-block @ 0x57DC (was gap+0x0, 144 bytes) */
-u8 dStageHyruleFile2_gap_0x57DC[144] = {
-	#include <StageHyruleFile2/gap_0x57DC.data.inc.c>
+/* MPVertexData[24] @ 0x57DC — vertex positions (MPGeometryData.vertex_data) */
+MPVertexData dStageHyruleFile2_gap_0x57DC[24] = {
+	{ {    442,   2851 }, 0x4000 },
+	{ {    852,   2851 }, 0x4000 },
+	{ {   1105,   2851 }, 0x0000 },
+	{ {   -215,   3768 }, 0x4000 },
+	{ {    195,   3768 }, 0x4000 },
+	{ {    448,   3768 }, 0x0000 },
+	{ {   3772,    878 }, 0x0000 },
+	{ {   4005,    848 }, 0x0000 },
+	{ {   3338,   1908 }, 0x0000 },
+	{ {   3747,   1908 }, 0x0000 },
+	{ {   3893,    848 }, 0x0000 },
+	{ {   3540,    848 }, 0x0000 },
+	{ {   3195,    848 }, 0x0000 },
+	{ {   -218,   1939 }, 0x4000 },
+	{ {    191,   1939 }, 0x4000 },
+	{ {    444,   1939 }, 0x0000 },
+	{ {   4602,  -6590 }, 0x0000 },
+	{ {   4601,      8 }, 0x8000 },
+	{ {   1785,      9 }, 0x0000 },
+	{ {   1785,   1022 }, 0x0000 },
+	{ {  -2676,   1022 }, 0x0000 },
+	{ {  -2676,    623 }, 0x8000 },
+	{ {  -4462,    191 }, 0x0000 },
+	{ {  -4459,  -6598 }, 0x0000 },
 };
 
-/* gap sub-block @ 0x586C (was gap+0x90, 68 bytes) */
-u8 dStageHyruleFile2_gap_0x57DC_sub_0x90[68] = {
-	#include <StageHyruleFile2/gap_0x57DC_sub_0x90.data.inc.c>
+/* MPVertexArray (34 IDs) @ 0x586C — vertex_id table (MPGeometryData.vertex_id) */
+u16 dStageHyruleFile2_gap_0x57DC_sub_0x90[34] = {
+	  3,   4,   5,   0,   1,   2,  13,  14,  15,   8,   9,  19,  20,  21,  22,  17,
+	 18,   6,   7,  10,  11,  12,  16,  17,   9,  10,  18,  19,  22,  23,  20,  21,
+	 12,   8,
 };
 
-/* gap sub-block @ 0x58B0 (was gap+0xD4, 60 bytes) */
-u8 dStageHyruleFile2_gap_0x57DC_sub_0xD4[60] = {
-	#include <StageHyruleFile2/gap_0x57DC_sub_0xD4.data.inc.c>
+/* MPVertexLinks[15] @ 0x58B0 — line vertex pairs (MPGeometryData.vertex_links) */
+MPVertexLinks dStageHyruleFile2_gap_0x57DC_sub_0xD4[15] = {
+	{   0, 3 }, {   3, 3 }, {   6, 3 }, {   9, 2 }, {  11, 2 }, {  13, 2 },
+	{  15, 2 }, {  17, 2 }, {  19, 3 }, {  22, 2 }, {  24, 2 }, {  26, 2 },
+	{  28, 2 }, {  30, 2 }, {  32, 2 },
 };
 
-/* gap sub-block @ 0x58EC (was gap+0x110, 20 bytes) */
-u8 dStageHyruleFile2_gap_0x57DC_sub_0x110[20] = {
-	#include <StageHyruleFile2/gap_0x57DC_sub_0x110.data.inc.c>
+/* MPLineInfo[1] @ 0x58EC — yakumono line groups (MPGeometryData.line_info) */
+MPLineInfo dStageHyruleFile2_gap_0x57DC_sub_0x110[1] = {
+	{ 1, { {  0,   7}, {  7,   2}, {  9,   3}, { 12,   3} } },
 };
 
-/* gap sub-block @ 0x5900 (was gap+0x124, 156 bytes) */
-u8 dStageHyruleFile2_gap_0x57DC_sub_0x124[156] = {
-	#include <StageHyruleFile2/gap_0x57DC_sub_0x124.data.inc.c>
+/* MPMapObjData[26] @ 0x5900 — map objects (MPGeometryData.mapobjs) */
+MPMapObjData dStageHyruleFile2_gap_0x57DC_sub_0x124[26] = {
+	{  37, {   595,  1040 } },
+	{  33, { -1495,  1040 } },
+	{  24, { -2399,  1042 } },
+	{  25, { -1109,  1042 } },
+	{  26, {   239,  1042 } },
+	{  27, {  1500,  1042 } },
+	{  28, {   124,  1947 } },
+	{  29, {   787,  2861 } },
+	{  30, {   128,  3776 } },
+	{  31, {  3554,  1916 } },
+	{   4, {     0,  6636 } },
+	{   4, {    90,  2735 } },
+	{   4, {  3540,  6634 } },
+	{   4, { -3244,  1100 } },
+	{   4, {  -750,  6639 } },
+	{   4, {  3540,   561 } },
+	{  13, {  2676,    17 } },
+	{  13, {  -451,  1037 } },
+	{  13, {   730,  2867 } },
+	{  13, { -3499,   437 } },
+	{  21, {  1499,  1042 } },
+	{   0, { -2400,  1042 } },
+	{   1, { -1110,  1042 } },
+	{   2, {   240,  1039 } },
+	{   3, {  1500,  1042 } },
+	{  32, {     0,  4800 } },
 };
 
-/* Raw data from file offset 0x599C to 0x66A8 (3340 bytes) */
-u8 dStageHyruleFile2_MPGeometryData_0x599C[3340] = {
-	#include <StageHyruleFile2/MPGeometryData_0x599C.data.inc.c>
+/* MPGeometryData @ 0x599C (28 bytes) */
+MPGeometryData dStageHyruleFile2_MPGeometryData_0x599C = {
+	1,
+	(MPVertexPosContainer*)dStageHyruleFile2_gap_0x57DC,
+	(MPVertexArray*)dStageHyruleFile2_gap_0x57DC_sub_0x90,
+	dStageHyruleFile2_gap_0x57DC_sub_0xD4,
+	dStageHyruleFile2_gap_0x57DC_sub_0x110,
+	26,
+	(MPMapObjContainer*)dStageHyruleFile2_gap_0x57DC_sub_0x124,
+};
+
+/* Trailing data after MPGeometryData @ 0x59B8 (3312 bytes) — split into
+ * a 1384-byte front blob (still opaque), four small 48/64-byte sub-blobs
+ * (DL fragments / state-set tables) and nine Gfx display lists. The
+ * Layer3DObj entries chain-point to the start of each Gfx DL. */
+PAD(8);
+/* 15 Vtx arrays consumed by gsSPVertex in the DL_0x* display lists below. */
+Vtx dStageHyruleFile2_Vtx_0x8[6] = {
+	#include <StageHyruleFile2/Vtx_0x8.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x68[6] = {
+	#include <StageHyruleFile2/Vtx_0x68.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0xC8[8] = {
+	#include <StageHyruleFile2/Vtx_0xC8.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x148[4] = {
+	#include <StageHyruleFile2/Vtx_0x148.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x188[4] = {
+	#include <StageHyruleFile2/Vtx_0x188.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x1C8[4] = {
+	#include <StageHyruleFile2/Vtx_0x1C8.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x208[8] = {
+	#include <StageHyruleFile2/Vtx_0x208.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x288[8] = {
+	#include <StageHyruleFile2/Vtx_0x288.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x308[4] = {
+	#include <StageHyruleFile2/Vtx_0x308.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x348[4] = {
+	#include <StageHyruleFile2/Vtx_0x348.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x388[4] = {
+	#include <StageHyruleFile2/Vtx_0x388.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x3C8[4] = {
+	#include <StageHyruleFile2/Vtx_0x3C8.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x408[8] = {
+	#include <StageHyruleFile2/Vtx_0x408.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x488[8] = {
+	#include <StageHyruleFile2/Vtx_0x488.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x508[6] = {
+	#include <StageHyruleFile2/Vtx_0x508.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x568[3] = {
+	#include <StageHyruleFile2/Vtx_0x568.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x598[4] = {
+	#include <StageHyruleFile2/Vtx_0x598.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x5D8[4] = {
+	#include <StageHyruleFile2/Vtx_0x5D8.vtx.inc.c>
+};
+Vtx dStageHyruleFile2_Vtx_0x618[4] = {
+	#include <StageHyruleFile2/Vtx_0x618.vtx.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0x658[60] = {
+	#include <StageHyruleFile2/DL_0x658.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0x838[61] = {
+	#include <StageHyruleFile2/DL_0x838.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xA20[20] = {
+	#include <StageHyruleFile2/DL_0xA20.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xAC0[9] = {
+	#include <StageHyruleFile2/DL_0xAC0.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xB08[17] = {
+	#include <StageHyruleFile2/DL_0xB08.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xB90[15] = {
+	#include <StageHyruleFile2/DL_0xB90.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xC08[15] = {
+	#include <StageHyruleFile2/DL_0xC08.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xC80[4] = {
+	#include <StageHyruleFile2/DL_0xC80.dl.inc.c>
+};
+Gfx dStageHyruleFile2_DL_0xCA0[10] = {
+	#include <StageHyruleFile2/DL_0xCA0.dl.inc.c>
 };
 
 /* DObjDesc: Layer3DObj @ 0x66A8 (11 entries) */
 DObjDesc dStageHyruleFile2_Layer3DObj[] = {
 	{ 0, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0x674), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0x854), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xA3C), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xADC), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xB24), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xBAC), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xC24), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xC9C), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
-	{ 1, (void*)((u8*)dStageHyruleFile2_MPGeometryData_0x599C + 0xCBC), { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0x658, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0x838, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xA20, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xAC0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xB08, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xB90, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xC08, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xC80, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
+	{ 1, (void*)dStageHyruleFile2_DL_0xCA0, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
-
-PAD(4);
-

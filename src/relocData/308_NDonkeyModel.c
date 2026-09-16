@@ -8,6 +8,32 @@
 
 /* Vtx: JointVerts @ 0x0 (0 vertices — elided) */
 
+
+/* Forward decls auto-added/hoisted by hoistExterns.py */
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern u8 dNCommonTexture_Tex[];
+extern u16 dNCommonTexture_palette[];
+extern Vtx dNDonkeyModel_Vtx_0x0180_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0370_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0550_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0580_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0700_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0880_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0A00_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0BE0_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0D80_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x0F00_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1080_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1200_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1380_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1540_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1720_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1780_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1900_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1AC0_Vtx[];
+extern Vtx dNDonkeyModel_Vtx_0x1CC0_Vtx[];
+extern Vtx dNDonkeyModel_gap_0x0000[];
 /* Placeholder wrapper: the description slot collapsed to
  * zero vertices because an extras block starts at the
  * same offset. No C declaration is emitted so IDO CFE
@@ -219,5 +245,3 @@ DObjDesc dNDonkeyModel_JointTree[] = {
 	{ 1, (void*)0x00000000, { 6.000000212225132e-06f, -387.7086181640625f, -1.839005947113037f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f } },
 	{ 18, (void*)0x00000000, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } },
 };
-
-PAD(4);

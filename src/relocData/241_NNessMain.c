@@ -2,18 +2,30 @@
 /* File size: 1600 bytes (0x640) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+extern u8 dNessShieldPose_data0[];
+extern u8 dNessShieldPose_data0_end[];
+extern u8 dNessShieldPose_shield_anim_joint_1[];
+extern u8 dNessShieldPose_shield_anim_joint_2[];
+extern u8 dNessShieldPose_shield_anim_joint_3[];
+extern u8 dNessShieldPose_shield_anim_joint_4[];
+extern u8 dNessShieldPose_shield_anim_joint_5[];
+extern u8 dNessShieldPose_shield_anim_joint_6[];
+extern u8 dNessShieldPose_shield_anim_joint_7[];
+extern u32 dMasterHandIcon_FTEmblem[];
 #include <ft/fttypes.h>
 
 extern DObjDesc dNNessModel_JointTree[];
-extern u8 dNNessModel_gap_0x3210_sub_0x2B0[];
+extern u8 dNNessModel_DL_0x34C0[];
 extern u8 dNNessModel_gap_0x3210_sub_0x30[];
-extern u32 dNessMainMotion_0x0024[];
+extern u32 dNessMainMotion_EggLay_0x0024[];
 
 /* Pre-attributes data (188 words, 0x02F0 bytes) */
 /* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNNessMain_pre+0x0) */
-u32 dNNessMain_file_handles[1] = {
+u32 *dNNessMain_file_handles[1] = {
 
-	(u32)&dNessMainMotion_0x0024, /* extern -> 0x0024 */
+	(u32 *)&dNessMainMotion_EggLay_0x0024, /* extern -> 0x0024 */
 };
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNNessMain_pre+0x4) */
@@ -38,8 +50,8 @@ FTHiddenPart dNNessMain_hiddenparts[4] = {
 
 /* @ 0x0054, 40 bytes: FTAttributes.sub_0x054 target (was dNNessMain_pre+0x54) */
 FTModelPart dNNessMain_modelparts_desc_0x054[2] = {
-	{ (Gfx*)&dNNessModel_gap_0x3210_sub_0x2B0, NULL, NULL, NULL, 0x00 },
-	{ (Gfx*)&dNNessModel_gap_0x3210_sub_0x2B0, NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)&dNNessModel_DL_0x34C0, NULL, NULL, NULL, 0x00 },
+	{ (Gfx*)&dNNessModel_DL_0x34C0, NULL, NULL, NULL, 0x00 },
 };
 
 /* @ 0x007C, 40 bytes: FTAttributes.sub_0x07C target (was dNNessMain_pre+0x7C) */
@@ -58,9 +70,7 @@ FTModelPartDesc *dNNessMain_modelparts_container[27] = {
 };
 
 /* @ 0x0110, 4 bytes: FTAttributes.textureparts_container target (was dNNessMain_pre+0x110) */
-u32 dNNessMain_textureparts_container[1] = {
-	0x0C000000,
-};
+FTTexturePart dNNessMain_textureparts_container = { 0x0C, { 0x00, 0x00 } };
 
 /* @ 0x0114, 32 bytes: FTAttributes.commonparts_container target (was dNNessMain_pre+0x114) */
 FTCommonPartContainer dNNessMain_commonparts_container = {
@@ -132,7 +142,7 @@ FTThrownStatus dNNessMain_thrown_status[54] = {
 FTSprites dNNessMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x017200AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNNessMain_attr = {
@@ -232,8 +242,8 @@ FTAttributes dNNessMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNNessMain_hiddenparts, /* hiddenparts */
 	&dNNessMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dNessShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dNessShieldPose_data0_end, (void *)&dNessShieldPose_shield_anim_joint_1, (void *)&dNessShieldPose_shield_anim_joint_2, (void *)&dNessShieldPose_shield_anim_joint_3, (void *)&dNessShieldPose_shield_anim_joint_4, (void *)&dNessShieldPose_shield_anim_joint_5, (void *)&dNessShieldPose_shield_anim_joint_6, (void *)&dNessShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	24, /* joint_rfoot_id */
 	60.891f, /* joint_rfoot_rotate */
 	18, /* joint_lfoot_id */
@@ -244,7 +254,7 @@ FTAttributes dNNessMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dNNessMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dNNessMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dNNessMain_textureparts_container, /* textureparts_container */
 	30, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dNNessMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */

@@ -2,16 +2,28 @@
 /* File size: 1552 bytes (0x610) */
 
 #include "relocdata_types.h"
+
+/* Step 3 forward decls auto-added by migrateStructShadows.py */
+extern u8 dKirbyShieldPose_data0[];
+extern u8 dKirbyShieldPose_data0_end[];
+extern u8 dKirbyShieldPose_shield_anim_joint_1[];
+extern u8 dKirbyShieldPose_shield_anim_joint_2[];
+extern u8 dKirbyShieldPose_shield_anim_joint_3[];
+extern u8 dKirbyShieldPose_shield_anim_joint_4[];
+extern u8 dKirbyShieldPose_shield_anim_joint_5[];
+extern u8 dKirbyShieldPose_shield_anim_joint_6[];
+extern u8 dKirbyShieldPose_shield_anim_joint_7[];
+extern u32 dMasterHandIcon_FTEmblem[];
 #include <ft/fttypes.h>
 
-extern u32 dKirbyMainMotion_0x0154[];
+extern u32 dKirbyMainMotion_EggLay_0x0154[];
 extern DObjDesc dNKirbyModel_JointTree[];
 
 /* Pre-attributes data (176 words, 0x02C0 bytes) */
 /* @ 0x0000, 4 bytes: FTAttributes.file_handles target (was dNKirbyMain_pre+0x0) */
-u32 dNKirbyMain_file_handles[1] = {
+u32 *dNKirbyMain_file_handles[1] = {
 
-	(u32)&dKirbyMainMotion_0x0154, /* extern -> 0x0154 */
+	(u32 *)&dKirbyMainMotion_EggLay_0x0154, /* extern -> 0x0154 */
 };
 
 /* @ 0x0004, 8 bytes: FTAttributes.animlock target (was dNKirbyMain_pre+0x4) */
@@ -46,9 +58,7 @@ FTModelPartDesc *dNKirbyMain_modelparts_container[27] = {
 };
 
 /* @ 0x00E0, 4 bytes: FTAttributes.textureparts_container target (was dNKirbyMain_pre+0xE0) */
-u32 dNKirbyMain_textureparts_container[1] = {
-	0x06000000,
-};
+FTTexturePart dNKirbyMain_textureparts_container = { 0x06, { 0x00, 0x00 } };
 
 /* @ 0x00E4, 32 bytes: FTAttributes.commonparts_container target (was dNKirbyMain_pre+0xE4) */
 FTCommonPartContainer dNKirbyMain_commonparts_container = {
@@ -120,7 +130,7 @@ FTThrownStatus dNKirbyMain_thrown_status[54] = {
 FTSprites dNKirbyMain_sprites = {
 	NULL, /* stock_sprite */
 	NULL, /* stock_luts */
-	(Sprite*)0x016600AE, /* emblem */
+	(Sprite*)dMasterHandIcon_FTEmblem, /* emblem */
 };
 
 FTAttributes dNKirbyMain_attr = {
@@ -220,8 +230,8 @@ FTAttributes dNKirbyMain_attr = {
 	0, /* unused_0x2CC */
 	(FTHiddenPart*)dNKirbyMain_hiddenparts, /* hiddenparts */
 	&dNKirbyMain_commonparts_container, /* commonparts_container */
-	NULL, /* dobj_lookup */
-	{ NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }, /* shield_anim_joints */
+	(void *)&dKirbyShieldPose_data0, /* dobj_lookup */
+	{ (void *)&dKirbyShieldPose_data0_end, (void *)&dKirbyShieldPose_shield_anim_joint_1, (void *)&dKirbyShieldPose_shield_anim_joint_2, (void *)&dKirbyShieldPose_shield_anim_joint_3, (void *)&dKirbyShieldPose_shield_anim_joint_4, (void *)&dKirbyShieldPose_shield_anim_joint_5, (void *)&dKirbyShieldPose_shield_anim_joint_6, (void *)&dKirbyShieldPose_shield_anim_joint_7 }, /* shield_anim_joints */
 	25, /* joint_rfoot_id */
 	61.848f, /* joint_rfoot_rotate */
 	20, /* joint_lfoot_id */
@@ -232,7 +242,7 @@ FTAttributes dNKirbyMain_attr = {
 	NULL, /* translate_scales */
 	(FTModelPartContainer*)dNKirbyMain_modelparts_container, /* modelparts_container */
 	NULL, /* accesspart */
-	(FTTexturePartContainer*)dNKirbyMain_textureparts_container, /* textureparts_container */
+	(FTTexturePartContainer*)&dNKirbyMain_textureparts_container, /* textureparts_container */
 	30, /* joint_itemheavy_id */
 	(FTThrownStatusArray*)dNKirbyMain_thrown_status, /* thrown_status */
 	17, /* joint_itemlight_id */
