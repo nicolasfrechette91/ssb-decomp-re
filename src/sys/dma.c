@@ -448,6 +448,7 @@ void syDmaReadVpk0(uintptr_t dev_addr, void *ram_dst)
 }
 #endif
 
+#ifndef PORT
 // 0x800036B4
 void unref_800036B4(u16 *data, u8 *out_buf)
 {
@@ -653,3 +654,4 @@ void unref_800036B4(u16 *data, u8 *out_buf)
         }
     }
 }
+#endif
