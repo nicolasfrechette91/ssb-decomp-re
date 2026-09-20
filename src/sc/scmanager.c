@@ -24,6 +24,7 @@ extern void port_coroutine_yield(void);
 #ifdef PORT
 #include <gr/ground.h>
 #include <sys/objman.h>
+#include <rl/rl.h>
 #endif
 
 extern void mnVSModeStartScene();
@@ -969,6 +970,11 @@ void scManagerRunLoop(sb32 arg)
 		gSCManagerSceneData.scene_curr = nSCKindPlayersVS;
 		gSCManagerSceneData.scene_prev = nSCKindPlayersVS;
 	}
+	// RL harness (port/rl/rl.h): no-op unless SSB64_RL_BTT=1
+	rlBootApply(&gSCManagerSceneData.scene_curr, &gSCManagerSceneData.scene_prev, &gSCManagerSceneData.player,
+	            &gSCManagerSceneData.bonus_fkind, &gSCManagerSceneData.bonus_costume, nSCKind1PBonusStage,
+	            nSCKind1PBonus1Players, nFTKindMario, &gGRCommonStruct.bonus1.target_count, &gSCManagerBattleState,
+	            (u32)((u8*)&gSCManagerVSBattleState.time_passed - (u8*)&gSCManagerVSBattleState));
 	port_log("SSB64: scManagerRunLoop — controllers=%d scene=%d\n",
 	         (int)gSYControllerConnectedNum, (int)gSCManagerSceneData.scene_curr);
 #endif
