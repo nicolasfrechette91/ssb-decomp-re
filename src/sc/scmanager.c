@@ -827,6 +827,102 @@ char dSCManagerBuildDate[/* */] = { "Dec 23 1998 18:06:24" };
 //                               //
 // // // // // // // // // // // //
 
+#ifdef PORT
+/* RL harness (port/rl/rl.h), M1b: fill the game-owned half of an
+ * RLObservation from the real decomp types.
+ *
+ * This exists because the port C++ cannot reach the fighter at all. The M1a
+ * facts in RLGameFacts cover only time_passed and the bonus-stage target
+ * count; everything else needed here lives behind
+ * gSCManagerBattleState->players[]->fighter_gobj->user_data.p, and reaching it
+ * from C++ would mean either mirroring FTStruct / MPCollData / GObj /
+ * SCBattleState or passing about a dozen raw offsets across the boundary with
+ * no safe way to validate the GObj. Reading the typed fields here instead
+ * keeps every decomp layout on the decomp side, which is the same convention
+ * the port_fighter_* call-outs already follow.
+ *
+ * Strictly read-only. It advances no clock, consumes no controller input,
+ * steps no simulation and writes to nothing but *out. The caller
+ * zero-initialises *out, so each early return below deliberately leaves
+ * deterministic zeros behind with btt_active / fighter_valid false. The
+ * port-owned fields (observation_schema, host_frame, input_tick) are not
+ * touched here, and no game-owned pointer is ever copied out. */
+void rlGameFillObservation(RLObservation *out)
+{
+	GObj *fighter_gobj;
+	FTStruct *fp;
+	s32 player;
+
+	if (out == NULL)
+	{
+		return;
+	}
+
+	/* gGRCommonStruct is a union shared by every stage, so the bonus-1 target
+	 * count is only meaningful while the bonus stage is the running scene --
+	 * the same guard the M1a episode monitor applies. */
+	if (gSCManagerSceneData.scene_curr != nSCKind1PBonusStage)
+	{
+		return;
+	}
+	if (gSCManagerBattleState == NULL)
+	{
+		return;
+	}
+
+	out->btt_active = 1;
+	out->time_passed = gSCManagerBattleState->time_passed;
+	out->game_status = gSCManagerBattleState->game_status;
+	out->targets_remaining = gGRCommonStruct.bonus1.target_count;
+
+	/* Player 0 for the RL episode, but read the port the scene actually
+	 * selected rather than assuming it, exactly as sc1pbonusstage.c does. */
+	player = (s32)gSCManagerSceneData.player;
+	if (player >= GMCOMMON_PLAYERS_MAX)
+	{
+		return;
+	}
+
+	/* NULL before the fighter spawns, and NULLed again for all three
+	 * persistent battle states at every scene boundary by the Issue #103
+	 * guard further down this file -- so this slot cannot dangle across a
+	 * scene change, and no bonus-stage code path destroys the fighter
+	 * mid-episode. */
+	fighter_gobj = gSCManagerBattleState->players[player].fighter_gobj;
+	if (fighter_gobj == NULL)
+	{
+		return;
+	}
+	fp = ftGetStruct(fighter_gobj);
+	if (fp == NULL)
+	{
+		return;
+	}
+	/* Set at fighter setup to &DObjGetStruct(fighter_gobj)->translate.vec.f
+	 * (ftmanager.c), i.e. the live TopN translation. */
+	if (fp->coll_data.p_translate == NULL)
+	{
+		return;
+	}
+
+	out->fighter_valid = 1;
+
+	out->position_x = fp->coll_data.p_translate->x;
+	out->position_y = fp->coll_data.p_translate->y;
+
+	out->air_velocity_x = fp->physics.vel_air.x;
+	out->air_velocity_y = fp->physics.vel_air.y;
+
+	out->ground_velocity_x = fp->physics.vel_ground.x;
+
+	out->facing_direction = fp->lr;
+	out->ground_air_state = fp->ga;
+	out->fighter_status_id = fp->status_id;
+
+	out->jumps_used = fp->jumps_used;
+}
+#endif
+
 // 0x800A1980
 void scManagerRunLoop(sb32 arg)
 {
