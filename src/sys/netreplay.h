@@ -12,6 +12,8 @@ extern void syNetReplayStartVSSession(SCBattleState *battle_state);
 extern void syNetReplayStartBTTSession(SCBattleState *battle_state);
 extern void syNetReplayFinishBTTSession(void);
 extern sb32 syNetReplayIsBTTPlaybackConfigured(void);
+extern void syNetReplayStartBTTInteractiveSession(void);
+extern sb32 syNetReplayIsBTTInteractiveSession(void);
 extern void syNetReplayUpdate(void);
 extern void syNetReplayFinishVSSession(void);
 extern sb32 syNetReplayWriteDebugFile(const char *path);

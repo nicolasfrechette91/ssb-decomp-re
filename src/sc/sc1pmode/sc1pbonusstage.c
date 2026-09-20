@@ -19,21 +19,68 @@ extern void func_800266A0_272A0(void);
 
 #ifdef PORT
     extern void port_log(const char *fmt, ...);
+
+    /* RL harness (port/rl/rl.h), M1c interactive stepping. rl.h restates a
+     * few native constants for the port C++, which cannot include decomp
+     * headers. Both definitions are visible here, so fail the build if they
+     * ever diverge (negative array size). */
+    #include <rl/rl.h>
+    typedef char rlStepAssertButtonA[(RL_BUTTON_A == A_BUTTON) ? 1 : -1];
+    typedef char rlStepAssertButtonB[(RL_BUTTON_B == B_BUTTON) ? 1 : -1];
+    typedef char rlStepAssertButtonZ[(RL_BUTTON_Z == Z_TRIG) ? 1 : -1];
+    typedef char rlStepAssertButtonStart[(RL_BUTTON_START == START_BUTTON) ? 1 : -1];
+    typedef char rlStepAssertButtonDU[(RL_BUTTON_DPAD_UP == U_JPAD) ? 1 : -1];
+    typedef char rlStepAssertButtonDD[(RL_BUTTON_DPAD_DOWN == D_JPAD) ? 1 : -1];
+    typedef char rlStepAssertButtonDL[(RL_BUTTON_DPAD_LEFT == L_JPAD) ? 1 : -1];
+    typedef char rlStepAssertButtonDR[(RL_BUTTON_DPAD_RIGHT == R_JPAD) ? 1 : -1];
+    typedef char rlStepAssertButtonL[(RL_BUTTON_L == L_TRIG) ? 1 : -1];
+    typedef char rlStepAssertButtonR[(RL_BUTTON_R == R_TRIG) ? 1 : -1];
+    typedef char rlStepAssertButtonCU[(RL_BUTTON_C_UP == U_CBUTTONS) ? 1 : -1];
+    typedef char rlStepAssertButtonCD[(RL_BUTTON_C_DOWN == D_CBUTTONS) ? 1 : -1];
+    typedef char rlStepAssertButtonCL[(RL_BUTTON_C_LEFT == L_CBUTTONS) ? 1 : -1];
+    typedef char rlStepAssertButtonCR[(RL_BUTTON_C_RIGHT == R_CBUTTONS) ? 1 : -1];
+    typedef char rlStepAssertStatusWait[(RL_GAME_STATUS_WAIT == nSCBattleGameStatusWait) ? 1 : -1];
+    typedef char rlStepAssertStatusGo[(RL_GAME_STATUS_GO == nSCBattleGameStatusGo) ? 1 : -1];
+    typedef char rlStepAssertStatusPause[(RL_GAME_STATUS_PAUSE == nSCBattleGameStatusPause) ? 1 : -1];
 #endif
 
 /* Consume exactly one imported movie row per controllable bonus-stage frame.
  * The stock controller callback remains active through the READY/GO wait and
- * whenever BTT playback was not configured, so normal play is unchanged. */
+ * whenever BTT playback was not configured, so normal play is unchanged.
+ *
+ * M1c (port/rl/rl_step.cpp): when no replay is armed but the interactive
+ * netinput session is, the very same reads consume one caller-submitted
+ * action per native input tick, staged into the Saved-source history and
+ * published by syNetInputFuncRead() exactly like a replay row. The replay
+ * branch keeps precedence and is unchanged. */
 void sc1PBonusStageFuncReadReplay(void)
 {
     #ifdef PORT
-        if ((syNetReplayIsBTTPlaybackConfigured() != FALSE) &&
-            (gSCManagerBattleState != NULL) &&
+        if ((gSCManagerBattleState != NULL) &&
             (gSCManagerBattleState->game_status != nSCBattleGameStatusWait) &&
             (gSCManagerBattleState->game_status != nSCBattleGameStatusPause))
         {
-            syNetInputFuncRead();
-            return;
+            if (syNetReplayIsBTTPlaybackConfigured() != FALSE)
+            {
+                syNetInputFuncRead();
+                return;
+            }
+            if (syNetReplayIsBTTInteractiveSession() != FALSE)
+            {
+                u16 buttons;
+                s8 stick_x;
+                s8 stick_y;
+
+                /* Returns 0 only when stepping does not apply to this read
+                 * (disabled, episode ended, shutting down); the stock read
+                 * below then applies. It never blocks the host thread. */
+                if (rlStepControllerRead(syNetInputGetTick(), &buttons, &stick_x, &stick_y) != 0)
+                {
+                    syNetInputSetSavedInput(0, syNetInputGetTick(), buttons, stick_x, stick_y);
+                    syNetInputFuncRead();
+                    return;
+                }
+            }
         }
     #endif
 	syControllerFuncRead();
@@ -1180,6 +1227,13 @@ void sc1PBonusStageFuncStart(void)
         if (gSCManagerBattleState->gkind == nGRKindBonus1Start)
         {
             syNetReplayStartBTTSession(gSCManagerBattleState);
+        }
+        /* M1c: no replay armed -> arm the interactive netinput session the
+         * same way (tick 0, Saved sources, nothing staged), so native tick 0
+         * is the first Go-status read exactly as it is for replay row 0. */
+        if ((syNetReplayIsBTTPlaybackConfigured() == FALSE) && (rlStepIsEnabled() != 0))
+        {
+            syNetReplayStartBTTInteractiveSession();
         }
     #endif
 	sc1PBonusStageSetupFiles();

@@ -42,6 +42,7 @@ sb32 sSYNetReplayIsPlaybackLoaded;
 sb32 sSYNetReplayIsPlaybackActive;
 sb32 sSYNetReplayIsPlaybackVerified;
 sb32 sSYNetReplayIsBTTTextPlayback;
+sb32 sSYNetReplayIsBTTInteractive; /* PORT: M1c interactive stepping session (port/rl/rl_step.cpp) */
 SYNetInputReplayMetadata sSYNetReplayLoadedMetadata;
 SYNetInputFrame sSYNetReplayLoadedFrames[MAXCONTROLLERS][SYNETINPUT_REPLAY_MAX_FRAMES];
 
@@ -305,11 +306,40 @@ void syNetReplayStartBTTSession(SCBattleState *battle_state)
 #endif
 }
 
+/* M1c interactive stepping (port/rl/rl_step.cpp): the same netinput session
+ * setup syNetReplayStartBTTSession performs, minus the file. No rows are
+ * staged; the bonus-stage controller callback stages one caller-submitted
+ * action per native tick through syNetInputSetSavedInput right before it
+ * calls syNetInputFuncRead. Only armed when no replay is configured. */
+void syNetReplayStartBTTInteractiveSession(void)
+{
+#ifdef PORT
+	s32 player;
+
+	syNetInputReset();
+	syNetInputClearReplayFrames();
+	syNetInputSetTick(0);
+
+	for (player = 0; player < MAXCONTROLLERS; player++)
+	{
+		syNetInputSetSlotSource(player, nSYNetInputSourceSaved);
+	}
+	sSYNetReplayIsBTTInteractive = TRUE;
+
+	port_log("SSB64 RL Step: interactive netinput session armed tick=0\n");
+#endif
+}
+
+sb32 syNetReplayIsBTTInteractiveSession(void)
+{
+	return (sSYNetReplayIsBTTInteractive != FALSE) ? TRUE : FALSE;
+}
+
 void syNetReplayFinishBTTSession(void)
 {
 	s32 player;
 
-	if (sSYNetReplayIsBTTTextPlayback == FALSE)
+	if ((sSYNetReplayIsBTTTextPlayback == FALSE) && (sSYNetReplayIsBTTInteractive == FALSE))
 	{
 		return;
 	}
@@ -317,12 +347,19 @@ void syNetReplayFinishBTTSession(void)
 	{
 		syNetInputSetSlotSource(player, nSYNetInputSourceLocal);
 	}
-	sSYNetReplayIsBTTTextPlayback = FALSE;
-	sSYNetReplayIsPlaybackActive = FALSE;
-
 #ifdef PORT
-	port_log("SSB64 BTT Replay: session finished at input_tick=%u\n", syNetInputGetTick());
+	if (sSYNetReplayIsBTTTextPlayback != FALSE)
+	{
+		port_log("SSB64 BTT Replay: session finished at input_tick=%u\n", syNetInputGetTick());
+	}
+	else
+	{
+		port_log("SSB64 RL Step: interactive session finished at input_tick=%u\n", syNetInputGetTick());
+	}
 #endif
+	sSYNetReplayIsBTTTextPlayback = FALSE;
+	sSYNetReplayIsBTTInteractive = FALSE;
+	sSYNetReplayIsPlaybackActive = FALSE;
 }
 
 void syNetReplayStartVSSession(SCBattleState *battle_state)
