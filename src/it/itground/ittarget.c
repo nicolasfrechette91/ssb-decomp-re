@@ -2,6 +2,8 @@
 #include <sc/scene.h>
 #ifdef PORT
 extern void *func_800269C0_275C0(u16 id);
+/* M7f target identity (sc1pbonusstage.c, PORT only): no-op unless SSB64_RL_TARGET_DIAG=1. */
+extern void rlGameNoteTargetBreak(GObj *item_gobj);
 #endif
 
 // 0x8018F130
@@ -37,6 +39,11 @@ sb32 itTargetCommonProcDamage(GObj* item_gobj)
 
 	func_800269C0_275C0(nSYAudioFGMBonus1TargetBreak);
 
+#ifdef PORT
+	/* M7f: attribute this break to the target's stable ID while it is still
+	 * alive, before the anonymous count below drops. Read-only towards the game. */
+	rlGameNoteTargetBreak(item_gobj);
+#endif
 	sc1PBonusStageUpdateTargetCount();
 
 	return TRUE;

@@ -42,6 +42,7 @@ extern void func_800266A0_272A0(void);
     typedef char rlStepAssertStatusWait[(RL_GAME_STATUS_WAIT == nSCBattleGameStatusWait) ? 1 : -1];
     typedef char rlStepAssertStatusGo[(RL_GAME_STATUS_GO == nSCBattleGameStatusGo) ? 1 : -1];
     typedef char rlStepAssertStatusPause[(RL_GAME_STATUS_PAUSE == nSCBattleGameStatusPause) ? 1 : -1];
+    typedef char rlTargetAssertCount[(RL_TARGET_COUNT == SCBATTLE_BONUSGAME_TASK_MAX) ? 1 : -1];
 #endif
 
 /* Consume exactly one imported movie row per controllable bonus-stage frame.
@@ -569,6 +570,209 @@ void sc1PBonusStageBonus1LoadFile(void)
 	gSC1PBonusStageItemFile = lbRelocGetExternHeapFile((u32)ll_253_FileID, syTaskmanMalloc(lbRelocGetFileSize((u32)ll_253_FileID), 0x10));
 }
 
+#ifdef PORT
+/* M7f target identity (port/rl/rl.h, SSB64_RL_TARGET_DIAG=1): which target
+ * breaks when, under a stable ID. The game itself only keeps the anonymous
+ * bonus1.target_count, so the identity is recorded where it is known: target
+ * ID i is loop index i of sc1PBonusStageMakeTargets below, i.e. the i-th
+ * target DObjDesc of the stage file (ROM data), and a break is attributed in
+ * itTargetCommonProcDamage, the only place a target breaks.
+ *
+ * Diagnostic only. Everything returns at once unless the diagnostic is
+ * enabled; with it on, game state is only read, never written, and the only
+ * writes go to this PORT-only table. The item GObj kept per ID is a handle for
+ * recognising live targets: it is compared, never dereferenced after that
+ * target's break (the GObj pool is shared and reused), and never leaves this
+ * file. */
+typedef struct SC1PBonusStageRLTargets
+{
+	GObj *gobj[RL_TARGET_COUNT];
+	RLTargetRecord rec[RL_TARGET_COUNT];
+	u32 spawn_count;
+	u32 break_count;
+	u32 remaining_mask;
+	u32 anomaly_flags;
+	u32 scene_entries;
+
+} SC1PBonusStageRLTargets;
+
+static SC1PBonusStageRLTargets sSC1PBonusStageRLTargets;
+static const SC1PBonusStageRLTargets dSC1PBonusStageRLTargetsNone;
+
+static void rlGameNoteTargetSpawn(s32 id, GObj *item_gobj, Vec3f *translate, sb32 is_animated)
+{
+	SC1PBonusStageRLTargets *t = &sSC1PBonusStageRLTargets;
+	RLTargetRecord *rec;
+
+	if (rlTargetDiagIsEnabled() == 0)
+	{
+		return;
+	}
+	if (id == 0)
+	{
+		/* A new scene entry spawns its targets from 0 again. */
+		u32 scene_entries = t->scene_entries + 1;
+
+		*t = dSC1PBonusStageRLTargetsNone;
+		t->scene_entries = scene_entries;
+	}
+	if ((id < 0) || (id >= (s32)RL_TARGET_COUNT) || (id != (s32)t->spawn_count))
+	{
+		t->anomaly_flags |= RL_TARGET_ANOMALY_SPAWN_OVERFLOW;
+		return;
+	}
+	rec = &t->rec[id];
+
+	t->gobj[id] = item_gobj;
+	rec->animated = (is_animated != FALSE) ? 1 : 0;
+	rec->spawn_x = translate->x;
+	rec->spawn_y = translate->y;
+	rec->spawn_z = translate->z;
+
+	t->remaining_mask |= (1u << id);
+	t->spawn_count++;
+}
+
+/* Called by itTargetCommonProcDamage (ittarget.c) while the target is still
+ * alive, before the anonymous count drops. Runs inside the game update that
+ * consumed native input tick T, where syNetInputGetTick() is already T + 1. */
+void rlGameNoteTargetBreak(GObj *item_gobj)
+{
+	SC1PBonusStageRLTargets *t = &sSC1PBonusStageRLTargets;
+	RLTargetRecord *rec;
+	Vec3f *translate;
+	s32 id;
+
+	if (rlTargetDiagIsEnabled() == 0)
+	{
+		return;
+	}
+	for (id = 0; id < (s32)t->spawn_count; id++)
+	{
+		if (t->gobj[id] == item_gobj)
+		{
+			break;
+		}
+	}
+	if (id >= (s32)t->spawn_count)
+	{
+		t->anomaly_flags |= RL_TARGET_ANOMALY_UNKNOWN_BREAK;
+		return;
+	}
+	if (!(t->remaining_mask & (1u << id)))
+	{
+		t->anomaly_flags |= RL_TARGET_ANOMALY_REPEAT_BREAK;
+		return;
+	}
+	if (gGRCommonStruct.bonus1.target_count == 0)
+	{
+		t->anomaly_flags |= RL_TARGET_ANOMALY_COUNT_GUARD;
+	}
+	rec = &t->rec[id];
+	translate = &DObjGetStruct(item_gobj)->translate.vec.f;
+
+	t->remaining_mask &= ~(1u << id);
+	t->break_count++;
+
+	rec->break_order = t->break_count;
+	rec->break_input_tick = syNetInputGetTick();
+	rec->break_time_passed = (gSCManagerBattleState != NULL) ? gSCManagerBattleState->time_passed : 0;
+	rec->break_x = translate->x;
+	rec->break_y = translate->y;
+	rec->break_z = translate->z;
+}
+
+/* Declared in port/rl/rl.h; called from the post-update capture. Copies the
+ * table and cross-checks it against the live item link, read-only. */
+void rlGameFillTargets(RLTargetDiag *out)
+{
+	SC1PBonusStageRLTargets *t = &sSC1PBonusStageRLTargets;
+	GObj *item_gobj;
+	u32 live;
+	u32 unmatched;
+	u32 unbroken;
+	u32 i;
+
+	if (out == NULL)
+	{
+		return;
+	}
+	out->target_schema = RL_TARGET_DIAG_SCHEMA;
+	out->scene_entries = t->scene_entries;
+	out->spawn_count = t->spawn_count;
+	out->remaining_mask = t->remaining_mask;
+	out->break_count = t->break_count;
+	out->anomaly_flags = t->anomaly_flags;
+
+	for (i = 0; i < RL_TARGET_COUNT; i++)
+	{
+		out->targets[i] = t->rec[i];
+	}
+	/* Same guard as rlGameFillObservation: the item link belongs to the
+	 * bonus stage only while it is the running scene. */
+	if ((gSCManagerSceneData.scene_curr != nSCKind1PBonusStage) || (gSCManagerBattleState == NULL))
+	{
+		return;
+	}
+	out->scene_active = 1;
+
+	/* gcEjectAll() at the end of the scene task empties every object link,
+	 * the fighter link included (never empty while the task runs), before
+	 * the scene variables change; from then on the link counts mean nothing
+	 * and the cross-check is skipped (link_checked stays 0). */
+	if (gGCCommonLinks[nGCCommonLinkIDFighter] == NULL)
+	{
+		return;
+	}
+	out->link_checked = 1;
+
+	live = unmatched = 0;
+
+	for (item_gobj = gGCCommonLinks[nGCCommonLinkIDItem]; item_gobj != NULL; item_gobj = item_gobj->link_next)
+	{
+		ITStruct *ip;
+
+		if (item_gobj->id != nGCCommonKindItem)
+		{
+			continue;
+		}
+		ip = itGetStruct(item_gobj);
+
+		if ((ip == NULL) || (ip->kind != nITKindTarget))
+		{
+			continue;
+		}
+		live++;
+
+		for (i = 0; i < t->spawn_count; i++)
+		{
+			if ((t->gobj[i] == item_gobj) && (t->remaining_mask & (1u << i)))
+			{
+				break;
+			}
+		}
+		if (i >= t->spawn_count)
+		{
+			unmatched++;
+		}
+	}
+	out->link_live_targets = live;
+	out->link_unmatched = unmatched;
+
+	for (unbroken = 0, i = 0; i < RL_TARGET_COUNT; i++)
+	{
+		if (t->remaining_mask & (1u << i))
+		{
+			unbroken++;
+		}
+	}
+	if ((unmatched != 0) || (live != unbroken))
+	{
+		out->anomaly_flags |= RL_TARGET_ANOMALY_LINK_MISMATCH;
+	}
+}
+
+#endif
 // 0x8018D374
 void sc1PBonusStageMakeTargets(void)
 {
@@ -608,6 +812,9 @@ void sc1PBonusStageMakeTargets(void)
 				gcAddDObjAnimJoint(DObjGetStruct(item_gobj), aj, 0.0F);
 				gcPlayAnimAll(item_gobj);
 			}
+			/* M7f: the loop index (the count before this target's ++ below)
+			 * is the target's stable ID. */
+			rlGameNoteTargetSpawn(gGRCommonStruct.bonus1.target_count, item_gobj, &dobjdesc->translate, (aj != NULL));
 		}
 #else
 		if (*anim_joints != NULL)
