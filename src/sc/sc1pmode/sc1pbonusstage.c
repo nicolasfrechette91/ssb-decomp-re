@@ -43,6 +43,19 @@ extern void func_800266A0_272A0(void);
     typedef char rlStepAssertStatusGo[(RL_GAME_STATUS_GO == nSCBattleGameStatusGo) ? 1 : -1];
     typedef char rlStepAssertStatusPause[(RL_GAME_STATUS_PAUSE == nSCBattleGameStatusPause) ? 1 : -1];
     typedef char rlTargetAssertCount[(RL_TARGET_COUNT == SCBATTLE_BONUSGAME_TASK_MAX) ? 1 : -1];
+    /* M7g spatial diagnostic: the restated collision constants. */
+    typedef char rlSpatialAssertFloor[(RL_SPATIAL_LINE_FLOOR == nMPLineKindFloor) ? 1 : -1];
+    typedef char rlSpatialAssertCeil[(RL_SPATIAL_LINE_CEIL == nMPLineKindCeil) ? 1 : -1];
+    typedef char rlSpatialAssertRWall[(RL_SPATIAL_LINE_RWALL == nMPLineKindRWall) ? 1 : -1];
+    typedef char rlSpatialAssertLWall[(RL_SPATIAL_LINE_LWALL == nMPLineKindLWall) ? 1 : -1];
+    typedef char rlSpatialAssertPass[(RL_SPATIAL_VERTEX_PASS == MAP_VERTEX_COLL_PASS) ? 1 : -1];
+    typedef char rlSpatialAssertCliff[(RL_SPATIAL_VERTEX_CLIFF == MAP_VERTEX_COLL_CLIFF) ? 1 : -1];
+    typedef char rlSpatialAssertContactL[(RL_SPATIAL_CONTACT_LWALL == MAP_FLAG_LWALL) ? 1 : -1];
+    typedef char rlSpatialAssertContactR[(RL_SPATIAL_CONTACT_RWALL == MAP_FLAG_RWALL) ? 1 : -1];
+    typedef char rlSpatialAssertContactC[(RL_SPATIAL_CONTACT_CEIL == MAP_FLAG_CEIL) ? 1 : -1];
+    typedef char rlSpatialAssertContactF[(RL_SPATIAL_CONTACT_FLOOR == MAP_FLAG_FLOOR) ? 1 : -1];
+    typedef char rlSpatialAssertStatusNone[(RL_SPATIAL_GROUP_STATUS_NONE == nMPYakumonoStatusNone) ? 1 : -1];
+    typedef char rlSpatialAssertStatusOff[(RL_SPATIAL_GROUP_STATUS_OFF == nMPYakumonoStatusOff) ? 1 : -1];
 #endif
 
 /* Consume exactly one imported movie row per controllable bonus-stage frame.
@@ -579,7 +592,8 @@ void sc1PBonusStageBonus1LoadFile(void)
  * itTargetCommonProcDamage, the only place a target breaks.
  *
  * Diagnostic only. Everything returns at once unless the diagnostic is
- * enabled; with it on, game state is only read, never written, and the only
+ * enabled (M7g: or the spatial diagnostic, which reads the same table; see
+ * rlTargetTableIsEnabled); with it on, game state is only read, never written, and the only
  * writes go to this PORT-only table. The item GObj kept per ID is a handle for
  * recognising live targets: it is compared, never dereferenced after that
  * target's break (the GObj pool is shared and reused), and never leaves this
@@ -604,7 +618,7 @@ static void rlGameNoteTargetSpawn(s32 id, GObj *item_gobj, Vec3f *translate, sb3
 	SC1PBonusStageRLTargets *t = &sSC1PBonusStageRLTargets;
 	RLTargetRecord *rec;
 
-	if (rlTargetDiagIsEnabled() == 0)
+	if (rlTargetTableIsEnabled() == 0)
 	{
 		return;
 	}
@@ -643,7 +657,7 @@ void rlGameNoteTargetBreak(GObj *item_gobj)
 	Vec3f *translate;
 	s32 id;
 
-	if (rlTargetDiagIsEnabled() == 0)
+	if (rlTargetTableIsEnabled() == 0)
 	{
 		return;
 	}
@@ -769,6 +783,219 @@ void rlGameFillTargets(RLTargetDiag *out)
 	if ((unmatched != 0) || (live != unbroken))
 	{
 		out->anomaly_flags |= RL_TARGET_ANOMALY_LINK_MISMATCH;
+	}
+}
+
+/* M7g structured-spatial diagnostic (port/rl/rl.h, SSB64_RL_SPATIAL=1).
+ * Declared in rl.h; called from the post-update capture. Reads the collision
+ * arrays and object links directly and never calls a collision getter: most of
+ * them spin forever on line id -1/-2 or a switched-off group. Nothing is
+ * advanced or written except *out, and no game pointer leaves this function.
+ * The item GObj handles of the M7f table are only compared against the live
+ * item link, never dereferenced unless found on it. */
+void rlGameFillSpatial(RLSpatialDiag *out)
+{
+	SC1PBonusStageRLTargets *t = &sSC1PBonusStageRLTargets;
+	GObj *item_gobj;
+	GObj *fighter_gobj;
+	s32 player;
+	s32 count;
+	s32 i;
+	s32 k;
+
+	if (out == NULL)
+	{
+		return;
+	}
+	out->spatial_schema = RL_SPATIAL_SCHEMA;
+
+	/* Same guards as rlGameFillTargets: the stage's collision data and object
+	 * links belong to the bonus stage only while it is the running scene, and
+	 * gcEjectAll() empties the links (fighter link included) at the end of the
+	 * scene task, after which the ground DObjs are gone. */
+	if ((gSCManagerSceneData.scene_curr != nSCKind1PBonusStage) || (gSCManagerBattleState == NULL))
+	{
+		return;
+	}
+	out->scene_active = 1;
+
+	if (gGCCommonLinks[nGCCommonLinkIDFighter] == NULL)
+	{
+		return;
+	}
+	if ((gMPCollisionGroundData == NULL) || (gMPCollisionYakumonoDObjs == NULL) || (gMPCollisionSpeeds == NULL) ||
+	    (gMPCollisionVertexInfo == NULL) || (gMPCollisionVertexData == NULL) || (gMPCollisionVertexIDs == NULL) ||
+	    (gMPCollisionVertexLinks == NULL))
+	{
+		return;
+	}
+	out->live = 1;
+	out->update_tic = gMPCollisionUpdateTic;
+
+	out->map_bound_top = gMPCollisionGroundData->map_bound_top;
+	out->map_bound_bottom = gMPCollisionGroundData->map_bound_bottom;
+	out->map_bound_right = gMPCollisionGroundData->map_bound_right;
+	out->map_bound_left = gMPCollisionGroundData->map_bound_left;
+	out->camera_bound_top = gMPCollisionGroundData->camera_bound_top;
+	out->camera_bound_bottom = gMPCollisionGroundData->camera_bound_bottom;
+	out->camera_bound_right = gMPCollisionGroundData->camera_bound_right;
+	out->camera_bound_left = gMPCollisionGroundData->camera_bound_left;
+
+	/* Yakumono groups: the DObj per group and its last-update speed, with the
+	 * translate rule of mpCollisionGetVertexPositionID. */
+	count = gMPCollisionYakumonosNum;
+
+	if (count > (s32)RL_SPATIAL_MAX_GROUPS)
+	{
+		out->anomaly_flags |= RL_SPATIAL_ANOMALY_GROUP_OVERFLOW;
+		count = RL_SPATIAL_MAX_GROUPS;
+	}
+	if (count < 0)
+	{
+		count = 0;
+	}
+	out->group_count = count;
+
+	for (i = 0; i < count; i++)
+	{
+		DObj *dobj = gMPCollisionYakumonoDObjs->dobjs[i];
+		RLSpatialGroup *g = &out->groups[i];
+
+		if (dobj == NULL)
+		{
+			continue;
+		}
+		g->present = 1;
+		g->status = (u32)dobj->user_data.s;
+		g->translated = ((dobj->anim_joint.event32 != NULL) || (dobj->user_data.s != nMPYakumonoStatusNone)) ? 1 : 0;
+		g->translate_x = dobj->translate.vec.f.x;
+		g->translate_y = dobj->translate.vec.f.y;
+		g->speed_x = gMPCollisionSpeeds[i].x;
+		g->speed_y = gMPCollisionSpeeds[i].y;
+	}
+
+	/* Collision lines, in line-id order, vertices as stored (group-local). */
+	count = gMPCollisionLinesNum;
+
+	if (count > (s32)RL_SPATIAL_MAX_LINES)
+	{
+		out->anomaly_flags |= RL_SPATIAL_ANOMALY_LINE_OVERFLOW;
+		count = RL_SPATIAL_MAX_LINES;
+	}
+	if (count < 0)
+	{
+		count = 0;
+	}
+	out->line_count = count;
+
+	for (i = 0; i < count; i++)
+	{
+		MPVertexInfo *info = &gMPCollisionVertexInfo->vertex_info[i];
+		MPVertexLinks *links = &gMPCollisionVertexLinks[i];
+		RLSpatialLine *line = &out->lines[i];
+		s32 vertices = links->vertex2;
+
+		line->line_type = info->line_type;
+		line->group = info->yakumono_id;
+		line->vertex_total = vertices;
+
+		if ((info->yakumono_id >= gMPCollisionYakumonosNum) ||
+		    (gMPCollisionYakumonoDObjs->dobjs[info->yakumono_id] == NULL))
+		{
+			out->anomaly_flags |= RL_SPATIAL_ANOMALY_BAD_GROUP;
+		}
+		if (vertices > (s32)RL_SPATIAL_MAX_LINE_VERTICES)
+		{
+			out->anomaly_flags |= RL_SPATIAL_ANOMALY_VERTEX_OVERFLOW;
+			vertices = RL_SPATIAL_MAX_LINE_VERTICES;
+		}
+		line->vertex_count = vertices;
+
+		for (k = 0; k < vertices; k++)
+		{
+			MPVertexData *vertex = &gMPCollisionVertexData->vpos[gMPCollisionVertexIDs->vertex_id[links->vertex1 + k]];
+
+			line->x[k] = vertex->pos.x;
+			line->y[k] = vertex->pos.y;
+
+			if (k == 0)
+			{
+				line->flags = vertex->vertex_flags; /* mpCollisionGetVertexFlagsLineID */
+			}
+		}
+	}
+
+	/* Mario's collision state, behind the same guards as rlGameFillObservation. */
+	player = (s32)gSCManagerSceneData.player;
+
+	if (player < GMCOMMON_PLAYERS_MAX)
+	{
+		fighter_gobj = gSCManagerBattleState->players[player].fighter_gobj;
+
+		if (fighter_gobj != NULL)
+		{
+			FTStruct *fp = ftGetStruct(fighter_gobj);
+
+			if (fp != NULL)
+			{
+				RLSpatialFighter *f = &out->fighter;
+				MPCollData *coll = &fp->coll_data;
+
+				f->valid = 1;
+				f->floor_line_id = coll->floor_line_id;
+				f->ceil_line_id = coll->ceil_line_id;
+				f->lwall_line_id = coll->lwall_line_id;
+				f->rwall_line_id = coll->rwall_line_id;
+				f->mask_curr = coll->mask_curr;
+				f->floor_dist = coll->floor_dist;
+				f->carry_x = coll->vel_speed.x;
+				f->carry_y = coll->vel_speed.y;
+				f->coll_top = coll->map_coll.top;
+				f->coll_center = coll->map_coll.center;
+				f->coll_bottom = coll->map_coll.bottom;
+				f->coll_width = coll->map_coll.width;
+			}
+		}
+	}
+
+	/* Live target positions under the M7f stable ID: only items found on the
+	 * live item link are read. */
+	for (item_gobj = gGCCommonLinks[nGCCommonLinkIDItem]; item_gobj != NULL; item_gobj = item_gobj->link_next)
+	{
+		ITStruct *ip;
+		Vec3f *translate;
+
+		if (item_gobj->id != nGCCommonKindItem)
+		{
+			continue;
+		}
+		ip = itGetStruct(item_gobj);
+
+		if ((ip == NULL) || (ip->kind != nITKindTarget))
+		{
+			continue;
+		}
+		for (i = 0; i < (s32)t->spawn_count; i++)
+		{
+			if ((t->gobj[i] == item_gobj) && (t->remaining_mask & (1u << i)))
+			{
+				break;
+			}
+		}
+		if (i >= (s32)t->spawn_count)
+		{
+			out->anomaly_flags |= RL_SPATIAL_ANOMALY_TARGET_MISMATCH;
+			continue;
+		}
+		translate = &DObjGetStruct(item_gobj)->translate.vec.f;
+
+		out->target_live_mask |= (1u << i);
+		out->target_x[i] = translate->x;
+		out->target_y[i] = translate->y;
+	}
+	if (out->target_live_mask != t->remaining_mask)
+	{
+		out->anomaly_flags |= RL_SPATIAL_ANOMALY_TARGET_MISMATCH;
 	}
 }
 
