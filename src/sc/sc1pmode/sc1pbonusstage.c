@@ -25,6 +25,7 @@ extern void func_800266A0_272A0(void);
      * headers. Both definitions are visible here, so fail the build if they
      * ever diverge (negative array size). */
     #include <rl/rl.h>
+    #include <wp/weapon.h> /* M7n entity diagnostic: wpGetStruct */
     typedef char rlStepAssertButtonA[(RL_BUTTON_A == A_BUTTON) ? 1 : -1];
     typedef char rlStepAssertButtonB[(RL_BUTTON_B == B_BUTTON) ? 1 : -1];
     typedef char rlStepAssertButtonZ[(RL_BUTTON_Z == Z_TRIG) ? 1 : -1];
@@ -997,6 +998,171 @@ void rlGameFillSpatial(RLSpatialDiag *out)
 	{
 		out->anomaly_flags |= RL_SPATIAL_ANOMALY_TARGET_MISMATCH;
 	}
+}
+
+/* M7n entity diagnostic (port/rl/rl.h, SSB64_RL_ENTITY=1): the player
+ * fighter's action-state progress and every live weapon (projectile) under a
+ * PORT-only spawn serial. Read-only towards the game: the object link is
+ * walked, typed fields are read, nothing is called that advances, blocks or
+ * writes game state. The only writes go to *out and to the serial table
+ * below, which keeps weapon GObj pointers only as handles to recognise a
+ * weapon seen at the previous capture (compared, never dereferenced from the
+ * table); a weapon's pointer never leaves this file. */
+#define SC1PBONUSSTAGE_RL_WEAPON_TRACK_MAX 16
+
+typedef struct SC1PBonusStageRLWeaponTrack
+{
+	GObj *gobj;
+	s32 kind;
+	s32 lifetime;
+	u32 serial;
+
+} SC1PBonusStageRLWeaponTrack;
+
+static SC1PBonusStageRLWeaponTrack sSC1PBonusStageRLWeaponTrack[SC1PBONUSSTAGE_RL_WEAPON_TRACK_MAX];
+static s32 sSC1PBonusStageRLWeaponTrackCount = 0;
+static u32 sSC1PBonusStageRLWeaponNextSerial = 1;
+
+void rlGameFillEntity(RLEntityDiag *out)
+{
+	SC1PBonusStageRLWeaponTrack seen[SC1PBONUSSTAGE_RL_WEAPON_TRACK_MAX];
+	s32 seen_count = 0;
+	GObj *fighter_gobj = NULL;
+	GObj *weapon_gobj;
+	s32 player;
+	s32 i;
+
+	if (out == NULL)
+	{
+		return;
+	}
+	out->entity_schema = RL_ENTITY_SCHEMA;
+
+	if ((gSCManagerSceneData.scene_curr != nSCKind1PBonusStage) || (gSCManagerBattleState == NULL))
+	{
+		/* Outside the scene the serial table is meaningless: forget it, so a
+		 * later scene entry starts its serials from 1 again. */
+		sSC1PBonusStageRLWeaponTrackCount = 0;
+		sSC1PBonusStageRLWeaponNextSerial = 1;
+		return;
+	}
+	out->scene_active = 1;
+
+	/* Same guard as rlGameFillSpatial: gcEjectAll() empties the links at the
+	 * end of the scene task (the teardown update of a fall or clear). */
+	if (gGCCommonLinks[nGCCommonLinkIDFighter] == NULL)
+	{
+		return;
+	}
+	out->live = 1;
+
+	/* The player fighter, behind the same guards as rlGameFillObservation. */
+	player = (s32)gSCManagerSceneData.player;
+
+	if (player < GMCOMMON_PLAYERS_MAX)
+	{
+		fighter_gobj = gSCManagerBattleState->players[player].fighter_gobj;
+
+		if (fighter_gobj != NULL)
+		{
+			FTStruct *fp = ftGetStruct(fighter_gobj);
+
+			if (fp != NULL)
+			{
+				RLEntityFighter *f = &out->fighter;
+
+				f->valid = 1;
+				f->status_total_tics = fp->status_total_tics;
+				f->hitlag_tics = fp->hitlag_tics;
+				f->jumps_max = (fp->attr != NULL) ? fp->attr->jumps_max : 0;
+				f->attack_active = fp->is_attack_active ? 1 : 0;
+				f->cliff_hold = fp->is_cliff_hold ? 1 : 0;
+				f->shield_active = fp->is_shield ? 1 : 0;
+				f->fastfall = fp->is_fastfall ? 1 : 0;
+				f->hitstun = fp->is_hitstun ? 1 : 0;
+			}
+		}
+	}
+
+	/* Live weapons, in link order. A weapon keeps its serial while the same
+	 * GObj holds the same kind with a non-increasing lifetime (lifetime only
+	 * ever decrements); anything else is a new spawn, which also covers a
+	 * pooled GObj reused by a new weapon between two captures. */
+	for (weapon_gobj = gGCCommonLinks[nGCCommonLinkIDWeapon]; weapon_gobj != NULL; weapon_gobj = weapon_gobj->link_next)
+	{
+		WPStruct *wp;
+		DObj *dobj;
+		u32 serial = 0;
+
+		if (weapon_gobj->id != nGCCommonKindWeapon)
+		{
+			continue;
+		}
+		wp = wpGetStruct(weapon_gobj);
+		dobj = DObjGetStruct(weapon_gobj);
+
+		if ((wp == NULL) || (dobj == NULL))
+		{
+			out->anomaly_flags |= RL_ENTITY_ANOMALY_BAD_WEAPON;
+			continue;
+		}
+		out->weapon_total++;
+
+		for (i = 0; i < sSC1PBonusStageRLWeaponTrackCount; i++)
+		{
+			SC1PBonusStageRLWeaponTrack *tr = &sSC1PBonusStageRLWeaponTrack[i];
+
+			if ((tr->gobj == weapon_gobj) && (tr->kind == wp->kind) && (wp->lifetime <= tr->lifetime))
+			{
+				serial = tr->serial;
+				break;
+			}
+		}
+		if (serial == 0)
+		{
+			serial = sSC1PBonusStageRLWeaponNextSerial++;
+		}
+		if (seen_count < SC1PBONUSSTAGE_RL_WEAPON_TRACK_MAX)
+		{
+			seen[seen_count].gobj = weapon_gobj;
+			seen[seen_count].kind = wp->kind;
+			seen[seen_count].lifetime = wp->lifetime;
+			seen[seen_count].serial = serial;
+			seen_count++;
+		}
+		else
+		{
+			out->anomaly_flags |= RL_ENTITY_ANOMALY_TRACK_OVERFLOW;
+			serial = 0;
+		}
+		if (out->weapon_count < RL_ENTITY_MAX_WEAPONS)
+		{
+			RLEntityWeapon *w = &out->weapons[out->weapon_count];
+
+			w->serial = serial;
+			w->kind = wp->kind;
+			w->owned = ((fighter_gobj != NULL) && (wp->owner_gobj == fighter_gobj)) ? 1 : 0;
+			w->lr = wp->lr;
+			w->ga = (wp->ga != 0) ? 1 : 0;
+			w->lifetime = wp->lifetime;
+			w->attack_state = wp->attack_coll.attack_state;
+			w->x = dobj->translate.vec.f.x;
+			w->y = dobj->translate.vec.f.y;
+			w->vel_x = wp->physics.vel_air.x;
+			w->vel_y = wp->physics.vel_air.y;
+			out->weapon_count++;
+		}
+		else
+		{
+			out->anomaly_flags |= RL_ENTITY_ANOMALY_WEAPON_OVERFLOW;
+		}
+	}
+	/* Only weapons seen at this capture stay tracked. */
+	for (i = 0; i < seen_count; i++)
+	{
+		sSC1PBonusStageRLWeaponTrack[i] = seen[i];
+	}
+	sSC1PBonusStageRLWeaponTrackCount = seen_count;
 }
 
 #endif
