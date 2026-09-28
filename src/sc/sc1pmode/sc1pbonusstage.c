@@ -1165,6 +1165,76 @@ void rlGameFillEntity(RLEntityDiag *out)
 	sSC1PBonusStageRLWeaponTrackCount = seen_count;
 }
 
+/* M7q input-state diagnostic (btt_input_state_v1, SSB64_RL_INPUT=1): the
+ * player fighter's latched controller state, tap counters, Z timer, animation
+ * progress / speed and motion flag 1, read after the update that produced the
+ * paired observation. Same guards as rlGameFillObservation / rlGameFillEntity;
+ * typed reads only, nothing advances or blocks, writes only *out. Separate
+ * from btt_entity_v1 so that object stays byte-identical. */
+void rlGameFillInput(RLInputDiag *out)
+{
+	GObj *fighter_gobj;
+	FTStruct *fp;
+	DObj *dobj;
+	s32 player;
+
+	if (out == NULL)
+	{
+		return;
+	}
+	out->input_schema = RL_INPUT_SCHEMA;
+
+	if ((gSCManagerSceneData.scene_curr != nSCKind1PBonusStage) || (gSCManagerBattleState == NULL))
+	{
+		return;
+	}
+	out->scene_active = 1;
+
+	if (gGCCommonLinks[nGCCommonLinkIDFighter] == NULL)
+	{
+		return;
+	}
+	out->live = 1;
+
+	player = (s32)gSCManagerSceneData.player;
+
+	if (player >= GMCOMMON_PLAYERS_MAX)
+	{
+		return;
+	}
+	fighter_gobj = gSCManagerBattleState->players[player].fighter_gobj;
+
+	if (fighter_gobj == NULL)
+	{
+		return;
+	}
+	fp = ftGetStruct(fighter_gobj);
+	dobj = DObjGetStruct(fighter_gobj);
+
+	if ((fp == NULL) || (dobj == NULL))
+	{
+		return;
+	}
+	out->valid = 1;
+
+	out->stick_x = fp->input.pl.stick_range.x;
+	out->stick_y = fp->input.pl.stick_range.y;
+	out->button_hold = fp->input.pl.button_hold;
+	out->button_tap = fp->input.pl.button_tap;
+	out->button_release = fp->input.pl.button_release;
+
+	out->tap_stick_x = fp->tap_stick_x;
+	out->tap_stick_y = fp->tap_stick_y;
+	out->hold_stick_x = fp->hold_stick_x;
+	out->hold_stick_y = fp->hold_stick_y;
+
+	out->tics_since_last_z = fp->tics_since_last_z;
+
+	out->anim_frame = fighter_gobj->anim_frame;
+	out->anim_speed = dobj->anim_speed;
+	out->motion_flag1 = fp->motion_vars.flags.flag1;
+}
+
 #endif
 // 0x8018D374
 void sc1PBonusStageMakeTargets(void)
